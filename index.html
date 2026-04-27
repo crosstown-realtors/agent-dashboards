@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crosstown Realtors — Agent Dashboards</title>
-<style>body{font-family:-apple-system,sans-serif;max-width:600px;margin:60px auto;padding:20px;}
-h2{color:#1c1c1e;} a{display:block;padding:16px 20px;background:#5856d6;color:white;border-radius:12px;text-decoration:none;margin-bottom:10px;font-weight:600;font-size:15px;}
-a:hover{background:#4a48c4;}</style>
-</head><body>
-<h2>Crosstown Realtors — Agent Dashboards</h2>
-<a href="michelle.html">Michelle Madden</a>
-</body></html>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f2f2f7; color: #1c1c1e; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
+  .logo { font-size: 32px; margin-bottom: 8px; }
+  h1 { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
+  .sub { font-size: 14px; color: #6c6c70; margin-bottom: 36px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; width: 100%; max-width: 720px; }
+  .card { background: white; border-radius: 18px; padding: 24px 20px; text-decoration: none; color: #1c1c1e; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform .15s, box-shadow .15s; border: 2px solid transparent; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .avatar { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; margin-bottom: 14px; }
+  .agent-name { font-weight: 700; font-size: 16px; margin-bottom: 3px; }
+  .agent-role { font-size: 12px; color: #6c6c70; }
+  .agent-stat { margin-top: 10px; font-size: 13px; font-weight: 700; }
+  footer { margin-top: 48px; font-size: 12px; color: #aaa; }
+</style>
+</head>
+<body>
+  <div class="logo">🏠</div>
+  <h1>Crosstown Realtors</h1>
+  <p class="sub">Agent Dashboards — Krembo Group · 2026</p>
+  <div class="grid">
+    <a class="card" href="michelle.html" style="border-color:#5856d620;">
+      <div class="avatar" style="background:#5856d6;">MM</div>
+      <div class="agent-name">Michelle Madden</div>
+      <div class="agent-role">Buyer's &amp; Listing Agent</div>
+      <div class="agent-stat" style="color:#5856d6;">$54,542 YTD · 12 closes</div>
+    </a>
+    <a class="card" href="lauren.html" style="border-color:#0891b220;">
+      <div class="avatar" style="background:#0891b2;">LL</div>
+      <div class="agent-name">Lauren Litoborski</div>
+      <div class="agent-role">Buyer's &amp; Listing Agent</div>
+      <div class="agent-stat" style="color:#0891b2;">$22,048 YTD · 4 closes</div>
+    </a>
+    <a class="card" href="mollie.html" style="border-color:#05996920;">
+      <div class="avatar" style="background:#059669;">MK</div>
+      <div class="agent-name">Mollie Kelly</div>
+      <div class="agent-role">Buyer's &amp; Listing Agent</div>
+      <div class="agent-stat" style="color:#059669;">$25,165 YTD · 5 closes</div>
+    </a>
+    <a class="card" href="mike.html" style="border-color:#2563eb20;">
+      <div class="avatar" style="background:#2563eb;">MiK</div>
+      <div class="agent-name">Mike Kelly</div>
+      <div class="agent-role">Buyer's &amp; Listing Agent</div>
+      <div class="agent-stat" style="color:#2563eb;">$35,233 YTD · 4 closes</div>
+    </a>
+    <a class="card" href="jaclyn.html" style="border-color:#7c3aed20;">
+      <div class="avatar" style="background:#7c3aed;">JM</div>
+      <div class="agent-name">Jaclyn Mitchell</div>
+      <div class="agent-role">Buyer's &amp; Listing Agent</div>
+      <div class="agent-stat" style="color:#7c3aed;">$2,940 YTD · 2 closes</div>
+    </a>
+  </div>
+  <footer>Dashboards rebuild every weekday morning at 8 AM · crosstown-realtors.github.io</footer>
+</body>
+</html>
