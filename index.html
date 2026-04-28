@@ -10,13 +10,16 @@
   .logo { font-size: 32px; margin-bottom: 8px; }
   h1 { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
   .sub { font-size: 14px; color: #6c6c70; margin-bottom: 36px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; width: 100%; max-width: 720px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; width: 100%; max-width: 920px; }
   .card { background: white; border-radius: 18px; padding: 24px 20px; text-decoration: none; color: #1c1c1e; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform .15s, box-shadow .15s; border: 2px solid transparent; }
   .card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .card.broker { background: #1e3a5f; color: white; }
+  .card.broker .agent-role { color: #93c5fd; }
   .avatar { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; margin-bottom: 14px; }
   .agent-name { font-weight: 700; font-size: 16px; margin-bottom: 3px; }
   .agent-role { font-size: 12px; color: #6c6c70; }
   .agent-stat { margin-top: 10px; font-size: 13px; font-weight: 700; }
+  .section-label { width: 100%; max-width: 920px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6c6c70; margin-bottom: 4px; margin-top: 8px; }
   footer { margin-top: 48px; font-size: 12px; color: #aaa; }
 </style>
 </head>
@@ -24,6 +27,18 @@
   <div class="logo">🏠</div>
   <h1>Crosstown Realtors</h1>
   <p class="sub">Agent Dashboards — Krembo Group · 2026</p>
+
+  <div class="section-label">Broker</div>
+  <div class="grid" style="max-width:240px; margin-bottom:14px;">
+    <a class="card broker" href="dan.html" style="border-color:#2563eb40;">
+      <div class="avatar" style="background:#2563eb;">DK</div>
+      <div class="agent-name" style="color:white;">Dan Krembuszewski</div>
+      <div class="agent-role">Broker / Owner</div>
+      <div class="agent-stat" style="color:#93c5fd;">$28,414 YTD · 5 closes</div>
+    </a>
+  </div>
+
+  <div class="section-label">Agents</div>
   <div class="grid">
     <a class="card" href="michelle.html" style="border-color:#5856d620;">
       <div class="avatar" style="background:#5856d6;">MM</div>
