@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Michelle Madden — Dashboard</title>
 <style>
+
   :root {
     color-scheme: light;
     --bg: #f2f2f7;
@@ -185,6 +186,7 @@
   .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
   .save-toast.show { display: block; animation: fadeup .3s ease; }
   @keyframes fadeup { from { opacity:0; transform:translateX(-50%) translateY(8px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+
 </style>
 </head>
 <body>
@@ -193,7 +195,7 @@
   <div class="topbar-inner">
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="avatar">MM</div>
-      <div><div class="tb-name">Michelle Madden</div><div class="tb-role">Buyer's &amp; Listing Agent · Krembo Group / Crosstown Realtors</div></div>
+      <div><div class="tb-name">Michelle Madden</div><div class="tb-role">Buyer's & Listing Agent · Krembo Group / Crosstown Realtors</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="tb-right">
@@ -214,7 +216,6 @@
   </div>
 </div>
 
-<!-- Settings Overlay & Drawer -->
 <div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
 <div class="settings-drawer" id="settings-drawer">
   <div class="settings-hdr">
@@ -222,47 +223,24 @@
     <button class="settings-close" onclick="closeSettings()">✕</button>
   </div>
   <div class="settings-body">
-
     <div class="settings-group">
       <div class="settings-group-title">🎯 Goals</div>
       <div class="settings-field">
         <label class="settings-label" for="s-pac-goal">Annual PAC Goal ($)</label>
         <input class="settings-input" type="number" id="s-pac-goal" placeholder="200000" step="1000">
-        <div class="settings-hint">Your target primary agent commission for 2026</div>
       </div>
       <div class="settings-field">
         <label class="settings-label" for="s-close-goal">Annual Close Goal (# of deals)</label>
         <input class="settings-input" type="number" id="s-close-goal" placeholder="45">
-        <div class="settings-hint">How many deals you want to close this year</div>
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-contact-goal">Daily Contact Goal</label>
-        <input class="settings-input" type="number" id="s-contact-goal" placeholder="15">
-        <div class="settings-hint">How many contacts you aim to make each day</div>
       </div>
     </div>
-
     <div class="settings-group">
       <div class="settings-group-title">📝 Custom Notes</div>
       <div class="settings-field">
-        <label class="settings-label" for="s-note">Today's personal note (optional)</label>
-        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Call John before noon, listing appointment at 2pm..."></textarea>
-        <div class="settings-hint">Shown at the top of your dashboard each day</div>
+        <label class="settings-label" for="s-note">Today's personal note</label>
+        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Call John before noon..."></textarea>
       </div>
     </div>
-
-    <div class="settings-group">
-      <div class="settings-group-title">🔔 Reminders</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-reminder1">Custom reminder 1</label>
-        <input class="settings-input" type="text" id="s-reminder1" placeholder="e.g. Submit expense report by Friday">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-reminder2">Custom reminder 2</label>
-        <input class="settings-input" type="text" id="s-reminder2" placeholder="e.g. Follow up with John Smith">
-      </div>
-    </div>
-
   </div>
   <div class="settings-footer">
     <button class="btn-reset" onclick="resetSettings()">Reset</button>
@@ -273,90 +251,55 @@
 
 <div class="container">
 
-  <!-- Refresh timestamp -->
   <div style="font-size:11px;color:var(--sub);text-align:right;margin-bottom:14px;">
     🔄 Data refreshed <strong>April 28, 2026</strong> · Source: Transaction Tracker
   </div>
 
-  <!-- Quick Links -->
   <div class="quick-links">
     <a class="ql-btn" href="https://app.followupboss.com" target="_blank">
-      <div class="ql-icon" style="background:#fff3e0;">🎯</div>
-      Follow Up Boss
+      <div class="ql-icon" style="background:#fff3e0;">🎯</div>Follow Up Boss
     </a>
     <a class="ql-btn" href="https://www.dotloop.com" target="_blank">
-      <div class="ql-icon" style="background:#eaf4fd;">📋</div>
-      Dotloop
+      <div class="ql-icon" style="background:#eaf4fd;">📋</div>Dotloop
     </a>
     <a class="ql-btn" href="https://mylistingiq.ai" target="_blank">
-      <div class="ql-icon" style="background:#eafaf1;">🏡</div>
-      MyListingIQ
+      <div class="ql-icon" style="background:#eafaf1;">🏡</div>MyListingIQ
     </a>
     <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">
-      <div class="ql-icon" style="background:#f0f0ff;">📊</div>
-      Transaction Tracker
+      <div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker
     </a>
   </div>
 
-  <!-- Alerts -->
   <div style="margin-bottom:18px;">
-    <div class="alert alert-red">🚨 <span><strong>Joel Huffar (Sell)</strong> — 136 W 18th St, Lockport — has been Under Contract since Jan 22 with a projected close of <strong>Feb 18</strong>. That's <strong>69+ days overdue</strong>. Needs immediate follow-up.</span></div>
-    <div class="alert alert-gold">⭐ <span><strong>Big deal closing soon:</strong> Alimirah/Dubkova — $1,350,000 in Burr Ridge closes <strong>May 15</strong>. Est. commission: <strong>$14,261</strong>. Stay on top of this one.</span></div>
-    <div class="alert alert-green">✅ <span><strong>Schmidt/Kipping both closed!</strong> Romeoville Sell + Joliet Buy both recorded as closed. Nice work getting those across the line.</span></div>
-    <div class="alert alert-teal">💰 <span>Your recruits are paying off — <strong>$1,544 in override income</strong> earned so far this year. Another <strong>$2,204 pending</strong> when Lauren's and Jaclyn's pipeline closes.</span></div>
+    <div class="alert alert-red">🚨 <span><strong>Joel Huffar (Sell)</strong> — 136 W 18th St, Lockport — has been Under Contract since Jan 22. Projected close was <strong>Feb 18</strong>. Needs immediate follow-up.</span></div><div class="alert alert-gold">⭐ <span><strong>Big deal closing soon:</strong> Alimirah/Dubkova — $1,350,000 in Burr Ridge closes <strong>May 15</strong>. Est. PAC: <strong>$14,261</strong>. Stay on top of this one.</span></div><div class="alert alert-green">✅ <span><strong>4 closings in April</strong> so far — Kokalj, Tracy Hasler, Schmidt Sell, and Schmidt Buy all recorded. Great momentum heading into May.</span></div>
   </div>
 
-  <!-- Stat row -->
   <div class="grid-4">
     <div class="stat-card">
       <div class="stat-num" style="color:var(--accent)">$54,542</div>
       <div class="stat-label">PAC YTD</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--teal)">$1,544</div>
-      <div class="stat-label">Override YTD</div>
-      <div class="stat-sub">+$2,204 pending</div>
+      <div class="stat-num" style="color:var(--green)">12</div>
+      <div class="stat-label">Closings YTD</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--green)">$56,086</div>
-      <div class="stat-label">Total Income</div>
+      <div class="stat-num" style="color:var(--orange)">27.3%</div>
+      <div class="stat-label">Of $200,000 Goal</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)">28%</div>
-      <div class="stat-label">Of $200K Goal</div>
+      <div class="stat-num" style="color:var(--blue)">3</div>
+      <div class="stat-label">Active Pipeline</div>
+      <div class="stat-sub">3 Under Contract</div>
     </div>
   </div>
 
-  <!-- Income Breakdown -->
   <div class="section">
-    <div class="section-label">💰 Income Breakdown — YTD 2026</div>
-    <div class="card">
-      <div class="income-row">
-        <span class="income-label">Commission (Primary Agent Commission)</span>
-        <span class="income-amt" style="color:var(--accent)">$54,542</span>
-      </div>
-      <div class="income-row">
-        <span class="income-label">Override income (from recruits — Lauren &amp; Jaclyn)</span>
-        <span class="income-amt" style="color:var(--teal)">+$1,544</span>
-      </div>
-      <div class="income-row" style="padding-top:10px;">
-        <span style="font-weight:700;font-size:14px;">Total Income YTD</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green)">$56,086</span>
-      </div>
-      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--sub);">
-        Pending override income (when pipeline closes): <strong style="color:var(--teal)">+$2,204</strong>
-        <span style="margin-left:8px;font-size:11px;">(Lauren Fairchild $1,260 · Lauren Lavecchia $944)</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Production tracker -->
-  <div class="section">
-    <div class="section-label">📈 2026 Production — $200K PAC Goal</div>
+    <div class="section-label">📈 2026 Production — $200,000 PAC Goal</div>
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
-          <div class="prog-row"><span>YTD PAC: <strong>$54,542</strong></span><span id="pct-lbl" style="color:var(--orange)">27.3% of $200K</span></div>
+          <div class="prog-row"><span>YTD PAC: <strong>$54,542</strong></span><span id="pct-lbl" style="color:var(--orange)">27.3% of $200,000</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
           <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
@@ -369,7 +312,6 @@
     </div>
   </div>
 
-  <!-- Current Month -->
   <div class="section">
     <div class="section-label">📅 April 2026 — Current Month</div>
     <div class="card">
@@ -387,15 +329,9 @@
           <div class="cur-lbl">Pipeline Due Soon</div>
         </div>
       </div>
-      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
-        <div class="prog-row"><span>Monthly goal: <strong>$16,667</strong></span><span style="color:var(--orange)">57% of monthly pace</span></div>
-        <div class="prog-bg"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--orange),var(--gold));" id="apr-bar"></div></div>
-        <div style="margin-top:8px;font-size:12px;color:var(--sub);">Alimirah/Dubkova closing May 15 will add <strong style="color:var(--gold)">$14,261</strong> — biggest deal of the year.</div>
-      </div>
     </div>
   </div>
 
-  <!-- Annual Close Count & Streak -->
   <div class="section">
     <div class="section-label">🔥 Annual Progress — Close Count</div>
     <div class="card">
@@ -408,30 +344,23 @@
         <div style="flex:1;">
           <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">12 / 45 (26.7%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
-          <div style="margin-top:10px;">
-            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency — closes per month</div>
-            <div class="month-dots-row" id="streak-dots"></div>
-          </div>
+          <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending · Est. +$24,805 PAC when closed</div>
         </div>
-      </div>
-      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--sub);">
-        🔥 <strong style="color:var(--green)">4 months in a row</strong> with at least one close — keep the streak alive in May!
       </div>
     </div>
   </div>
 
-  <!-- Pipeline -->
   <div class="section">
     <div class="section-label">🏠 Active Pipeline</div>
-
+    
     <div class="spotlight">
       <div class="spotlight-hdr">
         <div>
           <div class="spotlight-title">⭐ High-Value Deal — Watch Closely</div>
-          <div style="font-weight:600;font-size:14px;margin-top:2px;">Ibrahim Alimirah &amp; Vira Dubkova — BUY</div>
+          <div style="font-weight:600;font-size:14px;margin-top:2px;">Ibrahim Alimirah & Vira Dubkova — BUY</div>
           <div style="font-size:12px;color:var(--sub);margin-top:2px;">8673 Timber Ridge Dr, Burr Ridge IL 60527</div>
         </div>
-        <span class="badge badge-gold" id="burr-ridge-badge">⭐ Closing May 15</span>
+        <span class="badge badge-gold">⭐ Closing May 15</span>
       </div>
       <div class="spotlight-chips">
         <div class="chip">Proj. close: <strong>May 15</strong></div>
@@ -442,21 +371,19 @@
         <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
       </div>
     </div>
-
     <div class="card">
       <div class="deal-row">
         <div class="deal-left"><div class="deal-title">Joel Huffar — SELL</div><div class="deal-sub">136 W 18th St, Lockport IL 60441</div></div>
         <span class="badge badge-red">🚨 69d overdue</span>
       </div>
       <div class="deal-chips">
-        <div class="chip">Proj. close: <strong>Feb 18</strong></div>
+        <div class="chip">Proj. close: <strong>Feb 18 (overdue)</strong></div>
         <div class="chip">Price: <strong>$335,000</strong></div>
         <div class="chip">Est. PAC: <strong>$6,784</strong></div>
         <div class="chip">Source: <strong>SOI/PC</strong></div>
         <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
       </div>
     </div>
-
     <div class="card">
       <div class="deal-row">
         <div class="deal-left"><div class="deal-title">Margaret Buck — BUY</div><div class="deal-sub">6870 W Winding Trail Unit 302, Oak Forest IL 60452</div></div>
@@ -470,284 +397,162 @@
         <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
       </div>
     </div>
-
     <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">
       <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
         <span style="color:var(--sub);">Est. pipeline value if all close:</span>
         <span style="font-weight:800;font-size:16px;color:var(--green);">+$24,805 PAC</span>
       </div>
-      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$79,347 (39.7% of goal) + another $2,204 in override income</div>
+      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$79,347</div>
     </div>
   </div>
 
-  <!-- Recent Closings -->
   <div class="section">
-    <div class="section-label">✅ Recent Closings</div>
+    <div class="section-label">✅ Recent Closings — YTD 2026</div>
     <div class="card">
+      
       <div class="closed-row">
         <div class="cl-date">Apr 14</div>
         <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 1596 W Ludington Cir, Romeoville (Zillow)</div>
+        <div class="cl-name">Roger Schmidt & Andrea Kipping — 1596 W Ludington Cir, Romeoville (Zillow)</div>
         <div class="cl-pac">$2,938</div>
       </div>
       <div class="closed-row">
         <div class="cl-date">Apr 14</div>
         <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 2909 Bisbee Dr, Joliet (Zillow)</div>
+        <div class="cl-name">Roger Schmidt & Andrea Kipping — 2909 Bisbee Dr, Joliet (Zillow)</div>
         <div class="cl-pac">$3,497</div>
       </div>
-      <div class="closed-row" style="border-bottom:none;">
+      <div class="closed-row">
+        <div class="cl-date">Apr 9</div>
+        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
+        <div class="cl-name">Tracy Hasler — 6755 180th St Unit 6, Tinley Park (SOI/PC)</div>
+        <div class="cl-pac">$2,820</div>
+      </div>
+      <div class="closed-row">
         <div class="cl-date">Apr 5</div>
         <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Michelle Kogalj — 802 Eagle Dr, Joliet (Zillow)</div>
+        <div class="cl-name">Michelle Kokalj — 802 Eagle Dr, Joliet (Zillow)</div>
         <div class="cl-pac">$3,134</div>
       </div>
-      <div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:12px;color:var(--sub);">12 total closes in 2026</span>
-        <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View all in tracker →</a>
+      <div class="closed-row">
+        <div class="cl-date">Mar 31</div>
+        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
+        <div class="cl-name">Adam Franson & Kayla Franson — 10950 S Homan Ave, Chicago (SOI/PC)</div>
+        <div class="cl-pac">$10,026</div>
       </div>
-    </div>
-  </div>
-
-  <!-- Task blocks -->
-  <div class="section">
-    <div class="section-label">✅ Today's Task Blocks</div>
-    <div class="grid-2">
-
-      <div class="card">
-        <div class="block-hdr"><span style="font-size:18px;">☀️</span><div><div class="block-title">Morning Block</div><div class="block-time">9:00 – 11:00 AM · Prospecting</div></div></div>
-        <div class="task-item" data-id="m1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Call Joel Huffar — deal 68+ days overdue, urgent status check</div><span class="task-tag tag-urgent">Urgent</span></div>
-        <div class="task-item" data-id="m2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Check &amp; respond to new Zillow Flex leads (5-min rule)</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="m3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Make 3 SOI check-in calls — past clients, referral ask</div><span class="task-tag tag-soi">SOI</span></div>
-        <div class="task-item" data-id="m4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Touch base with Alimirah/Dubkova — confirm Burr Ridge docs on track for May 15</div><span class="task-tag tag-gold">⭐ May 15</span></div>
-        <div class="task-item" data-id="m5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Check in with Margaret Buck — confirm May 20 closing timeline</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="counter-row">
-          <div><div class="counter-label">Contacts today <span>Goal: 15</span></div><div style="font-size:11px;color:var(--sub);margin-top:2px;" id="contact-sub">0 of 15</div></div>
-          <div class="counter-controls">
-            <button class="counter-btn" onclick="adjustContacts(-1)">−</button>
-            <div class="counter-val" id="contact-count">0</div>
-            <button class="counter-btn" onclick="adjustContacts(1)">+</button>
-          </div>
-        </div>
+      <div class="closed-row">
+        <div class="cl-date">Feb 27</div>
+        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
+        <div class="cl-name">Paul McDaniels & Lance Lopez — 2200 Holt Rd, Minooka (SOI/PC)</div>
+        <div class="cl-pac">$9,601</div>
       </div>
-
-      <div class="card">
-        <div class="block-hdr"><span style="font-size:18px;">🌅</span><div><div class="block-title">Afternoon Block</div><div class="block-time">2:00 – 4:30 PM · Follow-ups</div></div></div>
-        <div class="task-item" data-id="a1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Follow up buyers who toured homes this week — get feedback</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="a2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Schedule weekend showings — confirm times with clients</div><span class="task-tag tag-admin">Admin</span></div>
-        <div class="task-item" data-id="a3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Send market update to 3 Zillow leads not yet converted</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="a4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Reach out to 2 SOI contacts not spoken to in 30+ days</div><span class="task-tag tag-soi">SOI</span></div>
-        <div class="task-item" data-id="a5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Update Dotloop &amp; log any deal changes in tracker</div><span class="task-tag tag-admin">Admin</span></div>
-        <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
-          <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">🌙 End of Day</div>
-          <div class="task-item" data-id="e1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Log all contacts in CRM</div><span class="task-tag tag-admin">Admin</span></div>
-          <div class="task-item" data-id="e2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Set tomorrow's top 3 priorities</div><span class="task-tag tag-admin">Admin</span></div>
-        </div>
+      <div class="closed-row">
+        <div class="cl-date">Feb 16</div>
+        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
+        <div class="cl-name">Tracy & Jordan Hasler — 1308 Glenridge Ct, Minooka (Zillow)</div>
+        <div class="cl-pac">$4,289</div>
       </div>
-    </div>
-  </div>
-
-  <!-- Progress bar -->
-  <div class="section">
-    <div class="section-label">📊 Today's Progress</div>
-    <div class="card" style="display:flex;align-items:center;gap:16px;">
-      <div style="flex:1;">
-        <div class="prog-row"><span>Tasks done: <strong id="tasks-count">0 / 12</strong></span><span id="tasks-pct">0%</span></div>
-        <div class="prog-bg"><div class="prog-fill" id="tasks-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),var(--green))"></div></div>
+      <div class="closed-row">
+        <div class="cl-date">Feb 4</div>
+        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
+        <div class="cl-name">Sally & Matthew Vitiritti — 701 E 7th St, Lockport (Zillow)</div>
+        <div class="cl-pac">$3,893</div>
       </div>
-      <div style="font-size:26px;" id="tasks-emoji">👊</div>
     </div>
   </div>
 
 </div>
 
 <script>
-const now = new Date();
-const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const MON_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-document.getElementById('js-date').textContent = `${DAY_NAMES[now.getDay()]}, ${MON_NAMES[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
-function tick(){ document.getElementById('js-time').textContent = new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true}); }
-tick(); setInterval(tick, 30000);
-
-// Production
-const GOAL = 200000;
+const PAC_YTD = 54542;
+const PAC_GOAL = 200000;
+const NUM_CLOSES = 12;
 const CLOSE_GOAL = 45;
-const monthlyPAC = { 1:17163.80, 2:17783.51, 3:10026.00, 4:9569.09 };
-const ytd = Object.values(monthlyPAC).reduce((a,b)=>a+b,0);
-const pct = ytd / GOAL;
-const start = new Date(now.getFullYear(),0,0);
-const dayOfYear = Math.floor((now-start)/86400000);
-const paceTarget = (dayOfYear/365)*GOAL;
-const gap = ytd - paceTarget;
-const annualized = (ytd / (now.getMonth()+1)) * 12;
-const monthsLeft = 12 - now.getMonth() - 1;
 
-document.getElementById('pct-lbl').textContent = (pct*100).toFixed(1)+'% of $200K';
-document.getElementById('annualized').textContent = '$'+Math.round(annualized).toLocaleString();
-const gapEl = document.getElementById('pace-gap');
-gapEl.textContent = (gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
-gapEl.style.color = gap<0?'var(--red)':'var(--green)';
-document.getElementById('mo-needed').textContent = monthsLeft>0 ? '$'+Math.round((GOAL-ytd)/monthsLeft).toLocaleString() : '—';
-document.getElementById('mo-left').textContent = monthsLeft;
-setTimeout(()=>{
-  document.getElementById('gci-bar').style.width = Math.min(pct*100,100)+'%';
-  document.getElementById('apr-bar').style.width = Math.min((9569/16667)*100,100)+'%';
-  document.getElementById('close-bar').style.width = Math.min((12/CLOSE_GOAL)*100,100)+'%';
-},100);
-
-// Burr Ridge countdown
-const burr = new Date('2026-05-15');
-const daysLeft = Math.ceil((burr-now)/86400000);
-document.getElementById('burr-ridge-badge').textContent = daysLeft > 0 ? `⭐ ${daysLeft}d to close` : '⭐ Closing today!';
-
-// Month PAC dots
-const mGoal = GOAL/12;
-const grid = document.getElementById('month-grid');
-['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
-  const inc = monthlyPAC[i+1]||0;
-  const isCur = i===now.getMonth();
-  const color = inc===0?'#e0e0e0':inc>=mGoal?'#27ae60':inc>=mGoal*.6?'#e67e22':'#c0392b';
-  const dot = document.createElement('div');
-  dot.className='month-dot';
-  dot.style.background = isCur?'#5856d6':color;
-  dot.style.opacity = i>now.getMonth()?'0.3':'1';
-  dot.style.outline = isCur?'2px solid #3634a3':'none';
-  dot.innerHTML = `<span>${m}</span><span class="tip">${m}: ${inc>0?'$'+inc.toLocaleString('en-US',{maximumFractionDigits:0}):'No data'}</span>`;
-  grid.appendChild(dot);
-});
-
-// Monthly close count dots
-const closesPerMonth = {1:4, 2:3, 3:1, 4:4};
-const streakContainer = document.getElementById('streak-dots');
-['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
-  const closes = closesPerMonth[i+1]||0;
-  const isFuture = i > now.getMonth();
-  const isCur = i === now.getMonth();
-  const dot = document.createElement('div');
-  dot.className='mdot';
-  dot.title = `${m}: ${closes} close${closes!==1?'s':''}`;
-  if(isFuture) {
-    dot.style.background='#e0e0e0';
-    dot.style.color='#aaa';
-    dot.textContent=m.charAt(0);
-  } else if(closes > 0) {
-    dot.style.background= isCur?'#5856d6':'#27ae60';
-    dot.style.color='white';
-    dot.textContent=closes;
-  } else {
-    dot.style.background='#fef0ee';
-    dot.style.color='#c0392b';
-    dot.textContent='0';
-  }
-  streakContainer.appendChild(dot);
-});
-
-// Tasks
-const TODAY_KEY = 'mm_tasks_'+now.toISOString().split('T')[0];
-let state = JSON.parse(localStorage.getItem(TODAY_KEY)||'{}');
-function saveState(){ localStorage.setItem(TODAY_KEY, JSON.stringify(state)); }
-function toggleTask(el){ const id=el.dataset.id; state[id]=!state[id]; saveState(); el.classList.toggle('done',state[id]); updateProgress(); }
-document.querySelectorAll('.task-item').forEach(el=>{ if(state[el.dataset.id]) el.classList.add('done'); });
-function updateProgress(){
-  const all=document.querySelectorAll('.task-item'), done=document.querySelectorAll('.task-item.done');
-  const p=all.length?Math.round(done.length/all.length*100):0;
-  document.getElementById('tasks-count').textContent=`${done.length} / ${all.length}`;
-  document.getElementById('tasks-pct').textContent=p+'%';
-  document.getElementById('tasks-bar').style.width=p+'%';
-  const e=['👊','💪','🔥','🔥','⚡','🏆','🎯','💎','💎','🌟','🎉','🎉','🏅'];
-  document.getElementById('tasks-emoji').textContent=e[Math.min(Math.floor(p/8),e.length-1)];
+// Date/time
+function updateClock() {
+  const now = new Date();
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('js-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate();
+  document.getElementById('js-time').textContent = now.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});
 }
-updateProgress();
+updateClock();
+setInterval(updateClock, 60000);
+
+// Progress bars
+window.addEventListener('load', () => {
+  const pct = Math.min(100, PAC_YTD / PAC_GOAL * 100);
+  document.getElementById('gci-bar').style.width = pct + '%';
+  const closePct = Math.min(100, NUM_CLOSES / CLOSE_GOAL * 100);
+  document.getElementById('close-bar').style.width = closePct + '%';
+
+  // Pace calcs
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 1);
+  const endOfYear = new Date(now.getFullYear(), 11, 31);
+  const elapsed = (now - startOfYear) / (endOfYear - startOfYear);
+  const annualized = elapsed > 0 ? Math.round(PAC_YTD / elapsed) : 0;
+  const expected = PAC_GOAL * elapsed;
+  const gap = PAC_YTD - expected;
+  const monthsLeft = Math.max(0, 12 - (now.getMonth() + now.getDate()/31));
+  const needed = monthsLeft > 0 ? Math.round((PAC_GOAL - PAC_YTD) / monthsLeft) : 0;
+
+  document.getElementById('annualized').textContent = '$' + annualized.toLocaleString();
+  document.getElementById('pace-gap').textContent = (gap >= 0 ? '+' : '') + '$' + Math.abs(Math.round(gap)).toLocaleString();
+  document.getElementById('pace-gap').style.color = gap >= 0 ? 'var(--green)' : 'var(--red)';
+  document.getElementById('mo-needed').textContent = '$' + needed.toLocaleString();
+  document.getElementById('mo-left').textContent = Math.ceil(monthsLeft);
+
+  // Month grid
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const monthlyColors = ['#c3c4ff','#a5b4fc','#818cf8','#6366f1','#4f46e5','#4338ca','#3730a3','#312e81','#e5e7eb','#e5e7eb','#e5e7eb','#e5e7eb'];
+  const grid = document.getElementById('month-grid');
+  months.forEach((m,i) => {
+    const dot = document.createElement('div');
+    dot.className = 'month-dot';
+    dot.style.background = monthlyColors[i];
+    dot.innerHTML = '<span>' + m.slice(0,1) + '</span>';
+    grid.appendChild(dot);
+  });
+});
 
 // Settings
-const SETTINGS_KEY = 'mm_settings';
-const DEFAULTS = { pacGoal: 200000, closeGoal: 45, contactGoal: 15, note: '', reminder1: '', reminder2: '' };
-function loadSettings(){ return Object.assign({}, DEFAULTS, JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')); }
-function applySettings(s){
-  // Contact goal
-  document.querySelectorAll('.counter-label span').forEach(el => el.textContent = 'Goal: '+s.contactGoal);
-  renderContacts(s.contactGoal);
-  // Personal note
-  let noteEl = document.getElementById('personal-note');
-  if(s.note && s.note.trim()){
-    if(!noteEl){
-      noteEl = document.createElement('div');
-      noteEl.id = 'personal-note';
-      noteEl.className = 'alert alert-blue';
-      noteEl.style.marginBottom = '18px';
-      document.querySelector('.container').insertBefore(noteEl, document.querySelector('.container').firstChild);
-    }
-    noteEl.innerHTML = '📝 <span><strong>Your note:</strong> '+s.note+'</span>';
-  } else if(noteEl) { noteEl.remove(); }
-  // Reminders
-  ['reminder1','reminder2'].forEach((r,i) => {
-    let el = document.getElementById('custom-reminder-'+(i+1));
-    if(s[r] && s[r].trim()){
-      if(!el){
-        el = document.createElement('div');
-        el.id = 'custom-reminder-'+(i+1);
-        el.className = 'alert alert-orange';
-        el.style.marginBottom = '8px';
-        const alertsDiv = document.querySelector('.container > div');
-        alertsDiv.appendChild(el);
-      }
-      el.innerHTML = '🔔 <span>'+s[r]+'</span>';
-    } else if(el) { el.remove(); }
-  });
-}
-function openSettings(){
-  const s = loadSettings();
-  document.getElementById('s-pac-goal').value = s.pacGoal;
-  document.getElementById('s-close-goal').value = s.closeGoal;
-  document.getElementById('s-contact-goal').value = s.contactGoal;
-  document.getElementById('s-note').value = s.note;
-  document.getElementById('s-reminder1').value = s.reminder1;
-  document.getElementById('s-reminder2').value = s.reminder2;
+const STORAGE_KEY = 'dashboard_MM_settings';
+function openSettings() {
   document.getElementById('settings-overlay').classList.add('open');
   document.getElementById('settings-drawer').classList.add('open');
+  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+  if(saved.pac_goal) document.getElementById('s-pac-goal').value = saved.pac_goal;
+  if(saved.close_goal) document.getElementById('s-close-goal').value = saved.close_goal;
+  if(saved.note) document.getElementById('s-note').value = saved.note;
 }
-function closeSettings(){
+function closeSettings() {
   document.getElementById('settings-overlay').classList.remove('open');
   document.getElementById('settings-drawer').classList.remove('open');
 }
-function saveSettings(){
-  const s = {
-    pacGoal: parseInt(document.getElementById('s-pac-goal').value)||200000,
-    closeGoal: parseInt(document.getElementById('s-close-goal').value)||45,
-    contactGoal: parseInt(document.getElementById('s-contact-goal').value)||15,
-    note: document.getElementById('s-note').value.trim(),
-    reminder1: document.getElementById('s-reminder1').value.trim(),
-    reminder2: document.getElementById('s-reminder2').value.trim(),
+function saveSettings() {
+  const settings = {
+    pac_goal: document.getElementById('s-pac-goal').value,
+    close_goal: document.getElementById('s-close-goal').value,
+    note: document.getElementById('s-note').value
   };
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
-  applySettings(s);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
   closeSettings();
   const toast = document.getElementById('save-toast');
   toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'), 2500);
+  setTimeout(() => toast.classList.remove('show'), 2500);
 }
-function resetSettings(){
-  localStorage.removeItem(SETTINGS_KEY);
-  document.getElementById('s-pac-goal').value = DEFAULTS.pacGoal;
-  document.getElementById('s-close-goal').value = DEFAULTS.closeGoal;
-  document.getElementById('s-contact-goal').value = DEFAULTS.contactGoal;
+function resetSettings() {
+  localStorage.removeItem(STORAGE_KEY);
+  document.getElementById('s-pac-goal').value = '';
+  document.getElementById('s-close-goal').value = '';
   document.getElementById('s-note').value = '';
-  document.getElementById('s-reminder1').value = '';
-  document.getElementById('s-reminder2').value = '';
 }
-applySettings(loadSettings());
-
-// Contacts
-const CK = 'mm_contacts_'+now.toISOString().split('T')[0];
-let contacts = parseInt(localStorage.getItem(CK)||'0');
-function renderContacts(goalOverride){
-  const goal = goalOverride || loadSettings().contactGoal;
-  document.getElementById('contact-count').textContent=contacts;
-  document.getElementById('contact-count').style.color=contacts>=goal?'var(--green)':contacts>=(goal/2)?'var(--orange)':'var(--text)';
-  document.getElementById('contact-sub').textContent=contacts>=goal?'✅ Goal hit!':contacts+' of '+goal+' today';
-}
-function adjustContacts(d){ contacts=Math.max(0,contacts+d); localStorage.setItem(CK,contacts); renderContacts(); }
-renderContacts();
+// Task checkboxes
+document.querySelectorAll('.task-item').forEach(item => {
+  item.addEventListener('click', () => item.classList.toggle('done'));
+});
 </script>
 </body>
 </html>

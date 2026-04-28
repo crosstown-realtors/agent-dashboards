@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaclyn Mitchell — Dashboard</title>
 <style>
+
   :root {
     color-scheme: light;
     --bg: #f2f2f7;
@@ -16,12 +17,13 @@
     --orange: #e67e22; --orange-bg: #fef8ee;
     --green: #27ae60;  --green-bg: #eafaf1;
     --blue: #2980b9;   --blue-bg: #eaf4fd;
-    --accent: #7c3aed; --accent-bg: #f5f3ff;
+    --accent: #5856d6; --accent-bg: #f0f0ff;
     --gold: #b7860b;   --gold-bg: #fefbe8;
     --teal: #0e9488;   --teal-bg: #f0fdf9;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+
   .topbar { background: var(--accent); }
   .topbar-inner { max-width: 860px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
   .avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: white; flex-shrink: 0; }
@@ -30,21 +32,27 @@
   .tb-right { text-align: right; }
   .tb-date { color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 600; }
   .tb-time { color: rgba(255,255,255,0.6); font-size: 12px; }
+
   .container { max-width: 860px; margin: 0 auto; padding: 22px 20px 48px; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 20px; }
   .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 20px; }
+
   .card { background: var(--card); border-radius: 14px; padding: 16px 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); margin-bottom: 10px; }
   .card:last-child { margin-bottom: 0; }
   .section { margin-bottom: 20px; }
   .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--sub); margin-bottom: 10px; }
+
   .stat-card { background: var(--card); border-radius: 14px; padding: 14px 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); text-align: center; }
   .stat-num { font-size: 22px; font-weight: 800; line-height: 1.1; }
   .stat-label { font-size: 10px; color: var(--sub); margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
   .stat-sub { font-size: 10px; color: var(--sub); margin-top: 2px; }
+
   .prog-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--sub); margin-bottom: 6px; }
   .prog-row strong { color: var(--text); }
   .prog-bg { height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
   .prog-fill { height: 100%; border-radius: 4px; transition: width .7s ease; }
+
   .badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
   .badge-red    { background: var(--red-bg);    color: var(--red); }
   .badge-orange { background: var(--orange-bg); color: var(--orange); }
@@ -53,6 +61,7 @@
   .badge-gold   { background: var(--gold-bg);   color: var(--gold); }
   .badge-gray   { background: var(--bg);        color: var(--sub); }
   .badge-teal   { background: var(--teal-bg);   color: var(--teal); }
+
   .alert { border-radius: 0 10px 10px 0; padding: 10px 14px; font-size: 12.5px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
   .alert-red    { background: var(--red-bg);    color: #7d2a2a; border-left: 3px solid var(--red); }
   .alert-orange { background: var(--orange-bg); color: #7a4a00; border-left: 3px solid var(--orange); }
@@ -60,21 +69,24 @@
   .alert-blue   { background: var(--blue-bg);   color: #1a5c8a; border-left: 3px solid var(--blue); }
   .alert-green  { background: var(--green-bg);  color: #1a6b3a; border-left: 3px solid var(--green); }
   .alert-teal   { background: var(--teal-bg);   color: var(--teal); border-left: 3px solid var(--teal); }
+
   .deal-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
   .deal-left { flex: 1; min-width: 0; }
   .deal-title { font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .deal-sub { font-size: 12px; color: var(--sub); margin-top: 2px; }
+  .deal-sub { font-size: 12px; color: var(--sub); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .deal-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 9px; padding-top: 9px; border-top: 1px solid var(--border); align-items: center; }
   .chip { font-size: 11px; color: var(--sub); }
   .chip strong { color: var(--text); font-weight: 600; }
   a.open-link { color: var(--blue); font-size: 12px; text-decoration: none; margin-left: auto; }
   a.open-link:hover { text-decoration: underline; }
+
   .closed-row { display: flex; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
   .closed-row:last-child { border-bottom: none; }
   .cl-date { font-size: 11px; color: var(--sub); width: 55px; flex-shrink: 0; }
   .cl-type { flex-shrink: 0; }
   .cl-name { flex: 1; color: var(--sub); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cl-pac  { font-weight: 700; color: var(--green); white-space: nowrap; min-width: 75px; text-align: right; }
+
   .block-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
   .block-title { font-weight: 700; font-size: 15px; }
   .block-time { font-size: 12px; color: var(--sub); }
@@ -93,6 +105,7 @@
   .tag-admin  { background: var(--bg); color: var(--sub); }
   .tag-urgent { background: var(--red-bg); color: var(--red); }
   .tag-gold   { background: var(--gold-bg); color: var(--gold); }
+
   .counter-row { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
   .counter-label { font-size: 13px; font-weight: 600; }
   .counter-label span { font-size: 11px; color: var(--sub); font-weight: 400; margin-left: 4px; }
@@ -100,38 +113,52 @@
   .counter-btn { width: 32px; height: 32px; border-radius: 50%; border: none; background: var(--bg); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: 600; transition: background .15s; }
   .counter-btn:hover { background: var(--border); }
   .counter-val { font-size: 22px; font-weight: 800; min-width: 40px; text-align: center; }
+
   .month-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 4px; margin-top: 12px; }
   .month-dot { height: 26px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: white; position: relative; cursor: default; }
   .month-dot .tip { display: none; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: #222; color: #fff; font-size: 10px; padding: 3px 8px; border-radius: 5px; white-space: nowrap; z-index: 10; }
   .month-dot:hover .tip { display: block; }
+
   .pace-wrap { display: flex; gap: 16px; align-items: stretch; }
   .pace-main { flex: 1; }
   .pace-side { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 14px; border-left: 1px solid var(--border); text-align: center; min-width: 86px; gap: 12px; }
   .pace-side .num { font-size: 20px; font-weight: 800; }
   .pace-side .lbl { font-size: 10px; color: var(--sub); font-weight: 600; }
+
   .spotlight { background: linear-gradient(135deg, #fefbe8 0%, #fff9e6 100%); border: 1px solid #f0d060; border-radius: 14px; padding: 16px 18px; margin-bottom: 10px; }
   .spotlight-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
   .spotlight-title { font-weight: 700; font-size: 15px; color: var(--gold); }
   .spotlight-chips { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 10px; border-top: 1px solid #f0d060; }
+
+  /* Quick links */
   .quick-links { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
   .ql-btn { display: flex; align-items: center; gap: 7px; padding: 9px 16px; background: var(--card); border-radius: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; transition: box-shadow .15s, transform .1s; border: 1px solid var(--border); }
   .ql-btn:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); transform: translateY(-1px); }
   .ql-icon { width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+
+  /* Income breakdown */
   .income-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
   .income-row:last-child { border-bottom: none; }
   .income-label { color: var(--sub); }
   .income-amt { font-weight: 700; }
+
+  /* Streak / close count */
   .streak-wrap { display: flex; gap: 16px; align-items: center; }
   .streak-count { text-align: center; min-width: 80px; }
   .streak-num { font-size: 36px; font-weight: 800; line-height: 1; }
   .streak-label { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
   .month-dots-row { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
   .mdot { width: 22px; height: 22px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; }
+
+  /* Current month */
   .cur-month-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
   .cur-stat { text-align: center; }
   .cur-num { font-size: 20px; font-weight: 800; }
   .cur-lbl { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+
   @media(max-width:580px){ .grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;} .pace-wrap{flex-direction:column;} .pace-side{border-left:none;border-top:1px solid var(--border);padding:10px 0 0;flex-direction:row;gap:20px;} .cur-month-grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* Settings */
   .gear-btn { background: rgba(255,255,255,0.15); border: none; border-radius: 8px; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; flex-shrink: 0; }
   .gear-btn:hover { background: rgba(255,255,255,0.25); }
   .gear-btn svg { width: 18px; height: 18px; fill: white; }
@@ -159,6 +186,7 @@
   .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
   .save-toast.show { display: block; animation: fadeup .3s ease; }
   @keyframes fadeup { from { opacity:0; transform:translateX(-50%) translateY(8px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+
 </style>
 </head>
 <body>
@@ -167,7 +195,7 @@
   <div class="topbar-inner">
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="avatar">JM</div>
-      <div><div class="tb-name">Jaclyn Mitchell</div><div class="tb-role">Buyer&#39;s &amp; Listing Agent · Krembo Group / Crosstown Realtors</div></div>
+      <div><div class="tb-name">Jaclyn Mitchell</div><div class="tb-role">Buyer's & Listing Agent · Crosstown Realtors</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="tb-right">
@@ -179,9 +207,9 @@
           <line x1="3" y1="5" x2="17" y2="5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
           <line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
           <line x1="3" y1="15" x2="17" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="7" cy="5" r="2" fill="#7c3aed" stroke="white" stroke-width="1.6"/>
-          <circle cx="13" cy="10" r="2" fill="#7c3aed" stroke="white" stroke-width="1.6"/>
-          <circle cx="8" cy="15" r="2" fill="#7c3aed" stroke="white" stroke-width="1.6"/>
+          <circle cx="7" cy="5" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
+          <circle cx="13" cy="10" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
+          <circle cx="8" cy="15" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
         </svg>
       </button>
     </div>
@@ -199,34 +227,18 @@
       <div class="settings-group-title">🎯 Goals</div>
       <div class="settings-field">
         <label class="settings-label" for="s-pac-goal">Annual PAC Goal ($)</label>
-        <input class="settings-input" type="number" id="s-pac-goal" placeholder="50000" step="1000">
-        <div class="settings-hint">Your target primary agent commission for 2026</div>
+        <input class="settings-input" type="number" id="s-pac-goal" placeholder="80000" step="1000">
       </div>
       <div class="settings-field">
         <label class="settings-label" for="s-close-goal">Annual Close Goal (# of deals)</label>
-        <input class="settings-input" type="number" id="s-close-goal" placeholder="12">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-contact-goal">Daily Contact Goal</label>
-        <input class="settings-input" type="number" id="s-contact-goal" placeholder="15">
+        <input class="settings-input" type="number" id="s-close-goal" placeholder="20">
       </div>
     </div>
     <div class="settings-group">
       <div class="settings-group-title">📝 Custom Notes</div>
       <div class="settings-field">
-        <label class="settings-label" for="s-note">Today's personal note (optional)</label>
-        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Call John before noon, listing at 2pm..."></textarea>
-      </div>
-    </div>
-    <div class="settings-group">
-      <div class="settings-group-title">🔔 Reminders</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-reminder1">Custom reminder 1</label>
-        <input class="settings-input" type="text" id="s-reminder1" placeholder="e.g. Submit docs by Friday">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-reminder2">Custom reminder 2</label>
-        <input class="settings-input" type="text" id="s-reminder2" placeholder="e.g. Follow up with client">
+        <label class="settings-label" for="s-note">Today's personal note</label>
+        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Call John before noon..."></textarea>
       </div>
     </div>
   </div>
@@ -239,62 +251,56 @@
 
 <div class="container">
 
+  <div style="font-size:11px;color:var(--sub);text-align:right;margin-bottom:14px;">
+    🔄 Data refreshed <strong>April 28, 2026</strong> · Source: Transaction Tracker
+  </div>
+
   <div class="quick-links">
-    <a class="ql-btn" href="https://app.followupboss.com" target="_blank"><div class="ql-icon" style="background:#fff3e0;">🎯</div>Follow Up Boss</a>
-    <a class="ql-btn" href="https://www.dotloop.com" target="_blank"><div class="ql-icon" style="background:#eaf4fd;">📋</div>Dotloop</a>
-    <a class="ql-btn" href="https://mylistingiq.ai" target="_blank"><div class="ql-icon" style="background:#eafaf1;">🏡</div>MyListingIQ</a>
-    <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank"><div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker</a>
+    <a class="ql-btn" href="https://app.followupboss.com" target="_blank">
+      <div class="ql-icon" style="background:#fff3e0;">🎯</div>Follow Up Boss
+    </a>
+    <a class="ql-btn" href="https://www.dotloop.com" target="_blank">
+      <div class="ql-icon" style="background:#eaf4fd;">📋</div>Dotloop
+    </a>
+    <a class="ql-btn" href="https://mylistingiq.ai" target="_blank">
+      <div class="ql-icon" style="background:#eafaf1;">🏡</div>MyListingIQ
+    </a>
+    <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">
+      <div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker
+    </a>
   </div>
 
   <div style="margin-bottom:18px;">
-    <div class="alert alert-gold">⭐ <span><strong>David Mitchell closes Jun 5</strong> — $690K buy in Lemont, est. <strong>$15,525 PAC</strong>. This deal alone would more than 5× your current YTD. Stay close!</span></div>
-    <div class="alert alert-blue">📋 <span><strong>Robert Crozier</strong> (Sell · Alsip, 3631 W 121st Pl) shows as Closed — PAC not yet recorded in tracker. Follow up with Dan to confirm commission amount.</span></div>
-    <div class="alert alert-green">✅ <span><strong>Building momentum</strong> — 2 closes already this year. Keep adding to your pipeline alongside David Mitchell for a strong Q2/Q3.</span></div>
+    <div class="alert alert-gold">⭐ <span><strong>David Mitchell (Buy)</strong> — 11S315 Saratoga Avenue, Lemont — $690,000 Under Contract, expected close <strong>June 5</strong>. Est. PAC: <strong>$15,525</strong>. Biggest deal of the year!</span></div><div class="alert alert-green">✅ <span><strong>Robert Zmora closed Feb 17</strong> — 32209 N 1500 East Rd, Blackstone ($315,000). PAC: <strong>$4,664</strong>. Robert Crozier also closed May 22 — <strong>$304,000</strong>.</span></div><div class="alert alert-blue">📋 <span>With David Mitchell pipeline, projected end-of-year PAC could reach <strong>$25,732</strong> — 32% of goal. Focus on building new leads for H2.</span></div>
   </div>
 
   <div class="grid-4">
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--accent)">$2,940</div>
+      <div class="stat-num" style="color:var(--accent)">$10,207</div>
       <div class="stat-label">PAC YTD</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--green)">$2,940</div>
-      <div class="stat-label">Total YTD Income</div>
+      <div class="stat-num" style="color:var(--green)">3</div>
+      <div class="stat-label">Closings YTD</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--blue)">2</div>
-      <div class="stat-label">Closes in 2026</div>
-      <div class="stat-sub">Goal: 12</div>
+      <div class="stat-num" style="color:var(--orange)">12.8%</div>
+      <div class="stat-label">Of $80,000 Goal</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)">6%</div>
-      <div class="stat-label">Of $50K Goal</div>
+      <div class="stat-num" style="color:var(--blue)">1</div>
+      <div class="stat-label">Active Pipeline</div>
+      <div class="stat-sub">1 Under Contract</div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-label">💰 Income Breakdown — YTD 2026</div>
-    <div class="card">
-      <div class="income-row">
-        <span class="income-label">Commission (Primary Agent Commission)</span>
-        <span class="income-amt" style="color:var(--accent)">$2,940</span>
-      </div>
-
-      <div class="income-row" style="padding-top:10px;">
-        <span style="font-weight:700;font-size:14px;">Total Income YTD</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green)">$2,940</span>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-label">📈 2026 Production — $50K PAC Goal</div>
+    <div class="section-label">📈 2026 Production — $80,000 PAC Goal</div>
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
-          <div class="prog-row"><span>YTD PAC: <strong>$2,940</strong></span><span id="pct-lbl" style="color:var(--orange)">5.9% of $50K</span></div>
-          <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7c3aedcc)"></div></div>
+          <div class="prog-row"><span>YTD PAC: <strong>$10,207</strong></span><span id="pct-lbl" style="color:var(--orange)">12.8% of $80,000</span></div>
+          <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
           <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
         </div>
@@ -311,7 +317,7 @@
     <div class="card">
       <div class="cur-month-grid">
         <div class="cur-stat">
-          <div class="cur-num" style="color:var(--accent)">1</div>
+          <div class="cur-num" style="color:var(--accent)">0</div>
           <div class="cur-lbl">Closes This Month</div>
         </div>
         <div class="cur-stat">
@@ -323,10 +329,6 @@
           <div class="cur-lbl">Pipeline Due Soon</div>
         </div>
       </div>
-      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
-        <div class="prog-row"><span>Monthly goal: <strong>$4,166</strong></span><span id="mo-pct-lbl" style="color:var(--orange)">—</span></div>
-        <div class="prog-bg"><div class="prog-fill" id="cur-bar" style="width:0%;background:linear-gradient(90deg,var(--orange),var(--gold));"></div></div>
-      </div>
     </div>
   </div>
 
@@ -335,17 +337,14 @@
     <div class="card">
       <div class="streak-wrap">
         <div class="streak-count">
-          <div class="streak-num" style="color:var(--accent)">2</div>
+          <div class="streak-num" style="color:var(--accent)">3</div>
           <div class="streak-label">Closes in 2026</div>
-          <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 12</div>
+          <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 20</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">2 / 12 (16.7%)</span></div>
-          <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7c3aedcc)" id="close-bar"></div></div>
-          <div style="margin-top:10px;">
-            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency — closes per month</div>
-            <div class="month-dots-row" id="streak-dots"></div>
-          </div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">3 / 20 (15.0%)</span></div>
+          <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
+          <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 1 deals pending · Est. +$15,525 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -353,20 +352,21 @@
 
   <div class="section">
     <div class="section-label">🏠 Active Pipeline</div>
-
+    
     <div class="spotlight">
       <div class="spotlight-hdr">
         <div>
-          <div class="spotlight-title">⭐ Closing Soon — Priority Deal</div>
+          <div class="spotlight-title">⭐ High-Value Deal — Watch Closely</div>
           <div style="font-weight:600;font-size:14px;margin-top:2px;">David Mitchell — BUY</div>
-          <div style="font-size:12px;color:var(--sub);margin-top:2px;">11S315 Saratoga Avenue, Lemont IL</div>
+          <div style="font-size:12px;color:var(--sub);margin-top:2px;">11S315 Saratoga Avenue, Lemont</div>
         </div>
-        <span class="badge badge-gold" id="spotlight-badge">⭐ Jun 5</span>
+        <span class="badge badge-gold">⭐ Closing June 5</span>
       </div>
       <div class="spotlight-chips">
-        <div class="chip">Proj. close: <strong>Jun 5</strong></div>
+        <div class="chip">Proj. close: <strong>June 5</strong></div>
         <div class="chip">Price: <strong>$690,000</strong></div>
-        <div class="chip">Est. PAC: <strong>$15,525</strong></div>
+        <div class="chip">GCI: <strong>$17,250</strong></div>
+        <div class="chip">Est. your PAC: <strong>$15,525</strong></div>
         <div class="chip">Source: <strong>SOI/PC</strong></div>
         <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
       </div>
@@ -376,229 +376,127 @@
         <span style="color:var(--sub);">Est. pipeline value if all close:</span>
         <span style="font-weight:800;font-size:16px;color:var(--green);">+$15,525 PAC</span>
       </div>
-      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$18,465 (36.9% of goal)</div>
+      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$25,732</div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-label">✅ Recent Closings</div>
+    <div class="section-label">✅ Recent Closings — YTD 2026</div>
     <div class="card">
+      
       <div class="closed-row">
-        <div class="cl-date">Apr 9</div>
+        <div class="cl-date">May 22</div>
         <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Robert Crozier — 3631 W 121st Pl, Alsip IL (SOI/PC) · PAC pending</div>
-        <div class="cl-pac">—</div>
+        <div class="cl-name">Robert Crozier — 3631 W 121st Place, Alsip (SOI/PC)</div>
+        <div class="cl-pac">$4,286</div>
+      </div>
+      <div class="closed-row">
+        <div class="cl-date">Feb 17</div>
+        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
+        <div class="cl-name">Robert Zmora — 32209 N 1500 East Rd, Blackstone (Referral)</div>
+        <div class="cl-pac">$4,664</div>
       </div>
       <div class="closed-row">
         <div class="cl-date">Mar 30</div>
         <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Jaqueline Hansel — 19546 115th Ave Unit A, Mokena (Zillow Flex)</div>
+        <div class="cl-name">Jaqueline Hansel — 19546 115th Ave Unit A, Mokena (Zillow)</div>
         <div class="cl-pac">$2,940</div>
       </div>
-
-      <div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:12px;color:var(--sub);">2 total closes in 2026</span>
-        <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View all in tracker →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-label">✅ Today's Task Blocks</div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="block-hdr"><span style="font-size:18px;">☀️</span><div><div class="block-title">Morning Block</div><div class="block-time">9:00 – 11:00 AM · Prospecting</div></div></div>
-        <div class="task-item" data-id="m1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Confirm David Mitchell (Jun 5, Lemont) — verify all contract docs in order</div><span class="task-tag tag-gold">Jun 5 Close</span></div>
-        <div class="task-item" data-id="m2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Follow up with Dan on Robert Crozier PAC — needs to be entered in tracker</div><span class="task-tag tag-urgent">Pending PAC</span></div>
-        <div class="task-item" data-id="m3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Check & respond to new Zillow Flex leads (5-min response rule)</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="m4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Make 3 SOI check-in calls — past clients, referral ask</div><span class="task-tag tag-soi">SOI</span></div>
-        <div class="task-item" data-id="m5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Identify 2 new prospects in FUB to nurture this week</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="counter-row">
-          <div><div class="counter-label">Contacts today <span>Goal: 15</span></div><div style="font-size:11px;color:var(--sub);margin-top:2px;" id="contact-sub">0 of 15</div></div>
-          <div class="counter-controls">
-            <button class="counter-btn" onclick="adjustContacts(-1)">−</button>
-            <div class="counter-val" id="contact-count">0</div>
-            <button class="counter-btn" onclick="adjustContacts(1)">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="block-hdr"><span style="font-size:18px;">🌅</span><div><div class="block-title">Afternoon Block</div><div class="block-time">2:00 – 4:30 PM · Follow-ups</div></div></div>
-        <div class="task-item" data-id="a1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Follow up active buyers who toured homes this week</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="a2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Schedule weekend showings — confirm with clients</div><span class="task-tag tag-admin">Admin</span></div>
-        <div class="task-item" data-id="a3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Send market update to 2 unconverted leads in FUB</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="a4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Reach out to 2 SOI contacts not spoken to in 30+ days</div><span class="task-tag tag-soi">SOI</span></div>
-        <div class="task-item" data-id="a5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Update Dotloop & log any changes in transaction tracker</div><span class="task-tag tag-admin">Admin</span></div>
-        <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
-          <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">🌙 End of Day</div>
-          <div class="task-item" data-id="e1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Log all contacts in CRM</div><span class="task-tag tag-admin">Admin</span></div>
-          <div class="task-item" data-id="e2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Set tomorrow's top 3 priorities</div><span class="task-tag tag-admin">Admin</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-label">📊 Today's Progress</div>
-    <div class="card" style="display:flex;align-items:center;gap:16px;">
-      <div style="flex:1;">
-        <div class="prog-row"><span>Tasks done: <strong id="tasks-count">0 / 12</strong></span><span id="tasks-pct">0%</span></div>
-        <div class="prog-bg"><div class="prog-fill" id="tasks-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),var(--green))"></div></div>
-      </div>
-      <div style="font-size:26px;" id="tasks-emoji">👊</div>
     </div>
   </div>
 
 </div>
 
 <script>
-const now = new Date();
-const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const MON_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-document.getElementById('js-date').textContent = `${DAY_NAMES[now.getDay()]}, ${MON_NAMES[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
-function tick(){ document.getElementById('js-time').textContent = new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true}); }
-tick(); setInterval(tick, 30000);
+const PAC_YTD = 10207;
+const PAC_GOAL = 80000;
+const NUM_CLOSES = 3;
+const CLOSE_GOAL = 20;
 
-const GOAL = 50000;
-const CLOSE_GOAL = 12;
-const monthlyPAC = {3:2940.0};
-const ytd = 2940.0;
-const pct = ytd / GOAL;
-const start = new Date(now.getFullYear(),0,0);
-const dayOfYear = Math.floor((now-start)/86400000);
-const paceTarget = (dayOfYear/365)*GOAL;
-const gap = ytd - paceTarget;
-const annualized = (ytd / (now.getMonth()+1)) * 12;
-const monthsLeft = 12 - now.getMonth() - 1;
-const mGoal = GOAL/12;
-
-document.getElementById('pct-lbl').textContent = (pct*100).toFixed(1)+'% of $50K';
-document.getElementById('annualized').textContent = '$'+Math.round(annualized).toLocaleString();
-const gapEl = document.getElementById('pace-gap');
-gapEl.textContent = (gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
-gapEl.style.color = gap<0?'var(--red)':'var(--green)';
-document.getElementById('mo-needed').textContent = monthsLeft>0 ? '$'+Math.round((GOAL-ytd)/monthsLeft).toLocaleString() : '—';
-document.getElementById('mo-left').textContent = monthsLeft;
-
-const curPAC = 0;
-const moPct = Math.min((curPAC/mGoal)*100, 100);
-document.getElementById('mo-pct-lbl').textContent = moPct.toFixed(0)+'% of monthly goal';
-
-setTimeout(()=>{
-  document.getElementById('gci-bar').style.width = Math.min(pct*100,100)+'%';
-  document.getElementById('cur-bar').style.width = moPct+'%';
-  document.getElementById('close-bar').style.width = Math.min((2/CLOSE_GOAL)*100,100)+'%';
-},100);
-
-const grid = document.getElementById('month-grid');
-['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
-  const inc = monthlyPAC[i+1]||0;
-  const isCur = i===now.getMonth();
-  const color = inc===0?'#e0e0e0':inc>=mGoal?'#27ae60':inc>=mGoal*.6?'#e67e22':'#c0392b';
-  const dot = document.createElement('div');
-  dot.className='month-dot';
-  dot.style.background = isCur?'#7c3aed':color;
-  dot.style.opacity = i>now.getMonth()?'0.3':'1';
-  dot.style.outline = isCur?'2px solid #7c3aed88':'none';
-  dot.innerHTML = `<span>${m}</span><span class="tip">${m}: ${inc>0?'$'+inc.toLocaleString('en-US',{maximumFractionDigits:0}):'No data'}</span>`;
-  grid.appendChild(dot);
-});
-
-const closesPerMonth = {3:1};
-const streakContainer = document.getElementById('streak-dots');
-['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
-  const c = closesPerMonth[i+1]||0;
-  const isFuture = i > now.getMonth();
-  const isCur = i === now.getMonth();
-  const dot = document.createElement('div');
-  dot.className='mdot';
-  dot.title = `${m}: ${c} close${c!==1?'s':''}`;
-  if(isFuture) { dot.style.background='#e0e0e0'; dot.style.color='#aaa'; dot.textContent=m.charAt(0); }
-  else if(c > 0) { dot.style.background=isCur?'#7c3aed':'#27ae60'; dot.style.color='white'; dot.textContent=c; }
-  else { dot.style.background='#fef0ee'; dot.style.color='#c0392b'; dot.textContent='0'; }
-  streakContainer.appendChild(dot);
-});
-
-const TODAY_KEY = 'jm_settings_tasks_'+now.toISOString().split('T')[0];
-let state = JSON.parse(localStorage.getItem(TODAY_KEY)||'{}');
-function saveState(){ localStorage.setItem(TODAY_KEY, JSON.stringify(state)); }
-function toggleTask(el){ const id=el.dataset.id; state[id]=!state[id]; saveState(); el.classList.toggle('done',state[id]); updateProgress(); }
-document.querySelectorAll('.task-item').forEach(el=>{ if(state[el.dataset.id]) el.classList.add('done'); });
-function updateProgress(){
-  const all=document.querySelectorAll('.task-item'), done=document.querySelectorAll('.task-item.done');
-  const p=all.length?Math.round(done.length/all.length*100):0;
-  document.getElementById('tasks-count').textContent=`${done.length} / ${all.length}`;
-  document.getElementById('tasks-pct').textContent=p+'%';
-  document.getElementById('tasks-bar').style.width=p+'%';
-  const e=['👊','💪','🔥','🔥','⚡','🏆','🎯','💎','💎','🌟','🎉','🎉','🏅'];
-  document.getElementById('tasks-emoji').textContent=e[Math.min(Math.floor(p/8),e.length-1)];
+// Date/time
+function updateClock() {
+  const now = new Date();
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('js-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate();
+  document.getElementById('js-time').textContent = now.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});
 }
-updateProgress();
+updateClock();
+setInterval(updateClock, 60000);
 
-const SETTINGS_KEY = 'jm_settings';
-const DEFAULTS = { pacGoal: 50000, closeGoal: 12, contactGoal: 15, note: '', reminder1: '', reminder2: '' };
-function loadSettings(){ return Object.assign({}, DEFAULTS, JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')); }
-function applySettings(s){
-  document.querySelectorAll('.counter-label span').forEach(el => el.textContent = 'Goal: '+s.contactGoal);
-  renderContacts(s.contactGoal);
-  let noteEl = document.getElementById('personal-note');
-  if(s.note && s.note.trim()){
-    if(!noteEl){ noteEl = document.createElement('div'); noteEl.id='personal-note'; noteEl.className='alert alert-blue'; noteEl.style.marginBottom='18px'; document.querySelector('.container').insertBefore(noteEl, document.querySelector('.container').firstChild); }
-    noteEl.innerHTML = '📝 <span><strong>Your note:</strong> '+s.note+'</span>';
-  } else if(noteEl) { noteEl.remove(); }
-  ['reminder1','reminder2'].forEach((r,i) => {
-    let el = document.getElementById('custom-reminder-'+(i+1));
-    if(s[r] && s[r].trim()){
-      if(!el){ el=document.createElement('div'); el.id='custom-reminder-'+(i+1); el.className='alert alert-orange'; el.style.marginBottom='8px'; document.querySelector('.container > div').appendChild(el); }
-      el.innerHTML = '🔔 <span>'+s[r]+'</span>';
-    } else if(el) { el.remove(); }
+// Progress bars
+window.addEventListener('load', () => {
+  const pct = Math.min(100, PAC_YTD / PAC_GOAL * 100);
+  document.getElementById('gci-bar').style.width = pct + '%';
+  const closePct = Math.min(100, NUM_CLOSES / CLOSE_GOAL * 100);
+  document.getElementById('close-bar').style.width = closePct + '%';
+
+  // Pace calcs
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 1);
+  const endOfYear = new Date(now.getFullYear(), 11, 31);
+  const elapsed = (now - startOfYear) / (endOfYear - startOfYear);
+  const annualized = elapsed > 0 ? Math.round(PAC_YTD / elapsed) : 0;
+  const expected = PAC_GOAL * elapsed;
+  const gap = PAC_YTD - expected;
+  const monthsLeft = Math.max(0, 12 - (now.getMonth() + now.getDate()/31));
+  const needed = monthsLeft > 0 ? Math.round((PAC_GOAL - PAC_YTD) / monthsLeft) : 0;
+
+  document.getElementById('annualized').textContent = '$' + annualized.toLocaleString();
+  document.getElementById('pace-gap').textContent = (gap >= 0 ? '+' : '') + '$' + Math.abs(Math.round(gap)).toLocaleString();
+  document.getElementById('pace-gap').style.color = gap >= 0 ? 'var(--green)' : 'var(--red)';
+  document.getElementById('mo-needed').textContent = '$' + needed.toLocaleString();
+  document.getElementById('mo-left').textContent = Math.ceil(monthsLeft);
+
+  // Month grid
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const monthlyColors = ['#c3c4ff','#a5b4fc','#818cf8','#6366f1','#4f46e5','#4338ca','#3730a3','#312e81','#e5e7eb','#e5e7eb','#e5e7eb','#e5e7eb'];
+  const grid = document.getElementById('month-grid');
+  months.forEach((m,i) => {
+    const dot = document.createElement('div');
+    dot.className = 'month-dot';
+    dot.style.background = monthlyColors[i];
+    dot.innerHTML = '<span>' + m.slice(0,1) + '</span>';
+    grid.appendChild(dot);
   });
-}
-function openSettings(){
-  const s = loadSettings();
-  document.getElementById('s-pac-goal').value = s.pacGoal;
-  document.getElementById('s-close-goal').value = s.closeGoal;
-  document.getElementById('s-contact-goal').value = s.contactGoal;
-  document.getElementById('s-note').value = s.note;
-  document.getElementById('s-reminder1').value = s.reminder1;
-  document.getElementById('s-reminder2').value = s.reminder2;
+});
+
+// Settings
+const STORAGE_KEY = 'dashboard_JM_settings';
+function openSettings() {
   document.getElementById('settings-overlay').classList.add('open');
   document.getElementById('settings-drawer').classList.add('open');
+  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+  if(saved.pac_goal) document.getElementById('s-pac-goal').value = saved.pac_goal;
+  if(saved.close_goal) document.getElementById('s-close-goal').value = saved.close_goal;
+  if(saved.note) document.getElementById('s-note').value = saved.note;
 }
-function closeSettings(){
+function closeSettings() {
   document.getElementById('settings-overlay').classList.remove('open');
   document.getElementById('settings-drawer').classList.remove('open');
 }
-function saveSettings(){
-  const s = { pacGoal: parseInt(document.getElementById('s-pac-goal').value)||50000, closeGoal: parseInt(document.getElementById('s-close-goal').value)||12, contactGoal: parseInt(document.getElementById('s-contact-goal').value)||15, note: document.getElementById('s-note').value.trim(), reminder1: document.getElementById('s-reminder1').value.trim(), reminder2: document.getElementById('s-reminder2').value.trim() };
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
-  applySettings(s);
+function saveSettings() {
+  const settings = {
+    pac_goal: document.getElementById('s-pac-goal').value,
+    close_goal: document.getElementById('s-close-goal').value,
+    note: document.getElementById('s-note').value
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
   closeSettings();
   const toast = document.getElementById('save-toast');
   toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'), 2500);
+  setTimeout(() => toast.classList.remove('show'), 2500);
 }
-function resetSettings(){
-  localStorage.removeItem(SETTINGS_KEY);
-  document.getElementById('s-pac-goal').value = DEFAULTS.pacGoal;
-  document.getElementById('s-close-goal').value = DEFAULTS.closeGoal;
-  document.getElementById('s-contact-goal').value = DEFAULTS.contactGoal;
+function resetSettings() {
+  localStorage.removeItem(STORAGE_KEY);
+  document.getElementById('s-pac-goal').value = '';
+  document.getElementById('s-close-goal').value = '';
   document.getElementById('s-note').value = '';
-  document.getElementById('s-reminder1').value = '';
-  document.getElementById('s-reminder2').value = '';
 }
-applySettings(loadSettings());
-
-const CK = 'jm_settings_contacts_'+now.toISOString().split('T')[0];
-let contacts = parseInt(localStorage.getItem(CK)||'0');
-function renderContacts(goalOverride){
-  const goal = goalOverride || loadSettings().contactGoal;
-  document.getElementById('contact-count').textContent=contacts;
-  document.getElementById('contact-count').style.color=contacts>=goal?'var(--green)':contacts>=(goal/2)?'var(--orange)':'var(--text)';
-  document.getElementById('contact-sub').textContent=contacts>=goal?'✅ Goal hit!':contacts+' of '+goal+' today';
-}
-function adjustContacts(d){ contacts=Math.max(0,contacts+d); localStorage.setItem(CK,contacts); renderContacts(); }
-renderContacts();
+// Task checkboxes
+document.querySelectorAll('.task-item').forEach(item => {
+  item.addEventListener('click', () => item.classList.toggle('done'));
+});
 </script>
 </body>
 </html>
