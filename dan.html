@@ -245,8 +245,8 @@
       <div class="stat-sub">15 team closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)">33%</div>
-      <div class="stat-label">Of $150K Goal</div>
+      <div class="stat-num" style="color:var(--orange)" id="pct-stat">33%</div>
+      <div class="stat-label" id="pct-stat-label">Of $150K Goal</div>
       <div class="stat-sub">$18,186 pipeline</div>
     </div>
   </div>
@@ -320,7 +320,7 @@
           <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 20</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">6 / 20 (30%)</span></div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;" id="close-label">6 / 20 (30%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,#1e3a5f,#2563eb)" id="close-bar"></div></div>
           <div style="margin-top:10px;">
             <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
@@ -534,52 +534,132 @@ updateProgress();
 
 const SETTINGS_KEY='dk_settings';
 const DEFAULTS={pacGoal:150000,closeGoal:20,contactGoal:10,note:'',reminder1:'',reminder2:''};
+const YTD=49381.27, OWN_CLOSES=6;
+
 function loadSettings(){return Object.assign({},DEFAULTS,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'));}
+
 function applySettings(s){
+  const goal=s.pacGoal||150000;
+  const cgoal=s.closeGoal||20;
+  const pct=YTD/goal;
+  const mGoal=goal/12;
+  const start=new Date(now.getFullYear(),0,0);
+  const dayOfYear=Math.floor((now-start)/86400000);
+  const paceTarget=(dayOfYear/365)*goal;
+  const gap=YTD-paceTarget;
+  const annualized=(YTD/(now.getMonth()+1))*12;
+  const monthsLeft=12-now.getMonth()-1;
+
+  // Progress bar + pace labels
+  document.getElementById('gci-bar').style.width=Math.min(pct*100,100)+'%';
+  document.getElementById('pct-lbl').textContent=(pct*100).toFixed(1)+'% of $'+Math.round(goal/1000)+'K';
+  document.getElementById('annualized').textContent='$'+Math.round(annualized).toLocaleString();
+  const gapEl=document.getElementById('pace-gap');
+  gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
+  gapEl.style.color=gap<0?'var(--red)':'var(--green)';
+  document.getElementById('mo-needed').textContent=monthsLeft>0?'$'+Math.round((goal-YTD)/monthsLeft).toLocaleString():'—';
+  document.getElementById('mo-left').textContent=monthsLeft;
+
+  // % stat card
+  const pctCard=document.getElementById('pct-stat');
+  if(pctCard){pctCard.textContent=Math.round(pct*100)+'%';pctCard.nextElementSibling&&(pctCard.nextElementSibling.textContent='Of $'+Math.round(goal/1000)+'K Goal');}
+
+  // Close goal bar
+  document.getElementById('close-bar').style.width=Math.min((OWN_CLOSES/cgoal)*100,100)+'%';
+  const closeLabel=document.getElementById('close-label');
+  if(closeLabel) closeLabel.textContent=OWN_CLOSES+' / '+cgoal+' ('+Math.round(OWN_CLOSES/cgoal*100)+'%)';
+
+  // Month dot colors (re-tint based on new goal)
+  document.querySelectorAll('#month-grid .month-dot').forEach((dot,i)=>{
+    const inc=monthlyPAC[i+1]||0;
+    const isCur=i===now.getMonth();
+    if(!isCur){
+      dot.style.background=inc===0?'#e0e0e0':inc>=mGoal?'#27ae60':inc>=mGoal*.5?'#e67e22':'#c0392b';
+    }
+  });
+
+  // Contact goal
   document.querySelectorAll('.counter-label span').forEach(el=>el.textContent='Goal: '+s.contactGoal);
   renderContacts(s.contactGoal);
+
+  // Note card
   let noteEl=document.getElementById('personal-note');
   if(s.note&&s.note.trim()){
-    if(!noteEl){noteEl=document.createElement('div');noteEl.id='personal-note';noteEl.className='alert alert-blue';noteEl.style.marginBottom='18px';document.querySelector('.container').insertBefore(noteEl,document.querySelector('.container').firstChild);}
+    if(!noteEl){noteEl=document.createElement('div');noteEl.id='personal-note';noteEl.className='alert alert-blue';noteEl.style.marginBottom='8px';
+      const alertsDiv=document.querySelector('.container>div');alertsDiv.insertBefore(noteEl,alertsDiv.firstChild);}
     noteEl.innerHTML='📝 <span><strong>Your note:</strong> '+s.note+'</span>';
   }else if(noteEl){noteEl.remove();}
+
+  // Reminders
+  ['reminder1','reminder2'].forEach((r,i)=>{
+    const id='custom-reminder-'+(i+1);
+    let el=document.getElementById(id);
+    if(s[r]&&s[r].trim()){
+      if(!el){el=document.createElement('div');el.id=id;el.className='alert alert-orange';el.style.marginBottom='8px';
+        const alertsDiv=document.querySelector('.container>div');alertsDiv.appendChild(el);}
+      el.innerHTML='🔔 <span>'+s[r]+'</span>';
+    }else if(el){el.remove();}
+  });
 }
+
 function openSettings(){
   const s=loadSettings();
   document.getElementById('s-pac-goal').value=s.pacGoal;
   document.getElementById('s-close-goal').value=s.closeGoal;
   document.getElementById('s-contact-goal').value=s.contactGoal;
-  document.getElementById('s-note').value=s.note;
-  document.getElementById('s-reminder1').value=s.reminder1;
-  document.getElementById('s-reminder2').value=s.reminder2;
+  document.getElementById('s-note').value=s.note||'';
+  document.getElementById('s-reminder1').value=s.reminder1||'';
+  document.getElementById('s-reminder2').value=s.reminder2||'';
   document.getElementById('settings-overlay').classList.add('open');
   document.getElementById('settings-drawer').classList.add('open');
 }
+
 function closeSettings(){
   document.getElementById('settings-overlay').classList.remove('open');
   document.getElementById('settings-drawer').classList.remove('open');
 }
+
 function saveSettings(){
-  const s={pacGoal:parseInt(document.getElementById('s-pac-goal').value)||150000,closeGoal:parseInt(document.getElementById('s-close-goal').value)||20,contactGoal:parseInt(document.getElementById('s-contact-goal').value)||10,note:document.getElementById('s-note').value.trim(),reminder1:document.getElementById('s-reminder1').value.trim(),reminder2:document.getElementById('s-reminder2').value.trim()};
-  localStorage.setItem(SETTINGS_KEY,JSON.stringify(s));applySettings(s);closeSettings();
-  const toast=document.getElementById('save-toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500);
+  const s={
+    pacGoal: parseInt(document.getElementById('s-pac-goal').value)||150000,
+    closeGoal: parseInt(document.getElementById('s-close-goal').value)||20,
+    contactGoal: parseInt(document.getElementById('s-contact-goal').value)||10,
+    note: document.getElementById('s-note').value.trim(),
+    reminder1: document.getElementById('s-reminder1').value.trim(),
+    reminder2: document.getElementById('s-reminder2').value.trim()
+  };
+  localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+  closeSettings();
+  applySettings(s);
+  // Show toast (force reflow so animation fires even if re-saving)
+  const toast=document.getElementById('save-toast');
+  toast.classList.remove('show');
+  void toast.offsetWidth;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 2500);
 }
+
 function resetSettings(){
   localStorage.removeItem(SETTINGS_KEY);
-  document.getElementById('s-pac-goal').value=DEFAULTS.pacGoal;document.getElementById('s-close-goal').value=DEFAULTS.closeGoal;
-  document.getElementById('s-contact-goal').value=DEFAULTS.contactGoal;document.getElementById('s-note').value='';
+  document.getElementById('s-pac-goal').value=DEFAULTS.pacGoal;
+  document.getElementById('s-close-goal').value=DEFAULTS.closeGoal;
+  document.getElementById('s-contact-goal').value=DEFAULTS.contactGoal;
+  document.getElementById('s-note').value='';
+  document.getElementById('s-reminder1').value='';
+  document.getElementById('s-reminder2').value='';
 }
-applySettings(loadSettings());
 
 const CK='dk_contacts_'+now.toISOString().split('T')[0];
 let contacts=parseInt(localStorage.getItem(CK)||'0');
 function renderContacts(goalOverride){
-  const goal=goalOverride||loadSettings().contactGoal;
+  const goal=goalOverride||(loadSettings().contactGoal)||10;
   document.getElementById('contact-count').textContent=contacts;
   document.getElementById('contact-count').style.color=contacts>=goal?'var(--green)':contacts>=(goal/2)?'var(--orange)':'var(--text)';
   document.getElementById('contact-sub').textContent=contacts>=goal?'✅ Goal hit!':contacts+' of '+goal+' today';
 }
 function adjustContacts(d){contacts=Math.max(0,contacts+d);localStorage.setItem(CK,contacts);renderContacts();}
+
+applySettings(loadSettings());
 renderContacts();
 </script>
 </body>
