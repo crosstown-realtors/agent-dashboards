@@ -6,11 +6,10 @@
 <title>Dan Krembuszewski — Dashboard</title>
 <style>
   :root {
-    color-scheme: light;
     --bg: #f2f2f7; --card: #fff; --text: #1c1c1e; --sub: #6c6c70; --border: #e5e5ea;
     --red: #c0392b; --red-bg: #fef0ee; --orange: #e67e22; --orange-bg: #fef8ee;
     --green: #27ae60; --green-bg: #eafaf1; --blue: #2980b9; --blue-bg: #eaf4fd;
-    --accent: #1e3a5f; --accent-bg: #eff6ff;
+    --accent: #1e3a5f; --accent2: #2563eb; --accent-bg: #eff6ff;
     --gold: #b7860b; --gold-bg: #fefbe8; --teal: #0e9488; --teal-bg: #f0fdf9;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,11 +38,11 @@
   .prog-bg { height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
   .prog-fill { height: 100%; border-radius: 4px; transition: width .7s ease; }
   .badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-  .badge-blue  { background: var(--blue-bg); color: var(--blue); }
+  .badge-blue   { background: var(--blue-bg); color: var(--blue); }
   .badge-orange { background: var(--orange-bg); color: var(--orange); }
-  .badge-green { background: var(--green-bg); color: var(--green); }
-  .badge-gold  { background: var(--gold-bg); color: var(--gold); }
-  .badge-teal  { background: var(--teal-bg); color: var(--teal); }
+  .badge-green  { background: var(--green-bg); color: var(--green); }
+  .badge-gold   { background: var(--gold-bg); color: var(--gold); }
+  .badge-teal   { background: var(--teal-bg); color: var(--teal); }
   .alert { border-radius: 0 10px 10px 0; padding: 10px 14px; font-size: 12.5px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
   .alert-orange { background: var(--orange-bg); color: #7a4a00; border-left: 3px solid var(--orange); }
   .alert-gold   { background: var(--gold-bg);   color: var(--gold); border-left: 3px solid var(--gold); }
@@ -61,8 +60,15 @@
   .closed-row { display: flex; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
   .closed-row:last-child { border-bottom: none; }
   .cl-date { font-size: 11px; color: var(--sub); width: 55px; flex-shrink: 0; }
+  .cl-agent { font-size: 10px; color: var(--sub); width: 28px; flex-shrink: 0; text-align:center; padding: 2px 4px; background: var(--bg); border-radius: 4px; }
   .cl-name { flex: 1; color: var(--sub); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cl-pac  { font-weight: 700; color: var(--green); white-space: nowrap; min-width: 75px; text-align: right; }
+  .income-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .income-row:last-child { border-bottom: none; }
+  .income-label { color: var(--sub); }
+  .income-amt { font-weight: 700; }
+  .by-agent-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .by-agent-row:last-child { border-bottom: none; }
   .block-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
   .block-title { font-weight: 700; font-size: 15px; }
   .block-time { font-size: 12px; color: var(--sub); }
@@ -79,7 +85,6 @@
   .tag-zillow { background: #fff3e0; color: #e67e22; }
   .tag-soi    { background: var(--green-bg); color: var(--green); }
   .tag-admin  { background: var(--bg); color: var(--sub); }
-  .tag-urgent { background: var(--red-bg); color: var(--red); }
   .tag-gold   { background: var(--gold-bg); color: var(--gold); }
   .counter-row { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
   .counter-label { font-size: 13px; font-weight: 600; }
@@ -97,10 +102,6 @@
   .pace-side { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 14px; border-left: 1px solid var(--border); text-align: center; min-width: 86px; gap: 12px; }
   .pace-side .num { font-size: 20px; font-weight: 800; }
   .pace-side .lbl { font-size: 10px; color: var(--sub); font-weight: 600; }
-  .income-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-  .income-row:last-child { border-bottom: none; }
-  .income-label { color: var(--sub); }
-  .income-amt { font-weight: 700; }
   .streak-wrap { display: flex; gap: 16px; align-items: center; }
   .streak-num { font-size: 36px; font-weight: 800; line-height: 1; }
   .streak-label { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
@@ -124,7 +125,6 @@
   .settings-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--sub); margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
   .settings-field { margin-bottom: 16px; }
   .settings-label { font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block; }
-  .settings-hint { font-size: 11px; color: var(--sub); margin-top: 3px; }
   .settings-input { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border .15s; }
   .settings-input:focus { border-color: var(--accent); background: white; }
   .settings-footer { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
@@ -176,10 +176,9 @@
       <div class="settings-field">
         <label class="settings-label" for="s-pac-goal">Annual Income Goal ($)</label>
         <input class="settings-input" type="number" id="s-pac-goal" placeholder="150000" step="5000">
-        <div class="settings-hint">Your combined Krembo + override target for 2026</div>
       </div>
       <div class="settings-field">
-        <label class="settings-label" for="s-close-goal">Annual Close Goal (# deals)</label>
+        <label class="settings-label" for="s-close-goal">Annual Close Goal (# own deals)</label>
         <input class="settings-input" type="number" id="s-close-goal" placeholder="20">
       </div>
       <div class="settings-field">
@@ -191,7 +190,7 @@
       <div class="settings-group-title">📝 Custom Notes</div>
       <div class="settings-field">
         <label class="settings-label" for="s-note">Today's note (optional)</label>
-        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Team meeting at 10am, call re: Andrew Lenard..."></textarea>
+        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Team meeting at 10am..."></textarea>
       </div>
     </div>
     <div class="settings-group">
@@ -224,29 +223,31 @@
   </div>
 
   <div style="margin-bottom:18px;">
-    <div class="alert alert-green">✅ <span><strong>Strong April</strong> — 3 closes (Calderon, M. Corbin, Corbin/Baya) — <strong>$17,594 Krembo</strong> in one month. Best month of 2026.</span></div>
-    <div class="alert alert-gold">⭐ <span><strong>Andrew Lenard closes May 25</strong> — $496K buy in Orland Park. Your cut: <strong>$5,667</strong>. Confirm timeline with buyer.</span></div>
-    <div class="alert alert-blue">📋 <span>No DK override income recorded yet in the tracker. If any should be showing, check the Override To column with Dan to confirm entries.</span></div>
+    <div class="alert alert-green">✅ <span><strong>$49,381 YTD</strong> — 6 own closes + Krembo override from 15 team closes. Strong April: $20,953 in one month.</span></div>
+    <div class="alert alert-gold">⭐ <span><strong>Andrew Lenard closes May 25</strong> — $496K buy, Orland Park. Your Krembo cut: <strong>$5,667</strong>. Confirm timeline.</span></div>
+    <div class="alert alert-blue">📋 <span><strong>$18,186 in pipeline Krembo</strong> across all active team contracts (Lenard, Fairchild, Lavecchia, Galvan, Buck, Alimirakh, Dryjanski).</span></div>
   </div>
 
   <div class="grid-4">
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--accent)">$33,790</div>
-      <div class="stat-label">Krembo YTD</div>
+      <div class="stat-num" style="color:var(--accent)">$49,381</div>
+      <div class="stat-label">Total YTD Income</div>
+      <div class="stat-sub">own + team Krembo</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color:var(--blue)">$33,790</div>
+      <div class="stat-label">Own Agent Deals</div>
       <div class="stat-sub">6 own closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--teal)">$0</div>
-      <div class="stat-label">Override DK YTD</div>
-      <div class="stat-sub">none recorded yet</div>
+      <div class="stat-num" style="color:var(--teal)">$15,591</div>
+      <div class="stat-label">Team Override</div>
+      <div class="stat-sub">15 team closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--green)">$33,790</div>
-      <div class="stat-label">Total YTD Income</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)">23%</div>
+      <div class="stat-num" style="color:var(--orange)">33%</div>
       <div class="stat-label">Of $150K Goal</div>
+      <div class="stat-sub">$18,186 pipeline</div>
     </div>
   </div>
 
@@ -254,19 +255,24 @@
     <div class="section-label">💰 Income Breakdown — YTD 2026</div>
     <div class="card">
       <div class="income-row">
-        <span class="income-label">Krembo commission (own deals)</span>
-        <span class="income-amt" style="color:var(--accent)">$33,790.30</span>
+        <span class="income-label">Own agent deals (Krembo — 6 closes)</span>
+        <span class="income-amt" style="color:var(--blue)">$33,790.30</span>
       </div>
       <div class="income-row">
-        <span class="income-label">Override income (Override To = DK)</span>
-        <span class="income-amt" style="color:var(--teal)">$0.00</span>
+        <span class="income-label">Team override / broker Krembo (15 team closes)</span>
+        <span class="income-amt" style="color:var(--teal)">$15,590.97</span>
       </div>
       <div class="income-row" style="padding-top:10px;">
         <span style="font-weight:700;font-size:14px;">Total Income YTD</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green)">$33,790.30</span>
+        <span style="font-weight:800;font-size:16px;color:var(--green)">$49,381.27</span>
       </div>
-      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--sub);">
-        Pending (Andrew Lenard pipeline): <strong style="color:var(--gold)">+$5,667 Krembo</strong> when May 25 close records
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
+        <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Override by agent</div>
+        <div class="by-agent-row"><span style="color:var(--sub);">Michelle Madden (10 closes)</span><span style="font-weight:700;">$5,243</span></div>
+        <div class="by-agent-row"><span style="color:var(--sub);">Mike Kelly (2 closes with Krembo)</span><span style="font-weight:700;">$3,054</span></div>
+        <div class="by-agent-row"><span style="color:var(--sub);">Jaclyn Mitchell (2 closes with Krembo)</span><span style="font-weight:700;">$2,839</span></div>
+        <div class="by-agent-row"><span style="color:var(--sub);">Mollie Kelly (2 closes with Krembo)</span><span style="font-weight:700;">$2,262</span></div>
+        <div class="by-agent-row"><span style="color:var(--sub);">Lauren Litoborski (3 closes with Krembo)</span><span style="font-weight:700;">$2,193</span></div>
       </div>
     </div>
   </div>
@@ -276,9 +282,9 @@
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
-          <div class="prog-row"><span>YTD: <strong>$33,790</strong></span><span id="pct-lbl" style="color:var(--orange)">22.5% of $150K</span></div>
+          <div class="prog-row"><span>YTD: <strong>$49,381</strong></span><span id="pct-lbl" style="color:var(--green)">32.9% of $150K</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,#1e3a5f,#2563eb)"></div></div>
-          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace: <strong id="pace-gap">—</strong></div>
+          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; vs. pace: <strong id="pace-gap">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
         </div>
         <div class="pace-side">
@@ -290,34 +296,34 @@
   </div>
 
   <div class="section">
-    <div class="section-label">📅 April 2026 — Current Month</div>
+    <div class="section-label">📅 April 2026 — Best Month Yet</div>
     <div class="card">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-        <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--accent);">3</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Closes</div></div>
-        <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--green);">$17,594</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Krembo Earned</div></div>
-        <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--gold);">1</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Pipeline Due Soon</div></div>
+        <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--accent);">$20,953</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Total Krembo</div></div>
+        <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--blue);">3</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Own Closes</div></div>
+        <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--teal);">4</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Team Closes</div></div>
       </div>
       <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
-        <div class="prog-row"><span>Monthly goal: <strong>$12,500</strong></span><span style="color:var(--green)">141% — exceeded!</span></div>
+        <div class="prog-row"><span>vs. monthly avg goal <strong>$12,500</strong></span><span style="color:var(--green)">168% — best month of 2026</span></div>
         <div class="prog-bg"><div class="prog-fill" style="width:100%;background:linear-gradient(90deg,var(--green),#52c77e);"></div></div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-label">🔥 Annual Progress — Close Count</div>
+    <div class="section-label">🔥 Own Close Count — 2026</div>
     <div class="card">
       <div class="streak-wrap">
         <div style="text-align:center;min-width:80px;">
-          <div class="streak-num" style="color:var(--accent)">5</div>
-          <div class="streak-label">Closes 2026</div>
+          <div class="streak-num" style="color:var(--accent)">6</div>
+          <div class="streak-label">Own Closes</div>
           <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 20</div>
         </div>
         <div style="flex:1;">
           <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">6 / 20 (30%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,#1e3a5f,#2563eb)" id="close-bar"></div></div>
           <div style="margin-top:10px;">
-            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency</div>
+            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
             <div class="month-dots-row" id="streak-dots"></div>
           </div>
         </div>
@@ -326,74 +332,82 @@
   </div>
 
   <div class="section">
-    <div class="section-label">🏠 Active Pipeline</div>
+    <div class="section-label">🏠 Active Pipeline — All Krembo</div>
     <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;">
       <div class="deal-row">
         <div class="deal-left">
-          <div class="deal-title">Andrew Lenard — BUY</div>
-          <div class="deal-sub">7741 Sycamore Dr, Orland Park IL</div>
+          <div class="deal-title">Andrew Lenard (DK) — BUY · May 25</div>
+          <div class="deal-sub">7741 Sycamore Dr, Orland Park · $496K · Zillow Flex</div>
         </div>
-        <span class="badge badge-gold">📅 May 25</span>
+        <span class="badge badge-gold">$5,667 Krembo</span>
       </div>
-      <div class="deal-chips">
-        <div class="chip">Proj. close: <strong>May 25</strong></div>
-        <div class="chip">Price: <strong>$496,000</strong></div>
-        <div class="chip">Your Krembo: <strong>$5,667</strong></div>
-        <div class="chip">Source: <strong>Zillow Flex</strong></div>
-        <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
+    </div>
+    <div class="card">
+      <div class="deal-row">
+        <div class="deal-left">
+          <div class="deal-title">Michelle — Ibrahim Alimirakh · May 15</div>
+          <div class="deal-sub">8673 Timber Ridge, Burr Ridge · $1.35M</div>
+        </div>
+        <span class="badge badge-blue">$3,209 Krembo</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="deal-row">
+        <div class="deal-left">
+          <div class="deal-title">Lauren — Russell Fairchild · May 1</div>
+          <div class="deal-sub">18309 Carrington Dr, Hazel Crest · $520K</div>
+        </div>
+        <span class="badge badge-blue">$2,520 Krembo</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="deal-row">
+        <div class="deal-left">
+          <div class="deal-title">Lauren — Dino Lavecchia · May 27 &nbsp;|&nbsp; Richard Galvan · May 26</div>
+          <div class="deal-sub">Oak Forest + Manhattan · $435K + $251K</div>
+        </div>
+        <span class="badge badge-blue">$3,480 Krembo</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="deal-row">
+        <div class="deal-left">
+          <div class="deal-title">Mollie — Chris Dryjanski · May 22</div>
+          <div class="deal-sub">16729 Normandy Dr, Tinley Park · $267.5K</div>
+        </div>
+        <span class="badge badge-blue">$1,697 Krembo</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="deal-row">
+        <div class="deal-left">
+          <div class="deal-title">Michelle — Margaret Buck · May 20 &nbsp;|&nbsp; Margaret Buck</div>
+          <div class="deal-sub">Oak Forest $254K + Burr Ridge pipeline</div>
+        </div>
+        <span class="badge badge-blue">$4,820 Krembo</span>
       </div>
     </div>
     <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">
-      <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
-        <span style="color:var(--sub);">Pipeline Krembo if Andrew Lenard closes:</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green);">+$5,667</span>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:13px;color:var(--sub);">Total pipeline Krembo (all contracts):</span>
+        <span style="font-weight:800;font-size:18px;color:var(--green);">~$18,186</span>
       </div>
-      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$39,458 (22.7% of $150K goal)</div>
+      <div style="font-size:11px;color:var(--sub);margin-top:4px;">If all close → YTD would reach <strong style="color:var(--green);">~$67,567</strong> (45% of $150K goal)</div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-label">✅ Recent Closings</div>
+    <div class="section-label">✅ Recent Closings (All Krembo Sources)</div>
     <div class="card">
-      <div class="closed-row">
-        <div class="cl-date">Apr 27</div>
-        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Mary Beth Corbin &amp; Mike Baya — 19416 Cranfield, Tinley Park (Zillow Flex)</div>
-        <div class="cl-pac">$5,288</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Apr 10</div>
-        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Mary Corbin — 19840 Silverside Dr, Tinley Park (Zillow Flex)</div>
-        <div class="cl-pac">$8,076</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Apr 8</div>
-        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Cheryl Calderon — 6419 Oak Forest Ave, Tinley Park (SOI/PC)</div>
-        <div class="cl-pac">$4,231</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Jan 7</div>
-        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Ray Calderon — 8648 W 145th St, Orland Park (Zillow Flex)</div>
-        <div class="cl-pac">$5,376</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Jan 16</div>
-        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Alex &amp; Skyler Martin — 24556 Lancelot, Shorewood (Referral)</div>
-        <div class="cl-pac">$3,619</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Jan 8</div>
-        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Melvin Melendez — 2538 Needham, Aurora (Zillow Flex)</div>
-        <div class="cl-pac">$7,201</div>
-      </div>
-      <div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:12px;color:var(--sub);">6 total closes in 2026</span>
-        <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View all in tracker →</a>
+      <div class="closed-row"><div class="cl-date">Apr 27</div><div class="cl-agent">DK</div><span class="badge badge-blue" style="font-size:10px;padding:2px 6px;">Buy</span><div class="cl-name">Mary Beth Corbin &amp; Mike Baya — 19416 Cranfield, Tinley Park</div><div class="cl-pac">$5,288</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 14</div><div class="cl-agent">MM</div><span class="badge badge-orange" style="font-size:10px;padding:2px 6px;">Sell</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 1596 Ludington, Romeoville</div><div class="cl-pac">$700</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 14</div><div class="cl-agent">MM</div><span class="badge badge-blue" style="font-size:10px;padding:2px 6px;">Buy</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 2909 Bisbee Dr, Joliet</div><div class="cl-pac">$833</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 10</div><div class="cl-agent">DK</div><span class="badge badge-orange" style="font-size:10px;padding:2px 6px;">Sell</span><div class="cl-name">Mary Corbin — 19840 Silverside Dr, Tinley Park</div><div class="cl-pac">$8,076</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 9</div><div class="cl-agent">LL</div><span class="badge badge-blue" style="font-size:10px;padding:2px 6px;">Buy</span><div class="cl-name">Phillip Powell — 24840 Hemphill Dr, Elwood</div><div class="cl-pac">$1,043</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 8</div><div class="cl-agent">DK</div><span class="badge badge-orange" style="font-size:10px;padding:2px 6px;">Sell</span><div class="cl-name">Cheryl Calderon — 6419 Oak Forest Ave, Tinley Park</div><div class="cl-pac">$4,231</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 5</div><div class="cl-agent">MM</div><span class="badge badge-blue" style="font-size:10px;padding:2px 6px;">Buy</span><div class="cl-name">Michelle Kokalj — 802 Eagle Dr, Joliet</div><div class="cl-pac">$784</div></div>
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-size:12px;color:var(--sub);">Showing Apr closes — <a href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" style="color:var(--blue);text-decoration:none;">view all in tracker →</a></span>
       </div>
     </div>
   </div>
@@ -407,7 +421,7 @@
         <div class="task-item" data-id="m2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Check &amp; respond to new Zillow Flex leads (5-min response rule)</div><span class="task-tag tag-zillow">Zillow</span></div>
         <div class="task-item" data-id="m3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Make 3 SOI check-in calls — past clients, referral ask</div><span class="task-tag tag-soi">SOI</span></div>
         <div class="task-item" data-id="m4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Identify 2 new prospects in FUB to nurture this week</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="m5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Review Dotloop for any pending items on active deal</div><span class="task-tag tag-admin">Admin</span></div>
+        <div class="task-item" data-id="m5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Review Dotloop — any pending docs on Lenard file?</div><span class="task-tag tag-gold">Admin</span></div>
         <div class="counter-row">
           <div><div class="counter-label">Contacts today <span>Goal: 10</span></div><div style="font-size:11px;color:var(--sub);margin-top:2px;" id="contact-sub">0 of 10</div></div>
           <div class="counter-controls">
@@ -419,8 +433,8 @@
       </div>
       <div class="card">
         <div class="block-hdr"><span style="font-size:18px;">🌅</span><div><div class="block-title">Afternoon Block</div><div class="block-time">2:00 – 4:30 PM · Follow-ups</div></div></div>
-        <div class="task-item" data-id="a1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Follow up buyers who toured homes this week — get feedback</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="a2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Schedule weekend showings — confirm times with clients</div><span class="task-tag tag-admin">Admin</span></div>
+        <div class="task-item" data-id="a1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Follow up on Alimirakh file (Michelle) — $3,209 Krembo due May 15</div><span class="task-tag tag-gold">May 15</span></div>
+        <div class="task-item" data-id="a2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Schedule weekend showings — confirm with clients</div><span class="task-tag tag-admin">Admin</span></div>
         <div class="task-item" data-id="a3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Send market update to 2 warm leads not yet converted</div><span class="task-tag tag-zillow">Zillow</span></div>
         <div class="task-item" data-id="a4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Reach out to 2 SOI contacts not spoken to in 30+ days</div><span class="task-tag tag-soi">SOI</span></div>
         <div class="task-item" data-id="a5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="task-text">Update Dotloop &amp; log any deal changes in tracker</div><span class="task-tag tag-admin">Admin</span></div>
@@ -448,63 +462,58 @@
 
 <script>
 const now = new Date();
-const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const MON_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-document.getElementById('js-date').textContent = `${DAY_NAMES[now.getDay()]}, ${MON_NAMES[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
-function tick(){ document.getElementById('js-time').textContent = new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true}); }
-tick(); setInterval(tick,30000);
+const DAY_NAMES=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MON_NAMES=['January','February','March','April','May','June','July','August','September','October','November','December'];
+document.getElementById('js-date').textContent=`${DAY_NAMES[now.getDay()]}, ${MON_NAMES[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+function tick(){document.getElementById('js-time').textContent=new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});}
+tick();setInterval(tick,30000);
 
-const GOAL = 150000;
-const CLOSE_GOAL = 20;
-const monthlyPAC = {1:16195.9,4:17594.4};
-const ytd = 33790.3;
-const pct = ytd/GOAL;
-const mGoal = GOAL/12;
-const start = new Date(now.getFullYear(),0,0);
-const dayOfYear = Math.floor((now-start)/86400000);
-const paceTarget = (dayOfYear/365)*GOAL;
-const gap = ytd - paceTarget;
-const annualized = (ytd/(now.getMonth()+1))*12;
-const monthsLeft = 12-now.getMonth()-1;
-
-document.getElementById('pct-lbl').textContent = (pct*100).toFixed(1)+'% of $150K';
-document.getElementById('annualized').textContent = '$'+Math.round(annualized).toLocaleString();
-const gapEl = document.getElementById('pace-gap');
-gapEl.textContent = (gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
-gapEl.style.color = gap<0?'var(--red)':'var(--green)';
-document.getElementById('mo-needed').textContent = monthsLeft>0?'$'+Math.round((GOAL-ytd)/monthsLeft).toLocaleString():'—';
-document.getElementById('mo-left').textContent = monthsLeft;
+const GOAL=150000, CLOSE_GOAL=20;
+const monthlyPAC={1:18533.12,2:6137.74,3:3756.94,4:20953.47};
+const ytd=49381.270000000004;
+const pct=ytd/GOAL;
+const mGoal=GOAL/12;
+const start=new Date(now.getFullYear(),0,0);
+const dayOfYear=Math.floor((now-start)/86400000);
+const paceTarget=(dayOfYear/365)*GOAL;
+const gap=ytd-paceTarget;
+const annualized=(ytd/(now.getMonth()+1))*12;
+const monthsLeft=12-now.getMonth()-1;
+document.getElementById('pct-lbl').textContent=(pct*100).toFixed(1)+'% of $150K';
+document.getElementById('annualized').textContent='$'+Math.round(annualized).toLocaleString();
+const gapEl=document.getElementById('pace-gap');
+gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
+gapEl.style.color=gap<0?'var(--red)':'var(--green)';
+document.getElementById('mo-needed').textContent=monthsLeft>0?'$'+Math.round((GOAL-ytd)/monthsLeft).toLocaleString():'—';
+document.getElementById('mo-left').textContent=monthsLeft;
 setTimeout(()=>{
-  document.getElementById('gci-bar').style.width = Math.min(pct*100,100)+'%';
-  document.getElementById('close-bar').style.width = Math.min((6/20)*100,100)+'%';
+  document.getElementById('gci-bar').style.width=Math.min(pct*100,100)+'%';
+  document.getElementById('close-bar').style.width=Math.min((6/20)*100,100)+'%';
 },100);
 
-const grid = document.getElementById('month-grid');
+const grid=document.getElementById('month-grid');
 ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
-  const inc = monthlyPAC[i+1]||0;
-  const isCur = i===now.getMonth();
-  const color = inc===0?'#e0e0e0':inc>=mGoal?'#27ae60':inc>=mGoal*.5?'#e67e22':'#c0392b';
-  const dot = document.createElement('div');
+  const inc=monthlyPAC[i+1]||0;
+  const isCur=i===now.getMonth();
+  const color=inc===0?'#e0e0e0':inc>=mGoal?'#27ae60':inc>=mGoal*.5?'#e67e22':'#c0392b';
+  const dot=document.createElement('div');
   dot.className='month-dot';
-  dot.style.background = isCur?'#1e3a5f':color;
-  dot.style.opacity = i>now.getMonth()?'0.3':'1';
-  dot.style.outline = isCur?'2px solid #1e3a5f88':'none';
-  dot.innerHTML = `<span>${m}</span><span class="tip">${m}: ${inc>0?'$'+inc.toLocaleString('en-US',{maximumFractionDigits:0}):'No data'}</span>`;
+  dot.style.background=isCur?'#1e3a5f':color;
+  dot.style.opacity=i>now.getMonth()?'0.3':'1';
+  dot.style.outline=isCur?'2px solid #1e3a5f88':'none';
+  dot.innerHTML=`<span>${m}</span><span class="tip">${m}: ${inc>0?'$'+inc.toLocaleString('en-US',{maximumFractionDigits:0}):'No data'}</span>`;
   grid.appendChild(dot);
 });
 
-const closesPerMonth = {1:3,4:3};
-const streakContainer = document.getElementById('streak-dots');
+const closesPerMonth={1:3,4:3};
+const sc=document.getElementById('streak-dots');
 ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
-  const c = closesPerMonth[i+1]||0;
-  const isFuture = i>now.getMonth(), isCur = i===now.getMonth();
-  const dot = document.createElement('div');
-  dot.className='mdot';
-  dot.title=`${m}: ${c} close${c!==1?'s':''}`;
+  const c=closesPerMonth[i+1]||0,isFuture=i>now.getMonth(),isCur=i===now.getMonth();
+  const dot=document.createElement('div');dot.className='mdot';dot.title=`${m}: ${c} own close${c!==1?'s':''}`;
   if(isFuture){dot.style.background='#e0e0e0';dot.style.color='#aaa';dot.textContent=m.charAt(0);}
   else if(c>0){dot.style.background=isCur?'#1e3a5f':'#27ae60';dot.style.color='white';dot.textContent=c;}
   else{dot.style.background='#fef0ee';dot.style.color='#c0392b';dot.textContent='0';}
-  streakContainer.appendChild(dot);
+  sc.appendChild(dot);
 });
 
 const TODAY_KEY='dk_tasks_'+now.toISOString().split('T')[0];
@@ -534,13 +543,6 @@ function applySettings(s){
     if(!noteEl){noteEl=document.createElement('div');noteEl.id='personal-note';noteEl.className='alert alert-blue';noteEl.style.marginBottom='18px';document.querySelector('.container').insertBefore(noteEl,document.querySelector('.container').firstChild);}
     noteEl.innerHTML='📝 <span><strong>Your note:</strong> '+s.note+'</span>';
   }else if(noteEl){noteEl.remove();}
-  ['reminder1','reminder2'].forEach((r,i)=>{
-    let el=document.getElementById('custom-reminder-'+(i+1));
-    if(s[r]&&s[r].trim()){
-      if(!el){el=document.createElement('div');el.id='custom-reminder-'+(i+1);el.className='alert alert-orange';el.style.marginBottom='8px';document.querySelector('.container > div').appendChild(el);}
-      el.innerHTML='🔔 <span>'+s[r]+'</span>';
-    }else if(el){el.remove();}
-  });
 }
 function openSettings(){
   const s=loadSettings();
@@ -566,7 +568,6 @@ function resetSettings(){
   localStorage.removeItem(SETTINGS_KEY);
   document.getElementById('s-pac-goal').value=DEFAULTS.pacGoal;document.getElementById('s-close-goal').value=DEFAULTS.closeGoal;
   document.getElementById('s-contact-goal').value=DEFAULTS.contactGoal;document.getElementById('s-note').value='';
-  document.getElementById('s-reminder1').value='';document.getElementById('s-reminder2').value='';
 }
 applySettings(loadSettings());
 
