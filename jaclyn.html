@@ -87,37 +87,8 @@
   .cl-name { flex: 1; color: var(--sub); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cl-pac  { font-weight: 700; color: var(--green); white-space: nowrap; min-width: 75px; text-align: right; }
 
-  .block-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
-  .block-title { font-weight: 700; font-size: 15px; }
-  .block-time { font-size: 12px; color: var(--sub); }
-  .task-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
-  .task-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .task-item.done .task-text { text-decoration: line-through; color: var(--sub); }
-  .task-item.done { opacity: .55; }
-  .task-check { width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; transition: all .15s; }
-  .task-item.done .task-check { background: var(--accent); border-color: var(--accent); }
-  .task-check svg { display: none; }
-  .task-item.done .task-check svg { display: block; }
-  .task-text { flex: 1; font-size: 13.5px; }
-  .task-tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 10px; flex-shrink: 0; margin-top: 2px; }
-  .tag-zillow { background: #fff3e0; color: #e67e22; }
-  .tag-soi    { background: var(--green-bg); color: var(--green); }
-  .tag-admin  { background: var(--bg); color: var(--sub); }
-  .tag-urgent { background: var(--red-bg); color: var(--red); }
-  .tag-gold   { background: var(--gold-bg); color: var(--gold); }
-
-  .counter-row { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
-  .counter-label { font-size: 13px; font-weight: 600; }
-  .counter-label span { font-size: 11px; color: var(--sub); font-weight: 400; margin-left: 4px; }
-  .counter-controls { display: flex; align-items: center; gap: 10px; }
-  .counter-btn { width: 32px; height: 32px; border-radius: 50%; border: none; background: var(--bg); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: 600; transition: background .15s; }
-  .counter-btn:hover { background: var(--border); }
-  .counter-val { font-size: 22px; font-weight: 800; min-width: 40px; text-align: center; }
-
   .month-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 4px; margin-top: 12px; }
-  .month-dot { height: 26px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: white; position: relative; cursor: default; }
-  .month-dot .tip { display: none; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: #222; color: #fff; font-size: 10px; padding: 3px 8px; border-radius: 5px; white-space: nowrap; z-index: 10; }
-  .month-dot:hover .tip { display: block; }
+  .month-dot { height: 26px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: white; }
 
   .pace-wrap { display: flex; gap: 16px; align-items: stretch; }
   .pace-main { flex: 1; }
@@ -126,66 +97,26 @@
   .pace-side .lbl { font-size: 10px; color: var(--sub); font-weight: 600; }
 
   .spotlight { background: linear-gradient(135deg, #fefbe8 0%, #fff9e6 100%); border: 1px solid #f0d060; border-radius: 14px; padding: 16px 18px; margin-bottom: 10px; }
-  .spotlight-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .spotlight-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; gap: 10px; }
   .spotlight-title { font-weight: 700; font-size: 15px; color: var(--gold); }
   .spotlight-chips { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 10px; border-top: 1px solid #f0d060; }
 
-  /* Quick links */
   .quick-links { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
   .ql-btn { display: flex; align-items: center; gap: 7px; padding: 9px 16px; background: var(--card); border-radius: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; transition: box-shadow .15s, transform .1s; border: 1px solid var(--border); }
   .ql-btn:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); transform: translateY(-1px); }
   .ql-icon { width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
 
-  /* Income breakdown */
-  .income-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-  .income-row:last-child { border-bottom: none; }
-  .income-label { color: var(--sub); }
-  .income-amt { font-weight: 700; }
-
-  /* Streak / close count */
   .streak-wrap { display: flex; gap: 16px; align-items: center; }
   .streak-count { text-align: center; min-width: 80px; }
   .streak-num { font-size: 36px; font-weight: 800; line-height: 1; }
   .streak-label { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
-  .month-dots-row { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
-  .mdot { width: 22px; height: 22px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; }
 
-  /* Current month */
   .cur-month-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
   .cur-stat { text-align: center; }
   .cur-num { font-size: 20px; font-weight: 800; }
   .cur-lbl { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
 
   @media(max-width:580px){ .grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;} .pace-wrap{flex-direction:column;} .pace-side{border-left:none;border-top:1px solid var(--border);padding:10px 0 0;flex-direction:row;gap:20px;} .cur-month-grid{grid-template-columns:repeat(2,1fr);} }
-
-  /* Settings */
-  .gear-btn { background: rgba(255,255,255,0.15); border: none; border-radius: 8px; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; flex-shrink: 0; }
-  .gear-btn:hover { background: rgba(255,255,255,0.25); }
-  .gear-btn svg { width: 18px; height: 18px; fill: white; }
-  .settings-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 100; }
-  .settings-overlay.open { display: block; }
-  .settings-drawer { position: fixed; top: 0; right: -360px; width: 340px; height: 100vh; background: var(--card); box-shadow: -4px 0 24px rgba(0,0,0,0.15); z-index: 101; transition: right .28s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
-  .settings-drawer.open { right: 0; }
-  .settings-hdr { background: var(--accent); padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
-  .settings-hdr-title { color: white; font-weight: 700; font-size: 16px; }
-  .settings-close { background: rgba(255,255,255,0.15); border: none; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; }
-  .settings-close:hover { background: rgba(255,255,255,0.25); }
-  .settings-body { padding: 20px; flex: 1; }
-  .settings-group { margin-bottom: 24px; }
-  .settings-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--sub); margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-  .settings-field { margin-bottom: 16px; }
-  .settings-label { font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block; }
-  .settings-hint { font-size: 11px; color: var(--sub); margin-top: 3px; }
-  .settings-input { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border .15s; }
-  .settings-input:focus { border-color: var(--accent); background: white; }
-  .settings-footer { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
-  .btn-save { flex: 1; padding: 11px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity .15s; }
-  .btn-save:hover { opacity: .88; }
-  .btn-reset { padding: 11px 16px; background: var(--bg); color: var(--sub); border: none; border-radius: 10px; font-size: 14px; cursor: pointer; }
-  .btn-reset:hover { background: var(--border); }
-  .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
-  .save-toast.show { display: block; animation: fadeup .3s ease; }
-  @keyframes fadeup { from { opacity:0; transform:translateX(-50%) translateY(8px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
 
 </style>
 </head>
@@ -195,64 +126,21 @@
   <div class="topbar-inner">
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="avatar">JM</div>
-      <div><div class="tb-name">Jaclyn Mitchell</div><div class="tb-role">Buyer's & Listing Agent · Crosstown Realtors</div></div>
+      <div><div class="tb-name">Jaclyn Mitchell</div><div class="tb-role">Buyer&#x27;s &amp; Listing Agent · Crosstown Realtors</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="tb-right">
         <div class="tb-date" id="js-date"></div>
         <div class="tb-time" id="js-time"></div>
       </div>
-      <button class="gear-btn" onclick="openSettings()" title="Customize dashboard">
-        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="3" y1="5" x2="17" y2="5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="3" y1="15" x2="17" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="7" cy="5" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
-          <circle cx="13" cy="10" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
-          <circle cx="8" cy="15" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
-        </svg>
-      </button>
     </div>
   </div>
 </div>
-
-<div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
-<div class="settings-drawer" id="settings-drawer">
-  <div class="settings-hdr">
-    <span class="settings-hdr-title">⚙️ My Dashboard Settings</span>
-    <button class="settings-close" onclick="closeSettings()">✕</button>
-  </div>
-  <div class="settings-body">
-    <div class="settings-group">
-      <div class="settings-group-title">🎯 Goals</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-pac-goal">Annual PAC Goal ($)</label>
-        <input class="settings-input" type="number" id="s-pac-goal" placeholder="80000" step="1000">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-close-goal">Annual Close Goal (# of deals)</label>
-        <input class="settings-input" type="number" id="s-close-goal" placeholder="20">
-      </div>
-    </div>
-    <div class="settings-group">
-      <div class="settings-group-title">📝 Custom Notes</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-note">Today's personal note</label>
-        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Call John before noon..."></textarea>
-      </div>
-    </div>
-  </div>
-  <div class="settings-footer">
-    <button class="btn-reset" onclick="resetSettings()">Reset</button>
-    <button class="btn-save" onclick="saveSettings()">Save Changes</button>
-  </div>
-</div>
-<div class="save-toast" id="save-toast">✅ Settings saved!</div>
 
 <div class="container">
 
   <div style="font-size:11px;color:var(--sub);text-align:right;margin-bottom:14px;">
-    🔄 Data refreshed <strong>April 28, 2026</strong> · Source: Transaction Tracker
+    🔄 Data refreshed <strong>April 29, 2026</strong> · Source: Transaction Tracker
   </div>
 
   <div class="quick-links">
@@ -271,12 +159,12 @@
   </div>
 
   <div style="margin-bottom:18px;">
-    <div class="alert alert-gold">⭐ <span><strong>David Mitchell (Buy)</strong> — 11S315 Saratoga Avenue, Lemont — $690,000 Under Contract, expected close <strong>June 5</strong>. Est. PAC: <strong>$15,525</strong>. Biggest deal of the year!</span></div><div class="alert alert-green">✅ <span><strong>Robert Zmora closed Feb 17</strong> — 32209 N 1500 East Rd, Blackstone ($315,000). PAC: <strong>$4,664</strong>. Robert Crozier also closed May 22 — <strong>$304,000</strong>.</span></div><div class="alert alert-blue">📋 <span>With David Mitchell pipeline, projected end-of-year PAC could reach <strong>$25,732</strong> — 32% of goal. Focus on building new leads for H2.</span></div>
+    <div class="alert alert-gold">⭐ <span><strong>Big deal closing soon:</strong> David Mitchell — $690,000 at 11S315 Saratoga Avenue Lemont closes <strong>Jun 5</strong>. Est. PAC: <strong>$15,525</strong>. Stay on top of this one.</span></div>
   </div>
 
   <div class="grid-4">
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--accent)">$10,207</div>
+      <div class="stat-num" style="color:var(--accent)">$7,604</div>
       <div class="stat-label">PAC YTD</div>
     </div>
     <div class="stat-card">
@@ -284,7 +172,7 @@
       <div class="stat-label">Closings YTD</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)">12.8%</div>
+      <div class="stat-num" style="color:var(--orange)">9.5%</div>
       <div class="stat-label">Of $80,000 Goal</div>
     </div>
     <div class="stat-card">
@@ -299,7 +187,7 @@
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
-          <div class="prog-row"><span>YTD PAC: <strong>$10,207</strong></span><span id="pct-lbl" style="color:var(--orange)">12.8% of $80,000</span></div>
+          <div class="prog-row"><span>YTD PAC: <strong>$7,604</strong></span><span id="pct-lbl" style="color:var(--orange)">9.5% of $80,000</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
           <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
@@ -339,10 +227,10 @@
         <div class="streak-count">
           <div class="streak-num" style="color:var(--accent)">3</div>
           <div class="streak-label">Closes in 2026</div>
-          <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 20</div>
+          <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 15</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">3 / 20 (15.0%)</span></div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">3 / 15 (20.0%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
           <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 1 deals pending · Est. +$15,525 PAC when closed</div>
         </div>
@@ -356,27 +244,29 @@
     <div class="spotlight">
       <div class="spotlight-hdr">
         <div>
-          <div class="spotlight-title">⭐ High-Value Deal — Watch Closely</div>
+          <div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div>
           <div style="font-weight:600;font-size:14px;margin-top:2px;">David Mitchell — BUY</div>
-          <div style="font-size:12px;color:var(--sub);margin-top:2px;">11S315 Saratoga Avenue, Lemont</div>
+          <div style="font-size:12px;color:var(--sub);margin-top:2px;">11S315 Saratoga Avenue Lemont</div>
         </div>
-        <span class="badge badge-gold">⭐ Closing June 5</span>
+        <span class="badge badge-gold">⭐ Closing Jun 5</span>
       </div>
       <div class="spotlight-chips">
-        <div class="chip">Proj. close: <strong>June 5</strong></div>
+        <div class="chip">Proj. close: <strong>Jun 5</strong></div>
         <div class="chip">Price: <strong>$690,000</strong></div>
         <div class="chip">GCI: <strong>$17,250</strong></div>
-        <div class="chip">Est. your PAC: <strong>$15,525</strong></div>
+        <div class="chip">Est. PAC: <strong>$15,525</strong></div>
         <div class="chip">Source: <strong>SOI/PC</strong></div>
         <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
       </div>
     </div>
+    
+    
     <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">
       <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
         <span style="color:var(--sub);">Est. pipeline value if all close:</span>
         <span style="font-weight:800;font-size:16px;color:var(--green);">+$15,525 PAC</span>
       </div>
-      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$25,732</div>
+      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$23,129</div>
     </div>
   </div>
 
@@ -387,20 +277,20 @@
       <div class="closed-row">
         <div class="cl-date">May 22</div>
         <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Robert Crozier — 3631 W 121st Place, Alsip (SOI/PC)</div>
-        <div class="cl-pac">$4,286</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Feb 17</div>
-        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Robert Zmora — 32209 N 1500 East Rd, Blackstone (Referral)</div>
-        <div class="cl-pac">$4,664</div>
+        <div class="cl-name">Robert Crozier — 3631 W 121st Place Alsip IL 60803 (SOI/PC)</div>
+        <div class="cl-pac">$0</div>
       </div>
       <div class="closed-row">
         <div class="cl-date">Mar 30</div>
         <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Jaqueline Hansel — 19546 115th Ave Unit A, Mokena (Zillow)</div>
+        <div class="cl-name">Jaqueline Hansel — 19546 115th Ave Unit A Mokena (Zillow Flex)</div>
         <div class="cl-pac">$2,940</div>
+      </div>
+      <div class="closed-row">
+        <div class="cl-date">Feb 17</div>
+        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
+        <div class="cl-name">Robert Zmora — 32209 N 1500 East Road Blackstone IL (Referral)</div>
+        <div class="cl-pac">$4,664</div>
       </div>
     </div>
   </div>
@@ -408,12 +298,11 @@
 </div>
 
 <script>
-const PAC_YTD = 10207;
+const PAC_YTD = 7603.58;
 const PAC_GOAL = 80000;
 const NUM_CLOSES = 3;
-const CLOSE_GOAL = 20;
+const CLOSE_GOAL = 15;
 
-// Date/time
 function updateClock() {
   const now = new Date();
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -424,14 +313,12 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 60000);
 
-// Progress bars
 window.addEventListener('load', () => {
   const pct = Math.min(100, PAC_YTD / PAC_GOAL * 100);
   document.getElementById('gci-bar').style.width = pct + '%';
   const closePct = Math.min(100, NUM_CLOSES / CLOSE_GOAL * 100);
   document.getElementById('close-bar').style.width = closePct + '%';
 
-  // Pace calcs
   const now = new Date();
   const startOfYear = new Date(now.getFullYear(), 0, 1);
   const endOfYear = new Date(now.getFullYear(), 11, 31);
@@ -448,7 +335,6 @@ window.addEventListener('load', () => {
   document.getElementById('mo-needed').textContent = '$' + needed.toLocaleString();
   document.getElementById('mo-left').textContent = Math.ceil(monthsLeft);
 
-  // Month grid
   const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const monthlyColors = ['#c3c4ff','#a5b4fc','#818cf8','#6366f1','#4f46e5','#4338ca','#3730a3','#312e81','#e5e7eb','#e5e7eb','#e5e7eb','#e5e7eb'];
   const grid = document.getElementById('month-grid');
@@ -459,43 +345,6 @@ window.addEventListener('load', () => {
     dot.innerHTML = '<span>' + m.slice(0,1) + '</span>';
     grid.appendChild(dot);
   });
-});
-
-// Settings
-const STORAGE_KEY = 'dashboard_JM_settings';
-function openSettings() {
-  document.getElementById('settings-overlay').classList.add('open');
-  document.getElementById('settings-drawer').classList.add('open');
-  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-  if(saved.pac_goal) document.getElementById('s-pac-goal').value = saved.pac_goal;
-  if(saved.close_goal) document.getElementById('s-close-goal').value = saved.close_goal;
-  if(saved.note) document.getElementById('s-note').value = saved.note;
-}
-function closeSettings() {
-  document.getElementById('settings-overlay').classList.remove('open');
-  document.getElementById('settings-drawer').classList.remove('open');
-}
-function saveSettings() {
-  const settings = {
-    pac_goal: document.getElementById('s-pac-goal').value,
-    close_goal: document.getElementById('s-close-goal').value,
-    note: document.getElementById('s-note').value
-  };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
-  closeSettings();
-  const toast = document.getElementById('save-toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2500);
-}
-function resetSettings() {
-  localStorage.removeItem(STORAGE_KEY);
-  document.getElementById('s-pac-goal').value = '';
-  document.getElementById('s-close-goal').value = '';
-  document.getElementById('s-note').value = '';
-}
-// Task checkboxes
-document.querySelectorAll('.task-item').forEach(item => {
-  item.addEventListener('click', () => item.classList.toggle('done'));
 });
 </script>
 </body>
