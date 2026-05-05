@@ -47,6 +47,10 @@
   .stat-num { font-size: 22px; font-weight: 800; line-height: 1.1; }
   .stat-label { font-size: 10px; color: var(--sub); margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
   .stat-sub { font-size: 10px; color: var(--sub); margin-top: 2px; }
+  .income-row { display:flex; justify-content:space-between; align-items:center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size:13px; }
+  .income-row:last-child { border-bottom: none; }
+  .income-label { color: var(--sub); }
+  .income-amt { font-weight: 700; }
 
   .prog-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--sub); margin-bottom: 6px; }
   .prog-row strong { color: var(--text); }
@@ -166,20 +170,41 @@
   <div class="grid-4">
     <div class="stat-card">
       <div class="stat-num" style="color:var(--accent)">$70,811</div>
-      <div class="stat-label">PAC YTD</div>
+      <div class="stat-label">Total YTD Income</div>
+      <div class="stat-sub">own PAC + override</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--green)">12</div>
-      <div class="stat-label">Closings YTD</div>
+      <div class="stat-num" style="color:var(--blue)">$68,133</div>
+      <div class="stat-label">Own Agent Deals</div>
+      <div class="stat-sub">13 own closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)">27.3%</div>
-      <div class="stat-label">Of $200,000 Goal</div>
+      <div class="stat-num" style="color:var(--teal)">$2,678</div>
+      <div class="stat-label">Team Override</div>
+      <div class="stat-sub">5 team closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--blue)">4</div>
-      <div class="stat-label">Active Pipeline</div>
-      <div class="stat-sub">3 Under Contract · 1 New</div>
+      <div class="stat-num" style="color:var(--orange)" id="pct-stat">35%</div>
+      <div class="stat-label">Of $200K Goal</div>
+      <div class="stat-sub">$28,418 pipeline</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">💰 Income Breakdown — YTD 2026</div>
+    <div class="card">
+      <div class="income-row">
+        <span class="income-label">Own agent deals (PAC — 13 closes)</span>
+        <span class="income-amt" style="color:var(--blue)">$68,133.30</span>
+      </div>
+      <div class="income-row">
+        <span class="income-label">Team override income (5 team closes)</span>
+        <span class="income-amt" style="color:var(--teal)">$2,678.11</span>
+      </div>
+      <div class="income-row" style="padding-top:10px;">
+        <span style="font-weight:700;font-size:14px;">Total Income YTD</span>
+        <span style="font-weight:800;font-size:16px;color:var(--green)">$70,811.41</span>
+      </div>
     </div>
   </div>
 
