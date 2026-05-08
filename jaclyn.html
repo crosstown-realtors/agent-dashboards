@@ -360,5 +360,150 @@ window.addEventListener('load', () => {
   });
 });
 </script>
+
+  <div class="section" id="precontract-section">
+    <div class="section-label">🔍 Active Buyers &amp; Sellers — Pre-Contract</div>
+    <div class="card" style="padding:0;">
+      <div id="precontract-list" style="padding:12px 16px 0;"></div>
+      <div style="padding:12px 16px;">
+        <button onclick="togglePCForm()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer;">+ Add Client</button>
+      </div>
+      <div id="pc-form" style="display:none;padding:0 16px 16px;border-top:1px solid var(--border);margin-top:4px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;">
+          <div>
+            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">CLIENT NAME</label>
+            <input id="pc-name" type="text" placeholder="e.g. John Smith" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+          </div>
+          <div>
+            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">TYPE</label>
+            <div style="display:flex;gap:8px;margin-top:4px;">
+              <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type" value="buyer" checked> Buyer</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type" value="seller"> Seller</label>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;" id="pc-area-label">AREAS SEARCHING</label>
+            <input id="pc-areas" type="text" placeholder="e.g. Mokena, Frankfort" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+          </div>
+          <div>
+            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">PRICE RANGE</label>
+            <input id="pc-price" type="text" placeholder="e.g. $350K–$500K" oninput="updateIncomePreview()" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+            <div id="pc-income-preview" style="font-size:11px;color:var(--teal);margin-top:4px;font-weight:600;min-height:16px;"></div>
+          </div>
+          <div style="grid-column:span 2;">
+            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">TIMELINE</label>
+            <input id="pc-timeline" type="text" placeholder="e.g. ASAP, Summer 2026, 3–6 months" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+          </div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:10px;">
+          <button onclick="savePC()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:7px 18px;font-size:13px;font-weight:600;cursor:pointer;">Save</button>
+          <button onclick="togglePCForm()" style="background:none;border:1px solid var(--border);border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer;color:var(--sub);">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+(function() {
+  const KEY = 'precontract_jm';
+  
+
+  function parsePriceRange(str) {
+    if (!str) return null;
+    // Extract all numbers (handle K, M suffixes and ranges like $300K-$450K)
+    const nums = [];
+    const matches = str.match(/[\d,]+\.?\d*\s*[KkMm]?/g) || [];
+    for (const m of matches) {
+      let n = parseFloat(m.replace(/,/g,''));
+      if (/[Kk]/.test(m)) n *= 1000;
+      if (/[Mm]/.test(m)) n *= 1000000;
+      if (n > 10000) nums.push(n); // filter out noise
+    }
+    if (!nums.length) return null;
+    return { min: Math.min(...nums), max: Math.max(...nums) };
+  }
+
+  function incomeStr(priceStr) {
+    const r = parsePriceRange(priceStr);
+    if (!r) return '';
+    const lo = Math.round(r.min * 0.025);
+    const hi = Math.round(r.max * 0.025);
+    const fmt = n => '$' + n.toLocaleString();
+    return lo === hi ? 'Est. PAC @ 2.5%: ' + fmt(lo) : 'Est. PAC @ 2.5%: ' + fmt(lo) + '–' + fmt(hi);
+  }
+
+  function getClients() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e) { return []; }
+  }
+  function saveClients(arr) { localStorage.setItem(KEY, JSON.stringify(arr)); }
+
+  function render() {
+    const clients = getClients();
+    const list = document.getElementById('precontract-list');
+    if (!clients.length) {
+      list.innerHTML = '<div style="font-size:13px;color:var(--sub);padding-bottom:10px;">No active pre-contract clients. Add one below.</div>';
+      return;
+    }
+    list.innerHTML = clients.map((c,i) => {
+      const inc = incomeStr(c.price);
+      return `<div style="display:flex;align-items:flex-start;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);">
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:14px;">
+            ${c.name}
+            <span style="font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;margin-left:4px;${c.type==='buyer'?'background:#e0e7ff;color:#4338ca':'background:#fff3cd;color:#92400e'}">${c.type==='buyer'?'Buyer':'Seller'}</span>
+          </div>
+          <div style="font-size:12px;color:var(--sub);margin-top:3px;">
+            ${c.type==='buyer'?'🔍':'📍'} ${c.areas||'—'}${c.price?' &nbsp;·&nbsp; 💰 '+c.price:''}${c.timeline?' &nbsp;·&nbsp; 📅 '+c.timeline:''}
+          </div>
+          ${inc ? `<div style="font-size:12px;color:var(--teal);font-weight:600;margin-top:3px;">💵 ${inc}</div>` : ''}
+        </div>
+        <button onclick="removePC(${i})" style="background:none;border:none;cursor:pointer;color:var(--sub);font-size:20px;line-height:1;padding:0 0 0 12px;flex-shrink:0;" title="Remove">&times;</button>
+      </div>`;
+    }).join('');
+  }
+
+  window.togglePCForm = function() {
+    const f = document.getElementById('pc-form');
+    const open = f.style.display === 'none';
+    f.style.display = open ? 'block' : 'none';
+    if (open) {
+      document.querySelectorAll('input[name="pc-type"]').forEach(r => {
+        r.onchange = () => {
+          document.getElementById('pc-area-label').textContent = r.value==='seller' ? 'PROPERTY ADDRESS' : 'AREAS SEARCHING';
+          document.getElementById('pc-areas').placeholder = r.value==='seller' ? 'e.g. 123 Main St, Mokena' : 'e.g. Mokena, Frankfort';
+        };
+      });
+    }
+  };
+
+  window.updateIncomePreview = function() {
+    const val = document.getElementById('pc-price').value;
+    document.getElementById('pc-income-preview').textContent = incomeStr(val);
+  };
+
+  window.savePC = function() {
+    const name = document.getElementById('pc-name').value.trim();
+    if (!name) { alert('Please enter a client name.'); return; }
+    const type = document.querySelector('input[name="pc-type"]:checked').value;
+    const areas = document.getElementById('pc-areas').value.trim();
+    const price = document.getElementById('pc-price').value.trim();
+    const timeline = document.getElementById('pc-timeline').value.trim();
+    const clients = getClients();
+    clients.push({name, type, areas, price, timeline});
+    saveClients(clients);
+    ['pc-name','pc-areas','pc-price','pc-timeline'].forEach(id => document.getElementById(id).value='');
+    document.getElementById('pc-income-preview').textContent = '';
+    document.getElementById('pc-form').style.display = 'none';
+    render();
+  };
+
+  window.removePC = function(i) {
+    const c = getClients(); c.splice(i,1); saveClients(c); render();
+  };
+
+  render();
+})();
+</script>
+
 </body>
 </html>
