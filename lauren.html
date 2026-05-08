@@ -387,148 +387,186 @@ window.addEventListener('load', () => {
 });
 </script>
 
+
   <div class="section" id="precontract-section">
     <div class="section-label">🔍 Active Buyers &amp; Sellers — Pre-Contract</div>
     <div class="card" style="padding:0;">
-      <div id="precontract-list" style="padding:12px 16px 0;"></div>
-      <div style="padding:12px 16px;">
-        <button onclick="togglePCForm()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer;">+ Add Client</button>
+      <div id="pc-list" style="padding:12px 16px 0;min-height:20px;"></div>
+      <div id="pc-total-bar" style="display:none;margin:0 16px 12px;padding:12px 16px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:10px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:13px;color:#15803d;font-weight:600;">💰 Total potential PAC if all convert:</span>
+          <span id="pc-total-amt" style="font-size:20px;font-weight:800;color:#15803d;">—</span>
+        </div>
+        <div style="font-size:11px;color:#166534;margin-top:4px;" id="pc-motivation">Every conversation gets you closer. Stay consistent.</div>
       </div>
-      <div id="pc-form" style="display:none;padding:0 16px 16px;border-top:1px solid var(--border);margin-top:4px;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;">
+      <div style="padding:0 16px 14px;">
+        <button id="pc-add-btn" onclick="pcToggleForm()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.01em;">+ Add Client</button>
+      </div>
+      <div id="pc-form" style="display:none;border-top:1px solid var(--border);padding:16px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
           <div>
-            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">CLIENT NAME</label>
-            <input id="pc-name" type="text" placeholder="e.g. John Smith" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">CLIENT NAME</div>
+            <input id="pc-name" type="text" placeholder="e.g. John Smith" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
           </div>
           <div>
-            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">TYPE</label>
-            <div style="display:flex;gap:8px;margin-top:4px;">
-              <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type" value="buyer" checked> Buyer</label>
-              <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type" value="seller"> Seller</label>
+            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">LEAD TEMPERATURE</div>
+            <select id="pc-rating" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);cursor:pointer;">
+              <option value="hot">🔥 Hot — Ready Now</option>
+              <option value="warm" selected>🌡️ Warm — 1–3 Months</option>
+              <option value="cool">❄️ Cool — 3–6 Months</option>
+              <option value="looking">👀 Just Looking</option>
+            </select>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">TYPE</div>
+            <div style="display:flex;gap:16px;padding-top:6px;">
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type-ll" value="buyer" checked> Buyer</label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type-ll" value="seller"> Seller</label>
             </div>
           </div>
           <div>
-            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;" id="pc-area-label">AREAS SEARCHING</label>
-            <input id="pc-areas" type="text" placeholder="e.g. Mokena, Frankfort" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;" id="pc-area-label-ll">AREAS SEARCHING</div>
+            <input id="pc-areas" type="text" placeholder="e.g. Mokena, Frankfort" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
           </div>
           <div>
-            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">PRICE RANGE</label>
-            <input id="pc-price" type="text" placeholder="e.g. $350K–$500K" oninput="updateIncomePreview()" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
-            <div id="pc-income-preview" style="font-size:11px;color:var(--teal);margin-top:4px;font-weight:600;min-height:16px;"></div>
+            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">PRICE</div>
+            <input id="pc-price" type="text" placeholder="e.g. $425,000 or $400K" oninput="pcPreview()" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+            <div id="pc-preview" style="font-size:12px;color:#0d9488;font-weight:700;margin-top:5px;min-height:16px;"></div>
           </div>
-          <div style="grid-column:span 2;">
-            <label style="font-size:11px;color:var(--sub);font-weight:600;display:block;margin-bottom:4px;">TIMELINE</label>
-            <input id="pc-timeline" type="text" placeholder="e.g. ASAP, Summer 2026, 3–6 months" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
+          <div>
+            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">TIMELINE</div>
+            <input id="pc-timeline" type="text" placeholder="e.g. ASAP, Summer 2026" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
           </div>
         </div>
-        <div style="margin-top:12px;display:flex;gap:10px;">
-          <button onclick="savePC()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:7px 18px;font-size:13px;font-weight:600;cursor:pointer;">Save</button>
-          <button onclick="togglePCForm()" style="background:none;border:1px solid var(--border);border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer;color:var(--sub);">Cancel</button>
+        <div style="margin-top:14px;display:flex;gap:10px;">
+          <button onclick="pcSave()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:13px;font-weight:700;cursor:pointer;">Save Client</button>
+          <button onclick="pcToggleForm()" style="background:none;border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;color:var(--sub);">Cancel</button>
         </div>
       </div>
     </div>
   </div>
 
 <script>
-(function() {
-  const KEY = 'precontract_ll';
-  
+var PC_KEY = 'precontract_ll';
 
-  function parsePriceRange(str) {
-    if (!str) return null;
-    // Extract all numbers (handle K, M suffixes and ranges like $300K-$450K)
-    const nums = [];
-    const matches = str.match(/[\d,]+\.?\d*\s*[KkMm]?/g) || [];
-    for (const m of matches) {
-      let n = parseFloat(m.replace(/,/g,''));
-      if (/[Kk]/.test(m)) n *= 1000;
-      if (/[Mm]/.test(m)) n *= 1000000;
-      if (n > 10000) nums.push(n); // filter out noise
+
+function pcParsePrice(s) {
+  if (!s) return 0;
+  var clean = s.replace(/[$,\s]/g,'');
+  var n = parseFloat(clean);
+  if (isNaN(n)) return 0;
+  if (/[Kk]/.test(s) && n < 10000) n *= 1000;
+  if (/[Mm]/.test(s) && n < 10000) n *= 1000000;
+  return n;
+}
+function pcFmt(n) { return '$' + Math.round(n).toLocaleString(); }
+function pcGet() { try { return JSON.parse(localStorage.getItem(PC_KEY))||[]; } catch(e) { return []; } }
+function pcSet(a) { localStorage.setItem(PC_KEY, JSON.stringify(a)); }
+
+var RATING_LABEL = {hot:'🔥 Hot',warm:'🌡️ Warm',cool:'❄️ Cool',looking:'👀 Looking'};
+var RATING_COLOR = {hot:'#dc2626',warm:'#d97706',cool:'#3b82f6',looking:'#6b7280'};
+var MOTIVATE = ['Every conversation counts. Go get it! 💪','One conversion away from your best month yet.','Stay consistent — leads close when you least expect it.','Your pipeline is your paycheck. Nurture it.','The fortune is in the follow-up. 📞'];
+
+function pcRender() {
+  var clients = pcGet();
+  var list = document.getElementById('pc-list');
+  var bar = document.getElementById('pc-total-bar');
+  if (!list) return;
+  if (!clients.length) {
+    list.innerHTML = '<div style="font-size:13px;color:var(--sub);padding-bottom:12px;">No active pre-contract clients yet.</div>';
+    if (bar) bar.style.display = 'none';
+    return;
+  }
+  var total = 0;
+  list.innerHTML = clients.map(function(c,i) {
+    var p = pcParsePrice(c.price);
+    var comm = p * 0.025;
+    total += comm;
+    var r = c.rating||'warm';
+    return '<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);">' +
+      '<div style="flex:1;">' +
+        '<div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:3px;">' +
+          '<span style="font-weight:700;font-size:14px;">' + c.name + '</span>' +
+          '<span style="font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;' + (c.type==='buyer'?'background:#e0e7ff;color:#4338ca':'background:#fff3cd;color:#92400e') + '">' + (c.type==='buyer'?'Buyer':'Seller') + '</span>' +
+          '<span style="font-size:11px;font-weight:700;color:' + RATING_COLOR[r] + '">' + RATING_LABEL[r] + '</span>' +
+        '</div>' +
+        '<div style="font-size:12px;color:var(--sub);">' + (c.type==='buyer'?'🔍 ':'📍 ') + (c.areas||'—') + (c.timeline?' &nbsp;·&nbsp; 📅 '+c.timeline:'') + '</div>' +
+        (p > 0 ? '<div style="display:flex;gap:16px;margin-top:5px;font-size:12px;">' +
+          '<span style="color:var(--sub);">Price: <strong style="color:var(--text);">' + pcFmt(p) + '</strong></span>' +
+          '<span style="color:#0d9488;font-weight:800;">💵 Est. PAC: ' + pcFmt(comm) + '</span>' +
+        '</div>' : '<div style="font-size:11px;color:var(--sub);margin-top:4px;font-style:italic;">Add price to see commission estimate</div>') +
+      '</div>' +
+      '<button onclick="pcRemove(' + i + ')" style="background:none;border:none;cursor:pointer;color:#9ca3af;font-size:22px;line-height:1;padding:0;flex-shrink:0;" title="Remove">&times;</button>' +
+    '</div>';
+  }).join('');
+
+  if (bar) {
+    if (total > 0) {
+      bar.style.display = 'block';
+      document.getElementById('pc-total-amt').textContent = pcFmt(total);
+      var mot = document.getElementById('pc-motivation');
+      if (mot) mot.textContent = MOTIVATE[clients.length % MOTIVATE.length];
+    } else {
+      bar.style.display = 'none';
     }
-    if (!nums.length) return null;
-    return { min: Math.min(...nums), max: Math.max(...nums) };
   }
+}
 
-  function incomeStr(priceStr) {
-    const r = parsePriceRange(priceStr);
-    if (!r) return '';
-    const lo = Math.round(r.min * 0.025);
-    const hi = Math.round(r.max * 0.025);
-    const fmt = n => '$' + n.toLocaleString();
-    return lo === hi ? 'Est. PAC @ 2.5%: ' + fmt(lo) : 'Est. PAC @ 2.5%: ' + fmt(lo) + '–' + fmt(hi);
-  }
+function pcToggleForm() {
+  var f = document.getElementById('pc-form');
+  if (!f) return;
+  f.style.display = (f.style.display === 'none' || f.style.display === '') ? 'block' : 'none';
+}
 
-  function getClients() {
-    try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e) { return []; }
-  }
-  function saveClients(arr) { localStorage.setItem(KEY, JSON.stringify(arr)); }
+function pcPreview() {
+  var p = pcParsePrice(document.getElementById('pc-price').value);
+  var el = document.getElementById('pc-preview');
+  if (el) el.textContent = p > 0 ? 'Est. PAC @ 2.5%: ' + pcFmt(p * 0.025) : '';
+}
 
-  function render() {
-    const clients = getClients();
-    const list = document.getElementById('precontract-list');
-    if (!clients.length) {
-      list.innerHTML = '<div style="font-size:13px;color:var(--sub);padding-bottom:10px;">No active pre-contract clients. Add one below.</div>';
-      return;
-    }
-    list.innerHTML = clients.map((c,i) => {
-      const inc = incomeStr(c.price);
-      return `<div style="display:flex;align-items:flex-start;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);">
-        <div style="flex:1;">
-          <div style="font-weight:600;font-size:14px;">
-            ${c.name}
-            <span style="font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;margin-left:4px;${c.type==='buyer'?'background:#e0e7ff;color:#4338ca':'background:#fff3cd;color:#92400e'}">${c.type==='buyer'?'Buyer':'Seller'}</span>
-          </div>
-          <div style="font-size:12px;color:var(--sub);margin-top:3px;">
-            ${c.type==='buyer'?'🔍':'📍'} ${c.areas||'—'}${c.price?' &nbsp;·&nbsp; 💰 '+c.price:''}${c.timeline?' &nbsp;·&nbsp; 📅 '+c.timeline:''}
-          </div>
-          ${inc ? `<div style="font-size:12px;color:var(--teal);font-weight:600;margin-top:3px;">💵 ${inc}</div>` : ''}
-        </div>
-        <button onclick="removePC(${i})" style="background:none;border:none;cursor:pointer;color:var(--sub);font-size:20px;line-height:1;padding:0 0 0 12px;flex-shrink:0;" title="Remove">&times;</button>
-      </div>`;
-    }).join('');
-  }
+function pcSave() {
+  var nameEl = document.getElementById('pc-name');
+  if (!nameEl || !nameEl.value.trim()) { alert('Please enter a client name.'); return; }
+  var typeEl = document.querySelector('input[name="pc-type-ll"]');
+  var sel = document.querySelector('input[name="pc-type-ll"]:checked');
+  var clients = pcGet();
+  clients.push({
+    name: nameEl.value.trim(),
+    type: sel ? sel.value : 'buyer',
+    areas: (document.getElementById('pc-areas')||{}).value||'',
+    price: (document.getElementById('pc-price')||{}).value||'',
+    timeline: (document.getElementById('pc-timeline')||{}).value||'',
+    rating: (document.getElementById('pc-rating')||{}).value||'warm'
+  });
+  pcSet(clients);
+  ['pc-name','pc-areas','pc-price','pc-timeline'].forEach(function(id){ var e=document.getElementById(id); if(e) e.value=''; });
+  var rEl = document.getElementById('pc-rating'); if(rEl) rEl.value='warm';
+  var pEl = document.getElementById('pc-preview'); if(pEl) pEl.textContent='';
+  document.getElementById('pc-form').style.display = 'none';
+  pcRender();
+}
 
-  window.togglePCForm = function() {
-    const f = document.getElementById('pc-form');
-    const open = f.style.display === 'none';
-    f.style.display = open ? 'block' : 'none';
-    if (open) {
-      document.querySelectorAll('input[name="pc-type"]').forEach(r => {
-        r.onchange = () => {
-          document.getElementById('pc-area-label').textContent = r.value==='seller' ? 'PROPERTY ADDRESS' : 'AREAS SEARCHING';
-          document.getElementById('pc-areas').placeholder = r.value==='seller' ? 'e.g. 123 Main St, Mokena' : 'e.g. Mokena, Frankfort';
-        };
-      });
-    }
-  };
+function pcRemove(i) { var a=pcGet(); a.splice(i,1); pcSet(a); pcRender(); }
 
-  window.updateIncomePreview = function() {
-    const val = document.getElementById('pc-price').value;
-    document.getElementById('pc-income-preview').textContent = incomeStr(val);
-  };
-
-  window.savePC = function() {
-    const name = document.getElementById('pc-name').value.trim();
-    if (!name) { alert('Please enter a client name.'); return; }
-    const type = document.querySelector('input[name="pc-type"]:checked').value;
-    const areas = document.getElementById('pc-areas').value.trim();
-    const price = document.getElementById('pc-price').value.trim();
-    const timeline = document.getElementById('pc-timeline').value.trim();
-    const clients = getClients();
-    clients.push({name, type, areas, price, timeline});
-    saveClients(clients);
-    ['pc-name','pc-areas','pc-price','pc-timeline'].forEach(id => document.getElementById(id).value='');
-    document.getElementById('pc-income-preview').textContent = '';
-    document.getElementById('pc-form').style.display = 'none';
-    render();
-  };
-
-  window.removePC = function(i) {
-    const c = getClients(); c.splice(i,1); saveClients(c); render();
-  };
-
-  render();
+// Wire up type radio to change label
+(function(){
+  var radios = document.querySelectorAll('input[name="pc-type-ll"]');
+  radios.forEach(function(r){
+    r.addEventListener('change', function(){
+      var lbl = document.getElementById('pc-area-label-ll');
+      var inp = document.getElementById('pc-areas');
+      if (r.value==='seller') {
+        if(lbl) lbl.textContent='PROPERTY ADDRESS';
+        if(inp) inp.placeholder='e.g. 123 Main St, Mokena';
+      } else {
+        if(lbl) lbl.textContent='AREAS SEARCHING';
+        if(inp) inp.placeholder='e.g. Mokena, Frankfort';
+      }
+    });
+  });
 })();
+
+pcRender();
 </script>
 
 </body>
