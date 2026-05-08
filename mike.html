@@ -329,6 +329,7 @@ window.addEventListener('load', () => {
 </script>
 
 
+
   <div class="section" id="precontract-section">
     <div class="section-label">🔍 Active Buyers &amp; Sellers — Pre-Contract</div>
     <div class="card" style="padding:0;">
@@ -341,9 +342,11 @@ window.addEventListener('load', () => {
         <div style="font-size:11px;color:#166534;margin-top:4px;" id="pc-motivation">Every conversation gets you closer. Stay consistent.</div>
       </div>
       <div style="padding:0 16px 14px;">
-        <button id="pc-add-btn" onclick="pcToggleForm()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.01em;">+ Add Client</button>
+        <button onclick="pcToggleForm(-1)" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.01em;">+ Add Client</button>
       </div>
+      <!-- Add/Edit form -->
       <div id="pc-form" style="display:none;border-top:1px solid var(--border);padding:16px;">
+        <div id="pc-form-title" style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:12px;">New Client</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
           <div>
             <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">CLIENT NAME</div>
@@ -380,8 +383,8 @@ window.addEventListener('load', () => {
           </div>
         </div>
         <div style="margin-top:14px;display:flex;gap:10px;">
-          <button onclick="pcSave()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:13px;font-weight:700;cursor:pointer;">Save Client</button>
-          <button onclick="pcToggleForm()" style="background:none;border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;color:var(--sub);">Cancel</button>
+          <button id="pc-save-btn" onclick="pcSave()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:13px;font-weight:700;cursor:pointer;">Save Client</button>
+          <button onclick="pcToggleForm(-1)" style="background:none;border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;color:var(--sub);">Cancel</button>
         </div>
       </div>
     </div>
@@ -389,6 +392,7 @@ window.addEventListener('load', () => {
 
 <script>
 var PC_KEY = 'precontract_mik';
+var PC_EDIT_IDX = -1;
 
 
 function pcParsePrice(s) {
@@ -437,7 +441,10 @@ function pcRender() {
           '<span style="color:#0d9488;font-weight:800;">💵 Est. PAC: ' + pcFmt(comm) + '</span>' +
         '</div>' : '<div style="font-size:11px;color:var(--sub);margin-top:4px;font-style:italic;">Add price to see commission estimate</div>') +
       '</div>' +
-      '<button onclick="pcRemove(' + i + ')" style="background:none;border:none;cursor:pointer;color:#9ca3af;font-size:22px;line-height:1;padding:0;flex-shrink:0;" title="Remove">&times;</button>' +
+      '<div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0;">' +
+        '<button onclick="pcEdit(' + i + ')" style="background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;cursor:pointer;color:var(--accent);">✏️ Edit</button>' +
+        '<button onclick="pcRemove(' + i + ')" style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;color:#9ca3af;">Remove</button>' +
+      '</div>' +
     '</div>';
   }).join('');
 
@@ -447,20 +454,67 @@ function pcRender() {
       document.getElementById('pc-total-amt').textContent = pcFmt(total);
       var mot = document.getElementById('pc-motivation');
       if (mot) mot.textContent = MOTIVATE[clients.length % MOTIVATE.length];
-    } else {
-      bar.style.display = 'none';
-    }
+    } else { bar.style.display = 'none'; }
   }
 }
 
-function pcToggleForm() {
+function pcToggleForm(editIdx) {
   var f = document.getElementById('pc-form');
   if (!f) return;
-  f.style.display = (f.style.display === 'none' || f.style.display === '') ? 'block' : 'none';
+  var isOpen = f.style.display === 'block';
+  // If same edit index clicked again, just close
+  if (isOpen && PC_EDIT_IDX === editIdx) { f.style.display='none'; PC_EDIT_IDX=-1; return; }
+  PC_EDIT_IDX = (editIdx !== undefined) ? editIdx : -1;
+  var title = document.getElementById('pc-form-title');
+  var saveBtn = document.getElementById('pc-save-btn');
+  if (PC_EDIT_IDX >= 0) {
+    if(title) title.textContent = 'Edit Client';
+    if(saveBtn) saveBtn.textContent = 'Save Changes';
+  } else {
+    if(title) title.textContent = 'New Client';
+    if(saveBtn) saveBtn.textContent = 'Save Client';
+    // Clear form for new entry
+    ['pc-name','pc-areas','pc-price','pc-timeline'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
+    var rEl=document.getElementById('pc-rating'); if(rEl) rEl.value='warm';
+    var pEl=document.getElementById('pc-preview'); if(pEl) pEl.textContent='';
+    var radios=document.querySelectorAll('input[name="pc-type-mik"]');
+    if(radios.length) radios[0].checked=true;
+    var lbl=document.getElementById('pc-area-label-mik');
+    var inp=document.getElementById('pc-areas');
+    if(lbl) lbl.textContent='AREAS SEARCHING';
+    if(inp) inp.placeholder='e.g. Mokena, Frankfort';
+  }
+  f.style.display = 'block';
+  // Scroll form into view
+  setTimeout(function(){ f.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 50);
+}
+
+function pcEdit(i) {
+  var clients = pcGet();
+  var c = clients[i];
+  if (!c) return;
+  document.getElementById('pc-name').value = c.name||'';
+  document.getElementById('pc-areas').value = c.areas||'';
+  document.getElementById('pc-price').value = c.price||'';
+  document.getElementById('pc-timeline').value = c.timeline||'';
+  var rEl = document.getElementById('pc-rating'); if(rEl) rEl.value = c.rating||'warm';
+  var radios = document.querySelectorAll('input[name="pc-type-mik"]');
+  radios.forEach(function(r){ r.checked = (r.value === (c.type||'buyer')); });
+  var lbl = document.getElementById('pc-area-label-mik');
+  var inp = document.getElementById('pc-areas');
+  if (c.type==='seller') {
+    if(lbl) lbl.textContent='PROPERTY ADDRESS';
+    if(inp) inp.placeholder='e.g. 123 Main St, Mokena';
+  } else {
+    if(lbl) lbl.textContent='AREAS SEARCHING';
+    if(inp) inp.placeholder='e.g. Mokena, Frankfort';
+  }
+  pcPreview();
+  pcToggleForm(i);
 }
 
 function pcPreview() {
-  var p = pcParsePrice(document.getElementById('pc-price').value);
+  var p = pcParsePrice((document.getElementById('pc-price')||{}).value||'');
   var el = document.getElementById('pc-preview');
   if (el) el.textContent = p > 0 ? 'Est. PAC @ 2.5%: ' + pcFmt(p * 0.025) : '';
 }
@@ -468,46 +522,41 @@ function pcPreview() {
 function pcSave() {
   var nameEl = document.getElementById('pc-name');
   if (!nameEl || !nameEl.value.trim()) { alert('Please enter a client name.'); return; }
-  var typeEl = document.querySelector('input[name="pc-type-mik"]');
   var sel = document.querySelector('input[name="pc-type-mik"]:checked');
-  var clients = pcGet();
-  clients.push({
+  var entry = {
     name: nameEl.value.trim(),
     type: sel ? sel.value : 'buyer',
     areas: (document.getElementById('pc-areas')||{}).value||'',
     price: (document.getElementById('pc-price')||{}).value||'',
     timeline: (document.getElementById('pc-timeline')||{}).value||'',
     rating: (document.getElementById('pc-rating')||{}).value||'warm'
-  });
+  };
+  var clients = pcGet();
+  if (PC_EDIT_IDX >= 0 && PC_EDIT_IDX < clients.length) {
+    clients[PC_EDIT_IDX] = entry;  // update existing
+  } else {
+    clients.push(entry);           // add new
+  }
   pcSet(clients);
-  ['pc-name','pc-areas','pc-price','pc-timeline'].forEach(function(id){ var e=document.getElementById(id); if(e) e.value=''; });
-  var rEl = document.getElementById('pc-rating'); if(rEl) rEl.value='warm';
-  var pEl = document.getElementById('pc-preview'); if(pEl) pEl.textContent='';
+  PC_EDIT_IDX = -1;
   document.getElementById('pc-form').style.display = 'none';
   pcRender();
 }
 
 function pcRemove(i) { var a=pcGet(); a.splice(i,1); pcSet(a); pcRender(); }
 
-// Wire up type radio to change label
 (function(){
   var radios = document.querySelectorAll('input[name="pc-type-mik"]');
   radios.forEach(function(r){
     r.addEventListener('change', function(){
-      var lbl = document.getElementById('pc-area-label-mik');
-      var inp = document.getElementById('pc-areas');
-      if (r.value==='seller') {
-        if(lbl) lbl.textContent='PROPERTY ADDRESS';
-        if(inp) inp.placeholder='e.g. 123 Main St, Mokena';
-      } else {
-        if(lbl) lbl.textContent='AREAS SEARCHING';
-        if(inp) inp.placeholder='e.g. Mokena, Frankfort';
-      }
+      var lbl=document.getElementById('pc-area-label-mik');
+      var inp=document.getElementById('pc-areas');
+      if(r.value==='seller'){if(lbl)lbl.textContent='PROPERTY ADDRESS';if(inp)inp.placeholder='e.g. 123 Main St, Mokena';}
+      else{if(lbl)lbl.textContent='AREAS SEARCHING';if(inp)inp.placeholder='e.g. Mokena, Frankfort';}
     });
   });
+  pcRender();
 })();
-
-pcRender();
 </script>
 
 </body>
