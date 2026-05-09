@@ -122,28 +122,8 @@
 
   @media(max-width:580px){ .grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;} .pace-wrap{flex-direction:column;} .pace-side{border-left:none;border-top:1px solid var(--border);padding:10px 0 0;flex-direction:row;gap:20px;} .cur-month-grid{grid-template-columns:repeat(2,1fr);} }
 
-
   .gear-btn { background: rgba(255,255,255,0.15); border: none; border-radius: 8px; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; flex-shrink: 0; }
   .gear-btn:hover { background: rgba(255,255,255,0.25); }
-  .settings-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 100; }
-  .settings-overlay.open { display: block; }
-  .settings-drawer { position: fixed; top: 0; right: -360px; width: 340px; height: 100vh; background: var(--card); box-shadow: -4px 0 24px rgba(0,0,0,0.15); z-index: 101; transition: right .28s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
-  .settings-drawer.open { right: 0; }
-  .settings-hdr { background: var(--accent); padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
-  .settings-hdr-title { color: white; font-weight: 700; font-size: 16px; }
-  .settings-close { background: rgba(255,255,255,0.15); border: none; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; }
-  .settings-body { padding: 20px; flex: 1; }
-  .settings-group { margin-bottom: 24px; }
-  .settings-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--sub); margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-  .settings-field { margin-bottom: 16px; }
-  .settings-label { font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block; }
-  .settings-input { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border .15s; }
-  .settings-input:focus { border-color: var(--accent); background: white; }
-  .settings-footer { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
-  .btn-save { flex: 1; padding: 10px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; }
-  .btn-reset { padding: 10px 16px; background: var(--bg); color: var(--sub); border: 1px solid var(--border); border-radius: 8px; font-size: 14px; cursor: pointer; }
-  .save-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; z-index: 200; opacity: 0; transition: all .3s; pointer-events: none; }
-  .save-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
@@ -151,24 +131,14 @@
 <div class="topbar">
   <div class="topbar-inner">
     <div style="display:flex;align-items:center;gap:12px;">
-      <div class="avatar">JW</div>
-      <div><div class="tb-name">Jaclyn Mitchell</div><div class="tb-role">Buyer's &amp; Listing Agent · Crosstown Realtors</div></div>
+      <div class="avatar">JM</div>
+      <div><div class="tb-name">Jaclyn Mitchell</div><div class="tb-role">Buyer&#x27;s &amp; Listing Agent · Crosstown Realtors</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:12px;">
       <div class="tb-right">
         <div class="tb-date" id="js-date"></div>
         <div class="tb-time" id="js-time"></div>
       </div>
-      <button class="gear-btn" onclick="openSettings()" title="Customize dashboard">
-        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-          <line x1="3" y1="5" x2="17" y2="5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="3" y1="15" x2="17" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="7" cy="5" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
-          <circle cx="13" cy="10" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
-          <circle cx="8" cy="15" r="2" fill="var(--accent)" stroke="white" stroke-width="1.6"/>
-        </svg>
-      </button>
     </div>
   </div>
 </div>
@@ -176,7 +146,7 @@
 <div class="container">
 
   <div style="font-size:11px;color:var(--sub);text-align:right;margin-bottom:14px;">
-    🔄 Data refreshed <strong>May 4, 2026</strong> · Source: Transaction Tracker
+    🔄 Data refreshed <strong>May 9, 2026</strong> · Source: Transaction Tracker
   </div>
 
   <div class="quick-links">
@@ -195,30 +165,29 @@
   </div>
 
   <div style="margin-bottom:18px;">
-    <div class="alert alert-gold">⭐ <span><strong>Two deals closing Jun 5</strong> — David Mitchell buy ($690K, PAC $15,525) + Jaclyn &amp; David Mitchell sell ($308K, PAC $6,237). Combined PAC: <strong>$21,762</strong>.</span></div>
+    <div class="alert alert-gold">⭐ <span><strong>Big deal closing soon:</strong> David Mitchell — $690,000 at 11S315 Saratoga Avenue Lemont closes <strong>Jun 5</strong>. Est. PAC: <strong>$15,525</strong>. Stay on top of this one.</span></div>
   </div>
-
 
   <div class="grid-4">
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--accent)">$7,604</div>
+      <div class="stat-num" style="color:var(--accent)">$15,441</div>
       <div class="stat-label">Total YTD Income</div>
       <div class="stat-sub">own PAC</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--blue)">$7,604</div>
+      <div class="stat-num" style="color:var(--blue)">$15,441</div>
       <div class="stat-label">Own Agent Deals</div>
       <div class="stat-sub">3 own closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:#9ca3af">$0</div>
+      <div class="stat-num" style="color:var(--teal)">$0</div>
       <div class="stat-label">Team Override</div>
-      <div class="stat-sub">None yet in 2026</div>
+      <div class="stat-sub">0 team closes</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:var(--orange)" id="pct-stat">4%</div>
-      <div class="stat-label">Of $200K Goal</div>
-      <div class="stat-sub">$21,762 pipeline</div>
+      <div class="stat-num" style="color:var(--orange)" id="pct-stat">13%</div>
+      <div class="stat-label">Of $120,000 Goal</div>
+      <div class="stat-sub">$15,525 pipeline</div>
     </div>
   </div>
 
@@ -227,32 +196,25 @@
     <div class="card">
       <div class="income-row">
         <span class="income-label">Own agent deals (PAC — 3 closes)</span>
-        <span class="income-amt" style="color:var(--blue)">$7,604.00</span>
+        <span class="income-amt" style="color:var(--blue)">$15,440.55</span>
       </div>
-      <div class="income-row" id="override-breakdown-row" style="display:none;">
-        <span class="income-label">Team override income</span>
-        <span class="income-amt" style="color:var(--teal)" id="override-breakdown-amt">$0</span>
+      <div class="income-row">
+        <span class="income-label">Team override income (0 team closes)</span>
+        <span class="income-amt" style="color:var(--teal)">$0.00</span>
       </div>
       <div class="income-row" style="padding-top:10px;">
         <span style="font-weight:700;font-size:14px;">Total Income YTD</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green)">$7,604.00</span>
+        <span style="font-weight:800;font-size:16px;color:var(--green)">$15,440.55</span>
       </div>
-    </div>
-  </div>
-
-  <div class="section" id="override-income-section" style="display:none;">
-    <div class="section-label">💼 Override Income — Team Deals (YTD)</div>
-    <div class="card">
-      <div style="font-size:12px;color:var(--sub);">Override commissions earned from team deals will appear here when received.</div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-label">📈 2026 Production — $200,000 PAC Goal</div>
+    <div class="section-label">📈 2026 Production — $120,000 PAC Goal</div>
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
-          <div class="prog-row"><span>YTD PAC: <strong>$7,604</strong></span><span id="pct-lbl" style="color:var(--orange)">3.8% of $200,000</span></div>
+          <div class="prog-row"><span>YTD PAC: <strong>$15,441</strong></span><span id="pct-lbl" style="color:var(--orange)">12.9% of $120,000</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
           <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
@@ -278,7 +240,7 @@
           <div class="cur-lbl">PAC Earned</div>
         </div>
         <div class="cur-stat">
-          <div class="cur-num" style="color:var(--gold)">1</div>
+          <div class="cur-num" style="color:var(--gold)">2</div>
           <div class="cur-lbl">Pipeline Due Soon</div>
         </div>
       </div>
@@ -292,12 +254,12 @@
         <div class="streak-count">
           <div class="streak-num" style="color:var(--accent)">3</div>
           <div class="streak-label">Closes in 2026</div>
-          <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 45</div>
+          <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 25</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">3 / 45 (6.7%)</span></div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">3 / 25 (12.0%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
-          <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 2 deals pending · Est. +$21,762 PAC when closed</div>
+          <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 2 deals pending · Est. +$15,525 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -305,80 +267,27 @@
 
   <div class="section">
     <div class="section-label">🏠 Active Pipeline</div>
-
-    <div class="spotlight">
-      <div class="spotlight-hdr">
-        <div>
-          <div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div>
-          <div style="font-weight:600;font-size:14px;margin-top:2px;">David Mitchell — BUY</div>
-          <div style="font-size:12px;color:var(--sub);margin-top:2px;">11S315 Saratoga Avenue Lemont</div>
-        </div>
-        <span class="badge badge-gold">⭐ Jun 5</span>
-      </div>
-      <div class="spotlight-chips">
-        <div class="chip">Proj. close: <strong>Jun 5</strong></div>
-        <div class="chip">Price: <strong>$690,000</strong></div>
-        <div class="chip">GCI: <strong>$17,250</strong></div>
-        <div class="chip">Est. PAC: <strong>$15,525</strong></div>
-        <div class="chip">Source: <strong>SOI/PC</strong></div>
-        <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="deal-row">
-        <div class="deal-left"><div class="deal-title">Jaclyn &amp; David Mitchell — SELL</div><div class="deal-sub">5238 W Dixie Dr, Alsip IL 60803</div></div>
-        <span class="badge badge-blue">📅 Jun 5</span>
-      </div>
-      <div class="deal-chips">
-        <div class="chip">Proj. close: <strong>Jun 5</strong></div>
-        <div class="chip">Price: <strong>$308,000</strong></div>
-        <div class="chip">Est. PAC: <strong>$6,237</strong></div>
-        <div class="chip">Source: <strong>SOI/PC</strong></div>
-        <a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a>
-      </div>
-    </div>
-    <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">
-      <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
-        <span style="color:var(--sub);">Est. pipeline value if all close:</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green);">+$21,762 PAC</span>
-      </div>
-      <div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$29,366</div>
-    </div>
+    <div class="spotlight"><div class="spotlight-hdr"><div><div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div><div style="font-weight:600;font-size:14px;margin-top:2px;">David Mitchell — BUY</div><div style="font-size:12px;color:var(--sub);margin-top:2px;">11S315 Saratoga Avenue Lemont</div></div><span class="badge badge-gold">⭐ Jun 5</span></div><div class="spotlight-chips"><div class="chip">Proj. close: <strong>Jun 5</strong></div><div class="chip">Price: <strong>$690,000</strong></div><div class="chip">GCI: <strong>$17,250</strong></div><div class="chip">Est. PAC: <strong>$15,525</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Jaclyn &amp; David Mitchell — SELL</div><div class="deal-sub">5238 W Dixie Drive Alsip IL 60803</div></div><span class="badge badge-blue">📅 Jun 5</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Jun 5</strong></div><div class="chip">Price: <strong>$308,000</strong></div><div class="chip">Est. PAC: <strong>$0</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;"><div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;"><span style="color:var(--sub);">Est. pipeline value if all close:</span><span style="font-weight:800;font-size:16px;color:var(--green);">+$15,525 PAC</span></div><div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$30,966</div></div>
   </div>
 
   <div class="section">
     <div class="section-label">✅ Recent Closings — YTD 2026</div>
     <div class="card">
-
-      <div class="closed-row">
-        <div class="cl-date">May 22</div>
-        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Robert Crozier — 3631 W 121st Place Alsip IL 60803 (SOI/PC)</div>
-        <div class="cl-pac">$0</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Mar 30</div>
-        <span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span>
-        <div class="cl-name">Jaqueline Hansel — 19546 115th Ave Unit A Mokena (Zillow Flex)</div>
-        <div class="cl-pac">$2,940</div>
-      </div>
-      <div class="closed-row">
-        <div class="cl-date">Feb 17</div>
-        <span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span>
-        <div class="cl-name">Robert Zmora — 32209 N 1500 East Road Blackstone IL (Referral)</div>
-        <div class="cl-pac">$4,664</div>
-      </div>
+      <div class="closed-row"><div class="cl-date">May 22</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Robert Crozier — 3631 W 121st Place Alsip IL 60803 (SOI/PC)</div><div class="cl-pac">$6,481</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 30</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Jaqueline Hansel — 19546 115th Ave Unit A Mokena (Zillow Flex)</div><div class="cl-pac">$2,940</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 17</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Robert Zmora — 32209 N 1500 East Road Blackstone IL (Referral)</div><div class="cl-pac">$6,020</div></div>
     </div>
   </div>
-
+  
 </div>
 
 <script>
-const PAC_YTD = 7603.58;
-const PAC_GOAL = 200000;
+const PAC_YTD = 15440.55;
+const PAC_GOAL = 120000;
 const NUM_CLOSES = 3;
-const CLOSE_GOAL = 45;
+const CLOSE_GOAL = 25;
 
 function updateClock() {
   const now = new Date();
@@ -425,374 +334,5 @@ window.addEventListener('load', () => {
 });
 </script>
 
-
-
-  <div class="section" id="precontract-section">
-    <div class="section-label">🔍 Active Buyers &amp; Sellers — Pre-Contract</div>
-    <div class="card" style="padding:0;">
-      <div id="pc-list" style="padding:12px 16px 0;min-height:20px;"></div>
-      <div id="pc-total-bar" style="display:none;margin:0 16px 12px;padding:12px 16px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:10px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-size:13px;color:#15803d;font-weight:600;">💰 Total potential PAC if all convert:</span>
-          <span id="pc-total-amt" style="font-size:20px;font-weight:800;color:#15803d;">—</span>
-        </div>
-        <div style="font-size:11px;color:#166534;margin-top:4px;" id="pc-motivation">Every conversation gets you closer. Stay consistent.</div>
-      </div>
-      <div style="padding:0 16px 14px;">
-        <button onclick="pcToggleForm(-1)" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.01em;">+ Add Client</button>
-      </div>
-      <!-- Add/Edit form -->
-      <div id="pc-form" style="display:none;border-top:1px solid var(--border);padding:16px;">
-        <div id="pc-form-title" style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:12px;">New Client</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div>
-            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">CLIENT NAME</div>
-            <input id="pc-name" type="text" placeholder="e.g. John Smith" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
-          </div>
-          <div>
-            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">LEAD TEMPERATURE</div>
-            <select id="pc-rating" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);cursor:pointer;">
-              <option value="hot">🔥 Hot — Ready Now</option>
-              <option value="warm" selected>🌡️ Warm — 1–3 Months</option>
-              <option value="cool">❄️ Cool — 3–6 Months</option>
-              <option value="looking">👀 Just Looking</option>
-            </select>
-          </div>
-          <div>
-            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">TYPE</div>
-            <div style="display:flex;gap:16px;padding-top:6px;">
-              <label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type-jm" value="buyer" checked> Buyer</label>
-              <label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;"><input type="radio" name="pc-type-jm" value="seller"> Seller</label>
-            </div>
-          </div>
-          <div>
-            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;" id="pc-area-label-jm">AREAS SEARCHING</div>
-            <input id="pc-areas" type="text" placeholder="e.g. Mokena, Frankfort" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
-          </div>
-          <div>
-            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">PRICE</div>
-            <input id="pc-price" type="text" placeholder="e.g. $425,000 or $400K" oninput="pcPreview()" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
-            <div id="pc-preview" style="font-size:12px;color:#0d9488;font-weight:700;margin-top:5px;min-height:16px;"></div>
-          </div>
-          <div>
-            <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">TIMELINE</div>
-            <input id="pc-timeline" type="text" placeholder="e.g. ASAP, Summer 2026" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);box-sizing:border-box;">
-          </div>
-        </div>
-        <div style="margin-top:14px;display:flex;gap:10px;">
-          <button id="pc-save-btn" onclick="pcSave()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:13px;font-weight:700;cursor:pointer;">Save Client</button>
-          <button onclick="pcToggleForm(-1)" style="background:none;border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;color:var(--sub);">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script>
-var PC_KEY = 'precontract_jm';
-var PC_EDIT_IDX = -1;
-
-
-function pcParsePrice(s) {
-  if (!s) return 0;
-  var clean = s.replace(/[$,\s]/g,'');
-  var n = parseFloat(clean);
-  if (isNaN(n)) return 0;
-  if (/[Kk]/.test(s) && n < 10000) n *= 1000;
-  if (/[Mm]/.test(s) && n < 10000) n *= 1000000;
-  return n;
-}
-function pcFmt(n) { return '$' + Math.round(n).toLocaleString(); }
-function pcGet() { try { return JSON.parse(localStorage.getItem(PC_KEY))||[]; } catch(e) { return []; } }
-function pcSet(a) { localStorage.setItem(PC_KEY, JSON.stringify(a)); }
-
-var RATING_LABEL = {hot:'🔥 Hot',warm:'🌡️ Warm',cool:'❄️ Cool',looking:'👀 Looking'};
-var RATING_COLOR = {hot:'#dc2626',warm:'#d97706',cool:'#3b82f6',looking:'#6b7280'};
-var MOTIVATE = ['Every conversation counts. Go get it! 💪','One conversion away from your best month yet.','Stay consistent — leads close when you least expect it.','Your pipeline is your paycheck. Nurture it.','The fortune is in the follow-up. 📞'];
-
-function pcRender() {
-  var clients = pcGet();
-  var list = document.getElementById('pc-list');
-  var bar = document.getElementById('pc-total-bar');
-  if (!list) return;
-  if (!clients.length) {
-    list.innerHTML = '<div style="font-size:13px;color:var(--sub);padding-bottom:12px;">No active pre-contract clients yet.</div>';
-    if (bar) bar.style.display = 'none';
-    return;
-  }
-  var total = 0;
-  list.innerHTML = clients.map(function(c,i) {
-    var p = pcParsePrice(c.price);
-    var comm = p * 0.025;
-    total += comm;
-    var r = c.rating||'warm';
-    return '<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);">' +
-      '<div style="flex:1;">' +
-        '<div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:3px;">' +
-          '<span style="font-weight:700;font-size:14px;">' + c.name + '</span>' +
-          '<span style="font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;' + (c.type==='buyer'?'background:#e0e7ff;color:#4338ca':'background:#fff3cd;color:#92400e') + '">' + (c.type==='buyer'?'Buyer':'Seller') + '</span>' +
-          '<span style="font-size:11px;font-weight:700;color:' + RATING_COLOR[r] + '">' + RATING_LABEL[r] + '</span>' +
-        '</div>' +
-        '<div style="font-size:12px;color:var(--sub);">' + (c.type==='buyer'?'🔍 ':'📍 ') + (c.areas||'—') + (c.timeline?' &nbsp;·&nbsp; 📅 '+c.timeline:'') + '</div>' +
-        (p > 0 ? '<div style="display:flex;gap:16px;margin-top:5px;font-size:12px;">' +
-          '<span style="color:var(--sub);">Price: <strong style="color:var(--text);">' + pcFmt(p) + '</strong></span>' +
-          '<span style="color:#0d9488;font-weight:800;">💵 Est. PAC: ' + pcFmt(comm) + '</span>' +
-        '</div>' : '<div style="font-size:11px;color:var(--sub);margin-top:4px;font-style:italic;">Add price to see commission estimate</div>') +
-      '</div>' +
-      '<div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0;">' +
-        '<button onclick="pcEdit(' + i + ')" style="background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;cursor:pointer;color:var(--accent);">✏️ Edit</button>' +
-        '<button onclick="pcRemove(' + i + ')" style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;color:#9ca3af;">Remove</button>' +
-      '</div>' +
-    '</div>';
-  }).join('');
-
-  if (bar) {
-    if (total > 0) {
-      bar.style.display = 'block';
-      document.getElementById('pc-total-amt').textContent = pcFmt(total);
-      var mot = document.getElementById('pc-motivation');
-      if (mot) mot.textContent = MOTIVATE[clients.length % MOTIVATE.length];
-    } else { bar.style.display = 'none'; }
-  }
-}
-
-function pcToggleForm(editIdx) {
-  var f = document.getElementById('pc-form');
-  if (!f) return;
-  var isOpen = f.style.display === 'block';
-  // If same edit index clicked again, just close
-  if (isOpen && PC_EDIT_IDX === editIdx) { f.style.display='none'; PC_EDIT_IDX=-1; return; }
-  PC_EDIT_IDX = (editIdx !== undefined) ? editIdx : -1;
-  var title = document.getElementById('pc-form-title');
-  var saveBtn = document.getElementById('pc-save-btn');
-  if (PC_EDIT_IDX >= 0) {
-    if(title) title.textContent = 'Edit Client';
-    if(saveBtn) saveBtn.textContent = 'Save Changes';
-  } else {
-    if(title) title.textContent = 'New Client';
-    if(saveBtn) saveBtn.textContent = 'Save Client';
-    // Clear form for new entry
-    ['pc-name','pc-areas','pc-price','pc-timeline'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
-    var rEl=document.getElementById('pc-rating'); if(rEl) rEl.value='warm';
-    var pEl=document.getElementById('pc-preview'); if(pEl) pEl.textContent='';
-    var radios=document.querySelectorAll('input[name="pc-type-jm"]');
-    if(radios.length) radios[0].checked=true;
-    var lbl=document.getElementById('pc-area-label-jm');
-    var inp=document.getElementById('pc-areas');
-    if(lbl) lbl.textContent='AREAS SEARCHING';
-    if(inp) inp.placeholder='e.g. Mokena, Frankfort';
-  }
-  f.style.display = 'block';
-  // Scroll form into view
-  setTimeout(function(){ f.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 50);
-}
-
-function pcEdit(i) {
-  var clients = pcGet();
-  var c = clients[i];
-  if (!c) return;
-  document.getElementById('pc-name').value = c.name||'';
-  document.getElementById('pc-areas').value = c.areas||'';
-  document.getElementById('pc-price').value = c.price||'';
-  document.getElementById('pc-timeline').value = c.timeline||'';
-  var rEl = document.getElementById('pc-rating'); if(rEl) rEl.value = c.rating||'warm';
-  var radios = document.querySelectorAll('input[name="pc-type-jm"]');
-  radios.forEach(function(r){ r.checked = (r.value === (c.type||'buyer')); });
-  var lbl = document.getElementById('pc-area-label-jm');
-  var inp = document.getElementById('pc-areas');
-  if (c.type==='seller') {
-    if(lbl) lbl.textContent='PROPERTY ADDRESS';
-    if(inp) inp.placeholder='e.g. 123 Main St, Mokena';
-  } else {
-    if(lbl) lbl.textContent='AREAS SEARCHING';
-    if(inp) inp.placeholder='e.g. Mokena, Frankfort';
-  }
-  pcPreview();
-  pcToggleForm(i);
-}
-
-function pcPreview() {
-  var p = pcParsePrice((document.getElementById('pc-price')||{}).value||'');
-  var el = document.getElementById('pc-preview');
-  if (el) el.textContent = p > 0 ? 'Est. PAC @ 2.5%: ' + pcFmt(p * 0.025) : '';
-}
-
-function pcSave() {
-  var nameEl = document.getElementById('pc-name');
-  if (!nameEl || !nameEl.value.trim()) { alert('Please enter a client name.'); return; }
-  var sel = document.querySelector('input[name="pc-type-jm"]:checked');
-  var entry = {
-    name: nameEl.value.trim(),
-    type: sel ? sel.value : 'buyer',
-    areas: (document.getElementById('pc-areas')||{}).value||'',
-    price: (document.getElementById('pc-price')||{}).value||'',
-    timeline: (document.getElementById('pc-timeline')||{}).value||'',
-    rating: (document.getElementById('pc-rating')||{}).value||'warm'
-  };
-  var clients = pcGet();
-  if (PC_EDIT_IDX >= 0 && PC_EDIT_IDX < clients.length) {
-    clients[PC_EDIT_IDX] = entry;  // update existing
-  } else {
-    clients.push(entry);           // add new
-  }
-  pcSet(clients);
-  PC_EDIT_IDX = -1;
-  document.getElementById('pc-form').style.display = 'none';
-  pcRender();
-}
-
-function pcRemove(i) { var a=pcGet(); a.splice(i,1); pcSet(a); pcRender(); }
-
-(function(){
-  var radios = document.querySelectorAll('input[name="pc-type-jm"]');
-  radios.forEach(function(r){
-    r.addEventListener('change', function(){
-      var lbl=document.getElementById('pc-area-label-jm');
-      var inp=document.getElementById('pc-areas');
-      if(r.value==='seller'){if(lbl)lbl.textContent='PROPERTY ADDRESS';if(inp)inp.placeholder='e.g. 123 Main St, Mokena';}
-      else{if(lbl)lbl.textContent='AREAS SEARCHING';if(inp)inp.placeholder='e.g. Mokena, Frankfort';}
-    });
-  });
-  pcRender();
-})();
-
-
-const SETTINGS_KEY='jw_settings';
-const SDEFAULTS={pacGoal:200000,closeGoal:45,contactGoal:10,note:'',reminder1:'',reminder2:''};
-
-function loadSettings(){return Object.assign({},SDEFAULTS,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'));}
-
-function applySettings(s){
-  var goal=s.pacGoal||PAC_GOAL;
-  var cgoal=s.closeGoal||CLOSE_GOAL;
-  var pct=PAC_YTD/goal;
-  var d=new Date();
-  var elapsed=(d.getMonth()+1)/12;
-  var expected=goal*elapsed;
-  var gap=PAC_YTD-expected;
-  var annualized=elapsed>0?Math.round(PAC_YTD/elapsed):0;
-  var monthsLeft=12-d.getMonth()-1;
-  var bar=document.getElementById('gci-bar');
-  if(bar)bar.style.width=Math.min(pct*100,100)+'%';
-  var pctLbl=document.getElementById('pct-lbl');
-  if(pctLbl)pctLbl.textContent=(pct*100).toFixed(1)+'% of $'+Math.round(goal/1000)+'K';
-  var ann=document.getElementById('annualized');
-  if(ann)ann.textContent='$'+annualized.toLocaleString();
-  var gapEl=document.getElementById('pace-gap');
-  if(gapEl){gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();gapEl.style.color=gap<0?'var(--red)':'var(--green)';}
-  var moN=document.getElementById('mo-needed');
-  if(moN)moN.textContent=monthsLeft>0?'$'+Math.round((goal-PAC_YTD)/monthsLeft).toLocaleString():'—';
-  var moL=document.getElementById('mo-left');
-  if(moL)moL.textContent=monthsLeft;
-  var pctCard=document.getElementById('pct-stat');
-  if(pctCard){pctCard.textContent=Math.round(pct*100)+'%';if(pctCard.nextElementSibling)pctCard.nextElementSibling.textContent='Of $'+Math.round(goal/1000)+'K Goal';}
-  var cbar=document.getElementById('close-bar');
-  if(cbar)cbar.style.width=Math.min((NUM_CLOSES/cgoal)*100,100)+'%';
-  var clbl=document.getElementById('close-label');
-  if(clbl)clbl.textContent=NUM_CLOSES+' / '+cgoal+' ('+Math.round(NUM_CLOSES/cgoal*100)+'%)';
-  var noteEl=document.getElementById('personal-note');
-  if(s.note&&s.note.trim()){
-    if(!noteEl){noteEl=document.createElement('div');noteEl.id='personal-note';noteEl.className='alert alert-blue';noteEl.style.marginBottom='8px';var ad=document.querySelector('.container>div');if(ad)ad.insertBefore(noteEl,ad.firstChild);}
-    noteEl.innerHTML='\uD83D\uDCDD <span><strong>Your note:</strong> '+s.note+'</span>';
-  }else if(noteEl){noteEl.remove();}
-  ['reminder1','reminder2'].forEach(function(r,i){
-    var id='custom-reminder-'+(i+1);var el=document.getElementById(id);
-    if(s[r]&&s[r].trim()){
-      if(!el){el=document.createElement('div');el.id=id;el.className='alert alert-orange';el.style.marginBottom='8px';var ad=document.querySelector('.container>div');if(ad)ad.appendChild(el);}
-      el.innerHTML='\uD83D\uDD14 <span>'+s[r]+'</span>';
-    }else if(el){el.remove();}
-  });
-}
-
-function openSettings(){
-  var s=loadSettings();
-  document.getElementById('s-pac-goal').value=s.pacGoal;
-  document.getElementById('s-close-goal').value=s.closeGoal;
-  document.getElementById('s-contact-goal').value=s.contactGoal;
-  document.getElementById('s-note').value=s.note||'';
-  document.getElementById('s-reminder1').value=s.reminder1||'';
-  document.getElementById('s-reminder2').value=s.reminder2||'';
-  document.getElementById('settings-overlay').classList.add('open');
-  document.getElementById('settings-drawer').classList.add('open');
-}
-function closeSettings(){
-  document.getElementById('settings-overlay').classList.remove('open');
-  document.getElementById('settings-drawer').classList.remove('open');
-}
-function saveSettings(){
-  var s={
-    pacGoal:parseInt(document.getElementById('s-pac-goal').value)||200000,
-    closeGoal:parseInt(document.getElementById('s-close-goal').value)||45,
-    contactGoal:parseInt(document.getElementById('s-contact-goal').value)||10,
-    note:document.getElementById('s-note').value.trim(),
-    reminder1:document.getElementById('s-reminder1').value.trim(),
-    reminder2:document.getElementById('s-reminder2').value.trim()
-  };
-  localStorage.setItem(SETTINGS_KEY,JSON.stringify(s));
-  closeSettings();
-  applySettings(s);
-  var toast=document.getElementById('save-toast');
-  toast.classList.remove('show');void toast.offsetWidth;toast.classList.add('show');
-  setTimeout(function(){toast.classList.remove('show');},2500);
-}
-function resetSettings(){
-  localStorage.removeItem(SETTINGS_KEY);
-  document.getElementById('s-pac-goal').value=SDEFAULTS.pacGoal;
-  document.getElementById('s-close-goal').value=SDEFAULTS.closeGoal;
-  document.getElementById('s-contact-goal').value=SDEFAULTS.contactGoal;
-  document.getElementById('s-note').value='';
-  document.getElementById('s-reminder1').value='';
-  document.getElementById('s-reminder2').value='';
-}
-applySettings(loadSettings());
-</script>
-
-
-<div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
-<div class="settings-drawer" id="settings-drawer">
-  <div class="settings-hdr">
-    <span class="settings-hdr-title">⚙️ My Dashboard Settings</span>
-    <button class="settings-close" onclick="closeSettings()">✕</button>
-  </div>
-  <div class="settings-body">
-    <div class="settings-group">
-      <div class="settings-group-title">🎯 Goals</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-pac-goal">Annual Income Goal ($)</label>
-        <input class="settings-input" type="number" id="s-pac-goal" placeholder="200000" step="5000">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-close-goal">Annual Close Goal (# own deals)</label>
-        <input class="settings-input" type="number" id="s-close-goal" placeholder="45">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-contact-goal">Daily Contact Goal</label>
-        <input class="settings-input" type="number" id="s-contact-goal" placeholder="10">
-      </div>
-    </div>
-    <div class="settings-group">
-      <div class="settings-group-title">📝 Custom Notes</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-note">Today's note (optional)</label>
-        <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Team meeting at 10am..."></textarea>
-      </div>
-    </div>
-    <div class="settings-group">
-      <div class="settings-group-title">🔔 Reminders</div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-reminder1">Reminder 1</label>
-        <input class="settings-input" type="text" id="s-reminder1" placeholder="">
-      </div>
-      <div class="settings-field">
-        <label class="settings-label" for="s-reminder2">Reminder 2</label>
-        <input class="settings-input" type="text" id="s-reminder2" placeholder="">
-      </div>
-    </div>
-  </div>
-  <div class="settings-footer">
-    <button class="btn-reset" onclick="resetSettings()">Reset</button>
-    <button class="btn-save" onclick="saveSettings()">Save Changes</button>
-  </div>
-</div>
-<div class="save-toast" id="save-toast">✅ Settings saved!</div>
 </body>
 </html>
