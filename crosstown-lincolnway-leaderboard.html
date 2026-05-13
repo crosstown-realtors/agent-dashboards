@@ -90,7 +90,7 @@
   .header {
     text-align: center;
     padding: 40px 20px 28px;
-    background: linear-gradient(270deg, #1a0533, #0d1b4b, #0d3040, #1a0533);
+    background: linear-gradient(270deg, #081520, #0d2535, #0a1e2e, #081520);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite, fadeSlideUp 0.8s ease both;
     border-radius: 20px;
@@ -102,8 +102,8 @@
   .header::before {
     content: '';
     position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(206,147,216,0.12) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 50%, rgba(79,195,247,0.1) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 30% 50%, rgba(125,222,30,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(125,222,30,0.05) 0%, transparent 60%);
     pointer-events: none;
   }
   /* Floating particles */
@@ -117,7 +117,7 @@
   .header h1 {
     font-size: clamp(2rem, 5vw, 3.4rem);
     font-weight: 900;
-    background: linear-gradient(90deg, #ff9a9e, #ffd700, #a8edea, #fed6e3, #ffd700);
+    background: linear-gradient(90deg, #ffffff, #7dde1e, #ffffff, #b8f06a, #ffffff);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -430,11 +430,11 @@
 
 <!-- Floating particles in header -->
 <div class="header">
-  <div class="particle" style="width:6px;height:6px;background:#ffd700;top:20%;left:10%;--dur:5s;--delay:0s;"></div>
-  <div class="particle" style="width:4px;height:4px;background:#4fc3f7;top:60%;left:85%;--dur:4s;--delay:1s;"></div>
-  <div class="particle" style="width:8px;height:8px;background:#ce93d8;top:30%;left:75%;--dur:6s;--delay:0.5s;"></div>
-  <div class="particle" style="width:5px;height:5px;background:#00d4aa;top:70%;left:20%;--dur:4.5s;--delay:1.5s;"></div>
-  <div class="particle" style="width:4px;height:4px;background:#f48fb1;top:50%;left:50%;--dur:5.5s;--delay:0.8s;"></div>
+  <div class="particle" style="width:6px;height:6px;background:#7dde1e;top:20%;left:10%;--dur:5s;--delay:0s;"></div>
+  <div class="particle" style="width:4px;height:4px;background:#b8f06a;top:60%;left:85%;--dur:4s;--delay:1s;"></div>
+  <div class="particle" style="width:8px;height:8px;background:#7dde1e;top:30%;left:75%;--dur:6s;--delay:0.5s;"></div>
+  <div class="particle" style="width:5px;height:5px;background:#ffffff;top:70%;left:20%;--dur:4.5s;--delay:1.5s;opacity:0.3"></div>
+  <div class="particle" style="width:4px;height:4px;background:#b8f06a;top:50%;left:50%;--dur:5.5s;--delay:0.8s;"></div>
   <h1>🏆 Crosstown-Lincolnway</h1>
   <div class="subtitle">Sales Leaderboard &nbsp;·&nbsp; 2026</div>
   <div class="updated" id="updated-date"></div>
@@ -500,7 +500,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">7 deals</div>
+      <div class="deals-count">9 Buy · 7 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
@@ -524,7 +524,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">6 deals</div>
+      <div class="deals-count">6 Buy · 4 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
@@ -548,7 +548,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">3 deals</div>
+      <div class="deals-count">3 Buy · 0 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
@@ -572,7 +572,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">5 deals</div>
+      <div class="deals-count">6 Buy · 2 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
@@ -596,7 +596,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">4 deals</div>
+      <div class="deals-count">4 Buy · 3 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
@@ -620,7 +620,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">3 deals</div>
+      <div class="deals-count">2 Buy · 3 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
@@ -644,7 +644,7 @@
       </div>
     </div>
     <div class="agent-stats">
-      <div class="deals-count">1 deal</div>
+      <div class="deals-count">2 Buy · 0 Sell</div>
       <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
