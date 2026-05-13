@@ -20,6 +20,14 @@
   .agent-role { font-size: 12px; color: #6c6c70; }
   .agent-stat { margin-top: 10px; font-size: 13px; font-weight: 700; }
   .section-label { width: 100%; max-width: 920px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6c6c70; margin-bottom: 4px; margin-top: 8px; }
+
+  .leaderboard-card { display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #081520 0%, #0d2535 50%, #0a1e2e 100%); border-radius: 18px; padding: 22px 28px; text-decoration: none; color: white; width: 100%; max-width: 920px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(125,222,30,0.2); border: 1.5px solid rgba(125,222,30,0.3); transition: transform .15s, box-shadow .15s; }
+  .leaderboard-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(125,222,30,0.35); }
+  .lb-left { display: flex; align-items: center; gap: 16px; }
+  .lb-trophy { font-size: 38px; line-height: 1; }
+  .lb-title { font-size: 18px; font-weight: 800; color: white; margin-bottom: 3px; }
+  .lb-sub { font-size: 13px; color: rgba(255,255,255,0.6); }
+  .lb-cta { background: #7dde1e; color: #081520; font-size: 13px; font-weight: 800; padding: 10px 20px; border-radius: 10px; white-space: nowrap; }
   footer { margin-top: 48px; font-size: 12px; color: #aaa; }
 </style>
 </head>
@@ -27,6 +35,17 @@
   <div class="logo">🏠</div>
   <h1>Crosstown Realtors</h1>
   <p class="sub">Agent Dashboards — Krembo Group · 2026</p>
+
+  <a class="leaderboard-card" href="crosstown-lincolnway-leaderboard.html" target="_blank">
+    <div class="lb-left">
+      <div class="lb-trophy">🏆</div>
+      <div>
+        <div class="lb-title">Crosstown-Lincolnway Sales Leaderboard</div>
+        <div class="lb-sub">Live rankings · YTD closed &amp; under contract volume · Updated weekly</div>
+      </div>
+    </div>
+    <div class="lb-cta">View Leaderboard →</div>
+  </a>
 
   <div class="section-label">Broker</div>
   <div class="grid" style="max-width:240px; margin-bottom:14px;">
