@@ -1,0 +1,12 @@
+{
+  "run_date": "2026-05-13",
+  "agents": {
+    "Michelle Madden":     {"closed_vol": 4690000, "uc_vol": 1940000},
+    "Dan Krembuszewski":   {"closed_vol": 2472500, "uc_vol": 2415000},
+    "Mike Kelly":          {"closed_vol": 2040000, "uc_vol": 0},
+    "Lauren Litoborski":   {"closed_vol": 1920000, "uc_vol": 995000},
+    "Mollie Kelly":        {"closed_vol": 1670000, "uc_vol": 268000},
+    "Jaclyn Mitchell":     {"closed_vol": 829000,  "uc_vol": 998000},
+    "Chris Lira":          {"closed_vol": 0,        "uc_vol": 465000}
+  }
+}
