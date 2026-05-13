@@ -11,19 +11,16 @@
     --gold: #FFD700;
     --silver: #C0C0C0;
     --bronze: #CD7F32;
-    --bg: #0f0f1a;
-    --card: #1a1a2e;
-    --card2: #16213e;
-    --accent1: #e94560;
-    --accent2: #0f3460;
-    --accent3: #533483;
+    --bg: #0a0a14;
+    --card: #12122a;
+    --card2: #0f1020;
     --green: #00d4aa;
     --blue: #4fc3f7;
     --purple: #ce93d8;
     --orange: #ffb74d;
     --pink: #f48fb1;
-    --text: #e0e0e0;
-    --subtext: #a0a0b8;
+    --text: #e0e0f0;
+    --subtext: #8888aa;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,96 +31,152 @@
     color: var(--text);
     min-height: 100vh;
     padding: 20px;
+    overflow-x: hidden;
   }
 
-  /* HEADER */
+  /* ── KEYFRAMES ─────────────────────────────────────────────────────── */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 20px rgba(255,215,0,0.2), 0 0 40px rgba(255,215,0,0.05); }
+    50%       { box-shadow: 0 0 35px rgba(255,215,0,0.45), 0 0 60px rgba(255,215,0,0.15); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33%       { transform: translateY(-8px) rotate(1deg); }
+    66%       { transform: translateY(-4px) rotate(-1deg); }
+  }
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes barFill {
+    from { width: 0 !important; }
+  }
+  @keyframes countUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @keyframes starPop {
+    0%   { opacity: 0; transform: scale(0) rotate(0deg); }
+    60%  { opacity: 1; transform: scale(1.3) rotate(180deg); }
+    100% { opacity: 1; transform: scale(1) rotate(360deg); }
+  }
+  @keyframes confettiFall {
+    0%   { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(80px) rotate(720deg); opacity: 0; }
+  }
+  @keyframes ripple {
+    0%   { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+  @keyframes ticker {
+    0%   { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── HEADER ─────────────────────────────────────────────────────────── */
   .header {
     text-align: center;
-    padding: 30px 20px 20px;
-    background: linear-gradient(135deg, #1a0533 0%, #0d1b4b 50%, #1a0533 100%);
+    padding: 40px 20px 28px;
+    background: linear-gradient(270deg, #1a0533, #0d1b4b, #0d3040, #1a0533);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite, fadeSlideUp 0.8s ease both;
     border-radius: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.07);
   }
   .header::before {
     content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(ellipse at center, rgba(233,69,96,0.15) 0%, transparent 60%);
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(206,147,216,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(79,195,247,0.1) 0%, transparent 60%);
     pointer-events: none;
   }
+  /* Floating particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float var(--dur, 4s) ease-in-out infinite var(--delay, 0s);
+    opacity: 0.4;
+  }
   .header h1 {
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3.4rem);
     font-weight: 900;
-    background: linear-gradient(90deg, #ff6b6b, #ffd700, #4fc3f7, #ce93d8);
+    background: linear-gradient(90deg, #ff9a9e, #ffd700, #a8edea, #fed6e3, #ffd700);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: shimmer 4s linear infinite;
     letter-spacing: -1px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    position: relative;
   }
   .header .subtitle {
     color: var(--subtext);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
   .header .updated {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
+    margin-top: 12px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
   }
 
-  /* OFFICE BANNER */
+  /* ── OFFICE BANNER ───────────────────────────────────────────────────── */
   .office-banner {
-    background: linear-gradient(135deg, #1e3a5f, #2d1b69, #1e3a5f);
+    background: linear-gradient(135deg, #0e2040, #1a1060, #0e2040);
     border-radius: 16px;
     padding: 24px 30px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid rgba(79,195,247,0.3);
+    justify-content: space-around;
+    border: 1px solid rgba(79,195,247,0.25);
+    animation: fadeSlideUp 0.9s 0.2s ease both;
     position: relative;
     overflow: hidden;
   }
-  .office-banner::after {
+  .office-banner::before {
     content: '🏢';
-    position: absolute;
-    right: 20px;
-    top: 50%;
+    position: absolute; right: 24px; top: 50%;
     transform: translateY(-50%);
-    font-size: 4rem;
-    opacity: 0.08;
+    font-size: 5rem; opacity: 0.06;
   }
-  .office-banner .label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--subtext);
-    margin-bottom: 4px;
-  }
-  .office-banner .value {
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
+  .banner-stat { text-align: center; min-width: 120px; }
+  .banner-stat .bl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 2px; color: var(--subtext); margin-bottom: 6px; }
+  .banner-stat .bv {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 900;
-    color: #fff;
+    animation: countUp 0.6s ease both;
   }
-  .office-banner .total { color: var(--gold); }
-  .office-banner .closed-val { color: var(--green); }
-  .office-banner .uc-val { color: var(--blue); }
-  .office-banner .stat { min-width: 150px; }
+  .bv.total   { color: var(--gold); }
+  .bv.closed  { color: var(--green); }
+  .bv.uc      { color: var(--blue); }
+  .bv.agents  { color: var(--purple); }
 
-  /* SECTION TITLES */
+  /* ── SECTION TITLE ───────────────────────────────────────────────────── */
   .section-title {
-    font-size: 1rem;
+    font-size: 0.78rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -133,218 +186,238 @@
     align-items: center;
     gap: 10px;
   }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: rgba(255,255,255,0.1);
-  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
 
-  /* LEADERBOARD TABLE */
-  .leaderboard {
-    margin-bottom: 28px;
-  }
+  /* ── LEADERBOARD ROWS ────────────────────────────────────────────────── */
+  .leaderboard { margin-bottom: 28px; }
+
   .agent-row {
     background: var(--card);
     border-radius: 14px;
-    padding: 16px 20px;
+    padding: 16px 18px;
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: 44px 1fr auto;
     gap: 14px;
     align-items: center;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: transform 0.2s, border-color 0.2s;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    animation: fadeSlideIn 0.5s ease forwards;
   }
-  .agent-row:hover { transform: translateX(4px); border-color: rgba(255,255,255,0.15); }
-  .agent-row.rank-1 { border-left: 3px solid var(--gold); background: linear-gradient(135deg, #2a2010, #1a1a2e); }
-  .agent-row.rank-2 { border-left: 3px solid var(--silver); background: linear-gradient(135deg, #202228, #1a1a2e); }
-  .agent-row.rank-3 { border-left: 3px solid var(--bronze); background: linear-gradient(135deg, #2a1810, #1a1a2e); }
+  .agent-row:hover {
+    transform: translateX(5px);
+    border-color: rgba(255,255,255,0.15);
+  }
+  .agent-row.rank-1 {
+    border-left: 3px solid var(--gold);
+    background: linear-gradient(135deg, #201808, #12122a);
+    animation: fadeSlideIn 0.5s ease forwards, pulse-gold 3s 1.5s ease-in-out infinite;
+  }
+  .agent-row.rank-2 { border-left: 3px solid var(--silver); background: linear-gradient(135deg, #181820, #12122a); }
+  .agent-row.rank-3 { border-left: 3px solid var(--bronze); background: linear-gradient(135deg, #201410, #12122a); }
+
+  /* Stagger delays */
+  .agent-row:nth-child(1) { animation-delay: 0.3s; }
+  .agent-row:nth-child(2) { animation-delay: 0.45s; }
+  .agent-row:nth-child(3) { animation-delay: 0.6s; }
+  .agent-row:nth-child(4) { animation-delay: 0.75s; }
+  .agent-row:nth-child(5) { animation-delay: 0.9s; }
+  .agent-row:nth-child(6) { animation-delay: 1.05s; }
+  .agent-row:nth-child(7) { animation-delay: 1.2s; }
 
   .rank-badge {
-    width: 44px;
-    height: 44px;
+    width: 44px; height: 44px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    font-weight: 900;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; font-weight: 900; flex-shrink: 0;
   }
-  .rank-1 .rank-badge { background: rgba(255,215,0,0.15); color: var(--gold); }
+  .rank-1 .rank-badge { background: rgba(255,215,0,0.18); color: var(--gold); }
   .rank-2 .rank-badge { background: rgba(192,192,192,0.15); color: var(--silver); }
   .rank-3 .rank-badge { background: rgba(205,127,50,0.15); color: var(--bronze); }
   .agent-row:not(.rank-1):not(.rank-2):not(.rank-3) .rank-badge {
-    background: rgba(255,255,255,0.06);
-    color: var(--subtext);
-    font-size: 1rem;
+    background: rgba(255,255,255,0.05); color: var(--subtext); font-size: 1rem;
   }
 
-  .agent-info { min-width: 0; }
-  .agent-name { font-weight: 700; font-size: 1rem; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .bars { display: flex; flex-direction: column; gap: 5px; }
-  .bar-row { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; }
-  .bar-label { width: 60px; color: var(--subtext); flex-shrink: 0; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
-  .bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; min-width: 80px; }
-  .bar-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
-  .bar-fill.closed { background: linear-gradient(90deg, #00d4aa, #00f5c4); }
-  .bar-fill.uc { background: linear-gradient(90deg, #4fc3f7, #81d4fa); }
-  .bar-val { color: var(--text); font-weight: 600; font-size: 0.75rem; min-width: 65px; text-align: right; flex-shrink: 0; }
+  .agent-name { font-weight: 700; font-size: 1rem; margin-bottom: 9px; }
+  .bars { display: flex; flex-direction: column; gap: 6px; }
+  .bar-row { display: flex; align-items: center; gap: 8px; }
+  .bar-label { width: 58px; color: var(--subtext); flex-shrink: 0; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; }
+  .bar-track { flex: 1; height: 7px; background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; min-width: 80px; }
+  .bar-fill {
+    height: 100%; border-radius: 4px;
+    animation: barFill 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .bar-fill.closed { background: linear-gradient(90deg, #00d4aa, #00ffcc); }
+  .bar-fill.uc     { background: linear-gradient(90deg, #4fc3f7, #81d4fa); }
+  .bar-val { color: var(--text); font-weight: 600; font-size: 0.75rem; min-width: 72px; text-align: right; flex-shrink: 0; }
+
+  /* Bar fill animation delays match row stagger */
+  .agent-row:nth-child(1) .bar-fill { animation-delay: 0.5s; }
+  .agent-row:nth-child(2) .bar-fill { animation-delay: 0.65s; }
+  .agent-row:nth-child(3) .bar-fill { animation-delay: 0.8s; }
+  .agent-row:nth-child(4) .bar-fill { animation-delay: 0.95s; }
+  .agent-row:nth-child(5) .bar-fill { animation-delay: 1.1s; }
+  .agent-row:nth-child(6) .bar-fill { animation-delay: 1.25s; }
+  .agent-row:nth-child(7) .bar-fill { animation-delay: 1.4s; }
 
   .agent-stats { text-align: right; flex-shrink: 0; }
-  .deals-count { font-size: 0.72rem; color: var(--subtext); margin-bottom: 3px; }
+  .deals-count { font-size: 0.72rem; color: var(--subtext); margin-bottom: 4px; }
   .first-report-badge {
-    background: rgba(255,183,77,0.15);
+    background: rgba(255,183,77,0.12);
     color: var(--orange);
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid rgba(255,183,77,0.3);
-    display: inline-block;
-    margin-top: 4px;
+    font-size: 0.62rem; font-weight: 700;
+    padding: 3px 8px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 1px;
+    border: 1px solid rgba(255,183,77,0.25);
+    display: inline-block; margin-top: 3px;
+    animation: ticker 0.4s ease both;
   }
 
-  /* TOP 3 PODIUM */
-  .podium-section { margin-bottom: 28px; }
+  /* ── PODIUM ──────────────────────────────────────────────────────────── */
+  .podium-section { margin-bottom: 28px; animation: fadeSlideUp 0.7s 1.4s ease both; opacity: 0; }
   .podium {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 12px;
-    padding: 10px 0 0;
+    display: flex; align-items: flex-end;
+    justify-content: center; gap: 10px; padding: 14px 0 0;
   }
   .podium-item {
-    flex: 1;
-    max-width: 220px;
-    text-align: center;
-    border-radius: 16px 16px 0 0;
-    padding: 20px 12px 16px;
-    position: relative;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-bottom: none;
+    flex: 1; max-width: 220px; text-align: center;
+    border-radius: 16px 16px 0 0; padding: 22px 12px 18px;
+    position: relative; border: 1px solid rgba(255,255,255,0.08); border-bottom: none;
+    transition: transform 0.3s;
   }
-  .podium-item.p1 { background: linear-gradient(180deg, rgba(255,215,0,0.12), rgba(255,215,0,0.04)); border-color: rgba(255,215,0,0.3); min-height: 180px; }
-  .podium-item.p2 { background: linear-gradient(180deg, rgba(192,192,192,0.12), rgba(192,192,192,0.04)); border-color: rgba(192,192,192,0.3); min-height: 150px; }
-  .podium-item.p3 { background: linear-gradient(180deg, rgba(205,127,50,0.12), rgba(205,127,50,0.04)); border-color: rgba(205,127,50,0.3); min-height: 130px; }
-  .podium-trophy { font-size: 2.2rem; margin-bottom: 8px; }
-  .podium-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
-  .podium-vol { font-size: 1.25rem; font-weight: 900; }
+  .podium-item:hover { transform: translateY(-6px); }
+  .podium-item.p1 {
+    background: linear-gradient(180deg, rgba(255,215,0,0.14), rgba(255,215,0,0.03));
+    border-color: rgba(255,215,0,0.35); min-height: 200px;
+    animation: pulse-gold 3s 2s ease-in-out infinite;
+  }
+  .podium-item.p2 { background: linear-gradient(180deg, rgba(192,192,192,0.12), rgba(192,192,192,0.03)); border-color: rgba(192,192,192,0.3); min-height: 165px; }
+  .podium-item.p3 { background: linear-gradient(180deg, rgba(205,127,50,0.12), rgba(205,127,50,0.03)); border-color: rgba(205,127,50,0.3); min-height: 145px; }
+  .podium-trophy { font-size: 2.4rem; margin-bottom: 8px; animation: starPop 0.6s 1.8s ease both; opacity: 0; }
+  .podium-name { font-weight: 700; font-size: 0.88rem; margin-bottom: 7px; }
+  .podium-vol { font-size: 1.3rem; font-weight: 900; }
   .p1 .podium-vol { color: var(--gold); }
   .p2 .podium-vol { color: var(--silver); }
   .p3 .podium-vol { color: var(--bronze); }
-  .podium-sub { font-size: 0.7rem; color: var(--subtext); margin-top: 4px; }
+  .podium-sub { font-size: 0.68rem; color: var(--subtext); margin-top: 5px; }
   .podium-rank {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 0.85rem;
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 0.8rem;
+    animation: starPop 0.5s ease both;
   }
-  .p1 .podium-rank { background: var(--gold); color: #000; }
-  .p2 .podium-rank { background: var(--silver); color: #000; }
-  .p3 .podium-rank { background: var(--bronze); color: #000; }
+  .p1 .podium-rank { background: var(--gold); color: #000; animation-delay: 1.6s; }
+  .p2 .podium-rank { background: var(--silver); color: #000; animation-delay: 1.7s; }
+  .p3 .podium-rank { background: var(--bronze); color: #000; animation-delay: 1.8s; }
 
-  /* TOP SALES */
-  .top-sales-section { margin-bottom: 28px; }
-  .top-sales-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
+  /* Confetti dots around #1 podium */
+  .confetti-wrap { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .confetti-dot {
+    position: absolute;
+    width: 6px; height: 6px; border-radius: 2px;
+    animation: confettiFall 1.5s ease-out infinite;
+    opacity: 0;
   }
+
+  /* ── TOP SALES ───────────────────────────────────────────────────────── */
+  .top-sales-section { margin-bottom: 28px; animation: fadeSlideUp 0.7s 1.6s ease both; opacity: 0; }
+  .top-sales-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
   .sale-card {
-    background: var(--card2);
-    border-radius: 14px;
-    padding: 18px;
-    border: 1px solid rgba(255,255,255,0.08);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    background: var(--card2); border-radius: 14px; padding: 20px;
+    border: 1px solid rgba(255,255,255,0.07); text-align: center;
+    position: relative; overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
   }
+  .sale-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
   .sale-card:nth-child(1) { border-top: 3px solid var(--gold); }
   .sale-card:nth-child(2) { border-top: 3px solid var(--silver); }
   .sale-card:nth-child(3) { border-top: 3px solid var(--bronze); }
-  .sale-rank-num { font-size: 2rem; font-weight: 900; opacity: 0.15; position: absolute; top: 8px; right: 12px; }
-  .sale-trophy { font-size: 1.6rem; margin-bottom: 8px; }
-  .sale-amount { font-size: 1.5rem; font-weight: 900; margin-bottom: 4px; }
+  /* Ripple effect bg */
+  .sale-card::after {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%; padding-top: 100%;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    transition: transform 0.6s;
+  }
+  .sale-card:hover::after { transform: translate(-50%, -50%) scale(2.5); }
+  .sale-rank-num { font-size: 2.2rem; font-weight: 900; opacity: 0.08; position: absolute; top: 8px; right: 12px; }
+  .sale-trophy { font-size: 1.8rem; margin-bottom: 10px; animation: starPop 0.5s ease both; opacity: 0; }
+  .sale-card:nth-child(1) .sale-trophy { animation-delay: 1.9s; }
+  .sale-card:nth-child(2) .sale-trophy { animation-delay: 2.0s; }
+  .sale-card:nth-child(3) .sale-trophy { animation-delay: 2.1s; }
+  .sale-amount { font-size: 1.5rem; font-weight: 900; margin-bottom: 5px; }
   .sale-card:nth-child(1) .sale-amount { color: var(--gold); }
   .sale-card:nth-child(2) .sale-amount { color: var(--silver); }
   .sale-card:nth-child(3) .sale-amount { color: var(--bronze); }
-  .sale-agent { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .sale-agent { font-weight: 600; font-size: 0.88rem; margin-bottom: 5px; }
   .sale-status {
-    display: inline-block;
-    font-size: 0.68rem;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 4px;
+    display: inline-block; font-size: 0.66rem; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;
   }
   .status-closed { background: rgba(0,212,170,0.15); color: var(--green); border: 1px solid rgba(0,212,170,0.3); }
-  .status-uc { background: rgba(79,195,247,0.15); color: var(--blue); border: 1px solid rgba(79,195,247,0.3); }
+  .status-uc     { background: rgba(79,195,247,0.15); color: var(--blue);  border: 1px solid rgba(79,195,247,0.3); }
 
-  /* FOOTER */
+  /* ── FOOTER ──────────────────────────────────────────────────────────── */
   .footer {
-    text-align: center;
-    padding: 16px;
-    color: rgba(255,255,255,0.2);
-    font-size: 0.75rem;
+    text-align: center; padding: 18px;
+    color: rgba(255,255,255,0.18); font-size: 0.75rem;
+    animation: fadeSlideUp 0.6s 2s ease both; opacity: 0;
   }
 
   @media (max-width: 600px) {
     .agent-row { grid-template-columns: 36px 1fr; }
     .agent-stats { display: none; }
-    .podium { gap: 6px; }
+    .podium { gap: 5px; }
     .podium-item { padding: 14px 8px 12px; }
+    .office-banner { flex-direction: column; gap: 12px; }
   }
 </style>
 </head>
 <body>
 
+<!-- Floating particles in header -->
 <div class="header">
+  <div class="particle" style="width:6px;height:6px;background:#ffd700;top:20%;left:10%;--dur:5s;--delay:0s;"></div>
+  <div class="particle" style="width:4px;height:4px;background:#4fc3f7;top:60%;left:85%;--dur:4s;--delay:1s;"></div>
+  <div class="particle" style="width:8px;height:8px;background:#ce93d8;top:30%;left:75%;--dur:6s;--delay:0.5s;"></div>
+  <div class="particle" style="width:5px;height:5px;background:#00d4aa;top:70%;left:20%;--dur:4.5s;--delay:1.5s;"></div>
+  <div class="particle" style="width:4px;height:4px;background:#f48fb1;top:50%;left:50%;--dur:5.5s;--delay:0.8s;"></div>
   <h1>🏆 Crosstown-Lincolnway</h1>
-  <div class="subtitle">Sales Leaderboard · 2025</div>
-  <div class="updated" id="updated-date">Loading...</div>
+  <div class="subtitle">Sales Leaderboard &nbsp;·&nbsp; 2025</div>
+  <div class="updated" id="updated-date"></div>
 </div>
 
 <!-- OFFICE VOLUME BANNER -->
 <div class="office-banner">
-  <div class="stat">
-    <div class="label">Total Office Volume</div>
-    <div class="value total">$20,757,500</div>
+  <div class="banner-stat">
+    <div class="bl">Total Office Volume</div>
+    <div class="bv total" data-target="20757500" data-prefix="$" data-suffix="">$20,757,500</div>
   </div>
-  <div class="stat">
-    <div class="label">Closed Volume</div>
-    <div class="value closed-val">$13,687,500</div>
+  <div class="banner-stat">
+    <div class="bl">Closed Volume</div>
+    <div class="bv closed" data-target="13687500" data-prefix="$">$13,687,500</div>
   </div>
-  <div class="stat">
-    <div class="label">Under Contract</div>
-    <div class="value uc-val">$7,070,000</div>
+  <div class="banner-stat">
+    <div class="bl">Under Contract</div>
+    <div class="bv uc" data-target="7070000" data-prefix="$">$7,070,000</div>
   </div>
-  <div class="stat">
-    <div class="label">Active Agents</div>
-    <div class="value" style="color:var(--purple)">7</div>
+  <div class="banner-stat">
+    <div class="bl">Active Agents</div>
+    <div class="bv agents" data-target="7">7</div>
   </div>
 </div>
 
 <!-- FULL LEADERBOARD -->
 <div class="leaderboard">
   <div class="section-title">📊 Agent Leaderboard</div>
-
-  <!-- Max value for bar scaling: $4,690,000 closed -->
 
   <!-- 1. Michelle Madden -->
   <div class="agent-row rank-1">
@@ -358,7 +431,7 @@
           <span class="bar-val" style="color:var(--green)">$4,690,000</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:41%"></div></div>
           <span class="bar-val" style="color:var(--blue)">$1,940,000</span>
         </div>
@@ -366,7 +439,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">7 deals</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 
@@ -382,7 +455,7 @@
           <span class="bar-val" style="color:var(--green)">$2,472,500</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:51%"></div></div>
           <span class="bar-val" style="color:var(--blue)">$2,415,000</span>
         </div>
@@ -390,7 +463,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">6 deals</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 
@@ -406,7 +479,7 @@
           <span class="bar-val" style="color:var(--green)">$2,040,000</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:0%"></div></div>
           <span class="bar-val" style="color:var(--subtext)">—</span>
         </div>
@@ -414,7 +487,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">3 deals</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 
@@ -430,7 +503,7 @@
           <span class="bar-val" style="color:var(--green)">$1,920,000</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:21%"></div></div>
           <span class="bar-val" style="color:var(--blue)">$995,000</span>
         </div>
@@ -438,7 +511,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">5 deals</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 
@@ -454,7 +527,7 @@
           <span class="bar-val" style="color:var(--green)">$1,670,000</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:6%"></div></div>
           <span class="bar-val" style="color:var(--blue)">$268,000</span>
         </div>
@@ -462,7 +535,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">4 deals</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 
@@ -478,7 +551,7 @@
           <span class="bar-val" style="color:var(--green)">$829,000</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:21%"></div></div>
           <span class="bar-val" style="color:var(--blue)">$998,000</span>
         </div>
@@ -486,7 +559,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">3 deals</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 
@@ -502,7 +575,7 @@
           <span class="bar-val" style="color:var(--subtext)">—</span>
         </div>
         <div class="bar-row">
-          <span class="bar-label">Under Contract</span>
+          <span class="bar-label">UC</span>
           <div class="bar-track"><div class="bar-fill uc" style="width:10%"></div></div>
           <span class="bar-val" style="color:var(--blue)">$465,000</span>
         </div>
@@ -510,7 +583,7 @@
     </div>
     <div class="agent-stats">
       <div class="deals-count">1 deal</div>
-      <div class="first-report-badge">First Report</div>
+      <div class="first-report-badge">✦ First Report</div>
     </div>
   </div>
 </div>
@@ -519,22 +592,28 @@
 <div class="podium-section">
   <div class="section-title">🏆 Top 3 Closed Volume</div>
   <div class="podium">
+    <!-- Silver: #2 -->
     <div class="podium-item p2">
       <div class="podium-rank">2</div>
+      <div class="confetti-wrap" id="c2"></div>
       <div class="podium-trophy">🥈</div>
       <div class="podium-name">Dan Krembuszewski</div>
       <div class="podium-vol">$2.47M</div>
       <div class="podium-sub">4 closed deals</div>
     </div>
+    <!-- Gold: #1 (center, tallest) -->
     <div class="podium-item p1">
       <div class="podium-rank">1</div>
+      <div class="confetti-wrap" id="c1"></div>
       <div class="podium-trophy">🏆</div>
       <div class="podium-name">Michelle Madden</div>
       <div class="podium-vol">$4.69M</div>
       <div class="podium-sub">5 closed deals</div>
     </div>
+    <!-- Bronze: #3 -->
     <div class="podium-item p3">
       <div class="podium-rank">3</div>
+      <div class="confetti-wrap" id="c3"></div>
       <div class="podium-trophy">🥉</div>
       <div class="podium-name">Mike Kelly</div>
       <div class="podium-vol">$2.04M</div>
@@ -572,14 +651,61 @@
 </div>
 
 <div class="footer">
-  Crosstown-Lincolnway · Updated daily · Busted transactions excluded
+  Crosstown-Lincolnway &nbsp;·&nbsp; Updated daily &nbsp;·&nbsp; Busted transactions excluded
 </div>
 
 <script>
-  // Set updated date
+  // ── Updated date ────────────────────────────────────────────────────────
   const d = new Date();
   document.getElementById('updated-date').textContent =
     'Last updated: ' + d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+
+  // ── Animated number counters ────────────────────────────────────────────
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const prefix = el.dataset.prefix || '';
+    const isLarge = target > 999;
+    const duration = 1600;
+    const start = performance.now();
+    function fmt(n) {
+      if (prefix === '$') return '$' + n.toLocaleString('en-US');
+      return n.toLocaleString('en-US');
+    }
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * ease);
+      el.textContent = fmt(current);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    setTimeout(() => requestAnimationFrame(step), 400);
+  }
+  document.querySelectorAll('.bv[data-target]').forEach(animateCounter);
+
+  // ── Confetti in podium ──────────────────────────────────────────────────
+  const confettiColors = ['#FFD700','#ff6b6b','#4fc3f7','#00d4aa','#ce93d8','#ffb74d'];
+  function spawnConfetti(containerId, count, delay) {
+    setTimeout(() => {
+      const wrap = document.getElementById(containerId);
+      if (!wrap) return;
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'confetti-dot';
+        dot.style.left = Math.random() * 100 + '%';
+        dot.style.top = Math.random() * 40 + '%';
+        dot.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+        dot.style.animationDelay = (Math.random() * 1.5) + 's';
+        dot.style.animationDuration = (1.2 + Math.random() * 1.2) + 's';
+        dot.style.width = dot.style.height = (4 + Math.random() * 6) + 'px';
+        wrap.appendChild(dot);
+      }
+    }, delay);
+  }
+  spawnConfetti('c1', 18, 1800);
+  spawnConfetti('c2', 10, 2000);
+  spawnConfetti('c3', 8,  2100);
 </script>
 </body>
 </html>
