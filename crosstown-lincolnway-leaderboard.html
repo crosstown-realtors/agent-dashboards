@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crosstown-Lincolnway Sales Leaderboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  :root {
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --bronze: #CD7F32;
+    --bg: #0f0f1a;
+    --card: #1a1a2e;
+    --card2: #16213e;
+    --accent1: #e94560;
+    --accent2: #0f3460;
+    --accent3: #533483;
+    --green: #00d4aa;
+    --blue: #4fc3f7;
+    --purple: #ce93d8;
+    --orange: #ffb74d;
+    --pink: #f48fb1;
+    --text: #e0e0e0;
+    --subtext: #a0a0b8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding: 30px 20px 20px;
+    background: linear-gradient(135deg, #1a0533 0%, #0d1b4b 50%, #1a0533 100%);
+    border-radius: 20px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(233,69,96,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .header h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff6b6b, #ffd700, #4fc3f7, #ce93d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  .header .subtitle {
+    color: var(--subtext);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .header .updated {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* OFFICE BANNER */
+  .office-banner {
+    background: linear-gradient(135deg, #1e3a5f, #2d1b69, #1e3a5f);
+    border-radius: 16px;
+    padding: 24px 30px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(79,195,247,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .office-banner::after {
+    content: '🏢';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    opacity: 0.08;
+  }
+  .office-banner .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--subtext);
+    margin-bottom: 4px;
+  }
+  .office-banner .value {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 900;
+    color: #fff;
+  }
+  .office-banner .total { color: var(--gold); }
+  .office-banner .closed-val { color: var(--green); }
+  .office-banner .uc-val { color: var(--blue); }
+  .office-banner .stat { min-width: 150px; }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--subtext);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* LEADERBOARD TABLE */
+  .leaderboard {
+    margin-bottom: 28px;
+  }
+  .agent-row {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .agent-row:hover { transform: translateX(4px); border-color: rgba(255,255,255,0.15); }
+  .agent-row.rank-1 { border-left: 3px solid var(--gold); background: linear-gradient(135deg, #2a2010, #1a1a2e); }
+  .agent-row.rank-2 { border-left: 3px solid var(--silver); background: linear-gradient(135deg, #202228, #1a1a2e); }
+  .agent-row.rank-3 { border-left: 3px solid var(--bronze); background: linear-gradient(135deg, #2a1810, #1a1a2e); }
+
+  .rank-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .rank-1 .rank-badge { background: rgba(255,215,0,0.15); color: var(--gold); }
+  .rank-2 .rank-badge { background: rgba(192,192,192,0.15); color: var(--silver); }
+  .rank-3 .rank-badge { background: rgba(205,127,50,0.15); color: var(--bronze); }
+  .agent-row:not(.rank-1):not(.rank-2):not(.rank-3) .rank-badge {
+    background: rgba(255,255,255,0.06);
+    color: var(--subtext);
+    font-size: 1rem;
+  }
+
+  .agent-info { min-width: 0; }
+  .agent-name { font-weight: 700; font-size: 1rem; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bars { display: flex; flex-direction: column; gap: 5px; }
+  .bar-row { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; }
+  .bar-label { width: 60px; color: var(--subtext); flex-shrink: 0; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+  .bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; min-width: 80px; }
+  .bar-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .bar-fill.closed { background: linear-gradient(90deg, #00d4aa, #00f5c4); }
+  .bar-fill.uc { background: linear-gradient(90deg, #4fc3f7, #81d4fa); }
+  .bar-val { color: var(--text); font-weight: 600; font-size: 0.75rem; min-width: 65px; text-align: right; flex-shrink: 0; }
+
+  .agent-stats { text-align: right; flex-shrink: 0; }
+  .deals-count { font-size: 0.72rem; color: var(--subtext); margin-bottom: 3px; }
+  .first-report-badge {
+    background: rgba(255,183,77,0.15);
+    color: var(--orange);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255,183,77,0.3);
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  /* TOP 3 PODIUM */
+  .podium-section { margin-bottom: 28px; }
+  .podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 0 0;
+  }
+  .podium-item {
+    flex: 1;
+    max-width: 220px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+    padding: 20px 12px 16px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-bottom: none;
+  }
+  .podium-item.p1 { background: linear-gradient(180deg, rgba(255,215,0,0.12), rgba(255,215,0,0.04)); border-color: rgba(255,215,0,0.3); min-height: 180px; }
+  .podium-item.p2 { background: linear-gradient(180deg, rgba(192,192,192,0.12), rgba(192,192,192,0.04)); border-color: rgba(192,192,192,0.3); min-height: 150px; }
+  .podium-item.p3 { background: linear-gradient(180deg, rgba(205,127,50,0.12), rgba(205,127,50,0.04)); border-color: rgba(205,127,50,0.3); min-height: 130px; }
+  .podium-trophy { font-size: 2.2rem; margin-bottom: 8px; }
+  .podium-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
+  .podium-vol { font-size: 1.25rem; font-weight: 900; }
+  .p1 .podium-vol { color: var(--gold); }
+  .p2 .podium-vol { color: var(--silver); }
+  .p3 .podium-vol { color: var(--bronze); }
+  .podium-sub { font-size: 0.7rem; color: var(--subtext); margin-top: 4px; }
+  .podium-rank {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.85rem;
+  }
+  .p1 .podium-rank { background: var(--gold); color: #000; }
+  .p2 .podium-rank { background: var(--silver); color: #000; }
+  .p3 .podium-rank { background: var(--bronze); color: #000; }
+
+  /* TOP SALES */
+  .top-sales-section { margin-bottom: 28px; }
+  .top-sales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .sale-card {
+    background: var(--card2);
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sale-card:nth-child(1) { border-top: 3px solid var(--gold); }
+  .sale-card:nth-child(2) { border-top: 3px solid var(--silver); }
+  .sale-card:nth-child(3) { border-top: 3px solid var(--bronze); }
+  .sale-rank-num { font-size: 2rem; font-weight: 900; opacity: 0.15; position: absolute; top: 8px; right: 12px; }
+  .sale-trophy { font-size: 1.6rem; margin-bottom: 8px; }
+  .sale-amount { font-size: 1.5rem; font-weight: 900; margin-bottom: 4px; }
+  .sale-card:nth-child(1) .sale-amount { color: var(--gold); }
+  .sale-card:nth-child(2) .sale-amount { color: var(--silver); }
+  .sale-card:nth-child(3) .sale-amount { color: var(--bronze); }
+  .sale-agent { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .sale-status {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+  .status-closed { background: rgba(0,212,170,0.15); color: var(--green); border: 1px solid rgba(0,212,170,0.3); }
+  .status-uc { background: rgba(79,195,247,0.15); color: var(--blue); border: 1px solid rgba(79,195,247,0.3); }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 16px;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 600px) {
+    .agent-row { grid-template-columns: 36px 1fr; }
+    .agent-stats { display: none; }
+    .podium { gap: 6px; }
+    .podium-item { padding: 14px 8px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 Crosstown-Lincolnway</h1>
+  <div class="subtitle">Sales Leaderboard · 2025</div>
+  <div class="updated" id="updated-date">Loading...</div>
+</div>
+
+<!-- OFFICE VOLUME BANNER -->
+<div class="office-banner">
+  <div class="stat">
+    <div class="label">Total Office Volume</div>
+    <div class="value total">$20,757,500</div>
+  </div>
+  <div class="stat">
+    <div class="label">Closed Volume</div>
+    <div class="value closed-val">$13,687,500</div>
+  </div>
+  <div class="stat">
+    <div class="label">Under Contract</div>
+    <div class="value uc-val">$7,070,000</div>
+  </div>
+  <div class="stat">
+    <div class="label">Active Agents</div>
+    <div class="value" style="color:var(--purple)">7</div>
+  </div>
+</div>
+
+<!-- FULL LEADERBOARD -->
+<div class="leaderboard">
+  <div class="section-title">📊 Agent Leaderboard</div>
+
+  <!-- Max value for bar scaling: $4,690,000 closed -->
+
+  <!-- 1. Michelle Madden -->
+  <div class="agent-row rank-1">
+    <div class="rank-badge">🥇</div>
+    <div class="agent-info">
+      <div class="agent-name">Michelle Madden</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:100%"></div></div>
+          <span class="bar-val" style="color:var(--green)">$4,690,000</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:41%"></div></div>
+          <span class="bar-val" style="color:var(--blue)">$1,940,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">7 deals</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+
+  <!-- 2. Dan Krembuszewski -->
+  <div class="agent-row rank-2">
+    <div class="rank-badge">🥈</div>
+    <div class="agent-info">
+      <div class="agent-name">Dan Krembuszewski</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:53%"></div></div>
+          <span class="bar-val" style="color:var(--green)">$2,472,500</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:51%"></div></div>
+          <span class="bar-val" style="color:var(--blue)">$2,415,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">6 deals</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+
+  <!-- 3. Mike Kelly -->
+  <div class="agent-row rank-3">
+    <div class="rank-badge">🥉</div>
+    <div class="agent-info">
+      <div class="agent-name">Mike Kelly</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:44%"></div></div>
+          <span class="bar-val" style="color:var(--green)">$2,040,000</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:0%"></div></div>
+          <span class="bar-val" style="color:var(--subtext)">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">3 deals</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+
+  <!-- 4. Lauren Litoborski -->
+  <div class="agent-row">
+    <div class="rank-badge">4</div>
+    <div class="agent-info">
+      <div class="agent-name">Lauren Litoborski</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:41%"></div></div>
+          <span class="bar-val" style="color:var(--green)">$1,920,000</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:21%"></div></div>
+          <span class="bar-val" style="color:var(--blue)">$995,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">5 deals</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+
+  <!-- 5. Mollie Kelly -->
+  <div class="agent-row">
+    <div class="rank-badge">5</div>
+    <div class="agent-info">
+      <div class="agent-name">Mollie Kelly</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:36%"></div></div>
+          <span class="bar-val" style="color:var(--green)">$1,670,000</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:6%"></div></div>
+          <span class="bar-val" style="color:var(--blue)">$268,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">4 deals</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+
+  <!-- 6. Jaclyn Mitchell -->
+  <div class="agent-row">
+    <div class="rank-badge">6</div>
+    <div class="agent-info">
+      <div class="agent-name">Jaclyn Mitchell</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:18%"></div></div>
+          <span class="bar-val" style="color:var(--green)">$829,000</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:21%"></div></div>
+          <span class="bar-val" style="color:var(--blue)">$998,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">3 deals</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+
+  <!-- 7. Chris Lira -->
+  <div class="agent-row">
+    <div class="rank-badge">7</div>
+    <div class="agent-info">
+      <div class="agent-name">Chris Lira</div>
+      <div class="bars">
+        <div class="bar-row">
+          <span class="bar-label">Closed</span>
+          <div class="bar-track"><div class="bar-fill closed" style="width:0%"></div></div>
+          <span class="bar-val" style="color:var(--subtext)">—</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Under Contract</span>
+          <div class="bar-track"><div class="bar-fill uc" style="width:10%"></div></div>
+          <span class="bar-val" style="color:var(--blue)">$465,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="agent-stats">
+      <div class="deals-count">1 deal</div>
+      <div class="first-report-badge">First Report</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP 3 CLOSED VOLUME PODIUM -->
+<div class="podium-section">
+  <div class="section-title">🏆 Top 3 Closed Volume</div>
+  <div class="podium">
+    <div class="podium-item p2">
+      <div class="podium-rank">2</div>
+      <div class="podium-trophy">🥈</div>
+      <div class="podium-name">Dan Krembuszewski</div>
+      <div class="podium-vol">$2.47M</div>
+      <div class="podium-sub">4 closed deals</div>
+    </div>
+    <div class="podium-item p1">
+      <div class="podium-rank">1</div>
+      <div class="podium-trophy">🏆</div>
+      <div class="podium-name">Michelle Madden</div>
+      <div class="podium-vol">$4.69M</div>
+      <div class="podium-sub">5 closed deals</div>
+    </div>
+    <div class="podium-item p3">
+      <div class="podium-rank">3</div>
+      <div class="podium-trophy">🥉</div>
+      <div class="podium-name">Mike Kelly</div>
+      <div class="podium-vol">$2.04M</div>
+      <div class="podium-sub">3 closed deals</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP 3 HIGHEST INDIVIDUAL SALES -->
+<div class="top-sales-section">
+  <div class="section-title">💎 Top 3 Highest Individual Sales — 2025</div>
+  <div class="top-sales-grid">
+    <div class="sale-card">
+      <div class="sale-rank-num">1</div>
+      <div class="sale-trophy">🥇</div>
+      <div class="sale-amount">$1,350,000</div>
+      <div class="sale-agent">Michelle Madden</div>
+      <span class="sale-status status-uc">Under Contract</span>
+    </div>
+    <div class="sale-card">
+      <div class="sale-rank-num">2</div>
+      <div class="sale-trophy">🥈</div>
+      <div class="sale-amount">$850,000</div>
+      <div class="sale-agent">Mike Kelly</div>
+      <span class="sale-status status-closed">Closed</span>
+    </div>
+    <div class="sale-card">
+      <div class="sale-rank-num">3</div>
+      <div class="sale-trophy">🥉</div>
+      <div class="sale-amount">$765,000</div>
+      <div class="sale-agent">Dan Krembuszewski</div>
+      <span class="sale-status status-uc">Under Contract</span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  Crosstown-Lincolnway · Updated daily · Busted transactions excluded
+</div>
+
+<script>
+  // Set updated date
+  const d = new Date();
+  document.getElementById('updated-date').textContent =
+    'Last updated: ' + d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+</script>
+</body>
+</html>
