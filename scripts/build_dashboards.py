@@ -205,7 +205,7 @@ def closed_row_html(deal):
             f'<div class="cl-pac">{pac_str}</div>'
             f'</div>')
 
-def pipeline_card_html(deal):
+def pipeline_card_html(deal, highlight=False):
     bs = deal['bs']
     client = deal['client'].replace('&','&amp;')
     addr = deal['addr'].replace('&','&amp;')
@@ -219,8 +219,9 @@ def pipeline_card_html(deal):
     dt = parse_proj_date(proj)
     proj_fmt = dt.strftime('%b %-d') if dt else proj
     
+    card_style = ' style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"' if highlight else ''
     gci_chip = f'<div class="chip">GCI: <strong>{fmt_money(gci)}</strong></div>' if gci > 0 else ""
-    return (f'<div class="card">'
+    return (f'<div class="card"{card_style}>'
             f'<div class="deal-row"><div class="deal-left">'
             f'<div class="deal-title">{client} — {bs.upper()}</div>'
             f'<div class="deal-sub">{addr}</div>'
@@ -432,34 +433,45 @@ def build_data_section(agent_name, d):
 
     # --- PIPELINE ---
     if uc:
-        # Spotlight the highest-value UC deal
-        top_uc = max(uc, key=lambda x: x['price'])
-        pac_top = top_uc['pac'] if 'Dan' not in agent_name else top_uc['krembo']
-        dt_top = parse_proj_date(top_uc['proj'])
-        dt_top_fmt = dt_top.strftime('%b %-d') if dt_top else top_uc['proj']
-        top_uc_gci_chip = f'<div class="chip">GCI: <strong>{fmt_money(top_uc["gci"])}</strong></div>' if top_uc['gci'] > 0 else ""
-        spotlight = (f'<div class="spotlight"><div class="spotlight-hdr"><div>'
-                     f'<div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div>'
-                     f'<div style="font-weight:600;font-size:14px;margin-top:2px;">{top_uc["client"].replace("&","&amp;")} — {top_uc["bs"].upper()}</div>'
-                     f'<div style="font-size:12px;color:var(--sub);margin-top:2px;">{top_uc["addr"].replace("&","&amp;")}</div>'
-                     f'</div><span class="badge badge-gold">⭐ {dt_top_fmt}</span></div>'
-                     f'<div class="spotlight-chips">'
-                     f'<div class="chip">Proj. close: <strong>{dt_top_fmt}</strong></div>'
-                     f'<div class="chip">Price: <strong>{fmt_money(top_uc["price"])}</strong></div>'
-                     f'{top_uc_gci_chip}'
-                     f'<div class="chip">Est. PAC: <strong>{fmt_money(pac_top)}</strong></div>'
-                     f'<div class="chip">Source: <strong>{top_uc["source"]}</strong></div>'
-                     f'<a class="open-link" href="{TRACKER_URL}" target="_blank">View tracker →</a>'
-                     f'</div></div>')
-        other_uc = [deal for deal in uc if deal != top_uc]
-        other_cards = '\n    '.join(pipeline_card_html(deal) for deal in other_uc)
-        pipeline_total_card = (f'<div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">'
-                               f'<div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">'
-                               f'<span style="color:var(--sub);">Est. pipeline value if all close:</span>'
-                               f'<span style="font-weight:800;font-size:16px;color:var(--green);">+{fmt_money(est_pipeline_pac)} PAC</span></div>'
-                               f'<div style="font-size:11px;color:var(--sub);margin-top:4px;">'
-                               f'Would bring YTD to ~{fmt_money(round(total_ytd + est_pipeline_pac))}</div></div>')
-        pipeline_content = spotlight + '\n    ' + other_cards + '\n    ' + pipeline_total_card
+        if 'Dan' in agent_name:
+            # Dan: all own deals highlighted, no spotlight
+            all_cards = '\n    '.join(pipeline_card_html(deal, highlight=True) for deal in uc)
+            pipeline_total_card = (f'<div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">'
+                                   f'<div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">'
+                                   f'<span style="color:var(--sub);">Est. pipeline value if all close:</span>'
+                                   f'<span style="font-weight:800;font-size:16px;color:var(--green);">+{fmt_money(est_pipeline_pac)} PAC</span></div>'
+                                   f'<div style="font-size:11px;color:var(--sub);margin-top:4px;">'
+                                   f'Would bring YTD to ~{fmt_money(round(total_ytd + est_pipeline_pac))}</div></div>')
+            pipeline_content = all_cards + '\n    ' + pipeline_total_card
+        else:
+            # Other agents: spotlight highest-value
+            top_uc = max(uc, key=lambda x: x['price'])
+            pac_top = top_uc['pac']
+            dt_top = parse_proj_date(top_uc['proj'])
+            dt_top_fmt = dt_top.strftime('%b %-d') if dt_top else top_uc['proj']
+            top_uc_gci_chip = f'<div class="chip">GCI: <strong>{fmt_money(top_uc["gci"])}</strong></div>' if top_uc['gci'] > 0 else ""
+            spotlight = (f'<div class="spotlight"><div class="spotlight-hdr"><div>'
+                         f'<div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div>'
+                         f'<div style="font-weight:600;font-size:14px;margin-top:2px;">{top_uc["client"].replace("&","&amp;")} — {top_uc["bs"].upper()}</div>'
+                         f'<div style="font-size:12px;color:var(--sub);margin-top:2px;">{top_uc["addr"].replace("&","&amp;")}</div>'
+                         f'</div><span class="badge badge-gold">⭐ {dt_top_fmt}</span></div>'
+                         f'<div class="spotlight-chips">'
+                         f'<div class="chip">Proj. close: <strong>{dt_top_fmt}</strong></div>'
+                         f'<div class="chip">Price: <strong>{fmt_money(top_uc["price"])}</strong></div>'
+                         f'{top_uc_gci_chip}'
+                         f'<div class="chip">Est. PAC: <strong>{fmt_money(pac_top)}</strong></div>'
+                         f'<div class="chip">Source: <strong>{top_uc["source"]}</strong></div>'
+                         f'<a class="open-link" href="{TRACKER_URL}" target="_blank">View tracker →</a>'
+                         f'</div></div>')
+            other_uc = [deal for deal in uc if deal != top_uc]
+            all_cards = spotlight + ('\n    ' + '\n    '.join(pipeline_card_html(deal) for deal in other_uc) if other_uc else '')
+            pipeline_total_card = (f'<div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">'
+                                   f'<div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">'
+                                   f'<span style="color:var(--sub);">Est. pipeline value if all close:</span>'
+                                   f'<span style="font-weight:800;font-size:16px;color:var(--green);">+{fmt_money(est_pipeline_pac)} PAC</span></div>'
+                                   f'<div style="font-size:11px;color:var(--sub);margin-top:4px;">'
+                                   f'Would bring YTD to ~{fmt_money(round(total_ytd + est_pipeline_pac))}</div></div>')
+            pipeline_content = all_cards + '\n    ' + pipeline_total_card
     else:
         pipeline_content = '<div class="card" style="color:var(--sub);text-align:center;padding:20px;">No active pipeline deals.</div>'
     
@@ -510,6 +522,59 @@ def build_data_section(agent_name, d):
     else:
         js_vars = f"const PAC_YTD = {total_ytd:.2f};\nconst PAC_GOAL = {pac_goal};\nconst NUM_CLOSES = {n_closed};\nconst CLOSE_GOAL = {close_goal};"
 
+    # --- RECENT MONTH ---
+    all_dated_closed = [c for c in closed if c['dt']]
+    if all_dated_closed:
+        months_avail = sorted(set((c['dt'].year, c['dt'].month) for c in all_dated_closed), reverse=True)
+        bm = months_avail[0]
+        month_closes_rm = [c for c in all_dated_closed if c['dt'].year == bm[0] and c['dt'].month == bm[1]]
+        month_name_rm = date(bm[0], bm[1], 1).strftime('%B %Y')
+        is_current_rm = bm[0] == date.today().year and bm[1] == date.today().month
+        if 'Dan' in agent_name:
+            month_own_krembo = sum(c['krembo'] for c in month_closes_rm)
+            month_team_rm = [o for o in override_list if o['dt'] and o['dt'].year == bm[0] and o['dt'].month == bm[1]]
+            month_team_krembo = sum(o['amt'] for o in month_team_rm)
+            month_total_rm = month_own_krembo + month_team_krembo
+            n_own_rm = len(month_closes_rm)
+            n_team_rm = len(month_team_rm)
+            krembo_label = "Total Krembo"
+        else:
+            month_total_rm = sum(c['effective_pac'] for c in month_closes_rm)
+            n_own_rm = len(month_closes_rm)
+            n_team_rm = 0
+            krembo_label = "Total PAC"
+        monthly_avg_goal = pac_goal / 12
+        pct_rm = month_total_rm / monthly_avg_goal * 100 if monthly_avg_goal > 0 else 0
+        bar_w_rm = min(100, pct_rm)
+        bar_c_rm = "var(--green)" if pct_rm >= 100 else ("var(--blue)" if pct_rm >= 50 else "var(--orange)")
+        if pct_rm >= 150:
+            perf_label_rm = f"{pct_rm:.0f}% of avg — best month yet!"
+        elif pct_rm >= 100:
+            perf_label_rm = f"{pct_rm:.0f}% of monthly avg ✓"
+        else:
+            perf_label_rm = f"{pct_rm:.0f}% of monthly avg"
+        rm_section_label = "📅 This Month" if is_current_rm else f"📅 {month_name_rm}"
+        recent_month_html = (
+            f"    <div class=\"section-label\">{rm_section_label}</div>\n"
+            f"    <div class=\"card\">\n"
+            f"      <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:10px;\">\n"
+            f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--accent);\">{fmt_money(round(month_total_rm))}</div>"
+            f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">{krembo_label}</div></div>\n"
+            f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--blue);\">{n_own_rm}</div>"
+            f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">Own Closes</div></div>\n"
+            f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--teal);\">{n_team_rm}</div>"
+            f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">Team Closes</div></div>\n"
+            f"      </div>\n"
+            f"      <div style=\"margin-top:12px;padding-top:10px;border-top:1px solid var(--border);\">\n"
+            f"        <div class=\"prog-row\"><span>vs. monthly avg goal <strong>{fmt_money(round(monthly_avg_goal))}</strong></span>"
+            f"<span style=\"color:{bar_c_rm}\">{perf_label_rm}</span></div>\n"
+            f"        <div class=\"prog-bg\"><div class=\"prog-fill\" style=\"width:{bar_w_rm:.0f}%;background:linear-gradient(90deg,{bar_c_rm},{bar_c_rm});\"></div></div>\n"
+            f"      </div>\n"
+            f"    </div>\n"
+        )
+    else:
+        recent_month_html = ''
+
     data = {
         'alerts': alerts_html,
         'stats': stats_html,
@@ -519,6 +584,7 @@ def build_data_section(agent_name, d):
         'pipeline': pipeline_html,
         'closings': closings_html,
         'override': override_html,
+        'recent_month': recent_month_html,
         'js_vars': js_vars,
         'pac_ytd': total_ytd,
         'n_closed': n_closed,
@@ -549,8 +615,7 @@ def patch_html(html_path, agent_name, data):
         f'  <div style="margin-bottom:18px;">\n    {data["alerts"]}\n  </div>')
 
     # Stats grid
-    html = replace_marked(html, 'stats',
-        f'  <div class="grid-4">\n{data["stats"]}\n  </div>')
+    html = replace_marked(html, 'stats', data['stats'])
 
     # Data sections (label + card content, no outer section wrapper)
     html = replace_marked(html, 'income',      data['income'])
