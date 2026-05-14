@@ -152,10 +152,8 @@ def parse_tracker(csv_text):
             agents[agent]['uc'].append(deal)
             if override_amt > 0 and override_to:
                 full_name = INITIALS.get(override_to, override_to)
-                agents[full_name]['override_pending'].append({
-                    'from_agent': agent, 'client': client, 'addr': addr,
-                    'amt': override_amt, 'proj': proj
-                })
+                # Store full deal so we can render a proper pipeline card
+                agents[full_name]['override_pending'].append(deal)
 
         elif status == 'Busted':
             agents[agent]['busted'].append(deal)
@@ -249,7 +247,7 @@ def build_data_section(agent_name, d):
     
     override_list = sorted(d['override_received'], key=lambda x: x['dt'] or datetime(2025,1,1), reverse=True)
     override_total = sum(o['amt'] for o in override_list)
-    override_pending = sum(o['amt'] for o in d['override_pending'])
+    override_pending = sum(o['override_amt'] for o in d['override_pending'])
     
     if 'Dan' in agent_name:
         own_income = d['krembo_total']
@@ -432,17 +430,59 @@ def build_data_section(agent_name, d):
 """
 
     # --- PIPELINE ---
-    if uc:
+    if uc or d['override_pending']:
         if 'Dan' in agent_name:
-            # Dan: all own deals highlighted, no spotlight
-            all_cards = '\n    '.join(pipeline_card_html(deal, highlight=True) for deal in uc)
+            # Dan: own deals (highlighted blue) + team override deals (no highlight), sorted by proj date
+            override_deals = d['override_pending']
+            # Build combined list: (deal, is_own)
+            combined = [(deal, True) for deal in uc] + [(deal, False) for deal in override_deals]
+            combined.sort(key=lambda x: parse_proj_date(x[0]['proj']) or datetime(2099,1,1))
+            # Build each card
+            card_parts = []
+            for deal, is_own in combined:
+                if is_own:
+                    card_parts.append(pipeline_card_html(deal, highlight=True))
+                else:
+                    # Override deal: show the override amount in the PAC chip, plus a "Team override" label
+                    override_amt_val = deal['override_amt']
+                    bs = deal['bs']
+                    client = deal['client'].replace('&','&amp;')
+                    addr = deal['addr'].replace('&','&amp;')
+                    proj = deal['proj']
+                    price = deal['price']
+                    gci = deal['gci']
+                    agent_init = deal['agent'].split()[0][0] + deal['agent'].split()[-1][0] if deal['agent'] else '?'
+                    badge = badge_for_close_date(proj)
+                    dt = parse_proj_date(proj)
+                    proj_fmt = dt.strftime('%b %-d') if dt else proj
+                    gci_chip = f'<div class="chip">GCI: <strong>{fmt_money(gci)}</strong></div>' if gci > 0 else ""
+                    card_parts.append(
+                        f'<div class="card" style="border-left:3px solid var(--teal);">'
+                        f'<div class="deal-row"><div class="deal-left">'
+                        f'<div class="deal-title">{client} — {bs.upper()}'
+                        f'<span style="font-size:10px;font-weight:600;color:var(--teal);margin-left:8px;background:rgba(0,150,136,0.1);padding:2px 6px;border-radius:10px;">OVERRIDE</span>'
+                        f'</div>'
+                        f'<div class="deal-sub">{addr}</div>'
+                        f'</div>{badge}</div>'
+                        f'<div class="deal-chips">'
+                        f'<div class="chip">Proj. close: <strong>{proj_fmt}</strong></div>'
+                        f'<div class="chip">Price: <strong>{fmt_money(price)}</strong></div>'
+                        f'{gci_chip}'
+                        f'<div class="chip">Est. Override: <strong>{fmt_money(override_amt_val)}</strong></div>'
+                        f'<div class="chip">Agent: <strong>{deal["agent"].split()[-1]}</strong></div>'
+                        f'<a class="open-link" href="{TRACKER_URL}" target="_blank">View tracker →</a>'
+                        f'</div></div>'
+                    )
+            # Total card covers own pipeline + pending overrides
+            est_override_pending = sum(d2['override_amt'] for d2 in override_deals)
+            total_pipeline_est = est_pipeline_pac + est_override_pending
             pipeline_total_card = (f'<div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;">'
                                    f'<div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">'
-                                   f'<span style="color:var(--sub);">Est. pipeline value if all close:</span>'
-                                   f'<span style="font-weight:800;font-size:16px;color:var(--green);">+{fmt_money(est_pipeline_pac)} PAC</span></div>'
+                                   f'<span style="color:var(--sub);">Est. pipeline income if all close:</span>'
+                                   f'<span style="font-weight:800;font-size:16px;color:var(--green);">+{fmt_money(total_pipeline_est)}</span></div>'
                                    f'<div style="font-size:11px;color:var(--sub);margin-top:4px;">'
-                                   f'Would bring YTD to ~{fmt_money(round(total_ytd + est_pipeline_pac))}</div></div>')
-            pipeline_content = all_cards + '\n    ' + pipeline_total_card
+                                   f'Own PAC: {fmt_money(est_pipeline_pac)}{"  ·  Override: "+fmt_money(est_override_pending) if est_override_pending else ""}  ·  Would bring YTD to ~{fmt_money(round(total_ytd + total_pipeline_est))}</div></div>')
+            pipeline_content = '\n    '.join(card_parts) + '\n    ' + pipeline_total_card
         else:
             # Other agents: spotlight highest-value
             top_uc = max(uc, key=lambda x: x['price'])
