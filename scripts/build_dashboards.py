@@ -83,10 +83,20 @@ def badge_for_close_date(proj_date_str):
 
 def load_csv(b64_or_path):
     if os.path.exists(b64_or_path):
-        b64 = open(b64_or_path).read().strip()
+        raw = open(b64_or_path).read().strip()
     else:
-        b64 = b64_or_path.strip()
-    b64_fixed = b64.replace(' ', '') + '=' * (-len(b64.replace(' ', '')) % 4)
+        raw = b64_or_path.strip()
+    # If the file looks like a raw CSV (starts with 'Timestamp'), use it directly
+    if raw.startswith('Timestamp') or raw.startswith('"Timestamp"'):
+        return raw
+    b64 = raw.replace(' ', '')
+    # Fix padding — handle the case where data chars % 4 == 1 by trying to strip 1 char
+    data_chars = len(b64.rstrip('='))
+    if data_chars % 4 == 1:
+        # Try dropping the last non-padding char before re-padding
+        b64 = b64.rstrip('=')[:-1]
+    pad = (-len(b64.rstrip('=')) % 4)
+    b64_fixed = b64.rstrip('=') + '=' * pad
     return base64.b64decode(b64_fixed).decode('utf-8', errors='replace')
 
 def parse_tracker(csv_text):
@@ -101,23 +111,24 @@ def parse_tracker(csv_text):
     })
 
     for r in rows:
-        agent = r.get('Agent Name','').strip()
-        status = r.get('Status','').strip()
+        def gs(key): return (r.get(key) or '').strip()
+        agent = gs('Agent Name')
+        status = gs('Status')
         if not agent or status not in ('Closed','Under Contract','Busted'):
             continue
-        
-        bs = r.get('Buy or Sell','').strip()
-        client = r.get('Client Name(s)','').strip()
-        addr = r.get('Property Address','').strip()
-        source = r.get('Source','').strip()
-        ts = r.get('Timestamp','').strip()
-        proj = r.get('Projected Close Date','').strip()
-        price = parse_dollar(r.get('Price',''))
-        pac = parse_dollar(r.get('Primary Agent Commission',''))
-        krembo = parse_dollar(r.get('Krembo',''))
-        gci = parse_dollar(r.get('GCI',''))
-        override_amt = parse_dollar(r.get('Override Amt',''))
-        override_to = r.get('Override To','').strip()
+
+        bs = gs('Buy or Sell')
+        client = gs('Client Name(s)')
+        addr = gs('Property Address')
+        source = gs('Source')
+        ts = gs('Timestamp')
+        proj = gs('Projected Close Date')
+        price = parse_dollar(r.get('Price') or '')
+        pac = parse_dollar(r.get('Primary Agent Commission') or '')
+        krembo = parse_dollar(r.get('Krembo') or '')
+        gci = parse_dollar(r.get('GCI') or '')
+        override_amt = parse_dollar(r.get('Override Amt') or '')
+        override_to = gs('Override To')
         short_date, dt_obj = fmt_short_date(ts)
         # Fallback: if no Timestamp on a closed deal, use Projected Close Date
         if not dt_obj and status == 'Closed' and proj:
