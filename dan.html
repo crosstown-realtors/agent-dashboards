@@ -15,14 +15,6 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
-  .topbar { background: linear-gradient(135deg, #1e3a5f 0%, #2d4a70 100%); }
-  .topbar-inner { max-width: 860px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
-  .avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: white; flex-shrink: 0; }
-  .tb-name { color: white; font-weight: 700; font-size: 16px; }
-  .tb-role { color: rgba(255,255,255,0.7); font-size: 12px; }
-  .tb-right { text-align: right; }
-  .tb-date { color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 600; }
-  .tb-time { color: rgba(255,255,255,0.6); font-size: 12px; }
   .container { max-width: 860px; margin: 0 auto; padding: 22px 20px 48px; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 20px; }
@@ -112,8 +104,6 @@
   .ql-btn { display: flex; align-items: center; gap: 7px; padding: 9px 16px; background: var(--card); border-radius: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; transition: box-shadow .15s, transform .1s; border: 1px solid var(--border); }
   .ql-btn:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); transform: translateY(-1px); }
   .ql-icon { width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
-  .gear-btn { background: rgba(255,255,255,0.15); border: none; border-radius: 8px; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; flex-shrink: 0; }
-  .gear-btn:hover { background: rgba(255,255,255,0.25); }
   .settings-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 100; }
   .settings-overlay.open { display: block; }
   .settings-drawer { position: fixed; top: 0; right: -360px; width: 340px; height: 100vh; background: var(--card); box-shadow: -4px 0 24px rgba(0,0,0,0.15); z-index: 101; transition: right .28s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
@@ -152,90 +142,47 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 20% 50%, rgba(88,86,214,0.18) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 60% at 80% 50%, rgba(99,102,241,0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse 60% 80% at 15% 50%, rgba(88,86,214,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 85% 50%, rgba(99,102,241,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
   .site-header-inner {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 11px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
+    max-width: 860px; margin: 0 auto; padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    position: relative; z-index: 1;
   }
-  .site-header-brand {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-  }
+  .site-header-brand { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
   .site-header-emblem {
-    width: 38px;
-    height: 38px;
+    width: 36px; height: 36px;
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-    box-shadow: 0 0 14px rgba(99,102,241,0.5);
+    border-radius: 9px; display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0; box-shadow: 0 0 12px rgba(99,102,241,0.5);
   }
-  .site-header-org {
-    font-size: 15px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 0.03em;
-    line-height: 1.2;
+  .site-header-org { font-size: 13px; font-weight: 800; color: #fff; letter-spacing: 0.03em; line-height: 1.2; }
+  .site-header-cmd { font-size: 9px; font-weight: 700; color: #a5b4fc; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 1px; }
+  .site-header-divider { width: 1px; height: 32px; background: rgba(165,180,252,0.2); flex-shrink: 0; }
+  .site-header-agent { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+  .site-header-avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; color: white; flex-shrink: 0;
   }
-  .site-header-cmd {
-    font-size: 10px;
-    font-weight: 700;
-    color: #a5b4fc;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-top: 1px;
+  .site-header-agent-name { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.2; }
+  .site-header-agent-role { font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .site-header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .site-header-clock { text-align: right; }
+  .site-header-clock .tb-date { color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; }
+  .site-header-clock .tb-time { color: rgba(255,255,255,0.5); font-size: 11px; }
+  .site-header .gear-btn {
+    background: rgba(255,255,255,0.1); border: none; border-radius: 8px;
+    width: 34px; height: 34px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: background .15s;
   }
-  .site-header-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .site-header-pill {
-    background: rgba(165,180,252,0.1);
-    border: 1px solid rgba(165,180,252,0.22);
-    border-radius: 20px;
-    padding: 5px 13px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #c7d2fe;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background .15s;
-  }
-  .site-header-pill:hover { background: rgba(165,180,252,0.2); }
-  .site-header-live {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 10px;
-    font-weight: 600;
-    color: #6ee7b7;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-  }
-  .live-dot {
-    width: 6px; height: 6px;
-    background: #34d399;
-    border-radius: 50%;
-    animation: livepulse 2s ease-in-out infinite;
-  }
-  @keyframes livepulse {
-    0%,100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: .45; transform: scale(.8); }
-  }
+  .site-header .gear-btn:hover { background: rgba(255,255,255,0.2); }
+  .live-dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; animation: livepulse 2s ease-in-out infinite; display: inline-block; }
+  @keyframes livepulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.8); } }
 
 </style>
 </head>
@@ -250,21 +197,16 @@
         <div class="site-header-cmd">Agent Command Center</div>
       </div>
     </div>
+    <div class="site-header-divider"></div>
+    <div class="site-header-agent">
+      <div class="site-header-avatar">DK</div>
+      <div style="min-width:0;">
+        <div class="site-header-agent-name">Dan Krembuszewski</div>
+        <div class="site-header-agent-role">Broker / Owner · Krembo Group / Crosstown Realtors</div>
+      </div>
+    </div>
     <div class="site-header-right">
-      <div class="site-header-live"><span class="live-dot"></span>Live</div>
-      <a class="site-header-pill" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank">🏆 Leaderboard</a>
-    </div>
-  </div>
-</div>
-
-<div class="topbar">
-  <div class="topbar-inner">
-    <div style="display:flex;align-items:center;gap:12px;">
-      <div class="avatar">DK</div>
-      <div><div class="tb-name">Dan Krembuszewski</div><div class="tb-role">Broker / Owner · Krembo Group / Crosstown Realtors</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <div class="tb-right">
+      <div class="site-header-clock">
         <div class="tb-date" id="js-date"></div>
         <div class="tb-time" id="js-time"></div>
       </div>
@@ -273,9 +215,9 @@
           <line x1="3" y1="5" x2="17" y2="5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
           <line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
           <line x1="3" y1="15" x2="17" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="7" cy="5" r="2" fill="#1e3a5f" stroke="white" stroke-width="1.6"/>
-          <circle cx="13" cy="10" r="2" fill="#1e3a5f" stroke="white" stroke-width="1.6"/>
-          <circle cx="8" cy="15" r="2" fill="#1e3a5f" stroke="white" stroke-width="1.6"/>
+          <circle cx="7" cy="5" r="2" fill="rgba(0,0,0,0.4)" stroke="white" stroke-width="1.6"/>
+          <circle cx="13" cy="10" r="2" fill="rgba(0,0,0,0.4)" stroke="white" stroke-width="1.6"/>
+          <circle cx="8" cy="15" r="2" fill="rgba(0,0,0,0.4)" stroke="white" stroke-width="1.6"/>
         </svg>
       </button>
     </div>

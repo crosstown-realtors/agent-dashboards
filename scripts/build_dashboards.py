@@ -40,6 +40,18 @@ FILES = {
 # Initials map for override lookup
 INITIALS = {"DK": "Dan Krembuszewski", "MM": "Michelle Madden", "CL": "Chris Lira", "ML": "Mollie Kelly", "AP": "Angela Palma"}
 
+# Per-agent header metadata (initials, display role)
+AGENT_META = {
+    "Dan Krembuszewski":  {"initials": "DK", "role": "Broker / Owner · Krembo Group / Crosstown Realtors"},
+    "Michelle Madden":    {"initials": "MM", "role": "Team Lead · Madden Group / Crosstown Realtors"},
+    "Lauren Litoborski":  {"initials": "LL", "role": "Agent · Crosstown Realtors"},
+    "Mollie Kelly":       {"initials": "MK", "role": "Agent · Crosstown Realtors"},
+    "Mike Kelly":         {"initials": "MiK", "role": "Agent · Crosstown Realtors"},
+    "Jaclyn Mitchell":    {"initials": "JM", "role": "Agent · Crosstown Realtors"},
+    "Chris Lira":         {"initials": "CL", "role": "Agent · Madden Group / Crosstown Realtors"},
+    "Angela Palma":       {"initials": "AP", "role": "Agent · Madden Group / Crosstown Realtors"},
+}
+
 def parse_dollar(s):
     try:
         return float(str(s).strip().replace('$','').replace(',','').replace(' ',''))
@@ -681,37 +693,65 @@ SITE_HEADER_CSS = """
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 20% 50%, rgba(88,86,214,0.18) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 60% at 80% 50%, rgba(99,102,241,0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse 60% 80% at 15% 50%, rgba(88,86,214,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 85% 50%, rgba(99,102,241,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
   .site-header-inner {
-    max-width: 860px; margin: 0 auto; padding: 11px 20px;
-    display: flex; align-items: center; justify-content: space-between;
+    max-width: 860px; margin: 0 auto; padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
     position: relative; z-index: 1;
   }
-  .site-header-brand { display: flex; align-items: center; gap: 13px; }
+  .site-header-brand { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
   .site-header-emblem {
-    width: 38px; height: 38px;
+    width: 36px; height: 36px;
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    border-radius: 10px; display: flex; align-items: center; justify-content: center;
-    font-size: 20px; flex-shrink: 0; box-shadow: 0 0 14px rgba(99,102,241,0.5);
+    border-radius: 9px; display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0; box-shadow: 0 0 12px rgba(99,102,241,0.5);
   }
-  .site-header-org { font-size: 15px; font-weight: 800; color: #fff; letter-spacing: 0.03em; line-height: 1.2; }
-  .site-header-cmd { font-size: 10px; font-weight: 700; color: #a5b4fc; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 1px; }
-  .site-header-right { display: flex; align-items: center; gap: 10px; }
-  .site-header-pill {
-    background: rgba(165,180,252,0.1); border: 1px solid rgba(165,180,252,0.22);
-    border-radius: 20px; padding: 5px 13px; font-size: 11px; font-weight: 600;
-    color: #c7d2fe; text-decoration: none; white-space: nowrap; transition: background .15s;
+  .site-header-org { font-size: 13px; font-weight: 800; color: #fff; letter-spacing: 0.03em; line-height: 1.2; }
+  .site-header-cmd { font-size: 9px; font-weight: 700; color: #a5b4fc; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 1px; }
+  .site-header-divider { width: 1px; height: 32px; background: rgba(165,180,252,0.2); flex-shrink: 0; }
+  .site-header-agent { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+  .site-header-avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; color: white; flex-shrink: 0;
   }
-  .site-header-pill:hover { background: rgba(165,180,252,0.2); }
-  .site-header-live { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; color: #6ee7b7; letter-spacing: .05em; text-transform: uppercase; }
-  .live-dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; animation: livepulse 2s ease-in-out infinite; }
+  .site-header-agent-name { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.2; }
+  .site-header-agent-role { font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .site-header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .site-header-clock { text-align: right; }
+  .site-header-clock .tb-date { color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; }
+  .site-header-clock .tb-time { color: rgba(255,255,255,0.5); font-size: 11px; }
+  .site-header .gear-btn {
+    background: rgba(255,255,255,0.1); border: none; border-radius: 8px;
+    width: 34px; height: 34px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: background .15s;
+  }
+  .site-header .gear-btn:hover { background: rgba(255,255,255,0.2); }
+  .live-dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; animation: livepulse 2s ease-in-out infinite; display: inline-block; }
   @keyframes livepulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.8); } }
 """
 
-SITE_HEADER_HTML = """<div class="site-header">
+GEAR_SVG = """\
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+          <line x1="3" y1="5" x2="17" y2="5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="3" y1="15" x2="17" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="7" cy="5" r="2" fill="rgba(0,0,0,0.4)" stroke="white" stroke-width="1.6"/>
+          <circle cx="13" cy="10" r="2" fill="rgba(0,0,0,0.4)" stroke="white" stroke-width="1.6"/>
+          <circle cx="8" cy="15" r="2" fill="rgba(0,0,0,0.4)" stroke="white" stroke-width="1.6"/>
+        </svg>"""
+
+def make_site_header_html(agent_name):
+    """Generate the unified Command Center header HTML for a specific agent."""
+    meta = AGENT_META.get(agent_name, {"initials": agent_name[:2].upper(), "role": "Agent · Crosstown Realtors"})
+    initials = meta["initials"]
+    role = meta["role"]
+    return f"""<div class="site-header">
   <div class="site-header-inner">
     <div class="site-header-brand">
       <div class="site-header-emblem">🏠</div>
@@ -720,9 +760,22 @@ SITE_HEADER_HTML = """<div class="site-header">
         <div class="site-header-cmd">Agent Command Center</div>
       </div>
     </div>
+    <div class="site-header-divider"></div>
+    <div class="site-header-agent">
+      <div class="site-header-avatar">{initials}</div>
+      <div style="min-width:0;">
+        <div class="site-header-agent-name">{agent_name}</div>
+        <div class="site-header-agent-role">{role}</div>
+      </div>
+    </div>
     <div class="site-header-right">
-      <div class="site-header-live"><span class="live-dot"></span>Live</div>
-      <a class="site-header-pill" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank">🏆 Leaderboard</a>
+      <div class="site-header-clock">
+        <div class="tb-date" id="js-date"></div>
+        <div class="tb-time" id="js-time"></div>
+      </div>
+      <button class="gear-btn" onclick="openSettings()" title="Customize dashboard">
+{GEAR_SVG}
+      </button>
     </div>
   </div>
 </div>
@@ -732,10 +785,32 @@ def patch_html(html_path, agent_name, data):
     with open(html_path) as f:
         html = f.read()
 
-    # Ensure site header CSS is present
+    # ── Unified Command Center header injection / upgrade ──
+    site_header_html = make_site_header_html(agent_name)
     if 'site-header' not in html:
+        # Fresh file: inject CSS + header before <body> and topbar
         html = html.replace('</style>', SITE_HEADER_CSS + '\n</style>', 1)
-        html = html.replace('<div class="topbar">', SITE_HEADER_HTML + '\n<div class="topbar">', 1)
+        # If old topbar present, place header before it; otherwise place after <body>
+        if '<div class="topbar">' in html:
+            html = html.replace('<div class="topbar">', site_header_html + '\n<div class="topbar">', 1)
+        else:
+            html = html.replace('<body>', '<body>\n' + site_header_html, 1)
+    elif 'site-header-agent' not in html:
+        # Old-style header (brand+leaderboard only) — upgrade to unified header
+        # Replace CSS block
+        html = re.sub(
+            r'/\* ── Site-wide Command Center Header ──.*?@keyframes livepulse \{[^}]*\}',
+            SITE_HEADER_CSS.strip(),
+            html, count=1, flags=re.DOTALL
+        )
+        # Replace old site-header div with new unified one
+        html = re.sub(
+            r'<div class="site-header">.*?</div>\s*\n(?=\s*<div class="topbar">|<div class="settings)',
+            site_header_html + '\n',
+            html, count=1, flags=re.DOTALL
+        )
+        # Remove old topbar div entirely
+        html = re.sub(r'\n<div class="topbar">.*?(?=\n<div class="settings)', '', html, count=1, flags=re.DOTALL)
 
     # Update cache-bust comment
     html = re.sub(r'<!-- cache-bust:.*?-->', f'<!-- cache-bust: {TODAY} -->', html)
