@@ -113,9 +113,10 @@ def parse_tracker(csv_text):
         'override_pending': [],   # UC deals with override
     })
 
+    seen_deals = set()   # for deduplication
     for r in rows:
         def gs(key): return (r.get(key) or '').strip()
-        agent = gs('Agent Name')
+        agent = gs('Agent Name').lstrip('-').strip()   # normalize: strip leading dashes
         status = gs('Status')
         if not agent or status not in ('Closed','Under Contract','Busted'):
             continue
@@ -126,6 +127,12 @@ def parse_tracker(csv_text):
         source = gs('Source')
         ts = gs('Timestamp')
         proj = gs('Projected Close Date')
+
+        # Deduplicate: skip rows that are exact duplicates of (agent, bs, client, proj, status)
+        dedup_key = (agent, bs, client, proj, status)
+        if dedup_key in seen_deals:
+            continue
+        seen_deals.add(dedup_key)
         price = parse_dollar(r.get('Price') or '')
         pac = parse_dollar(r.get('Primary Agent Commission') or '')
         krembo = parse_dollar(r.get('Krembo') or '')
