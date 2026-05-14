@@ -139,13 +139,6 @@
   @keyframes slideUpIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
   @keyframes urgentPulse { 0%,100% { box-shadow:0 1px 4px rgba(0,0,0,.07); } 50% { box-shadow:0 0 0 5px rgba(192,57,43,.18), 0 1px 4px rgba(0,0,0,.07); } }
   .urgent-deal { animation: urgentPulse 2.2s ease-in-out infinite; }
-  .barchart-wrap { padding: 4px 0 0; }
-  .barchart-grid { display:flex; align-items:flex-end; gap:5px; height:90px; position:relative; }
-  .barchart-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; position:relative; }
-  .barchart-bar { width:100%; border-radius:4px 4px 0 0; transition:height .8s cubic-bezier(.34,1.56,.64,1); }
-  .barchart-val { font-size:8px; font-weight:700; color:var(--text); position:absolute; top:-13px; left:0; right:0; text-align:center; }
-  .barchart-lbl { font-size:9px; color:var(--sub); margin-top:3px; font-weight:600; }
-  .barchart-goal-line { position:absolute; left:0; right:0; border-top:1.5px dashed #cbd5e1; pointer-events:none; z-index:1; }
   @media(max-width:580px){ .grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;} .pace-wrap{flex-direction:column;} .pace-side{border-left:none;border-top:1px solid var(--border);padding:10px 0 0;flex-direction:row;gap:20px;} }
 </style>
 </head>
@@ -291,7 +284,6 @@
   </div>
   <!-- AG:alerts-end -->
 
-  <div class="section" id="bar-chart-section"></div>
 
   <div class="section">
 <!-- AG:goal-start -->
@@ -695,58 +687,6 @@ setTimeout(function() {
   </div>`;
 })();
 
-// ── Monthly PAC bar chart ─────────────────────────────────────────────
-(function renderBarChart() {
-  const el = document.getElementById('bar-chart-section');
-  if (!el) return;
-  const s = loadSettings();
-  const goal = (s.pacGoal || GOAL || 150000);
-  const mGoal = goal / 12;
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const curMonth = now.getMonth();
-  const vals = months.map(function(m,i){ return monthlyPAC[i+1] || 0; });
-  const maxVal = Math.max(mGoal * 1.6, Math.max.apply(null, vals.concat([1])));
-  const goalPct = Math.min(mGoal / maxVal * 100, 96);
-
-  const bars = months.map(function(m, i) {
-    const val = vals[i];
-    const isFuture = i > curMonth;
-    const isCur = i === curMonth;
-    const hPct = isFuture || val === 0 ? 0 : Math.max(val / maxVal * 100, 2);
-    const color = isCur ? 'var(--accent)' : val >= mGoal ? 'var(--green)' : val > 0 ? 'var(--orange)' : 'var(--border)';
-    const valStr = val >= 1000 ? '$' + (val/1000).toFixed(0) + 'K' : '';
-    return `<div class="barchart-col">
-      ${valStr && !isFuture ? `<div class="barchart-val">${valStr}</div>` : '<div class="barchart-val"></div>'}
-      <div class="barchart-bar" data-h="${hPct}" style="height:0%;background:${color};opacity:${isFuture?'0.18':'1'};"></div>
-      <div class="barchart-lbl">${m.charAt(0)}</div>
-    </div>`;
-  }).join('');
-
-  el.innerHTML = `<div class="section-label">📊 Monthly PAC — 2026</div>
-  <div class="card">
-    <div class="barchart-wrap">
-      <div class="barchart-grid">
-        <div class="barchart-goal-line" style="bottom:calc(${goalPct}% + 12px);"></div>
-        ${bars}
-      </div>
-      <div style="display:flex;align-items:center;gap:16px;margin-top:10px;font-size:11px;color:var(--sub);">
-        <span style="display:flex;align-items:center;gap:5px;"><span style="width:20px;border-top:1.5px dashed #cbd5e1;display:inline-block;"></span>Monthly goal ($${Math.round(mGoal/1000)}K)</span>
-        <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--green);border-radius:2px;display:inline-block;"></span>Hit goal</span>
-        <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--orange);border-radius:2px;display:inline-block;"></span>Partial</span>
-        <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--accent);border-radius:2px;display:inline-block;"></span>Current</span>
-      </div>
-    </div>
-  </div>`;
-
-  // Animate bars in
-  setTimeout(function() {
-    el.querySelectorAll('.barchart-bar').forEach(function(bar, i) {
-      setTimeout(function() {
-        bar.style.height = bar.getAttribute('data-h') + '%';
-      }, i * 35);
-    });
-  }, 80);
-})();
 
 // ── Urgency pulse on deals closing ≤ 5 days ──────────────────────────
 if (PIPELINE_DK.length) {
