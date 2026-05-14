@@ -327,9 +327,13 @@
           <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 20</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">6 / 20 (30.0%)</span></div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;" id="close-label">6 / 20 (30.0%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
-          <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 4 deals pending · Est. +$33,088 PAC when closed</div>
+          <div style="margin-top:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
+            <div class="month-dots-row" id="streak-dots"></div>
+          </div>
+          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 4 deals pending · Est. +$33,088 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -422,8 +426,8 @@ function tick(){document.getElementById('js-time').textContent=new Date().toLoca
 tick();setInterval(tick,30000);
 
 const GOAL=150000, CLOSE_GOAL=20;
-const monthlyPAC={1:18533.12,2:6137.74,3:3756.94,4:20953.47};
-const ytd=47486.30;
+const monthlyPAC={3:17594.40};
+const ytd=49093.25;
 const pct=ytd/GOAL;
 const mGoal=GOAL/12;
 const start=new Date(now.getFullYear(),0,0);
@@ -458,7 +462,7 @@ const grid=document.getElementById('month-grid');
   grid.appendChild(dot);
 });
 
-const closesPerMonth={1:3,4:3};
+const closesPerMonth={3:3};
 const sc=document.getElementById('streak-dots');
 ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
   const c=closesPerMonth[i+1]||0,isFuture=i>now.getMonth(),isCur=i===now.getMonth();

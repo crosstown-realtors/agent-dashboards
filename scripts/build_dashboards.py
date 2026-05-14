@@ -423,9 +423,9 @@ def build_data_section(agent_name, d):
           <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: {close_goal}</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">{close_pct_str}</span></div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;" id="close-label">{close_pct_str}</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
-          <div style="margin-top:10px;font-size:12px;color:var(--sub);">{pipeline_note}</div>
+          <div style="margin-top:10px;">\n            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>\n            <div class="month-dots-row" id="streak-dots"></div>\n          </div>\n          <div style="margin-top:6px;font-size:12px;color:var(--sub);">{pipeline_note}</div>
         </div>
       </div>
     </div>
@@ -575,6 +575,16 @@ def build_data_section(agent_name, d):
     else:
         recent_month_html = ''
 
+    # Monthly breakdowns for Dan JS vars
+    monthly_pac = {}
+    monthly_closes = {}
+    if 'Dan' in agent_name:
+        for c in closed:
+            if c['dt']:
+                m = c['dt'].month
+                monthly_pac[m] = monthly_pac.get(m, 0) + c['krembo']
+                monthly_closes[m] = monthly_closes.get(m, 0) + 1
+
     data = {
         'alerts': alerts_html,
         'stats': stats_html,
@@ -588,6 +598,8 @@ def build_data_section(agent_name, d):
         'js_vars': js_vars,
         'pac_ytd': total_ytd,
         'n_closed': n_closed,
+        'monthly_pac': monthly_pac,
+        'monthly_closes': monthly_closes,
     }
     return data
 
@@ -635,6 +647,14 @@ def patch_html(html_path, agent_name, data):
     else:
         html = re.sub(r'const PAC_YTD = [\d.]+;', f'const PAC_YTD = {data["pac_ytd"]:.2f};', html)
         html = re.sub(r'const NUM_CLOSES = \d+;', f'const NUM_CLOSES = {data["n_closed"]};', html)
+
+    # Extra JS vars for Dan (lowercase ytd, monthlyPAC, closesPerMonth)
+    if 'Dan' in agent_name:
+        html = re.sub(r'const ytd=[\d.]+;', f'const ytd={data["pac_ytd"]:.2f};', html)
+        monthly_pac_js = '{' + ','.join(f'{m}:{v:.2f}' for m,v in sorted(data['monthly_pac'].items())) + '}'
+        html = re.sub(r'const monthlyPAC=\{[^}]+\};', f'const monthlyPAC={monthly_pac_js};', html)
+        monthly_closes_js = '{' + ','.join(f'{m}:{c}' for m,c in sorted(data['monthly_closes'].items())) + '}'
+        html = re.sub(r'const closesPerMonth=\{[^}]+\};', f'const closesPerMonth={monthly_closes_js};', html)
 
     with open(html_path, 'w') as f:
         f.write(html)

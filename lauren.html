@@ -124,6 +124,26 @@
 
   .gear-btn { background: rgba(255,255,255,0.15); border: none; border-radius: 8px; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; flex-shrink: 0; }
   .gear-btn:hover { background: rgba(255,255,255,0.25); }
+  .settings-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 100; }
+  .settings-overlay.open { display: block; }
+  .settings-drawer { position: fixed; top: 0; right: -360px; width: 340px; height: 100vh; background: var(--card); box-shadow: -4px 0 24px rgba(0,0,0,0.15); z-index: 101; transition: right .28s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
+  .settings-drawer.open { right: 0; }
+  .settings-hdr { background: var(--accent); padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
+  .settings-hdr-title { color: white; font-weight: 700; font-size: 16px; }
+  .settings-close { background: rgba(255,255,255,0.15); border: none; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+  .settings-body { padding: 20px; flex: 1; }
+  .settings-group { margin-bottom: 24px; }
+  .settings-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--sub); margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .settings-field { margin-bottom: 16px; }
+  .settings-label { font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block; }
+  .settings-input { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border .15s; }
+  .settings-input:focus { border-color: var(--accent); background: white; }
+  .settings-footer { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
+  .btn-save { flex: 1; padding: 11px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .btn-save:hover { opacity: .88; }
+  .btn-reset { padding: 11px 16px; background: var(--bg); color: var(--sub); border: none; border-radius: 10px; font-size: 14px; cursor: pointer; }
+  .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
+  .save-toast.show { display: block; animation: fadeup .3s ease; }
 </style>
 </head>
 <body>
@@ -139,9 +159,44 @@
         <div class="tb-date" id="js-date"></div>
         <div class="tb-time" id="js-time"></div>
       </div>
+      <button class="gear-btn" onclick="openSettings()" title="Customize dashboard">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+          <line x1="3" y1="5" x2="17" y2="5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="3" y1="15" x2="17" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="7" cy="5" r="2" fill="#1e3a5f" stroke="white" stroke-width="1.6"/>
+          <circle cx="13" cy="10" r="2" fill="#1e3a5f" stroke="white" stroke-width="1.6"/>
+          <circle cx="8" cy="15" r="2" fill="#1e3a5f" stroke="white" stroke-width="1.6"/>
+        </svg>
+      </button>
     </div>
   </div>
 </div>
+<div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
+<div class="settings-drawer" id="settings-drawer">
+  <div class="settings-hdr">
+    <span class="settings-hdr-title">⚙️ My Dashboard Settings</span>
+    <button class="settings-close" onclick="closeSettings()">✕</button>
+  </div>
+  <div class="settings-body">
+    <div class="settings-group">
+      <div class="settings-group-title">🎯 Goals</div>
+      <div class="settings-field">
+        <label class="settings-label" for="s-pac-goal">Annual Income Goal ($)</label>
+        <input class="settings-input" type="number" id="s-pac-goal" placeholder="150000" step="5000">
+      </div>
+      <div class="settings-field">
+        <label class="settings-label" for="s-close-goal">Annual Close Goal</label>
+        <input class="settings-input" type="number" id="s-close-goal" placeholder="20">
+      </div>
+    </div>
+  </div>
+  <div class="settings-footer">
+    <button class="btn-reset" onclick="resetSettings()">Reset</button>
+    <button class="btn-save" onclick="saveSettings()">Save Changes</button>
+  </div>
+</div>
+<div class="save-toast" id="save-toast">✅ Settings saved!</div>
 
 <div class="container">
 
@@ -283,9 +338,13 @@
           <div style="font-size:11px;color:var(--sub);margin-top:4px;">Goal: 30</div>
         </div>
         <div style="flex:1;">
-          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;">5 / 30 (16.7%)</span></div>
+          <div class="prog-row"><span>Annual close goal</span><span style="color:var(--accent);font-weight:700;" id="close-label">5 / 30 (16.7%)</span></div>
           <div class="prog-bg" style="height:10px;"><div class="prog-fill" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)" id="close-bar"></div></div>
-          <div style="margin-top:10px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending · Est. +$17,263 PAC when closed</div>
+          <div style="margin-top:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
+            <div class="month-dots-row" id="streak-dots"></div>
+          </div>
+          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending · Est. +$17,263 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -417,6 +476,73 @@ function pcSave(){
 }
 function pcRemove(i){if(!confirm('Remove this client?'))return;var cl=pcGet();cl.splice(i,1);pcSet(cl);pcRender();}
 document.addEventListener('DOMContentLoaded',pcRender);if(document.readyState!=='loading')pcRender();
+
+const SETTINGS_KEY='ll_settings';
+const DEFAULTS_S={pacGoal:150000,closeGoal:20};
+
+function loadSettings(){return Object.assign({},DEFAULTS_S,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'));}
+
+function applySettings(s){
+  const goal=s.pacGoal||150000;
+  const cgoal=s.closeGoal||20;
+  const pct=PAC_YTD/goal;
+  const mGoal=goal/12;
+  const start=new Date(now.getFullYear(),0,0);
+  const dayOfYear=Math.floor((now-start)/86400000);
+  const paceTarget=(dayOfYear/365)*goal;
+  const gap=PAC_YTD-paceTarget;
+  const annualized=(PAC_YTD/(now.getMonth()+1))*12;
+  const monthsLeft=12-now.getMonth()-1;
+  const gciBar=document.getElementById('gci-bar');
+  if(gciBar)gciBar.style.width=Math.min(pct*100,100)+'%';
+  const pctLbl=document.getElementById('pct-lbl');
+  if(pctLbl)pctLbl.textContent=(pct*100).toFixed(1)+'% of $'+Math.round(goal/1000)+'K';
+  const annEl=document.getElementById('annualized');
+  if(annEl)annEl.textContent='$'+Math.round(annualized).toLocaleString();
+  const gapEl=document.getElementById('pace-gap');
+  if(gapEl){gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();gapEl.style.color=gap<0?'var(--red)':'var(--green)';}
+  const moNeeded=document.getElementById('mo-needed');
+  if(moNeeded)moNeeded.textContent=monthsLeft>0?'$'+Math.round((goal-PAC_YTD)/monthsLeft).toLocaleString():'—';
+  const moLeft=document.getElementById('mo-left');
+  if(moLeft)moLeft.textContent=monthsLeft;
+  const closeBar=document.getElementById('close-bar');
+  if(closeBar)closeBar.style.width=Math.min((NUM_CLOSES/cgoal)*100,100)+'%';
+  const closePctEl=document.getElementById('close-pct');
+  if(closePctEl)closePctEl.textContent=NUM_CLOSES+' / '+cgoal+' ('+Math.round(NUM_CLOSES/cgoal*100)+'%)';
+  const pctStat=document.getElementById('pct-stat');
+  if(pctStat){pctStat.textContent=Math.round(pct*100)+'%';}
+}
+
+function openSettings(){
+  const s=loadSettings();
+  document.getElementById('s-pac-goal').value=s.pacGoal;
+  document.getElementById('s-close-goal').value=s.closeGoal;
+  document.getElementById('settings-overlay').classList.add('open');
+  document.getElementById('settings-drawer').classList.add('open');
+}
+
+function closeSettings(){
+  document.getElementById('settings-overlay').classList.remove('open');
+  document.getElementById('settings-drawer').classList.remove('open');
+}
+
+function saveSettings(){
+  const s={pacGoal:parseInt(document.getElementById('s-pac-goal').value)||150000,closeGoal:parseInt(document.getElementById('s-close-goal').value)||20};
+  localStorage.setItem(SETTINGS_KEY,JSON.stringify(s));
+  closeSettings();
+  applySettings(s);
+  const toast=document.getElementById('save-toast');
+  toast.classList.remove('show');void toast.offsetWidth;toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),2500);
+}
+
+function resetSettings(){
+  localStorage.removeItem(SETTINGS_KEY);
+  document.getElementById('s-pac-goal').value=DEFAULTS_S.pacGoal;
+  document.getElementById('s-close-goal').value=DEFAULTS_S.closeGoal;
+}
+
+applySettings(loadSettings());
 </script>
 
 </div>
