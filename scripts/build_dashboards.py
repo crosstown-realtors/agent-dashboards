@@ -119,6 +119,11 @@ def parse_tracker(csv_text):
         override_amt = parse_dollar(r.get('Override Amt',''))
         override_to = r.get('Override To','').strip()
         short_date, dt_obj = fmt_short_date(ts)
+        # Fallback: if no Timestamp on a closed deal, use Projected Close Date
+        if not dt_obj and status == 'Closed' and proj:
+            dt_obj = parse_proj_date(proj)
+            if dt_obj:
+                short_date = dt_obj.strftime('%b %-d')
 
         deal = dict(agent=agent, bs=bs, client=client, addr=addr, source=source,
                     ts=ts, short_date=short_date, dt=dt_obj, proj=proj,
@@ -616,9 +621,10 @@ def build_data_section(agent_name, d):
     # Monthly breakdowns for Dan JS vars
     monthly_pac = {}
     monthly_closes = {}
+    cur_year = date.today().year
     if 'Dan' in agent_name:
         for c in closed:
-            if c['dt']:
+            if c['dt'] and c['dt'].year == cur_year:
                 m = c['dt'].month
                 monthly_pac[m] = monthly_pac.get(m, 0) + c['krembo']
                 monthly_closes[m] = monthly_closes.get(m, 0) + 1
