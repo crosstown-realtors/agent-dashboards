@@ -562,58 +562,56 @@ def build_data_section(agent_name, d):
     else:
         js_vars = f"const PAC_YTD = {total_ytd:.2f};\nconst PAC_GOAL = {pac_goal};\nconst NUM_CLOSES = {n_closed};\nconst CLOSE_GOAL = {close_goal};"
 
-    # --- RECENT MONTH ---
+    # --- CURRENT MONTH (always show the current calendar month) ---
+    today_d = date.today()
+    cur_yr, cur_mo = today_d.year, today_d.month
+    cur_month_name = date(cur_yr, cur_mo, 1).strftime('%B %Y')
     all_dated_closed = [c for c in closed if c['dt']]
-    if all_dated_closed:
-        months_avail = sorted(set((c['dt'].year, c['dt'].month) for c in all_dated_closed), reverse=True)
-        bm = months_avail[0]
-        month_closes_rm = [c for c in all_dated_closed if c['dt'].year == bm[0] and c['dt'].month == bm[1]]
-        month_name_rm = date(bm[0], bm[1], 1).strftime('%B %Y')
-        is_current_rm = bm[0] == date.today().year and bm[1] == date.today().month
-        if 'Dan' in agent_name:
-            month_own_krembo = sum(c['krembo'] for c in month_closes_rm)
-            month_team_rm = [o for o in override_list if o['dt'] and o['dt'].year == bm[0] and o['dt'].month == bm[1]]
-            month_team_krembo = sum(o['amt'] for o in month_team_rm)
-            month_total_rm = month_own_krembo + month_team_krembo
-            n_own_rm = len(month_closes_rm)
-            n_team_rm = len(month_team_rm)
-            krembo_label = "Total Krembo"
-        else:
-            month_total_rm = sum(c['effective_pac'] for c in month_closes_rm)
-            n_own_rm = len(month_closes_rm)
-            n_team_rm = 0
-            krembo_label = "Total PAC"
-        monthly_avg_goal = pac_goal / 12
-        pct_rm = month_total_rm / monthly_avg_goal * 100 if monthly_avg_goal > 0 else 0
-        bar_w_rm = min(100, pct_rm)
-        bar_c_rm = "var(--green)" if pct_rm >= 100 else ("var(--blue)" if pct_rm >= 50 else "var(--orange)")
-        if pct_rm >= 150:
-            perf_label_rm = f"{pct_rm:.0f}% of avg — best month yet!"
-        elif pct_rm >= 100:
-            perf_label_rm = f"{pct_rm:.0f}% of monthly avg ✓"
-        else:
-            perf_label_rm = f"{pct_rm:.0f}% of monthly avg"
-        rm_section_label = "📅 This Month" if is_current_rm else f"📅 {month_name_rm}"
-        recent_month_html = (
-            f"    <div class=\"section-label\">{rm_section_label}</div>\n"
-            f"    <div class=\"card\">\n"
-            f"      <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:10px;\">\n"
-            f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--accent);\">{fmt_money(round(month_total_rm))}</div>"
-            f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">{krembo_label}</div></div>\n"
-            f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--blue);\">{n_own_rm}</div>"
-            f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">Own Closes</div></div>\n"
-            f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--teal);\">{n_team_rm}</div>"
-            f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">Team Closes</div></div>\n"
-            f"      </div>\n"
-            f"      <div style=\"margin-top:12px;padding-top:10px;border-top:1px solid var(--border);\">\n"
-            f"        <div class=\"prog-row\"><span>vs. monthly avg goal <strong>{fmt_money(round(monthly_avg_goal))}</strong></span>"
-            f"<span style=\"color:{bar_c_rm}\">{perf_label_rm}</span></div>\n"
-            f"        <div class=\"prog-bg\"><div class=\"prog-fill\" style=\"width:{bar_w_rm:.0f}%;background:linear-gradient(90deg,{bar_c_rm},{bar_c_rm});\"></div></div>\n"
-            f"      </div>\n"
-            f"    </div>\n"
-        )
+    month_closes_rm = [c for c in all_dated_closed if c['dt'].year == cur_yr and c['dt'].month == cur_mo]
+    monthly_avg_goal = pac_goal / 12
+    if 'Dan' in agent_name:
+        month_own_krembo = sum(c['krembo'] for c in month_closes_rm)
+        month_team_rm = [o for o in override_list if o['dt'] and o['dt'].year == cur_yr and o['dt'].month == cur_mo]
+        month_team_krembo = sum(o['amt'] for o in month_team_rm)
+        month_total_rm = month_own_krembo + month_team_krembo
+        n_own_rm = len(month_closes_rm)
+        n_team_rm = len(month_team_rm)
+        krembo_label = "Total Krembo"
     else:
-        recent_month_html = ''
+        month_total_rm = sum(c['effective_pac'] for c in month_closes_rm)
+        n_own_rm = len(month_closes_rm)
+        n_team_rm = 0
+        krembo_label = "Total PAC"
+    pct_rm = month_total_rm / monthly_avg_goal * 100 if monthly_avg_goal > 0 else 0
+    bar_w_rm = min(100, pct_rm)
+    bar_c_rm = "var(--green)" if pct_rm >= 100 else ("var(--blue)" if pct_rm >= 50 else "var(--orange)")
+    if month_total_rm == 0:
+        perf_label_rm = "No closes yet this month"
+        bar_c_rm = "var(--border)"
+    elif pct_rm >= 150:
+        perf_label_rm = f"{pct_rm:.0f}% of monthly avg — great month!"
+    elif pct_rm >= 100:
+        perf_label_rm = f"{pct_rm:.0f}% of monthly avg ✓"
+    else:
+        perf_label_rm = f"{pct_rm:.0f}% of monthly avg"
+    recent_month_html = (
+        f"    <div class=\"section-label\">📅 This Month — {cur_month_name}</div>\n"
+        f"    <div class=\"card\">\n"
+        f"      <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:10px;\">\n"
+        f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--accent);\">{fmt_money(round(month_total_rm))}</div>"
+        f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">{krembo_label}</div></div>\n"
+        f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--blue);\">{n_own_rm}</div>"
+        f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">Own Closes</div></div>\n"
+        f"        <div style=\"text-align:center;\"><div style=\"font-size:20px;font-weight:800;color:var(--teal);\">{n_team_rm}</div>"
+        f"<div style=\"font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;\">Team Closes</div></div>\n"
+        f"      </div>\n"
+        f"      <div style=\"margin-top:12px;padding-top:10px;border-top:1px solid var(--border);\">\n"
+        f"        <div class=\"prog-row\"><span>vs. monthly avg goal <strong>{fmt_money(round(monthly_avg_goal))}</strong></span>"
+        f"<span style=\"color:{bar_c_rm}\">{perf_label_rm}</span></div>\n"
+        f"        <div class=\"prog-bg\"><div class=\"prog-fill\" style=\"width:{bar_w_rm:.0f}%;background:linear-gradient(90deg,{bar_c_rm},{bar_c_rm});\"></div></div>\n"
+        f"      </div>\n"
+        f"    </div>\n"
+    )
 
     # Monthly breakdowns for Dan JS vars
     monthly_pac = {}
