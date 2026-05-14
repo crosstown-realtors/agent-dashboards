@@ -23,6 +23,7 @@ GOALS = {
     "Mike Kelly":            {"pac": 200000, "closes": 35},
     "Jaclyn Mitchell":       {"pac": 120000, "closes": 25},
     "Chris Lira":            {"pac": 120000, "closes": 20},
+    "Angela Palma":          {"pac": 100000, "closes": 18},
 }
 
 FILES = {
@@ -32,10 +33,12 @@ FILES = {
     "Mollie Kelly":      "mollie.html",
     "Mike Kelly":        "mike.html",
     "Jaclyn Mitchell":   "jaclyn.html",
+    "Chris Lira":        "chris.html",
+    "Angela Palma":      "angela.html",
 }
 
 # Initials map for override lookup
-INITIALS = {"DK": "Dan Krembuszewski", "MM": "Michelle Madden", "CL": "Chris Lira", "ML": "Mollie Kelly"}
+INITIALS = {"DK": "Dan Krembuszewski", "MM": "Michelle Madden", "CL": "Chris Lira", "ML": "Mollie Kelly", "AP": "Angela Palma"}
 
 def parse_dollar(s):
     try:
