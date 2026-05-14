@@ -135,6 +135,17 @@
   .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
   .save-toast.show { display: block; animation: fadeup .3s ease; }
   @keyframes fadeup { from { opacity:0; transform:translateX(-50%) translateY(8px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+  /* ── Enhancement styles ── */
+  @keyframes slideUpIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes urgentPulse { 0%,100% { box-shadow:0 1px 4px rgba(0,0,0,.07); } 50% { box-shadow:0 0 0 5px rgba(192,57,43,.18), 0 1px 4px rgba(0,0,0,.07); } }
+  .urgent-deal { animation: urgentPulse 2.2s ease-in-out infinite; }
+  .barchart-wrap { padding: 4px 0 0; }
+  .barchart-grid { display:flex; align-items:flex-end; gap:5px; height:90px; position:relative; }
+  .barchart-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; position:relative; }
+  .barchart-bar { width:100%; border-radius:4px 4px 0 0; transition:height .8s cubic-bezier(.34,1.56,.64,1); }
+  .barchart-val { font-size:8px; font-weight:700; color:var(--text); position:absolute; top:-13px; left:0; right:0; text-align:center; }
+  .barchart-lbl { font-size:9px; color:var(--sub); margin-top:3px; font-weight:600; }
+  .barchart-goal-line { position:absolute; left:0; right:0; border-top:1.5px dashed #cbd5e1; pointer-events:none; z-index:1; }
   @media(max-width:580px){ .grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;} .pace-wrap{flex-direction:column;} .pace-side{border-left:none;border-top:1px solid var(--border);padding:10px 0 0;flex-direction:row;gap:20px;} }
 </style>
 </head>
@@ -224,6 +235,8 @@
     <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/" target="_blank"><div class="ql-icon" style="background:#eff6ff;">👥</div>Team Dashboards</a>
   </div>
 
+  <div id="next-close-banner"></div>
+
 <!-- AG:alerts-start -->
   <div style="margin-bottom:18px;">
     <div class="alert alert-gold">⭐ <span><strong>Closing soon (5/25/2026):</strong> Andrew Lenard — buy $496,000 at 7741 Sycamore Dr, Orland Park. Est. PAC: <strong>$5,667</strong>.</span></div>
@@ -276,6 +289,8 @@
 
   <!-- AG:income-end -->
   </div>
+
+  <div class="section" id="bar-chart-section"></div>
 
   <div class="section">
 <!-- AG:goal-start -->
@@ -463,6 +478,7 @@ const grid=document.getElementById('month-grid');
 });
 
 const closesPerMonth={3:3};
+const PIPELINE_DK=[{"client": "Andrew Lenard", "addr": "7741 Sycamore Dr, Orland Park", "proj": "5/25/2026", "dt_iso": "2026-05-25", "krembo": 5667.3, "price": 496000.0}, {"client": "Peter Mathis", "addr": "836 Regent, New Lenox", "proj": "5/28/2026", "dt_iso": "2026-05-28", "krembo": 4365.36, "price": 430000.0}, {"client": "Edwin Tate", "addr": "9090 Big Sable Point, Frankfort", "proj": "5/30/2026", "dt_iso": "2026-05-30", "krembo": 8935.65, "price": 765000.0}, {"client": "Kent and Mihaela Liker", "addr": "888 Bridle Hill, New Lenox", "proj": "6/1/2026", "dt_iso": "2026-06-01", "krembo": 14119.65, "price": 715000.0}];
 const sc=document.getElementById('streak-dots');
 ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].forEach((m,i)=>{
   const c=closesPerMonth[i+1]||0,isFuture=i>now.getMonth(),isCur=i===now.getMonth();
@@ -618,6 +634,151 @@ function adjustContacts(d){contacts=Math.max(0,contacts+d);localStorage.setItem(
 
 applySettings(loadSettings());
 renderContacts();
+
+// ── Number roll-up animation ──────────────────────────────────────────
+function animVal(el, end, dur, fmt) {
+  if (!el || !end) return;
+  const t0 = performance.now();
+  (function step(t) {
+    const p = Math.min((t - t0) / dur, 1);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmt(Math.round(e * end));
+    if (p < 1) requestAnimationFrame(step);
+  })(performance.now());
+}
+// Animate the YTD stat card and total income row
+setTimeout(function() {
+  const ytdEl = document.querySelector('.stat-num[style*="accent"]');
+  if (ytdEl && ytd > 0) animVal(ytdEl, ytd, 900, n => '$' + n.toLocaleString());
+  // Animate annualized projection
+  const annEl = document.getElementById('annualized');
+  if (annEl) {
+    const annEnd = Math.round((ytd / (now.getMonth() + 1)) * 12);
+    animVal(annEl, annEnd, 900, n => '$' + n.toLocaleString());
+  }
+}, 200);
+
+// ── Next-close countdown banner ───────────────────────────────────────
+(function renderCountdown() {
+  const el = document.getElementById('next-close-banner');
+  if (!el || !PIPELINE_DK.length) return;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const upcoming = PIPELINE_DK.filter(d => d.dt_iso).map(d => {
+    return Object.assign({}, d, {dt: new Date(d.dt_iso + 'T12:00:00')});
+  }).sort(function(a,b){return a.dt-b.dt;});
+  if (!upcoming.length) return;
+  const next = upcoming[0];
+  const days = Math.round((next.dt - today) / 86400000);
+  if (days < 0 || days > 60) return;
+  const bg = days <= 3
+    ? 'linear-gradient(135deg,#7f1d1d,#b91c1c)'
+    : days <= 7
+    ? 'linear-gradient(135deg,#78350f,#b45309)'
+    : 'linear-gradient(135deg,#1e3a5f,#2563eb)';
+  const daysLabel = days === 0 ? 'TODAY' : days === 1 ? 'TOMORROW' : 'DAYS AWAY';
+  const daysDisplay = days === 0 ? '🎉' : String(days);
+  const others = upcoming.length - 1;
+  el.style.marginBottom = '16px';
+  el.innerHTML = `<div style="background:${bg};border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 12px rgba(0,0,0,0.15);">
+    <div style="flex:1;min-width:0;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,0.55);margin-bottom:4px;">🏠 Next Closing</div>
+      <div style="font-size:15px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${next.client.replace(/&/g,'&amp;')}</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">${next.addr.replace(/&/g,'&amp;')}</div>
+      <div style="margin-top:8px;font-size:12px;font-weight:700;color:#93c5fd;">Est. PAC: $${Math.round(next.krembo).toLocaleString()} &nbsp;·&nbsp; ${next.proj}</div>
+      ${others > 0 ? `<div style="font-size:11px;color:rgba(255,255,255,0.45);margin-top:3px;">+${others} more deal${others>1?'s':''} in pipeline</div>` : ''}
+    </div>
+    <div style="text-align:center;padding-left:20px;border-left:1px solid rgba(255,255,255,0.2);flex-shrink:0;">
+      <div style="font-size:${days<=9?'48':'38'}px;font-weight:900;line-height:1;color:white;">${daysDisplay}</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,0.65);margin-top:3px;">${daysLabel}</div>
+    </div>
+  </div>`;
+})();
+
+// ── Monthly PAC bar chart ─────────────────────────────────────────────
+(function renderBarChart() {
+  const el = document.getElementById('bar-chart-section');
+  if (!el) return;
+  const s = loadSettings();
+  const goal = (s.pacGoal || GOAL || 150000);
+  const mGoal = goal / 12;
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const curMonth = now.getMonth();
+  const vals = months.map(function(m,i){ return monthlyPAC[i+1] || 0; });
+  const maxVal = Math.max(mGoal * 1.6, Math.max.apply(null, vals.concat([1])));
+  const goalPct = Math.min(mGoal / maxVal * 100, 96);
+
+  const bars = months.map(function(m, i) {
+    const val = vals[i];
+    const isFuture = i > curMonth;
+    const isCur = i === curMonth;
+    const hPct = isFuture || val === 0 ? 0 : Math.max(val / maxVal * 100, 2);
+    const color = isCur ? 'var(--accent)' : val >= mGoal ? 'var(--green)' : val > 0 ? 'var(--orange)' : 'var(--border)';
+    const valStr = val >= 1000 ? '$' + (val/1000).toFixed(0) + 'K' : '';
+    return `<div class="barchart-col">
+      ${valStr && !isFuture ? `<div class="barchart-val">${valStr}</div>` : '<div class="barchart-val"></div>'}
+      <div class="barchart-bar" data-h="${hPct}" style="height:0%;background:${color};opacity:${isFuture?'0.18':'1'};"></div>
+      <div class="barchart-lbl">${m.charAt(0)}</div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `<div class="section-label">📊 Monthly PAC — 2026</div>
+  <div class="card">
+    <div class="barchart-wrap">
+      <div class="barchart-grid">
+        <div class="barchart-goal-line" style="bottom:calc(${goalPct}% + 12px);"></div>
+        ${bars}
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:10px;font-size:11px;color:var(--sub);">
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:20px;border-top:1.5px dashed #cbd5e1;display:inline-block;"></span>Monthly goal ($${Math.round(mGoal/1000)}K)</span>
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--green);border-radius:2px;display:inline-block;"></span>Hit goal</span>
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--orange);border-radius:2px;display:inline-block;"></span>Partial</span>
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--accent);border-radius:2px;display:inline-block;"></span>Current</span>
+      </div>
+    </div>
+  </div>`;
+
+  // Animate bars in
+  setTimeout(function() {
+    el.querySelectorAll('.barchart-bar').forEach(function(bar, i) {
+      setTimeout(function() {
+        bar.style.height = bar.getAttribute('data-h') + '%';
+      }, i * 35);
+    });
+  }, 80);
+})();
+
+// ── Urgency pulse on deals closing ≤ 5 days ──────────────────────────
+if (PIPELINE_DK.length) {
+  const today2 = new Date(); today2.setHours(0,0,0,0);
+  PIPELINE_DK.forEach(function(deal) {
+    if (!deal.dt_iso) return;
+    const dt = new Date(deal.dt_iso + 'T12:00:00');
+    const days = Math.round((dt - today2) / 86400000);
+    if (days >= 0 && days <= 5) {
+      const firstName = deal.client.split(' ')[0];
+      document.querySelectorAll('.deal-title').forEach(function(titleEl) {
+        if (titleEl.textContent.indexOf(firstName) >= 0) {
+          titleEl.closest('.card').classList.add('urgent-deal');
+        }
+      });
+    }
+  });
+}
+
+// ── Card entrance stagger ─────────────────────────────────────────────
+(function() {
+  let idx = 0;
+  document.querySelectorAll('.card, .stat-card').forEach(function(card) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(8px)';
+    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    const delay = 40 + (idx++) * 28;
+    setTimeout(function() {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, delay);
+  });
+})();
 </script>
 
 

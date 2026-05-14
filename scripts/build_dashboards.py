@@ -4,7 +4,7 @@ Crosstown Realtors — Agent Dashboard Builder
 Reads tracker CSV (base64 from Google Drive), patches all agent HTML files with fresh data.
 """
 
-import base64, csv, io, re, sys, os
+import base64, csv, io, json, re, sys, os
 from datetime import datetime, date
 from collections import defaultdict
 
@@ -640,6 +640,7 @@ def build_data_section(agent_name, d):
         'n_closed': n_closed,
         'monthly_pac': monthly_pac,
         'monthly_closes': monthly_closes,
+        'uc': uc,
     }
     return data
 
@@ -695,6 +696,20 @@ def patch_html(html_path, agent_name, data):
         html = re.sub(r'const monthlyPAC=\{[^}]+\};', f'const monthlyPAC={monthly_pac_js};', html)
         monthly_closes_js = '{' + ','.join(f'{m}:{c}' for m,c in sorted(data['monthly_closes'].items())) + '}'
         html = re.sub(r'const closesPerMonth=\{[^}]+\};', f'const closesPerMonth={monthly_closes_js};', html)
+        # Inject pipeline data for countdown banner and urgency detection
+        pipeline_dk = []
+        for deal in sorted(data['uc'], key=lambda x: parse_proj_date(x['proj']) or datetime(2099,1,1)):
+            dt = parse_proj_date(deal['proj'])
+            pipeline_dk.append({
+                'client': deal['client'],
+                'addr': deal['addr'],
+                'proj': deal['proj'],
+                'dt_iso': dt.strftime('%Y-%m-%d') if dt else None,
+                'krembo': round(deal['krembo'], 2),
+                'price': deal['price']
+            })
+        pipeline_dk_js = json.dumps(pipeline_dk)
+        html = re.sub(r'const PIPELINE_DK=\[.*?\];', f'const PIPELINE_DK={pipeline_dk_js};', html, flags=re.DOTALL)
 
     with open(html_path, 'w') as f:
         f.write(html)
