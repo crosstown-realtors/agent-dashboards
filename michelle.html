@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michelle Madden — Dashboard</title>
+<title>Michelle Madden â Dashboard</title>
 <style>
 
   :root {
@@ -135,7 +135,7 @@
   .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
   .save-toast.show { display: block; animation: fadeup .3s ease; }
 
-  /* ── Site-wide Command Center Header ── */
+  /* ââ Site-wide Command Center Header ââ */
   .site-header {
     background: linear-gradient(135deg, #080e1f 0%, #14103a 50%, #1e1b4b 100%);
     border-bottom: 1px solid rgba(99,102,241,0.4);
@@ -195,7 +195,7 @@
 <div class="site-header">
   <div class="site-header-inner">
     <div class="site-header-brand">
-      <div class="site-header-emblem">🏠</div>
+      <div class="site-header-emblem">ð </div>
       <div>
         <div class="site-header-org">Crosstown Realtors</div>
         <div class="site-header-cmd">Agent Command Center</div>
@@ -206,7 +206,7 @@
       <div class="site-header-avatar">MM</div>
       <div style="min-width:0;">
         <div class="site-header-agent-name">Michelle Madden</div>
-        <div class="site-header-agent-role">Buyer&#x27;s &amp; Listing Agent · Krembo Group / Crosstown Realtors</div>
+        <div class="site-header-agent-role">Buyer&#x27;s &amp; Listing Agent Â· Krembo Group / Crosstown Realtors</div>
       </div>
     </div>
     <div class="site-header-right">
@@ -231,12 +231,12 @@
 <div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
 <div class="settings-drawer" id="settings-drawer">
   <div class="settings-hdr">
-    <span class="settings-hdr-title">⚙️ My Dashboard Settings</span>
-    <button class="settings-close" onclick="closeSettings()">✕</button>
+    <span class="settings-hdr-title">âï¸ My Dashboard Settings</span>
+    <button class="settings-close" onclick="closeSettings()">â</button>
   </div>
   <div class="settings-body">
     <div class="settings-group">
-      <div class="settings-group-title">🎯 Goals</div>
+      <div class="settings-group-title">ð¯ Goals</div>
       <div class="settings-field">
         <label class="settings-label" for="s-pac-goal">Annual Income Goal ($)</label>
         <input class="settings-input" type="number" id="s-pac-goal" placeholder="200000" step="5000">
@@ -252,35 +252,108 @@
     <button class="btn-save" onclick="saveSettings()">Save Changes</button>
   </div>
 </div>
-<div class="save-toast" id="save-toast">✅ Settings saved!</div>
+<div class="save-toast" id="save-toast">â Settings saved!</div>
 
 <div class="container">
 
   <div style="font-size:11px;color:var(--sub);text-align:right;margin-bottom:14px;">
-    🔄 Data refreshed <strong>May 9, 2026</strong> · Source: Transaction Tracker
+    ð Data refreshed <strong>May 9, 2026</strong> Â· Source: Transaction Tracker
   </div>
 
   <div class="quick-links">
-    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank"><div class="ql-icon" style="background:#fefbe8;">🏆</div>Leaderboard</a>
+    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank"><div class="ql-icon" style="background:#fefbe8;">ð</div>Leaderboard</a>
     <a class="ql-btn" href="https://app.followupboss.com" target="_blank">
-      <div class="ql-icon" style="background:#fff3e0;">🎯</div>Follow Up Boss
+      <div class="ql-icon" style="background:#fff3e0;">ð¯</div>Follow Up Boss
     </a>
     <a class="ql-btn" href="https://www.dotloop.com" target="_blank">
-      <div class="ql-icon" style="background:#eaf4fd;">📋</div>Dotloop
+      <div class="ql-icon" style="background:#eaf4fd;">ð</div>Dotloop
     </a>
     <a class="ql-btn" href="https://mylistingiq.ai" target="_blank">
-      <div class="ql-icon" style="background:#eafaf1;">🏡</div>MyListingIQ
+      <div class="ql-icon" style="background:#eafaf1;">ð¡</div>MyListingIQ
     </a>
     <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">
-      <div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker
+      <div class="ql-icon" style="background:#f0f0ff;">ð</div>Transaction Tracker
     </a>
   </div>
 
-  <!-- AG:alerts-start -->
+  <!-- AG:top5-start -->
+<div class="section" id="top5-section">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <div class="section-label" style="margin-bottom:0;">🎯 Top 5 Priority Outreach — Today</div>
+    <span id="top5-freshness" style="font-size:11px;color:var(--sub);"></span>
+  </div>
+  <div id="top5-list"></div>
+</div>
+
+<script>
+(function(){
+  const SIGNAL_COLORS = {
+    commitment:  { bg:'var(--red-bg)',    fg:'var(--red)',    icon:'📌' },
+    activity:    { bg:'var(--blue-bg)',   fg:'var(--blue)',   icon:'👁️' },
+    transaction: { bg:'var(--orange-bg)', fg:'var(--orange)', icon:'🏠' },
+    fello:       { bg:'var(--teal-bg)',   fg:'var(--teal)',   icon:'⭐' },
+    unanswered:  { bg:'var(--gold-bg)',   fg:'var(--gold)',   icon:'💬' },
+    default:     { bg:'var(--accent-bg)', fg:'var(--accent)', icon:'🔔' }
+  };
+  function renderTop5(data) {
+    const list = document.getElementById('top5-list');
+    const fresh = document.getElementById('top5-freshness');
+    if (!list) return;
+    const generated = new Date(data.generated);
+    const ageMs = Date.now() - generated.getTime();
+    const ageH  = ageMs / 3600000;
+    const stale = ageH > 26;
+    const ageLabel = ageH < 1 ? 'just now' : ageH < 24 ? Math.round(ageH)+'h ago' : Math.round(ageH/24)+'d ago';
+    if (fresh) {
+      if (stale) {
+        fresh.innerHTML = '<span style="background:var(--orange-bg);color:var(--orange);border-radius:10px;padding:2px 8px;font-weight:700;">⚠️ Stale — last run '+ageLabel+'</span>';
+      } else {
+        fresh.textContent = '🟢 Updated '+ageLabel;
+        fresh.style.color = 'var(--green)';
+      }
+    }
+    if (!data.leads || !data.leads.length) {
+      list.innerHTML = '<div class="card" style="color:var(--sub);font-size:13px;">No leads found for today.</div>';
+      return;
+    }
+    list.innerHTML = data.leads.map(function(lead,i){
+      const sig = SIGNAL_COLORS[lead.signal_type] || SIGNAL_COLORS.default;
+      return '<div class="card" style="margin-bottom:8px;border-left:3px solid '+sig.fg+';">'+
+        '<div style="display:flex;align-items:flex-start;gap:10px;">'+
+          '<div style="width:26px;height:26px;border-radius:50%;background:'+sig.fg+';color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">'+(i+1)+'</div>'+
+          '<div style="flex:1;min-width:0;">'+
+            '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">'+
+              '<span style="font-weight:700;font-size:14px;">'+lead.name+'</span>'+
+              '<span class="badge" style="background:'+sig.bg+';color:'+sig.fg+';">'+sig.icon+' '+(lead.signal_label||lead.signal_type)+'</span>'+
+              (lead.stage?'<span class="badge badge-gray">'+lead.stage+'</span>':'')+
+            '</div>'+
+            '<div style="font-size:13px;color:var(--text);margin-bottom:4px;">'+lead.reason+'</div>'+
+            '<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">'+
+              (lead.last_activity?'<span class="chip">Last activity: <strong>'+lead.last_activity+'</strong></span>':'')+
+              (lead.last_note?'<span class="chip" style="color:var(--sub);font-style:italic;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">"'+lead.last_note+'"</span>':'')+
+              (lead.fub_url?'<a class="open-link" href="'+lead.fub_url+'" target="_blank" style="margin-left:auto;">Open in FUB →</a>':'')+
+            '</div>'+
+          '</div>'+
+        '</div></div>';
+    }).join('');
+  }
+  function showError(msg){
+    const el=document.getElementById('top5-list');
+    if(el) el.innerHTML='<div class="card" style="color:var(--sub);font-size:13px;font-style:italic;">'+msg+'</div>';
+  }
+  fetch('/agent-dashboards/data/michelle-outreach.json?cb='+Date.now())
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(renderTop5)
+    .catch(function(e){showError('Priority outreach data unavailable. Run will resume next weekday morning.');console.warn('Top5 fetch failed:',e);});
+})();
+</script>
+<!-- AG:top5-end -->
+
+<!-- AG:alerts-start -->
   <div style="margin-bottom:18px;">
-    <div class="alert alert-gold">⭐ <span><strong>Closing soon (2/18/2026):</strong> Joel Huffar — sell $335,000 at 136 w 18th St Lockport IL 60441. Est. PAC: <strong>$6,784</strong>.</span></div>
-    <div class="alert alert-red">🚨 <span><strong>Joel Huffar (Sell)</strong> — 136 w 18th St Lockport IL 60441 — projected close 2/18/2026 (89d overdue). Confirm status.</span></div>
-    <div class="alert alert-green">✅ <span><strong>1 closing(s) in April</strong> — $4,500 PAC. YTD: <strong>$51,216</strong> including $2,678 override income.</span></div>
+    <div class="alert alert-gold">â­ <span><strong>Closing soon (2/18/2026):</strong> Joel Huffar â sell $335,000 at 136 w 18th St Lockport IL 60441. Est. PAC: <strong>$6,784</strong>.</span></div>
+    <div class="alert alert-red">ð¨ <span><strong>Joel Huffar (Sell)</strong> â 136 w 18th St Lockport IL 60441 â projected close 2/18/2026 (89d overdue). Confirm status.</span></div>
+    <div class="alert alert-green">â <span><strong>1 closing(s) in April</strong> â $4,500 PAC. YTD: <strong>$51,216</strong> including $2,678 override income.</span></div>
   </div>
   <!-- AG:alerts-end -->
 
@@ -330,10 +403,10 @@
 
   <div class="section">
   <!-- AG:income-start -->
-    <div class="section-label">💰 Income Breakdown — YTD 2026</div>
+    <div class="section-label">ð° Income Breakdown â YTD 2026</div>
     <div class="card">
       <div class="income-row">
-        <span class="income-label">Own agent deals (PAC — 9 closes)</span>
+        <span class="income-label">Own agent deals (PAC â 9 closes)</span>
         <span class="income-amt" style="color:var(--blue)">$48,537.54</span>
       </div>
       <div class="income-row">
@@ -351,18 +424,18 @@
 
   <div class="section">
   <!-- AG:goal-start -->
-    <div class="section-label">📈 2026 Production — $200,000 PAC Goal</div>
+    <div class="section-label">ð 2026 Production â $200,000 PAC Goal</div>
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
           <div class="prog-row"><span>YTD PAC: <strong>$51,216</strong></span><span id="pct-lbl" style="color:var(--orange)">25.6% of $200,000</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
-          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
+          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">â</strong> &nbsp;Â·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">â</strong></div>
           <div class="month-grid" id="month-grid"></div>
         </div>
         <div class="pace-side">
-          <div><div class="num" style="color:var(--orange)" id="mo-needed">—</div><div class="lbl">Need/mo<br>to hit goal</div></div>
-          <div><div class="num" style="color:var(--blue)" id="mo-left">—</div><div class="lbl">Months<br>remaining</div></div>
+          <div><div class="num" style="color:var(--orange)" id="mo-needed">â</div><div class="lbl">Need/mo<br>to hit goal</div></div>
+          <div><div class="num" style="color:var(--blue)" id="mo-left">â</div><div class="lbl">Months<br>remaining</div></div>
         </div>
       </div>
     </div>
@@ -372,7 +445,7 @@
 
   <div class="section">
   <!-- AG:recentmonth-start -->
-    <div class="section-label">📅 This Month — May 2026</div>
+    <div class="section-label">ð This Month â May 2026</div>
     <div class="card">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
         <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--accent);">$0</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Total PAC</div></div>
@@ -390,7 +463,7 @@
 
   <div class="section">
   <!-- AG:closecount-start -->
-    <div class="section-label">🔥 Annual Progress — Close Count</div>
+    <div class="section-label">ð¥ Annual Progress â Close Count</div>
     <div class="card">
       <div class="streak-wrap">
         <div class="streak-count">
@@ -405,7 +478,7 @@
             <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
             <div class="month-dots-row" id="streak-dots"></div>
           </div>
-          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending · Est. +$23,489 PAC when closed</div>
+          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending Â· Est. +$23,489 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -415,10 +488,10 @@
 
   <div class="section">
   <!-- AG:pipeline-start -->
-    <div class="section-label">🏠 Active Pipeline</div>
-    <div class="spotlight"><div class="spotlight-hdr"><div><div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div><div style="font-weight:600;font-size:14px;margin-top:2px;">Ibrahim Alimirah &amp; Vira Dubkova — BUY</div><div style="font-size:12px;color:var(--sub);margin-top:2px;">8673 Timber Ridge Dr Burr Ridge IL 60527</div></div><span class="badge badge-gold">⭐ May 15</span></div><div class="spotlight-chips"><div class="chip">Proj. close: <strong>May 15</strong></div><div class="chip">Price: <strong>$1,350,000</strong></div><div class="chip">GCI: <strong>$30,375</strong></div><div class="chip">Est. PAC: <strong>$14,261</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
-    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Joel Huffar — SELL</div><div class="deal-sub">136 w 18th St Lockport IL 60441</div></div><span class="badge badge-red">🚨 89d overdue</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Feb 18</strong></div><div class="chip">Price: <strong>$335,000</strong></div><div class="chip">GCI: <strong>$7,936</strong></div><div class="chip">Est. PAC: <strong>$6,784</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
-    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Margaret  Buck — BUY</div><div class="deal-sub">6870 w Winding trail unit 302 Oak Forest IL 60452</div></div><span class="badge badge-red">🚨 2d</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 20</strong></div><div class="chip">Price: <strong>$254,000</strong></div><div class="chip">GCI: <strong>$5,715</strong></div><div class="chip">Est. PAC: <strong>$2,444</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="section-label">ð  Active Pipeline</div>
+    <div class="spotlight"><div class="spotlight-hdr"><div><div class="spotlight-title">â­ Highest-Value Deal â Watch Closely</div><div style="font-weight:600;font-size:14px;margin-top:2px;">Ibrahim Alimirah &amp; Vira Dubkova â BUY</div><div style="font-size:12px;color:var(--sub);margin-top:2px;">8673 Timber Ridge Dr Burr Ridge IL 60527</div></div><span class="badge badge-gold">â­ May 15</span></div><div class="spotlight-chips"><div class="chip">Proj. close: <strong>May 15</strong></div><div class="chip">Price: <strong>$1,350,000</strong></div><div class="chip">GCI: <strong>$30,375</strong></div><div class="chip">Est. PAC: <strong>$14,261</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
+    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Joel Huffar â SELL</div><div class="deal-sub">136 w 18th St Lockport IL 60441</div></div><span class="badge badge-red">ð¨ 89d overdue</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Feb 18</strong></div><div class="chip">Price: <strong>$335,000</strong></div><div class="chip">GCI: <strong>$7,936</strong></div><div class="chip">Est. PAC: <strong>$6,784</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
+    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Margaret  Buck â BUY</div><div class="deal-sub">6870 w Winding trail unit 302 Oak Forest IL 60452</div></div><span class="badge badge-red">ð¨ 2d</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 20</strong></div><div class="chip">Price: <strong>$254,000</strong></div><div class="chip">GCI: <strong>$5,715</strong></div><div class="chip">Est. PAC: <strong>$2,444</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
     <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;"><div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;"><span style="color:var(--sub);">Est. pipeline value if all close:</span><span style="font-weight:800;font-size:16px;color:var(--green);">+$23,489 PAC</span></div><div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$74,705</div></div>
 
   <!-- AG:pipeline-end -->
@@ -426,17 +499,17 @@
 
   <div class="section">
   <!-- AG:closings-start -->
-    <div class="section-label">✅ Recent Closings — YTD 2026</div>
+    <div class="section-label">â Recent Closings â YTD 2026</div>
     <div class="card">
-      <div class="closed-row"><div class="cl-date">Apr 7</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Tracy Hasler — 6755 180th St Unit 6 Tinley Park IL 60477 (SOI/PC)</div><div class="cl-pac">$4,500</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 2909 Bisbee Dr Joilet IL 06432 (Zillow Flex)</div><div class="cl-pac">$1,748</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 16</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 1596 w Ludington Circle Romeoville IL 60446 (Zillow Flex)</div><div class="cl-pac">$1,469</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 14</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Paul McDaniels &amp; Lance Lopez — 2200 Holt Rd Minooka IL 60447 (SOI/PC)</div><div class="cl-pac">$9,601</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 13</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Adam Franson &amp; Kayla Franson — 950 S Homan Ave  Chicago IL 60655 (SOI/PC)</div><div class="cl-pac">$10,026</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Tracy &amp; Jordan Hasler — 1308 Glenridge Ct Minooka IL 60447 (Zillow Flex)</div><div class="cl-pac">$4,289</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 7</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Sally &amp; Matthew Vitiritti — 701 E 7th St Lockport IL 60441 (Zillow Flex)</div><div class="cl-pac">$3,893</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 2</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Adam Mather &amp; Bailey Bingham — 16701 Highview Ave Orland Hills IL 60487 (Zillow Flex)</div><div class="cl-pac">$3,920</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 1</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Sue Shukstor — 22416 S Kings Ct Shorewood IL 60404 (SOI/PC)</div><div class="cl-pac">$9,091</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 7</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Tracy Hasler â 6755 180th St Unit 6 Tinley Park IL 60477 (SOI/PC)</div><div class="cl-pac">$4,500</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping â 2909 Bisbee Dr Joilet IL 06432 (Zillow Flex)</div><div class="cl-pac">$1,748</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 16</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping â 1596 w Ludington Circle Romeoville IL 60446 (Zillow Flex)</div><div class="cl-pac">$1,469</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 14</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Paul McDaniels &amp; Lance Lopez â 2200 Holt Rd Minooka IL 60447 (SOI/PC)</div><div class="cl-pac">$9,601</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 13</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Adam Franson &amp; Kayla Franson â 950 S Homan Ave  Chicago IL 60655 (SOI/PC)</div><div class="cl-pac">$10,026</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Tracy &amp; Jordan Hasler â 1308 Glenridge Ct Minooka IL 60447 (Zillow Flex)</div><div class="cl-pac">$4,289</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 7</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Sally &amp; Matthew Vitiritti â 701 E 7th St Lockport IL 60441 (Zillow Flex)</div><div class="cl-pac">$3,893</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 2</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Adam Mather &amp; Bailey Bingham â 16701 Highview Ave Orland Hills IL 60487 (Zillow Flex)</div><div class="cl-pac">$3,920</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 1</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Sue Shukstor â 22416 S Kings Ct Shorewood IL 60404 (SOI/PC)</div><div class="cl-pac">$9,091</div></div>
     </div>
 
   <!-- AG:closings-end -->
@@ -444,14 +517,14 @@
   
   <div class="section">
   <!-- AG:override-start -->
-    <div class="section-label">💼 Override Income — Team Deals (YTD)</div>
+    <div class="section-label">ð¼ Override Income â Team Deals (YTD)</div>
     <div class="card">
       <div style="font-size:12px;color:var(--sub);margin-bottom:10px;">Michelle receives override commissions on deals closed by other agents. This is included in Michelle's $51,216 YTD total.</div>
-      <div class="closed-row"><div class="cl-date">Mar 23</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Russell Fairchild — 18309 Carrington Dr, Hazel Crest, IL (Ylopo)</div><div class="cl-pac">$1,134</div></div>
-      <div class="closed-row"><div class="cl-date">Mar 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Phillip Powell — 24840 Hemphill Dr. Elwood IL (Zillow Flex)</div><div class="cl-pac">$522</div></div>
-      <div class="closed-row"><div class="cl-date">Mar 3</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Jaclyn — Jaqueline Hansel — 19546 115th Ave Unit A Mokena (Zillow Flex)</div><div class="cl-pac">$420</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 9</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Kris Urbauer — 11020 Keating Ave, Unit 106 (Zillow Flex)</div><div class="cl-pac">$328</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Lindsay Czarnowski — 6015 Lakeside Pl. Unit 203, Tinley Park, IL (Zillow Flex)</div><div class="cl-pac">$275</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 23</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren â Russell Fairchild â 18309 Carrington Dr, Hazel Crest, IL (Ylopo)</div><div class="cl-pac">$1,134</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren â Phillip Powell â 24840 Hemphill Dr. Elwood IL (Zillow Flex)</div><div class="cl-pac">$522</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 3</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Jaclyn â Jaqueline Hansel â 19546 115th Ave Unit A Mokena (Zillow Flex)</div><div class="cl-pac">$420</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 9</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren â Kris Urbauer â 11020 Keating Ave, Unit 106 (Zillow Flex)</div><div class="cl-pac">$328</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren â Lindsay Czarnowski â 6015 Lakeside Pl. Unit 203, Tinley Park, IL (Zillow Flex)</div><div class="cl-pac">$275</div></div>
       <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;margin-top:6px;border-top:1px solid var(--border);font-size:13px;">
         <span style="color:var(--sub);">Total override income YTD:</span>
         <span style="font-weight:800;color:var(--green);">$2,678</span>
@@ -586,7 +659,7 @@ function applySettings(s){
   const gapEl=document.getElementById('pace-gap');
   if(gapEl){gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();gapEl.style.color=gap<0?'var(--red)':'var(--green)';}
   const moNeeded=document.getElementById('mo-needed');
-  if(moNeeded)moNeeded.textContent=monthsLeft>0?'$'+Math.round((goal-PAC_YTD)/monthsLeft).toLocaleString():'—';
+  if(moNeeded)moNeeded.textContent=monthsLeft>0?'$'+Math.round((goal-PAC_YTD)/monthsLeft).toLocaleString():'â';
   const moLeft=document.getElementById('mo-left');
   if(moLeft)moLeft.textContent=monthsLeft;
   const closeBar=document.getElementById('close-bar');
