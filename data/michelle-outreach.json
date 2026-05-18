@@ -1,0 +1,62 @@
+{
+  "generated": "2026-05-18T07:00:00-05:00",
+  "agent": "Michelle Madden",
+  "fub_account": "crosstownlincolnway",
+  "leads": [
+    {
+      "rank": 1,
+      "name": "Jolanta Smolinskas",
+      "signal_type": "commitment",
+      "signal_label": "Unfulfilled Commitment",
+      "reason": "Promised to send a homes list — overdue follow-up",
+      "last_activity": "2d ago",
+      "last_note": "I'll send you a list tomorrow",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+    },
+    {
+      "rank": 2,
+      "name": "Ricardo Correa",
+      "signal_type": "activity",
+      "signal_label": "Recent Property View",
+      "reason": "Viewed $575K listing 28 min ago — 21 days without contact",
+      "last_activity": "28 min ago",
+      "last_note": "",
+      "stage": "Active Buyer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+    },
+    {
+      "rank": 3,
+      "name": "Mahmoud Fathi",
+      "signal_type": "activity",
+      "signal_label": "Shared a Listing",
+      "reason": "Shared $370K property an hour ago — strong buying signal",
+      "last_activity": "1h ago",
+      "last_note": "",
+      "stage": "Active Buyer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+    },
+    {
+      "rank": 4,
+      "name": "Jamie",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Follow-Up",
+      "reason": "Viewed $430K listing 10h ago — pending Mokena follow-up unanswered",
+      "last_activity": "10h ago",
+      "last_note": "",
+      "stage": "Active Buyer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+    },
+    {
+      "rank": 5,
+      "name": "Grizz Nava",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Showing Offer",
+      "reason": "Viewed $405K listing 14h ago — showing offer sent but no reply",
+      "last_activity": "14h ago",
+      "last_note": "",
+      "stage": "Active Buyer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+    }
+  ]
+}
