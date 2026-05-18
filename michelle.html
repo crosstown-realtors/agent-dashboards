@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michelle Madden Ã¢ÂÂ Dashboard</title>
+<title>Michelle Madden — Dashboard</title>
 <style>
 
   :root {
@@ -135,7 +135,7 @@
   .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
   .save-toast.show { display: block; animation: fadeup .3s ease; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Site-wide Command Center Header Ã¢ÂÂÃ¢ÂÂ */
+  /* ── Site-wide Command Center Header ── */
   .site-header {
     background: linear-gradient(135deg, #080e1f 0%, #14103a 50%, #1e1b4b 100%);
     border-bottom: 1px solid rgba(99,102,241,0.4);
@@ -195,7 +195,7 @@
 <div class="site-header">
   <div class="site-header-inner">
     <div class="site-header-brand">
-      <div class="site-header-emblem">Ã°ÂÂÂ </div>
+      <div class="site-header-emblem">🏠</div>
       <div>
         <div class="site-header-org">Crosstown Realtors</div>
         <div class="site-header-cmd">Agent Command Center</div>
@@ -206,7 +206,7 @@
       <div class="site-header-avatar">MM</div>
       <div style="min-width:0;">
         <div class="site-header-agent-name">Michelle Madden</div>
-        <div class="site-header-agent-role">Buyer&#x27;s &amp; Listing Agent ÃÂ· Krembo Group / Crosstown Realtors</div>
+        <div class="site-header-agent-role">Buyer&#x27;s &amp; Listing Agent · Krembo Group / Crosstown Realtors</div>
       </div>
     </div>
     <div class="site-header-right">
@@ -231,12 +231,12 @@
 <div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
 <div class="settings-drawer" id="settings-drawer">
   <div class="settings-hdr">
-    <span class="settings-hdr-title">Ã¢ÂÂÃ¯Â¸Â My Dashboard Settings</span>
-    <button class="settings-close" onclick="closeSettings()">Ã¢ÂÂ</button>
+    <span class="settings-hdr-title">⚙️ My Dashboard Settings</span>
+    <button class="settings-close" onclick="closeSettings()">✕</button>
   </div>
   <div class="settings-body">
     <div class="settings-group">
-      <div class="settings-group-title">Ã°ÂÂÂ¯ Goals</div>
+      <div class="settings-group-title">🎯 Goals</div>
       <div class="settings-field">
         <label class="settings-label" for="s-pac-goal">Annual Income Goal ($)</label>
         <input class="settings-input" type="number" id="s-pac-goal" placeholder="200000" step="5000">
@@ -252,36 +252,35 @@
     <button class="btn-save" onclick="saveSettings()">Save Changes</button>
   </div>
 </div>
-<div class="save-toast" id="save-toast">Ã¢ÂÂ Settings saved!</div>
+<div class="save-toast" id="save-toast">✅ Settings saved!</div>
 
 <div class="container">
 
   <div style="font-size:11px;color:var(--sub);text-align:right;margin-bottom:14px;">
-    Ã°ÂÂÂ Data refreshed <strong>May 9, 2026</strong> ÃÂ· Source: Transaction Tracker
+    🔄 Data refreshed <strong>May 9, 2026</strong> · Source: Transaction Tracker
   </div>
 
   <div class="quick-links">
-    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank"><div class="ql-icon" style="background:#fefbe8;">Ã°ÂÂÂ</div>Leaderboard</a>
+    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank"><div class="ql-icon" style="background:#fefbe8;">🏆</div>Leaderboard</a>
     <a class="ql-btn" href="https://app.followupboss.com" target="_blank">
-      <div class="ql-icon" style="background:#fff3e0;">Ã°ÂÂÂ¯</div>Follow Up Boss
+      <div class="ql-icon" style="background:#fff3e0;">🎯</div>Follow Up Boss
     </a>
     <a class="ql-btn" href="https://www.dotloop.com" target="_blank">
-      <div class="ql-icon" style="background:#eaf4fd;">Ã°ÂÂÂ</div>Dotloop
+      <div class="ql-icon" style="background:#eaf4fd;">📋</div>Dotloop
     </a>
     <a class="ql-btn" href="https://mylistingiq.ai" target="_blank">
-      <div class="ql-icon" style="background:#eafaf1;">Ã°ÂÂÂ¡</div>MyListingIQ
+      <div class="ql-icon" style="background:#eafaf1;">🏡</div>MyListingIQ
     </a>
     <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">
-      <div class="ql-icon" style="background:#f0f0ff;">Ã°ÂÂÂ</div>Transaction Tracker
+      <div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker
     </a>
   </div>
 
-  
-<!-- AG:alerts-start -->
+  <!-- AG:alerts-start -->
   <div style="margin-bottom:18px;">
-    <div class="alert alert-gold">Ã¢Â­Â <span><strong>Closing soon (2/18/2026):</strong> Joel Huffar Ã¢ÂÂ sell $335,000 at 136 w 18th St Lockport IL 60441. Est. PAC: <strong>$6,784</strong>.</span></div>
-    <div class="alert alert-red">Ã°ÂÂÂ¨ <span><strong>Joel Huffar (Sell)</strong> Ã¢ÂÂ 136 w 18th St Lockport IL 60441 Ã¢ÂÂ projected close 2/18/2026 (89d overdue). Confirm status.</span></div>
-    <div class="alert alert-green">Ã¢ÂÂ <span><strong>1 closing(s) in April</strong> Ã¢ÂÂ $4,500 PAC. YTD: <strong>$51,216</strong> including $2,678 override income.</span></div>
+    <div class="alert alert-gold">⭐ <span><strong>Closing soon (2/18/2026):</strong> Joel Huffar — sell $335,000 at 136 w 18th St Lockport IL 60441. Est. PAC: <strong>$6,784</strong>.</span></div>
+    <div class="alert alert-red">🚨 <span><strong>Joel Huffar (Sell)</strong> — 136 w 18th St Lockport IL 60441 — projected close 2/18/2026 (89d overdue). Confirm status.</span></div>
+    <div class="alert alert-green">✅ <span><strong>1 closing(s) in April</strong> — $4,500 PAC. YTD: <strong>$51,216</strong> including $2,678 override income.</span></div>
   </div>
   <!-- AG:alerts-end -->
 
@@ -331,10 +330,10 @@
 
   <div class="section">
   <!-- AG:income-start -->
-    <div class="section-label">Ã°ÂÂÂ° Income Breakdown Ã¢ÂÂ YTD 2026</div>
+    <div class="section-label">💰 Income Breakdown — YTD 2026</div>
     <div class="card">
       <div class="income-row">
-        <span class="income-label">Own agent deals (PAC Ã¢ÂÂ 9 closes)</span>
+        <span class="income-label">Own agent deals (PAC — 9 closes)</span>
         <span class="income-amt" style="color:var(--blue)">$48,537.54</span>
       </div>
       <div class="income-row">
@@ -352,18 +351,18 @@
 
   <div class="section">
   <!-- AG:goal-start -->
-    <div class="section-label">Ã°ÂÂÂ 2026 Production Ã¢ÂÂ $200,000 PAC Goal</div>
+    <div class="section-label">📈 2026 Production — $200,000 PAC Goal</div>
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
           <div class="prog-row"><span>YTD PAC: <strong>$51,216</strong></span><span id="pct-lbl" style="color:var(--orange)">25.6% of $200,000</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
-          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">Ã¢ÂÂ</strong> &nbsp;ÃÂ·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">Ã¢ÂÂ</strong></div>
+          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
         </div>
         <div class="pace-side">
-          <div><div class="num" style="color:var(--orange)" id="mo-needed">Ã¢ÂÂ</div><div class="lbl">Need/mo<br>to hit goal</div></div>
-          <div><div class="num" style="color:var(--blue)" id="mo-left">Ã¢ÂÂ</div><div class="lbl">Months<br>remaining</div></div>
+          <div><div class="num" style="color:var(--orange)" id="mo-needed">—</div><div class="lbl">Need/mo<br>to hit goal</div></div>
+          <div><div class="num" style="color:var(--blue)" id="mo-left">—</div><div class="lbl">Months<br>remaining</div></div>
         </div>
       </div>
     </div>
@@ -373,7 +372,7 @@
 
   <div class="section">
   <!-- AG:recentmonth-start -->
-    <div class="section-label">Ã°ÂÂÂ This Month Ã¢ÂÂ May 2026</div>
+    <div class="section-label">📅 This Month — May 2026</div>
     <div class="card">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
         <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--accent);">$0</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Total PAC</div></div>
@@ -391,7 +390,7 @@
 
   <div class="section">
   <!-- AG:closecount-start -->
-    <div class="section-label">Ã°ÂÂÂ¥ Annual Progress Ã¢ÂÂ Close Count</div>
+    <div class="section-label">🔥 Annual Progress — Close Count</div>
     <div class="card">
       <div class="streak-wrap">
         <div class="streak-count">
@@ -406,7 +405,7 @@
             <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
             <div class="month-dots-row" id="streak-dots"></div>
           </div>
-          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending ÃÂ· Est. +$23,489 PAC when closed</div>
+          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 3 deals pending · Est. +$23,489 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -416,10 +415,10 @@
 
   <div class="section">
   <!-- AG:pipeline-start -->
-    <div class="section-label">Ã°ÂÂÂ  Active Pipeline</div>
-    <div class="spotlight"><div class="spotlight-hdr"><div><div class="spotlight-title">Ã¢Â­Â Highest-Value Deal Ã¢ÂÂ Watch Closely</div><div style="font-weight:600;font-size:14px;margin-top:2px;">Ibrahim Alimirah &amp; Vira Dubkova Ã¢ÂÂ BUY</div><div style="font-size:12px;color:var(--sub);margin-top:2px;">8673 Timber Ridge Dr Burr Ridge IL 60527</div></div><span class="badge badge-gold">Ã¢Â­Â May 15</span></div><div class="spotlight-chips"><div class="chip">Proj. close: <strong>May 15</strong></div><div class="chip">Price: <strong>$1,350,000</strong></div><div class="chip">GCI: <strong>$30,375</strong></div><div class="chip">Est. PAC: <strong>$14,261</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker Ã¢ÂÂ</a></div></div>
-    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Joel Huffar Ã¢ÂÂ SELL</div><div class="deal-sub">136 w 18th St Lockport IL 60441</div></div><span class="badge badge-red">Ã°ÂÂÂ¨ 89d overdue</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Feb 18</strong></div><div class="chip">Price: <strong>$335,000</strong></div><div class="chip">GCI: <strong>$7,936</strong></div><div class="chip">Est. PAC: <strong>$6,784</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker Ã¢ÂÂ</a></div></div>
-    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Margaret  Buck Ã¢ÂÂ BUY</div><div class="deal-sub">6870 w Winding trail unit 302 Oak Forest IL 60452</div></div><span class="badge badge-red">Ã°ÂÂÂ¨ 2d</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 20</strong></div><div class="chip">Price: <strong>$254,000</strong></div><div class="chip">GCI: <strong>$5,715</strong></div><div class="chip">Est. PAC: <strong>$2,444</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker Ã¢ÂÂ</a></div></div>
+    <div class="section-label">🏠 Active Pipeline</div>
+    <div class="spotlight"><div class="spotlight-hdr"><div><div class="spotlight-title">⭐ Highest-Value Deal — Watch Closely</div><div style="font-weight:600;font-size:14px;margin-top:2px;">Ibrahim Alimirah &amp; Vira Dubkova — BUY</div><div style="font-size:12px;color:var(--sub);margin-top:2px;">8673 Timber Ridge Dr Burr Ridge IL 60527</div></div><span class="badge badge-gold">⭐ May 15</span></div><div class="spotlight-chips"><div class="chip">Proj. close: <strong>May 15</strong></div><div class="chip">Price: <strong>$1,350,000</strong></div><div class="chip">GCI: <strong>$30,375</strong></div><div class="chip">Est. PAC: <strong>$14,261</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Joel Huffar — SELL</div><div class="deal-sub">136 w 18th St Lockport IL 60441</div></div><span class="badge badge-red">🚨 89d overdue</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Feb 18</strong></div><div class="chip">Price: <strong>$335,000</strong></div><div class="chip">GCI: <strong>$7,936</strong></div><div class="chip">Est. PAC: <strong>$6,784</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card"><div class="deal-row"><div class="deal-left"><div class="deal-title">Margaret  Buck — BUY</div><div class="deal-sub">6870 w Winding trail unit 302 Oak Forest IL 60452</div></div><span class="badge badge-red">🚨 2d</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 20</strong></div><div class="chip">Price: <strong>$254,000</strong></div><div class="chip">GCI: <strong>$5,715</strong></div><div class="chip">Est. PAC: <strong>$2,444</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
     <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;"><div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;"><span style="color:var(--sub);">Est. pipeline value if all close:</span><span style="font-weight:800;font-size:16px;color:var(--green);">+$23,489 PAC</span></div><div style="font-size:11px;color:var(--sub);margin-top:4px;">Would bring YTD to ~$74,705</div></div>
 
   <!-- AG:pipeline-end -->
@@ -427,17 +426,17 @@
 
   <div class="section">
   <!-- AG:closings-start -->
-    <div class="section-label">Ã¢ÂÂ Recent Closings Ã¢ÂÂ YTD 2026</div>
+    <div class="section-label">✅ Recent Closings — YTD 2026</div>
     <div class="card">
-      <div class="closed-row"><div class="cl-date">Apr 7</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Tracy Hasler Ã¢ÂÂ 6755 180th St Unit 6 Tinley Park IL 60477 (SOI/PC)</div><div class="cl-pac">$4,500</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping Ã¢ÂÂ 2909 Bisbee Dr Joilet IL 06432 (Zillow Flex)</div><div class="cl-pac">$1,748</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 16</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping Ã¢ÂÂ 1596 w Ludington Circle Romeoville IL 60446 (Zillow Flex)</div><div class="cl-pac">$1,469</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 14</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Paul McDaniels &amp; Lance Lopez Ã¢ÂÂ 2200 Holt Rd Minooka IL 60447 (SOI/PC)</div><div class="cl-pac">$9,601</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 13</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Adam Franson &amp; Kayla Franson Ã¢ÂÂ 950 S Homan Ave  Chicago IL 60655 (SOI/PC)</div><div class="cl-pac">$10,026</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Tracy &amp; Jordan Hasler Ã¢ÂÂ 1308 Glenridge Ct Minooka IL 60447 (Zillow Flex)</div><div class="cl-pac">$4,289</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 7</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Sally &amp; Matthew Vitiritti Ã¢ÂÂ 701 E 7th St Lockport IL 60441 (Zillow Flex)</div><div class="cl-pac">$3,893</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 2</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Adam Mather &amp; Bailey Bingham Ã¢ÂÂ 16701 Highview Ave Orland Hills IL 60487 (Zillow Flex)</div><div class="cl-pac">$3,920</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 1</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Sue Shukstor Ã¢ÂÂ 22416 S Kings Ct Shorewood IL 60404 (SOI/PC)</div><div class="cl-pac">$9,091</div></div>
+      <div class="closed-row"><div class="cl-date">Apr 7</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Tracy Hasler — 6755 180th St Unit 6 Tinley Park IL 60477 (SOI/PC)</div><div class="cl-pac">$4,500</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 2909 Bisbee Dr Joilet IL 06432 (Zillow Flex)</div><div class="cl-pac">$1,748</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 16</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Roger Schmidt &amp; Andrea Kipping — 1596 w Ludington Circle Romeoville IL 60446 (Zillow Flex)</div><div class="cl-pac">$1,469</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 14</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Paul McDaniels &amp; Lance Lopez — 2200 Holt Rd Minooka IL 60447 (SOI/PC)</div><div class="cl-pac">$9,601</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 13</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Adam Franson &amp; Kayla Franson — 950 S Homan Ave  Chicago IL 60655 (SOI/PC)</div><div class="cl-pac">$10,026</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Tracy &amp; Jordan Hasler — 1308 Glenridge Ct Minooka IL 60447 (Zillow Flex)</div><div class="cl-pac">$4,289</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 7</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Sally &amp; Matthew Vitiritti — 701 E 7th St Lockport IL 60441 (Zillow Flex)</div><div class="cl-pac">$3,893</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 2</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Adam Mather &amp; Bailey Bingham — 16701 Highview Ave Orland Hills IL 60487 (Zillow Flex)</div><div class="cl-pac">$3,920</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 1</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Sue Shukstor — 22416 S Kings Ct Shorewood IL 60404 (SOI/PC)</div><div class="cl-pac">$9,091</div></div>
     </div>
 
   <!-- AG:closings-end -->
@@ -445,14 +444,14 @@
   
   <div class="section">
   <!-- AG:override-start -->
-    <div class="section-label">Ã°ÂÂÂ¼ Override Income Ã¢ÂÂ Team Deals (YTD)</div>
+    <div class="section-label">💼 Override Income — Team Deals (YTD)</div>
     <div class="card">
       <div style="font-size:12px;color:var(--sub);margin-bottom:10px;">Michelle receives override commissions on deals closed by other agents. This is included in Michelle's $51,216 YTD total.</div>
-      <div class="closed-row"><div class="cl-date">Mar 23</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren Ã¢ÂÂ Russell Fairchild Ã¢ÂÂ 18309 Carrington Dr, Hazel Crest, IL (Ylopo)</div><div class="cl-pac">$1,134</div></div>
-      <div class="closed-row"><div class="cl-date">Mar 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren Ã¢ÂÂ Phillip Powell Ã¢ÂÂ 24840 Hemphill Dr. Elwood IL (Zillow Flex)</div><div class="cl-pac">$522</div></div>
-      <div class="closed-row"><div class="cl-date">Mar 3</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Jaclyn Ã¢ÂÂ Jaqueline Hansel Ã¢ÂÂ 19546 115th Ave Unit A Mokena (Zillow Flex)</div><div class="cl-pac">$420</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 9</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren Ã¢ÂÂ Kris Urbauer Ã¢ÂÂ 11020 Keating Ave, Unit 106 (Zillow Flex)</div><div class="cl-pac">$328</div></div>
-      <div class="closed-row"><div class="cl-date">Jan 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren Ã¢ÂÂ Lindsay Czarnowski Ã¢ÂÂ 6015 Lakeside Pl. Unit 203, Tinley Park, IL (Zillow Flex)</div><div class="cl-pac">$275</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 23</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Russell Fairchild — 18309 Carrington Dr, Hazel Crest, IL (Ylopo)</div><div class="cl-pac">$1,134</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 12</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Phillip Powell — 24840 Hemphill Dr. Elwood IL (Zillow Flex)</div><div class="cl-pac">$522</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 3</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Jaclyn — Jaqueline Hansel — 19546 115th Ave Unit A Mokena (Zillow Flex)</div><div class="cl-pac">$420</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 9</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Kris Urbauer — 11020 Keating Ave, Unit 106 (Zillow Flex)</div><div class="cl-pac">$328</div></div>
+      <div class="closed-row"><div class="cl-date">Jan 20</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Override</span><div class="cl-name">Lauren — Lindsay Czarnowski — 6015 Lakeside Pl. Unit 203, Tinley Park, IL (Zillow Flex)</div><div class="cl-pac">$275</div></div>
       <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;margin-top:6px;border-top:1px solid var(--border);font-size:13px;">
         <span style="color:var(--sub);">Total override income YTD:</span>
         <span style="font-weight:800;color:var(--green);">$2,678</span>
@@ -465,119 +464,69 @@
 <div class="section">
   <div class="section-label">✅ Today's Task Blocks</div>
   <div class="grid-2">
-
     <div class="card" style="padding:0;overflow:hidden;">
       <div style="background:linear-gradient(135deg,#fff8e1,#fffde7);padding:12px 16px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;">
         <span style="font-size:18px;">☀️</span>
-        <div>
-          <div style="font-weight:700;font-size:13px;">Morning Block</div>
-          <div style="font-size:11px;color:var(--sub);">8:00 – 10:30 AM · Lead Response</div>
-        </div>
+        <div><div style="font-weight:700;font-size:13px;">Morning Block</div><div style="font-size:11px;color:var(--sub);">8:00 – 10:30 AM · Lead Response</div></div>
       </div>
-      <div style="padding:10px 14px;" id="mm-morning-tasks">
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Check &amp; respond to new Zillow Flex leads (5-min rule)</span><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;margin-left:auto;">Zillow</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Review FUB inbox — reply to all unread messages</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;">FUB</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Follow up on yesterday's showings</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;">Admin</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Check Under Contract files — any pending items?</span><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;margin-left:auto;">Deals</span></label>
+      <div style="padding:10px 14px;">
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Check &amp; respond to new Zillow Flex leads (5-min rule)</span><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Zillow</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Review FUB inbox — reply to all unread messages</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">FUB</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Follow up on yesterday's showings</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Admin</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Check Under Contract files — any pending items?</span><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Deals</span></label>
       </div>
       <div style="padding:8px 14px 12px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;">
-        <span style="font-size:12px;color:var(--sub);font-weight:600;">Contacts today</span>
-        <span style="font-size:11px;color:var(--sub);">Goal: 10</span>
+        <span style="font-size:12px;color:var(--sub);font-weight:600;">Contacts today</span><span style="font-size:11px;color:var(--sub);">Goal: 10</span>
         <div style="display:flex;align-items:center;gap:6px;margin-left:auto;">
-          <button onclick="mmAdjContacts(-1)" style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;">−</button>
+          <button onclick="mmAdj(-1)" style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;font-size:16px;line-height:1;display:flex;align-items:center;justify-content:center;">−</button>
           <span id="mm-contacts" style="font-size:16px;font-weight:800;min-width:20px;text-align:center;">0</span>
-          <button onclick="mmAdjContacts(1)" style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;">+</button>
+          <button onclick="mmAdj(1)" style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;font-size:16px;line-height:1;display:flex;align-items:center;justify-content:center;">+</button>
         </div>
       </div>
     </div>
-
     <div class="card" style="padding:0;overflow:hidden;">
       <div style="background:linear-gradient(135deg,#e8f4fd,#eaf4fd);padding:12px 16px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;">
         <span style="font-size:18px;">🌤️</span>
-        <div>
-          <div style="font-weight:700;font-size:13px;">Afternoon Block</div>
-          <div style="font-size:11px;color:var(--sub);">1:00 – 3:30 PM · Nurture &amp; Outreach</div>
-        </div>
+        <div><div style="font-weight:700;font-size:13px;">Afternoon Block</div><div style="font-size:11px;color:var(--sub);">1:00 – 3:30 PM · Nurture &amp; Outreach</div></div>
       </div>
-      <div style="padding:10px 14px;" id="mm-afternoon-tasks">
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Call top 3 leads from Priority Outreach list</span><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;margin-left:auto;">FUB</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Send property matches to active buyers (not yet converted)</span><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;margin-left:auto;">Zillow</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Reach out to 2 SOI contacts not spoken to in 30+ days</span><span class="badge badge-green" style="font-size:10px;padding:2px 7px;margin-left:auto;">SOI</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Schedule / confirm upcoming showings</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;">Admin</span></label>
+      <div style="padding:10px 14px;">
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Call top 3 leads from Priority Outreach list</span><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">FUB</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Send property matches to active buyers not yet under contract</span><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Zillow</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Reach out to 2 SOI contacts not spoken to in 30+ days</span><span class="badge badge-green" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">SOI</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Schedule / confirm upcoming showings</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Admin</span></label>
       </div>
       <div style="padding:8px 14px 12px;border-top:1px solid var(--border);">
         <div style="font-size:11px;color:var(--sub);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">🌙 End of Day</div>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Log all contacts &amp; notes in FUB</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;">Admin</span></label>
-        <label class="mm-task"><input type="checkbox" class="mm-cb"> <span>Update pipeline notes in Transaction Tracker</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;">Admin</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Log all contacts &amp; notes in FUB</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Admin</span></label>
+        <label class="mm-task"><input type="checkbox" class="mm-cb"><span>Update pipeline notes in Transaction Tracker</span><span class="badge badge-gray" style="font-size:10px;padding:2px 7px;margin-left:auto;flex-shrink:0;">Admin</span></label>
       </div>
     </div>
-
   </div>
-
   <div class="card" style="margin-top:4px;">
     <div style="display:flex;align-items:center;justify-content:space-between;">
       <span style="font-size:13px;font-weight:600;">📊 Today's Progress</span>
-      <span id="mm-progress-lbl" style="font-size:12px;color:var(--sub);">Tasks done: 0 / 10</span>
+      <span id="mm-prog-lbl" style="font-size:12px;color:var(--sub);">0 / 10 tasks</span>
     </div>
-    <div class="prog-bg" style="margin-top:8px;"><div class="prog-fill" id="mm-progress-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff);"></div></div>
+    <div class="prog-bg" style="margin-top:8px;"><div class="prog-fill" id="mm-prog-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff);"></div></div>
   </div>
 </div>
-
 <style>
-.mm-task { display:flex; align-items:center; gap:8px; padding:7px 0; border-bottom:1px solid var(--border); cursor:pointer; font-size:12.5px; }
-.mm-task:last-child { border-bottom:none; }
-.mm-task input[type=checkbox] { flex-shrink:0; width:15px; height:15px; cursor:pointer; accent-color:var(--accent); }
-.mm-task span:first-of-type { flex:1; }
-.mm-task.done span:first-of-type { text-decoration:line-through; color:var(--sub); }
+.mm-task{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);cursor:pointer;font-size:12.5px;}
+.mm-task:last-child{border-bottom:none;}
+.mm-task input[type=checkbox]{flex-shrink:0;width:15px;height:15px;cursor:pointer;accent-color:var(--accent);}
+.mm-task span:first-of-type{flex:1;}
+.mm-task.done span:first-of-type{text-decoration:line-through;color:var(--sub);}
 </style>
-
 <script>
 (function(){
-  const MM_TASKS_KEY = 'mm_tasks_' + new Date().toDateString();
-  function mmSave(){ localStorage.setItem(MM_TASKS_KEY, JSON.stringify(mmState())); }
-  function mmState(){
-    return Array.from(document.querySelectorAll('.mm-cb')).map(cb => cb.checked);
-  }
-  function mmUpdateProgress(){
-    const cbs = Array.from(document.querySelectorAll('.mm-cb'));
-    const done = cbs.filter(c=>c.checked).length;
-    const total = cbs.length;
-    const pct = total ? Math.round(done/total*100) : 0;
-    const bar = document.getElementById('mm-progress-bar');
-    const lbl = document.getElementById('mm-progress-lbl');
-    if(bar) bar.style.width = pct + '%';
-    if(lbl) lbl.textContent = 'Tasks done: ' + done + ' / ' + total + ' (' + pct + '%)';
-  }
-  function mmLoad(){
-    const saved = JSON.parse(localStorage.getItem(MM_TASKS_KEY)||'[]');
-    const cbs = document.querySelectorAll('.mm-cb');
-    cbs.forEach((cb,i) => {
-      if(saved[i]) cb.checked = true;
-      cb.closest('label').classList.toggle('done', cb.checked);
-    });
-    mmUpdateProgress();
-  }
-  document.addEventListener('change', function(e){
-    if(e.target.classList.contains('mm-cb')){
-      e.target.closest('label').classList.toggle('done', e.target.checked);
-      mmSave(); mmUpdateProgress();
-    }
-  });
-  const MM_CONTACTS_KEY = 'mm_contacts_' + new Date().toDateString();
-  window.mmAdjContacts = function(d){
-    let v = parseInt(localStorage.getItem(MM_CONTACTS_KEY)||'0') + d;
-    if(v < 0) v = 0;
-    localStorage.setItem(MM_CONTACTS_KEY, v);
-    const el = document.getElementById('mm-contacts');
-    if(el) el.textContent = v;
-  };
-  function mmLoadContacts(){
-    const v = localStorage.getItem(MM_CONTACTS_KEY)||'0';
-    const el = document.getElementById('mm-contacts');
-    if(el) el.textContent = v;
-  }
-  if(document.readyState !== 'loading'){ mmLoad(); mmLoadContacts(); }
-  else document.addEventListener('DOMContentLoaded', function(){ mmLoad(); mmLoadContacts(); });
+  const D=new Date().toDateString(),TK='mm_tasks_'+D,CK='mm_ct_'+D;
+  function prog(){var cbs=document.querySelectorAll('.mm-cb'),done=[...cbs].filter(c=>c.checked).length,tot=cbs.length,pct=tot?Math.round(done/tot*100):0;var b=document.getElementById('mm-prog-bar'),l=document.getElementById('mm-prog-lbl');if(b)b.style.width=pct+'%';if(l)l.textContent=done+' / '+tot+' tasks';}
+  function save(){localStorage.setItem(TK,JSON.stringify([...document.querySelectorAll('.mm-cb')].map(c=>c.checked)));}
+  function load(){var s=JSON.parse(localStorage.getItem(TK)||'[]');document.querySelectorAll('.mm-cb').forEach((c,i)=>{if(s[i])c.checked=true;c.closest('label').classList.toggle('done',c.checked);});prog();}
+  document.addEventListener('change',function(e){if(e.target.classList.contains('mm-cb')){e.target.closest('label').classList.toggle('done',e.target.checked);save();prog();}});
+  window.mmAdj=function(d){var v=Math.max(0,parseInt(localStorage.getItem(CK)||'0')+d);localStorage.setItem(CK,v);var el=document.getElementById('mm-contacts');if(el)el.textContent=v;};
+  function loadCt(){var el=document.getElementById('mm-contacts');if(el)el.textContent=localStorage.getItem(CK)||'0';}
+  if(document.readyState!=='loading'){load();loadCt();}else document.addEventListener('DOMContentLoaded',function(){load();loadCt();});
 })();
 </script>
 <!-- AG:tasks-end -->
@@ -585,76 +534,43 @@
 
 <!-- AG:top5-start -->
 <div class="section" id="top5-section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-    <div class="section-label" style="margin-bottom:0;">ð¯ Top 5 Priority Outreach â Today</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+    <div class="section-label" style="margin-bottom:0;">🎯 Top 5 Priority Outreach — Today</div>
     <span id="top5-freshness" style="font-size:11px;color:var(--sub);"></span>
   </div>
   <div id="top5-list"></div>
 </div>
-
 <script>
 (function(){
-  const SIGNAL_COLORS = {
-    commitment:  { bg:'var(--red-bg)',    fg:'var(--red)',    icon:'ð' },
-    activity:    { bg:'var(--blue-bg)',   fg:'var(--blue)',   icon:'ðï¸' },
-    transaction: { bg:'var(--orange-bg)', fg:'var(--orange)', icon:'ð ' },
-    fello:       { bg:'var(--teal-bg)',   fg:'var(--teal)',   icon:'â­' },
-    unanswered:  { bg:'var(--gold-bg)',   fg:'var(--gold)',   icon:'ð¬' },
-    default:     { bg:'var(--accent-bg)', fg:'var(--accent)', icon:'ð' }
-  };
-  function renderTop5(data) {
-    const list = document.getElementById('top5-list');
-    const fresh = document.getElementById('top5-freshness');
-    if (!list) return;
-    const generated = new Date(data.generated);
-    const ageMs = Date.now() - generated.getTime();
-    const ageH  = ageMs / 3600000;
-    const stale = ageH > 26;
-    const ageLabel = ageH < 1 ? 'just now' : ageH < 24 ? Math.round(ageH)+'h ago' : Math.round(ageH/24)+'d ago';
-    if (fresh) {
-      if (stale) {
-        fresh.innerHTML = '<span style="background:var(--orange-bg);color:var(--orange);border-radius:10px;padding:2px 8px;font-weight:700;">â ï¸ Stale â last run '+ageLabel+'</span>';
-      } else {
-        fresh.textContent = 'ð¢ Updated '+ageLabel;
-        fresh.style.color = 'var(--green)';
-      }
-    }
-    if (!data.leads || !data.leads.length) {
-      list.innerHTML = '<div class="card" style="color:var(--sub);font-size:13px;">No leads found for today.</div>';
-      return;
-    }
-    list.innerHTML = data.leads.map(function(lead,i){
-      const sig = SIGNAL_COLORS[lead.signal_type] || SIGNAL_COLORS.default;
-      return '<div class="card" style="margin-bottom:6px;padding:10px 14px!important;border-left:3px solid '+sig.fg+';">'+
-        '<div style="display:flex;align-items:flex-start;gap:10px;">'+
-          '<div style="width:22px;height:22px;border-radius:50%;background:'+sig.fg+';color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;">'+(i+1)+'</div>'+
-          '<div style="flex:1;min-width:0;">'+
-            '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">'+
-              '<span style="font-weight:700;font-size:13px;">'+lead.name+'</span>'+
-              '<span class="badge" style="background:'+sig.bg+';color:'+sig.fg+';">'+sig.icon+' '+(lead.signal_label||lead.signal_type)+'</span>'+
-              (lead.stage?'<span class="badge badge-gray">'+lead.stage+'</span>':'')+
-            '</div>'+
-            '<div style="font-size:12px;color:var(--text);margin-bottom:2px;">'+lead.reason+'</div>'+
-            '<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">'+
-              (lead.last_activity?'<span class="chip" style="font-size:11px;">Last activity: <strong>'+lead.last_activity+'</strong></span>':'')+
-              (lead.last_note?'<span class="chip" style="color:var(--sub);font-style:italic;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">"'+lead.last_note+'"</span>':'')+
-              (lead.fub_url?'<a class="open-link" href="'+lead.fub_url+'" target="_blank" style="margin-left:auto;">Open in FUB â</a>':'')+
-            '</div>'+
-          '</div>'+
-        '</div></div>';
-    }).join('');
+  var SC={commitment:{bg:'var(--red-bg)',fg:'var(--red)',icon:'📌'},activity:{bg:'var(--blue-bg)',fg:'var(--blue)',icon:'👁️'},transaction:{bg:'var(--orange-bg)',fg:'var(--orange)',icon:'🏠'},fello:{bg:'var(--teal-bg)',fg:'var(--teal)',icon:'⭐'},unanswered:{bg:'var(--gold-bg)',fg:'var(--gold)',icon:'💬'},default:{bg:'var(--accent-bg)',fg:'var(--accent)',icon:'🔔'}};
+  function render(data){
+    var list=document.getElementById('top5-list'),fresh=document.getElementById('top5-freshness');
+    if(!list)return;
+    var gen=new Date(data.generated),ageH=(Date.now()-gen)/3600000,stale=ageH>26,label=ageH<1?'just now':ageH<24?Math.round(ageH)+'h ago':Math.round(ageH/24)+'d ago';
+    if(fresh){if(stale){fresh.innerHTML='<span style="background:var(--orange-bg);color:var(--orange);border-radius:10px;padding:2px 8px;font-weight:700;">⚠️ Stale — last run '+label+'</span>';}else{fresh.textContent='🟢 Updated '+label;fresh.style.color='var(--green)';}}
+    if(!data.leads||!data.leads.length){list.innerHTML='<div class="card" style="color:var(--sub);font-size:13px;">No leads found.</div>';return;}
+    list.innerHTML=data.leads.map(function(l,i){var s=SC[l.signal_type]||SC.default;return'<div class="card" style="padding:10px 14px;margin-bottom:6px;border-left:3px solid '+s.fg+';">'+
+    '<div style="display:flex;align-items:flex-start;gap:9px;">'+
+    '<div style="width:22px;height:22px;border-radius:50%;background:'+s.fg+';color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;">'+(i+1)+'</div>'+
+    '<div style="flex:1;min-width:0;">'+
+    '<div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:2px;">'+
+    '<span style="font-weight:700;font-size:13px;">'+l.name+'</span>'+
+    '<span class="badge" style="background:'+s.bg+';color:'+s.fg+';">'+s.icon+' '+(l.signal_label||l.signal_type)+'</span>'+
+    (l.stage?'<span class="badge badge-gray">'+l.stage+'</span>':'')+
+    '</div>'+
+    '<div style="font-size:12px;color:var(--text);margin-bottom:2px;">'+l.reason+'</div>'+
+    '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">'+
+    (l.last_activity?'<span class="chip" style="font-size:11px;">Last activity: <strong>'+l.last_activity+'</strong></span>':'')+
+    (l.last_note?'<span class="chip" style="font-size:11px;color:var(--sub);font-style:italic;max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">"'+l.last_note+'"</span>':'')+
+    (l.fub_url?'<a class="open-link" href="'+l.fub_url+'" target="_blank" style="margin-left:auto;">Open in FUB →</a>':'')+
+    '</div></div></div></div>';}).join('');
   }
-  function showError(msg){
-    const el=document.getElementById('top5-list');
-    if(el) el.innerHTML='<div class="card" style="color:var(--sub);font-size:13px;font-style:italic;">'+msg+'</div>';
-  }
-  fetch('/agent-dashboards/data/michelle-outreach.json?cb='+Date.now())
-    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
-    .then(renderTop5)
-    .catch(function(e){showError('Priority outreach data unavailable. Run will resume next weekday morning.');console.warn('Top5 fetch failed:',e);});
+  function err(m){var el=document.getElementById('top5-list');if(el)el.innerHTML='<div class="card" style="color:var(--sub);font-size:13px;font-style:italic;">'+m+'</div>';}
+  fetch('/agent-dashboards/data/michelle-outreach.json?cb='+Date.now()).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(render).catch(function(){err('Priority outreach data unavailable. Resumes next weekday morning.');});
 })();
 </script>
 <!-- AG:top5-end -->
+
 
   </div>
 
@@ -783,7 +699,7 @@ function applySettings(s){
   const gapEl=document.getElementById('pace-gap');
   if(gapEl){gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();gapEl.style.color=gap<0?'var(--red)':'var(--green)';}
   const moNeeded=document.getElementById('mo-needed');
-  if(moNeeded)moNeeded.textContent=monthsLeft>0?'$'+Math.round((goal-PAC_YTD)/monthsLeft).toLocaleString():'Ã¢ÂÂ';
+  if(moNeeded)moNeeded.textContent=monthsLeft>0?'$'+Math.round((goal-PAC_YTD)/monthsLeft).toLocaleString():'—';
   const moLeft=document.getElementById('mo-left');
   if(moLeft)moLeft.textContent=monthsLeft;
   const closeBar=document.getElementById('close-bar');
