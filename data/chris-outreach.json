@@ -1,77 +1,72 @@
 {
   "agent": "Chris Lira",
-  "generated": "2026-05-19T17:12:59.428Z",
-  "note": "Leads from full team pool. FUB shows 0 active leads agent-assigned to Chris.",
+  "generated": "2026-05-19",
   "top5": [
     {
       "rank": 1,
-      "fub_id": 72273,
-      "name": "Logan Walker",
-      "stage": "Nurture",
+      "name": "Andre Brissett",
+      "personId": 73439,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73439",
+      "stage": "Attempted contact",
       "score": 15,
-      "score_reasons": [
-        "unanswered: outgoing 4 months ago — no reply",
-        "fello: viewed $449K listing in Tinley Park"
+      "signals": [
+        "Outgoing 3 days ago unanswered — asking about proof of funds/lender",
+        "Tour agent change notification today",
+        "Ylopo active 6 days ago ($739K property)"
       ],
-      "last_activity": "13 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72273",
-      "suggested_action": "Owns home at 17335 Oleander, Tinley Park — browsing $449K listings nearby. Possible upgrade buyer"
+      "why": "Unanswered lender question 3 days ago — follow up to keep momentum"
     },
     {
       "rank": 2,
-      "fub_id": 73426,
-      "name": "Olivia Grunert",
-      "stage": "Lead",
-      "score": 13,
-      "score_reasons": [
-        "activity: Dan messaged 12 min ago re Frankfort/Mokena",
-        "fello: viewed $380K Tinley Park listing 10 days ago"
+      "name": "Camila Johnson",
+      "personId": 73398,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73398",
+      "stage": "Attempted contact",
+      "score": 15,
+      "signals": [
+        "Outgoing 14 days ago unanswered — follow-up on canceled 17654 Driftwood Ln tour",
+        "Ylopo viewed $440K property 25 days ago"
       ],
-      "last_activity": "13 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73426",
-      "suggested_action": "New lead in Frankfort/Mokena/Tinley range — follow up if Dan doesn't connect"
+      "why": "Tour canceled, follow-up unanswered — try again with alternative homes"
     },
     {
       "rank": 3,
-      "fub_id": 72779,
-      "name": "Benny Unknown",
-      "stage": "Spoke with customer",
-      "score": 8,
-      "score_reasons": [
-        "activity: last incoming 9 months ago",
-        "prior conversation established"
+      "name": "Maddie Rarick",
+      "personId": 73050,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73050",
+      "stage": "Met with customer",
+      "score": 15,
+      "signals": [
+        "Outgoing 2 months ago unanswered — 'Are you still in the market?'",
+        "Previous tour request Dec '25"
       ],
-      "last_activity": "14 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72779",
-      "suggested_action": "Re-engage with a check-in text"
+      "why": "Prior meeting, unanswered check-in — worth a fresh touchpoint"
     },
     {
       "rank": 4,
-      "fub_id": 72664,
-      "name": "Edwin Tate",
-      "stage": "Under Contract",
-      "score": 6,
-      "score_reasons": [
-        "active communication (receipt/EM questions 18-19hr ago)",
-        "Under Contract — closing support"
+      "name": "Christian",
+      "personId": 73023,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73023",
+      "stage": "Showing homes",
+      "score": 15,
+      "signals": [
+        "Outgoing 4 months ago unanswered (Happy New Year check-in)",
+        "Ylopo viewed $310K property Apr 16"
       ],
-      "last_activity": "6 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72664",
-      "suggested_action": "Under Contract support — confirm receipt/EM. Good referral source post-close"
+      "why": "Showing homes stage with fresh Ylopo browse — reconnect"
     },
     {
       "rank": 5,
-      "fub_id": 71020,
-      "name": "Peter Mathis",
-      "stage": "Under Contract",
-      "score": 6,
-      "score_reasons": [
-        "incoming about wiring/attorney letter 2 days ago",
-        "Under Contract — buyer needs support"
+      "name": "Ivan Smilkovic",
+      "personId": 73391,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73391",
+      "stage": "Spoke with customer",
+      "score": 13,
+      "signals": [
+        "Tour at 1102 Hinswood Dr APT 206 canceled 6 days ago",
+        "Ylopo viewed IN property recently"
       ],
-      "last_activity": "1 hour ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71020",
-      "suggested_action": "Follow up on attorney letter and wiring confirmation. Good referral candidate post-close"
+      "why": "Tour just canceled — reach out to reschedule or redirect"
     }
   ]
 }
