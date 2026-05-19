@@ -1,6 +1,21 @@
 {
-  "generated": "1970-01-01T00:00:00-05:00",
   "agent": "Lauren Litoborski",
-  "fub_account": "crosstownlincolnway",
-  "leads": []
+  "generated": "2026-05-19T16:56:27.758Z",
+  "note": "Lauren has only 1 active lead in FUB. Portfolio is very sparse — recommend reviewing lead assignment in FUB admin.",
+  "top5": [
+    {
+      "rank": 1,
+      "fub_id": 18675,
+      "name": "Jenny Pantoja",
+      "stage": "Bad Phone",
+      "score": 6,
+      "score_reasons": [
+        "activity: only active lead assigned to Lauren",
+        "fello: viewed $258K listing (5 years ago)"
+      ],
+      "last_activity": "5 years ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/18675",
+      "suggested_action": "Attempt re-contact via alternate channel; update phone or move to Trash if unreachable"
+    }
+  ]
 }
