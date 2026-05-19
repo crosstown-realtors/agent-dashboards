@@ -1,6 +1,6 @@
 {
   "agent": "Dan Krembuszewski",
-  "generated": "2026-05-19T16:48:25.055Z",
+  "generated": "2026-05-19T16:48:41.123Z",
   "top5": [
     {
       "rank": 1,
@@ -9,12 +9,12 @@
       "stage": "Met with customer",
       "score": 17,
       "score_reasons": [
-        "commitment: incoming msg about wiring/attorney letter (buyer committed)",
-        "fello: viewed listing recently"
+        "commitment: buyer confirmed wiring/attorney letter",
+        "fello: viewed listing"
       ],
       "last_activity": "1 hour ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72800",
-      "suggested_action": "Follow up on attorney letter timeline and next steps for contract"
+      "suggested_action": "Follow up on attorney letter timeline and contract next steps"
     },
     {
       "rank": 2,
@@ -23,12 +23,12 @@
       "stage": "Lead",
       "score": 17,
       "score_reasons": [
-        "commitment: replied 'Yes please' 8 minutes ago to Dan's message",
-        "fello: viewed $365K listing recently"
+        "commitment: replied 'Yes please' 8 min ago",
+        "fello: viewed $365K listing"
       ],
       "last_activity": "3 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73446",
-      "suggested_action": "Hot! Respond immediately to 'Yes please' - confirm showing for Grove property"
+      "suggested_action": "Respond immediately – confirm showing for Grove property"
     },
     {
       "rank": 3,
@@ -37,12 +37,12 @@
       "stage": "Spoke with customer",
       "score": 15,
       "score_reasons": [
-        "unanswered: Dan messaged 1 month ago about DuPage inventory - no reply",
-        "fello: viewed $506K listing in Woodridge"
+        "unanswered: Dan msg 1 mo ago – no reply",
+        "fello: viewed $506K listing"
       ],
       "last_activity": "2 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73209",
-      "suggested_action": "Re-engage with fresh DuPage/Woodridge listings - short nudge text"
+      "suggested_action": "Re-engage with fresh DuPage/Woodridge listings"
     },
     {
       "rank": 4,
@@ -51,12 +51,12 @@
       "stage": "Lead",
       "score": 15,
       "score_reasons": [
-        "unanswered: Dan messaged 5 days ago about showing fallthrough - no reply",
-        "fello: viewed $390K listing in Aurora recently"
+        "unanswered: Dan msg 5 days ago – no reply",
+        "fello: viewed $390K listing"
       ],
       "last_activity": "3 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73436",
-      "suggested_action": "Send fresh Aurora/nearby listings; briefly acknowledge the missed showing"
+      "suggested_action": "Send fresh Aurora listings; acknowledge missed showing"
     },
     {
       "rank": 5,
@@ -65,12 +65,12 @@
       "stage": "Lead",
       "score": 13,
       "score_reasons": [
-        "fello: viewed $499K listing in Darien",
-        "activity: Dan just messaged after in-person meeting in New Lenox (4 min ago)"
+        "fello: viewed $499K listing",
+        "activity: Dan just messaged after in-person meeting"
       ],
       "last_activity": "2 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444",
-      "suggested_action": "Await Ashley's reply to recent outreach; prepare area-specific listing alerts"
+      "suggested_action": "Await reply; prepare area listing alerts"
     }
   ]
 }
