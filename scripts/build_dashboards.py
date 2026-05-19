@@ -833,6 +833,14 @@ def patch_html(html_path, agent_name, data):
 
     # Stats grid
     html = replace_marked(html, 'stats', data['stats'])
+    # Guard: strip orphaned stat-card fragments that can leak after AG:stats-end
+    # (these have a stray </div> that prematurely closes the container)
+    import re as _re
+    html = _re.sub(
+        r'(<!-- AG:stats-end -->)\s*<div class="stat-label">[^<]*</div>\s*<div class="stat-sub">[^<]*</div>\s*</div>\s*',
+        r'\1\n',
+        html
+    )
 
     # Data sections (label + card content, no outer section wrapper)
     html = replace_marked(html, 'income',      data['income'])
