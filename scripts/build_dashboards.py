@@ -782,7 +782,7 @@ def make_site_header_html(agent_name):
 """
 
 def patch_html(html_path, agent_name, data):
-    with open(html_path) as f:
+    with open(html_path, encoding='utf-8') as f:
         html = f.read()
 
     # ── Unified Command Center header injection / upgrade ──
@@ -921,7 +921,7 @@ def patch_html(html_path, agent_name, data):
     # ── End Remove-button snippet ──────────────────────────────────────────
 
 
-    with open(html_path, 'w') as f:
+    with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f"  ✓ Updated {os.path.basename(html_path)}")
 

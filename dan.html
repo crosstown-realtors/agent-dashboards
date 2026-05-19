@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dan Krembuszewski â Dashboard</title>
+<title>Dan Krembuszewski — Dashboard</title>
 <style>
   :root {
     --bg: #f2f2f7; --card: #fff; --text: #1c1c1e; --sub: #6c6c70; --border: #e5e5ea;
@@ -123,13 +123,13 @@
   .save-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1c1c1e; color: white; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 200; }
   .save-toast.show { display: block; animation: fadeup .3s ease; }
   @keyframes fadeup { from { opacity:0; transform:translateX(-50%) translateY(8px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
-  /* ââ Enhancement styles ââ */
+  /* ── Enhancement styles ── */
   @keyframes slideUpIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
   @keyframes urgentPulse { 0%,100% { box-shadow:0 1px 4px rgba(0,0,0,.07); } 50% { box-shadow:0 0 0 5px rgba(192,57,43,.18), 0 1px 4px rgba(0,0,0,.07); } }
   .urgent-deal { animation: urgentPulse 2.2s ease-in-out infinite; }
   @media(max-width:580px){ .grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;} .pace-wrap{flex-direction:column;} .pace-side{border-left:none;border-top:1px solid var(--border);padding:10px 0 0;flex-direction:row;gap:20px;} }
 
-  /* ââ Site-wide Command Center Header ââ */
+  /* ── Site-wide Command Center Header ── */
   .site-header {
     background: linear-gradient(135deg, #080e1f 0%, #14103a 50%, #1e1b4b 100%);
     border-bottom: 1px solid rgba(99,102,241,0.4);
@@ -183,7 +183,7 @@
   @keyframes livepulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.8); } }
 
 
-  /* ââ Top 5 Outreach Section ââ */
+  /* ── Top 5 Outreach Section ── */
   .top5-grid { display: flex; flex-direction: column; gap: 10px; }
   .top5-card {
     background: var(--card);
@@ -242,7 +242,7 @@
 <div class="site-header">
   <div class="site-header-inner">
     <div class="site-header-brand">
-      <div class="site-header-emblem">ð&nbsp;</div>
+      <div class="site-header-emblem">�&nbsp;</div>
       <div>
         <div class="site-header-org">Crosstown Realtors</div>
         <div class="site-header-cmd">Agent Command Center</div>
@@ -253,7 +253,7 @@
       <div class="site-header-avatar">DK</div>
       <div style="min-width:0;">
         <div class="site-header-agent-name">Dan Krembuszewski</div>
-        <div class="site-header-agent-role">Broker / Owner Â· Krembo Group / Crosstown Realtors</div>
+        <div class="site-header-agent-role">Broker / Owner · Krembo Group / Crosstown Realtors</div>
       </div>
     </div>
     <div class="site-header-right">
@@ -278,12 +278,12 @@
 <div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
 <div class="settings-drawer" id="settings-drawer">
   <div class="settings-hdr">
-    <span class="settings-hdr-title">âï¸ My Dashboard Settings</span>
-    <button class="settings-close" onclick="closeSettings()">â</button>
+    <span class="settings-hdr-title">⚙️ My Dashboard Settings</span>
+    <button class="settings-close" onclick="closeSettings()">✕</button>
   </div>
   <div class="settings-body">
     <div class="settings-group">
-      <div class="settings-group-title">ð¯ Goals</div>
+      <div class="settings-group-title">🎯 Goals</div>
       <div class="settings-field">
         <label class="settings-label" for="s-pac-goal">Annual Income Goal ($)</label>
         <input class="settings-input" type="number" id="s-pac-goal" placeholder="150000" step="5000">
@@ -298,14 +298,14 @@
       </div>
     </div>
     <div class="settings-group">
-      <div class="settings-group-title">ð Custom Notes</div>
+      <div class="settings-group-title">📝 Custom Notes</div>
       <div class="settings-field">
         <label class="settings-label" for="s-note">Today's note (optional)</label>
         <textarea class="settings-input" id="s-note" rows="3" placeholder="e.g. Team meeting at 10am..."></textarea>
       </div>
     </div>
     <div class="settings-group">
-      <div class="settings-group-title">ð Reminders</div>
+      <div class="settings-group-title">🔔 Reminders</div>
       <div class="settings-field">
         <label class="settings-label" for="s-reminder1">Reminder 1</label>
         <input class="settings-input" type="text" id="s-reminder1" placeholder="">
@@ -321,27 +321,27 @@
     <button class="btn-save" onclick="saveSettings()">Save Changes</button>
   </div>
 </div>
-<div class="save-toast" id="save-toast">â Settings saved!</div>
+<div class="save-toast" id="save-toast">✅ Settings saved!</div>
 
 <div class="container">
 
   <div class="quick-links">
-    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank"><div class="ql-icon" style="background:#fefbe8;">ð</div>Leaderboard</a>
-    <a class="ql-btn" href="https://app.followupboss.com" target="_blank"><div class="ql-icon" style="background:#fff3e0;">ð¯</div>Follow Up Boss</a>
-    <a class="ql-btn" href="https://www.dotloop.com" target="_blank"><div class="ql-icon" style="background:#eaf4fd;">ð</div>Dotloop</a>
-    <a class="ql-btn" href="https://mylistingiq.ai" target="_blank"><div class="ql-icon" style="background:#eafaf1;">ð¡</div>MyListingIQ</a>
-    <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank"><div class="ql-icon" style="background:#f0f0ff;">ð</div>Transaction Tracker</a>
-    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/" target="_blank"><div class="ql-icon" style="background:#eff6ff;">ð¥</div>Team Dashboards</a>
+    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/crosstown-lincolnway-leaderboard.html" target="_blank"><div class="ql-icon" style="background:#fefbe8;">🏆</div>Leaderboard</a>
+    <a class="ql-btn" href="https://app.followupboss.com" target="_blank"><div class="ql-icon" style="background:#fff3e0;">🎯</div>Follow Up Boss</a>
+    <a class="ql-btn" href="https://www.dotloop.com" target="_blank"><div class="ql-icon" style="background:#eaf4fd;">📋</div>Dotloop</a>
+    <a class="ql-btn" href="https://mylistingiq.ai" target="_blank"><div class="ql-icon" style="background:#eafaf1;">🏡</div>MyListingIQ</a>
+    <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank"><div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker</a>
+    <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/" target="_blank"><div class="ql-icon" style="background:#eff6ff;">👥</div>Team Dashboards</a>
   </div>
 
 
   <!-- TOP5-start -->
   <div class="section" id="top5-section">
-    <div class="section-label">ð¯ Today's Top 5 Priority Outreach
+    <div class="section-label">🎯 Today's Top 5 Priority Outreach
       <span id="top5-ts" style="font-size:10px;font-weight:400;color:var(--sub);margin-left:8px;"></span>
     </div>
     <div id="top5-cards">
-      <div class="card top5-empty">Loading outreach prioritiesâ¦</div>
+      <div class="card top5-empty">Loading outreach priorities…</div>
     </div>
   </div>
   <!-- TOP5-end -->
@@ -374,7 +374,7 @@
       const container = document.getElementById('top5-cards');
       const tsEl = document.getElementById('top5-ts');
       if (!data || !data.leads || !data.leads.length) {
-        container.innerHTML = '<div class="card top5-empty">No outreach data yet â run the Top 5 task to populate.</div>';
+        container.innerHTML = '<div class="card top5-empty">No outreach data yet — run the Top 5 task to populate.</div>';
         return;
       }
 
@@ -384,7 +384,7 @@
       let staleHtml = '';
       if (ageH > 18) {
         const d = new Date(data.generated);
-        staleHtml = `<div class="top5-stale">â ï¸ Data from ${d.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})} â next refresh at tomorrow's morning run.</div>`;
+        staleHtml = `<div class="top5-stale">⚠️ Data from ${d.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})} — next refresh at tomorrow's morning run.</div>`;
       }
 
       if (tsEl) {
@@ -406,10 +406,10 @@
             <div class="top5-meta">
               <span class="top5-signal ${sigClass}">${esc(lead.signal_label || lead.signal_type)}</span>
               <span class="top5-stage">${esc(lead.stage)}</span>
-              <span class="top5-activity">Â· ${esc(lead.last_activity)}</span>
+              <span class="top5-activity">· ${esc(lead.last_activity)}</span>
             </div>
           </div>
-          <a class="top5-link" href="${esc(lead.fub_url)}" target="_blank">Open in FUB â</a>
+          <a class="top5-link" href="${esc(lead.fub_url)}" target="_blank">Open in FUB →</a>
         </div>`;
       }).join('\n');
 
@@ -421,7 +421,7 @@
       .then(renderTop5)
       .catch(err => {
         const container = document.getElementById('top5-cards');
-        container.innerHTML = '<div class="card top5-empty">Outreach data not yet available â will appear after tomorrow morning\'s run.</div>';
+        container.innerHTML = '<div class="card top5-empty">Outreach data not yet available — will appear after tomorrow morning\'s run.</div>';
       });
   })();
   </script>
@@ -454,10 +454,10 @@
 
   <div class="section">
 <!-- AG:income-start -->
-    <div class="section-label">ð° Income Breakdown â YTD 2026</div>
+    <div class="section-label">💰 Income Breakdown — YTD 2026</div>
     <div class="card">
       <div class="income-row">
-        <span class="income-label">Own agent deals (Krembo → 6 closes)</span>
+        <span class="income-label">Own agent deals (Krembo ? 6 closes)</span>
         <span class="income-amt" style="color:var(--blue)">$33,790.30</span>
       </div>
       <div class="income-row">
@@ -466,7 +466,7 @@
       </div>
       <div class="income-row" style="padding-top:10px;">
         <span style="font-weight:700;font-size:14px;">Total Income YTD</span>
-        <span style="font-weight:800;font-size:16px;color:var(--green)">$36,922.70</span>
+        <span style="font-weight:800;font-size:16px;color:var(--green)">$49,648.44</span>
       </div>
     </div>
 
@@ -477,26 +477,26 @@
 
 <!-- AG:alerts-start -->
   <div style="margin-bottom:18px;">
-    <div class="alert alert-gold">â­ <span><strong>Closing soon (5/22/2026):</strong> Andrew Lenard â buy $496,000 at 7741 Sycamore Dr, Orland Park. Est. PAC: <strong>$5,667</strong>.</span></div>
-    <div class="alert alert-blue">â¹ï¸ <span>YTD: <strong>$36,923</strong> from 4 closed deal(s) + $7,676 override.</span></div>
+    <div class="alert alert-gold">⭐ <span><strong>Closing soon (5/22/2026):</strong> Andrew Lenard — buy $496,000 at 7741 Sycamore Dr, Orland Park. Est. PAC: <strong>$5,667</strong>.</span></div>
+    <div class="alert alert-blue">ℹ️ <span>YTD: <strong>$49,648</strong> from 6 closed deal(s) + $15,858 override.</span></div>
   </div>
   <!-- AG:alerts-end -->
 
 
   <div class="section">
 <!-- AG:goal-start -->
-    <div class="section-label">ð 2026 Production â $150,000 PAC Goal</div>
+    <div class="section-label">📈 2026 Production — $150,000 PAC Goal</div>
     <div class="card">
       <div class="pace-wrap">
         <div class="pace-main">
-          <div class="prog-row"><span>YTD PAC: <strong>$36,923</strong></span><span id="pct-lbl" style="color:var(--orange)">24.6% of $150,000</span></div>
+          <div class="prog-row"><span>YTD PAC: <strong>$49,648</strong></span><span id="pct-lbl" style="color:var(--orange)">24.6% of $150,000</span></div>
           <div class="prog-bg"><div class="prog-fill" id="gci-bar" style="width:0%;background:linear-gradient(90deg,var(--accent),#7b78ff)"></div></div>
-          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">â</strong> &nbsp;Â·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">â</strong></div>
+          <div style="margin-top:8px;font-size:12px;color:var(--sub);">On pace for: <strong id="annualized" style="color:var(--text)">—</strong> &nbsp;·&nbsp; Gap vs. pace today: <strong id="pace-gap" style="color:var(--red)">—</strong></div>
           <div class="month-grid" id="month-grid"></div>
         </div>
         <div class="pace-side">
-          <div><div class="num" style="color:var(--orange)" id="mo-needed">â</div><div class="lbl">Need/mo<br>to hit goal</div></div>
-          <div><div class="num" style="color:var(--blue)" id="mo-left">â</div><div class="lbl">Months<br>remaining</div></div>
+          <div><div class="num" style="color:var(--orange)" id="mo-needed">—</div><div class="lbl">Need/mo<br>to hit goal</div></div>
+          <div><div class="num" style="color:var(--blue)" id="mo-left">—</div><div class="lbl">Months<br>remaining</div></div>
         </div>
       </div>
     </div>
@@ -506,7 +506,7 @@
 
   <div class="section">
 <!-- AG:recentmonth-start -->
-    <div class="section-label">ð This Month â May 2026</div>
+    <div class="section-label">📅 This Month — May 2026</div>
     <div class="card">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
         <div style="text-align:center;"><div style="font-size:20px;font-weight:800;color:var(--accent);">$0</div><div style="font-size:10px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Total Krembo</div></div>
@@ -524,7 +524,7 @@
 
   <div class="section">
 <!-- AG:closecount-start -->
-    <div class="section-label">ð¥ Annual Progress â Close Count</div>
+    <div class="section-label">🔥 Annual Progress — Close Count</div>
     <div class="card">
       <div class="streak-wrap">
         <div class="streak-count">
@@ -539,7 +539,7 @@
             <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Monthly consistency (own closes)</div>
             <div class="month-dots-row" id="streak-dots"></div>
           </div>
-          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 4 deals pending Â· Est. +$33,088 PAC when closed</div>
+          <div style="margin-top:6px;font-size:12px;color:var(--sub);">Pipeline: 4 deals pending · Est. +$33,088 PAC when closed</div>
         </div>
       </div>
     </div>
@@ -549,12 +549,12 @@
 
   <div class="section">
 <!-- AG:pipeline-start -->
-    <div class="section-label">ð&nbsp; Active Pipeline</div>
-    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Andrew Lenard â BUY</div><div class="deal-sub">7741 Sycamore Dr, Orland Park</div></div><span class="badge badge-red">ð¨ 3d</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 22</strong></div><div class="chip">Price: <strong>$496,000</strong></div><div class="chip">GCI: <strong>$11,160</strong></div><div class="chip">Est. PAC: <strong>$5,667</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
-    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Peter Mathis â BUY</div><div class="deal-sub">836 Regent, New Lenox</div></div><span class="badge badge-orange">â° May 28</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 28</strong></div><div class="chip">Price: <strong>$430,000</strong></div><div class="chip">GCI: <strong>$8,600</strong></div><div class="chip">Est. PAC: <strong>$4,365</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
-    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Edwin Tate â BUY</div><div class="deal-sub">9090 Big Sable Point, Frankfort</div></div><span class="badge badge-orange">â° May 30</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 30</strong></div><div class="chip">Price: <strong>$765,000</strong></div><div class="chip">GCI: <strong>$17,212</strong></div><div class="chip">Est. PAC: <strong>$8,936</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
-    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Kent and Mihaela Liker â SELL</div><div class="deal-sub">888 Bridle Hill, New Lenox</div></div><span class="badge badge-orange">â° Jun 1</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Jun 1</strong></div><div class="chip">Price: <strong>$715,000</strong></div><div class="chip">GCI: <strong>$16,088</strong></div><div class="chip">Est. PAC: <strong>$14,120</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker â</a></div></div>
-    <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;"><div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;"><span style="color:var(--sub);">Est. pipeline income if all close:</span><span style="font-weight:800;font-size:16px;color:var(--green);">+$33,088</span></div><div style="font-size:11px;color:var(--sub);margin-top:4px;">Own PAC: $33,088  Â·  Would bring YTD to ~$70,011</div></div>
+    <div class="section-label">�&nbsp; Active Pipeline</div>
+    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Andrew Lenard — BUY</div><div class="deal-sub">7741 Sycamore Dr, Orland Park</div></div><span class="badge badge-red">🚨 3d</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 22</strong></div><div class="chip">Price: <strong>$496,000</strong></div><div class="chip">GCI: <strong>$11,160</strong></div><div class="chip">Est. PAC: <strong>$5,667</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Peter Mathis — BUY</div><div class="deal-sub">836 Regent, New Lenox</div></div><span class="badge badge-orange">⏰ May 28</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 28</strong></div><div class="chip">Price: <strong>$430,000</strong></div><div class="chip">GCI: <strong>$8,600</strong></div><div class="chip">Est. PAC: <strong>$4,365</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Edwin Tate — BUY</div><div class="deal-sub">9090 Big Sable Point, Frankfort</div></div><span class="badge badge-orange">⏰ May 30</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>May 30</strong></div><div class="chip">Price: <strong>$765,000</strong></div><div class="chip">GCI: <strong>$17,212</strong></div><div class="chip">Est. PAC: <strong>$8,936</strong></div><div class="chip">Source: <strong>Zillow Flex</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card" style="background:linear-gradient(135deg,#f0f7ff,#e8f2fe);border:1px solid #bfdbfe;"><div class="deal-row"><div class="deal-left"><div class="deal-title">Kent and Mihaela Liker — SELL</div><div class="deal-sub">888 Bridle Hill, New Lenox</div></div><span class="badge badge-orange">⏰ Jun 1</span></div><div class="deal-chips"><div class="chip">Proj. close: <strong>Jun 1</strong></div><div class="chip">Price: <strong>$715,000</strong></div><div class="chip">GCI: <strong>$16,088</strong></div><div class="chip">Est. PAC: <strong>$14,120</strong></div><div class="chip">Source: <strong>SOI/PC</strong></div><a class="open-link" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank">View tracker →</a></div></div>
+    <div class="card" style="background:var(--green-bg);border:1px solid #c3e6cb;"><div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;"><span style="color:var(--sub);">Est. pipeline income if all close:</span><span style="font-weight:800;font-size:16px;color:var(--green);">+$33,088</span></div><div style="font-size:11px;color:var(--sub);margin-top:4px;">Own PAC: $33,088  ·  Would bring YTD to ~$70,011</div></div>
 
   <!-- AG:pipeline-end -->
   </div>
@@ -562,45 +562,45 @@
 
   <div class="section">
 <!-- AG:closings-start -->
-    <div class="section-label">â Recent Closings â YTD 2026</div>
+    <div class="section-label">✅ Recent Closings — YTD 2026</div>
     <div class="card">
-      <div class="closed-row"><div class="cl-date">Mar 31</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Mary Beth Corbin and Mike Baya â 19416 Cranfield, Tinley Park (Zillow Flex)</div><div class="cl-pac">$5,288</div></div>
-      <div class="closed-row"><div class="cl-date">Mar 8</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Mary Corbin â 19840 Silverside Dr, Tinley Park (Zillow Flex)</div><div class="cl-pac">$8,076</div></div>
-      <div class="closed-row"><div class="cl-date">Mar 8</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Cheryl Calderon â 6419 Oak Forest Ave, Tinley Park (SOI/PC)</div><div class="cl-pac">$4,231</div></div>
-      <div class="closed-row"><div class="cl-date">Feb 7</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Ray Calderon â 8648 W 145th St, Orland Park (Zillow Flex)</div><div class="cl-pac">$5,376</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 31</div><span class="badge badge-blue" style="font-size:10px;padding:2px 7px;">Buy</span><div class="cl-name">Mary Beth Corbin and Mike Baya — 19416 Cranfield, Tinley Park (Zillow Flex)</div><div class="cl-pac">$5,288</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 8</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Mary Corbin — 19840 Silverside Dr, Tinley Park (Zillow Flex)</div><div class="cl-pac">$8,076</div></div>
+      <div class="closed-row"><div class="cl-date">Mar 8</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Cheryl Calderon — 6419 Oak Forest Ave, Tinley Park (SOI/PC)</div><div class="cl-pac">$4,231</div></div>
+      <div class="closed-row"><div class="cl-date">Feb 7</div><span class="badge badge-orange" style="font-size:10px;padding:2px 7px;">Sell</span><div class="cl-name">Ray Calderon — 8648 W 145th St, Orland Park (Zillow Flex)</div><div class="cl-pac">$5,376</div></div>
     </div>
 
   <!-- AG:closings-end -->
   </div>
 
   <div class="section">
-    <div class="section-label">â Today's Task Blocks</div>
+    <div class="section-label">✅ Today's Task Blocks</div>
     <div class="grid-2">
       <div class="card">
-        <div class="block-hdr"><span style="font-size:18px;">âï¸</span><div><div class="block-title">Morning Block</div><div class="block-time">9:00 â 11:00 AM Â· Prospecting</div></div></div>
-        <div class="task-item" data-id="m1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Check in with Andrew Lenard â confirm May 25 close on track</div><span class="task-tag tag-gold">May 25</span></div>
+        <div class="block-hdr"><span style="font-size:18px;">☀️</span><div><div class="block-title">Morning Block</div><div class="block-time">9:00 – 11:00 AM · Prospecting</div></div></div>
+        <div class="task-item" data-id="m1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Check in with Andrew Lenard — confirm May 25 close on track</div><span class="task-tag tag-gold">May 25</span></div>
         <div class="task-item" data-id="m2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Check &amp; respond to new Zillow Flex leads (5-min response rule)</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="m3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Make 3 SOI check-in calls â past clients, referral ask</div><span class="task-tag tag-soi">SOI</span></div>
+        <div class="task-item" data-id="m3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Make 3 SOI check-in calls — past clients, referral ask</div><span class="task-tag tag-soi">SOI</span></div>
         <div class="task-item" data-id="m4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Identify 2 new prospects in FUB to nurture this week</div><span class="task-tag tag-zillow">Zillow</span></div>
-        <div class="task-item" data-id="m5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Review Dotloop â any pending docs on Lenard file?</div><span class="task-tag tag-gold">Admin</span></div>
+        <div class="task-item" data-id="m5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Review Dotloop — any pending docs on Lenard file?</div><span class="task-tag tag-gold">Admin</span></div>
         <div class="counter-row">
           <div><div class="counter-label">Contacts today <span>Goal: 10</span></div><div style="font-size:11px;color:var(--sub);margin-top:2px;" id="contact-sub">0 of 10</div></div>
           <div class="counter-controls">
-            <button class="counter-btn" onclick="adjustContacts(-1)">â</button>
+            <button class="counter-btn" onclick="adjustContacts(-1)">−</button>
             <div class="counter-val" id="contact-count">0</div>
             <button class="counter-btn" onclick="adjustContacts(1)">+</button>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="block-hdr"><span style="font-size:18px;">ð</span><div><div class="block-title">Afternoon Block</div><div class="block-time">2:00 â 4:30 PM Â· Follow-ups</div></div></div>
-        <div class="task-item" data-id="a1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Follow up on Alimirakh file (Michelle) â $3,209 Krembo due May 15</div><span class="task-tag tag-gold">May 15</span></div>
-        <div class="task-item" data-id="a2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Schedule weekend showings â confirm with clients</div><span class="task-tag tag-admin">Admin</span></div>
+        <div class="block-hdr"><span style="font-size:18px;">🌅</span><div><div class="block-title">Afternoon Block</div><div class="block-time">2:00 – 4:30 PM · Follow-ups</div></div></div>
+        <div class="task-item" data-id="a1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Follow up on Alimirakh file (Michelle) — $3,209 Krembo due May 15</div><span class="task-tag tag-gold">May 15</span></div>
+        <div class="task-item" data-id="a2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Schedule weekend showings — confirm with clients</div><span class="task-tag tag-admin">Admin</span></div>
         <div class="task-item" data-id="a3" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Send market update to 2 warm leads not yet converted</div><span class="task-tag tag-zillow">Zillow</span></div>
         <div class="task-item" data-id="a4" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Reach out to 2 SOI contacts not spoken to in 30+ days</div><span class="task-tag tag-soi">SOI</span></div>
         <div class="task-item" data-id="a5" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Update Dotloop &amp; log any deal changes in tracker</div><span class="task-tag tag-admin">Admin</span></div>
         <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
-          <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">ð End of Day</div>
+          <div style="font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">🌙 End of Day</div>
           <div class="task-item" data-id="e1" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Log all contacts in CRM</div><span class="task-tag tag-admin">Admin</span></div>
           <div class="task-item" data-id="e2" onclick="toggleTask(this)"><div class="task-check"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="task-text">Set tomorrow's top 3 priorities</div><span class="task-tag tag-admin">Admin</span></div>
         </div>
@@ -609,13 +609,13 @@
   </div>
 
   <div class="section">
-    <div class="section-label">ð Today's Progress</div>
+    <div class="section-label">📊 Today's Progress</div>
     <div class="card" style="display:flex;align-items:center;gap:16px;">
       <div style="flex:1;">
         <div class="prog-row"><span>Tasks done: <strong id="tasks-count">0 / 12</strong></span><span id="tasks-pct">0%</span></div>
         <div class="prog-bg"><div class="prog-fill" id="tasks-bar" style="width:0%;background:linear-gradient(90deg,#1e3a5f,#2563eb)"></div></div>
       </div>
-      <div style="font-size:26px;" id="tasks-emoji">ð</div>
+      <div style="font-size:26px;" id="tasks-emoji">👊</div>
     </div>
   </div>
 
@@ -645,7 +645,7 @@ document.getElementById('annualized').textContent='$'+Math.round(annualized).toL
 const gapEl=document.getElementById('pace-gap');
 gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
 gapEl.style.color=gap<0?'var(--red)':'var(--green)';
-document.getElementById('mo-needed').textContent=monthsLeft>0?'$'+Math.round((GOAL-ytd)/monthsLeft).toLocaleString():'â';
+document.getElementById('mo-needed').textContent=monthsLeft>0?'$'+Math.round((GOAL-ytd)/monthsLeft).toLocaleString():'—';
 document.getElementById('mo-left').textContent=monthsLeft;
 setTimeout(()=>{
   document.getElementById('gci-bar').style.width=Math.min(pct*100,100)+'%';
@@ -689,7 +689,7 @@ function updateProgress(){
   document.getElementById('tasks-count').textContent=`${done.length} / ${all.length}`;
   document.getElementById('tasks-pct').textContent=p+'%';
   document.getElementById('tasks-bar').style.width=p+'%';
-  const e=['ð','ðª','ð¥','ð¥','â¡','ð','ð¯','ð','ð','ð','ð','ð','ð'];
+  const e=['👊','💪','🔥','🔥','⚡','🏆','🎯','💎','💎','🌟','🎉','🎉','🏅'];
   document.getElementById('tasks-emoji').textContent=e[Math.min(Math.floor(p/8),e.length-1)];
 }
 updateProgress();
@@ -719,7 +719,7 @@ function applySettings(s){
   const gapEl=document.getElementById('pace-gap');
   gapEl.textContent=(gap<0?'-$':'+$')+Math.abs(Math.round(gap)).toLocaleString();
   gapEl.style.color=gap<0?'var(--red)':'var(--green)';
-  document.getElementById('mo-needed').textContent=monthsLeft>0?'$'+Math.round((goal-YTD)/monthsLeft).toLocaleString():'â';
+  document.getElementById('mo-needed').textContent=monthsLeft>0?'$'+Math.round((goal-YTD)/monthsLeft).toLocaleString():'—';
   document.getElementById('mo-left').textContent=monthsLeft;
 
   // % stat card
@@ -749,7 +749,7 @@ function applySettings(s){
   if(s.note&&s.note.trim()){
     if(!noteEl){noteEl=document.createElement('div');noteEl.id='personal-note';noteEl.className='alert alert-blue';noteEl.style.marginBottom='8px';
       const alertsDiv=document.querySelector('.container>div');alertsDiv.insertBefore(noteEl,alertsDiv.firstChild);}
-    noteEl.innerHTML='ð <span><strong>Your note:</strong> '+s.note+'</span>';
+    noteEl.innerHTML='📝 <span><strong>Your note:</strong> '+s.note+'</span>';
   }else if(noteEl){noteEl.remove();}
 
   // Reminders
@@ -759,7 +759,7 @@ function applySettings(s){
     if(s[r]&&s[r].trim()){
       if(!el){el=document.createElement('div');el.id=id;el.className='alert alert-orange';el.style.marginBottom='8px';
         const alertsDiv=document.querySelector('.container>div');alertsDiv.appendChild(el);}
-      el.innerHTML='ð <span>'+s[r]+'</span>';
+      el.innerHTML='🔔 <span>'+s[r]+'</span>';
     }else if(el){el.remove();}
   });
 }
@@ -817,14 +817,14 @@ function renderContacts(goalOverride){
   const goal=goalOverride||(loadSettings().contactGoal)||10;
   document.getElementById('contact-count').textContent=contacts;
   document.getElementById('contact-count').style.color=contacts>=goal?'var(--green)':contacts>=(goal/2)?'var(--orange)':'var(--text)';
-  document.getElementById('contact-sub').textContent=contacts>=goal?'â Goal hit!':contacts+' of '+goal+' today';
+  document.getElementById('contact-sub').textContent=contacts>=goal?'✅ Goal hit!':contacts+' of '+goal+' today';
 }
 function adjustContacts(d){contacts=Math.max(0,contacts+d);localStorage.setItem(CK,contacts);renderContacts();}
 
 applySettings(loadSettings());
 renderContacts();
 
-// ââ Number roll-up animation ââââââââââââââââââââââââââââââââââââââââââ
+// ── Number roll-up animation ──────────────────────────────────────────
 function animVal(el, end, dur, fmt) {
   if (!el || !end) return;
   const t0 = performance.now();
@@ -847,7 +847,7 @@ setTimeout(function() {
   }
 }, 200);
 
-// ââ Next-close countdown banner âââââââââââââââââââââââââââââââââââââââ
+// ── Next-close countdown banner ───────────────────────────────────────
 (function renderCountdown() {
   const el = document.getElementById('next-close-banner');
   if (!el || !PIPELINE_DK.length) return;
@@ -865,15 +865,15 @@ setTimeout(function() {
     ? 'linear-gradient(135deg,#78350f,#b45309)'
     : 'linear-gradient(135deg,#1e3a5f,#2563eb)';
   const daysLabel = days === 0 ? 'TODAY' : days === 1 ? 'TOMORROW' : 'DAYS AWAY';
-  const daysDisplay = days === 0 ? 'ð' : String(days);
+  const daysDisplay = days === 0 ? '🎉' : String(days);
   const others = upcoming.length - 1;
   el.style.marginBottom = '16px';
   el.innerHTML = `<div style="background:${bg};border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 12px rgba(0,0,0,0.15);">
     <div style="flex:1;min-width:0;">
-      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,0.55);margin-bottom:4px;">ð  Next Closing</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,0.55);margin-bottom:4px;">🏠 Next Closing</div>
       <div style="font-size:15px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${next.client.replace(/&/g,'&amp;')}</div>
       <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">${next.addr.replace(/&/g,'&amp;')}</div>
-      <div style="margin-top:8px;font-size:12px;font-weight:700;color:#93c5fd;">Est. PAC: $${Math.round(next.krembo).toLocaleString()} &nbsp;Â·&nbsp; ${next.proj}</div>
+      <div style="margin-top:8px;font-size:12px;font-weight:700;color:#93c5fd;">Est. PAC: $${Math.round(next.krembo).toLocaleString()} &nbsp;·&nbsp; ${next.proj}</div>
       ${others > 0 ? `<div style="font-size:11px;color:rgba(255,255,255,0.45);margin-top:3px;">+${others} more deal${others>1?'s':''} in pipeline</div>` : ''}
     </div>
     <div style="text-align:center;padding-left:20px;border-left:1px solid rgba(255,255,255,0.2);flex-shrink:0;">
@@ -884,7 +884,7 @@ setTimeout(function() {
 })();
 
 
-// ââ Urgency pulse on deals closing â¤ 5 days ââââââââââââââââââââââââââ
+// ── Urgency pulse on deals closing ≤ 5 days ──────────────────────────
 if (PIPELINE_DK.length) {
   const today2 = new Date(); today2.setHours(0,0,0,0);
   PIPELINE_DK.forEach(function(deal) {
@@ -902,7 +902,7 @@ if (PIPELINE_DK.length) {
   });
 }
 
-// ââ Card entrance stagger âââââââââââââââââââââââââââââââââââââââââââââ
+// ── Card entrance stagger ─────────────────────────────────────────────
 (function() {
   let idx = 0;
   document.querySelectorAll('.card, .stat-card').forEach(function(card) {
@@ -921,13 +921,13 @@ if (PIPELINE_DK.length) {
 
 
   <div class="section" id="precontract-section">
-    <div class="section-label">ð Active Buyers &amp; Sellers â Pre-Contract</div>
+    <div class="section-label">🔍 Active Buyers &amp; Sellers — Pre-Contract</div>
     <div class="card" style="padding:0;">
       <div id="pc-list" style="padding:12px 16px 0;min-height:20px;"></div>
       <div id="pc-total-bar" style="display:none;margin:0 16px 12px;padding:12px 16px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:10px;">
         <div style="display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-size:13px;color:#15803d;font-weight:600;">ð° Total potential PAC if all convert:</span>
-          <span id="pc-total-amt" style="font-size:20px;font-weight:800;color:#15803d;">â</span>
+          <span style="font-size:13px;color:#15803d;font-weight:600;">💰 Total potential PAC if all convert:</span>
+          <span id="pc-total-amt" style="font-size:20px;font-weight:800;color:#15803d;">—</span>
         </div>
         <div style="font-size:11px;color:#166534;margin-top:4px;" id="pc-motivation">Every conversation gets you closer. Stay consistent.</div>
       </div>
@@ -945,10 +945,10 @@ if (PIPELINE_DK.length) {
           <div>
             <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:5px;">LEAD TEMPERATURE</div>
             <select id="pc-rating" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);cursor:pointer;">
-              <option value="hot">ð¥ Hot â Ready Now</option>
-              <option value="warm" selected="">ð¡ï¸ Warm â 1â3 Months</option>
-              <option value="cool">âï¸ Cool â 3â6 Months</option>
-              <option value="looking">ð Just Looking</option>
+              <option value="hot">🔥 Hot — Ready Now</option>
+              <option value="warm" selected="">🌡️ Warm — 1–3 Months</option>
+              <option value="cool">❄️ Cool — 3–6 Months</option>
+              <option value="looking">👀 Just Looking</option>
             </select>
           </div>
           <div>
@@ -1002,9 +1002,9 @@ function pcFmt(n) { return '$' + Math.round(n).toLocaleString(); }
 function pcGet() { try { return JSON.parse(localStorage.getItem(PC_KEY))||[]; } catch(e) { return []; } }
 function pcSet(a) { localStorage.setItem(PC_KEY, JSON.stringify(a)); }
 
-var RATING_LABEL = {hot:'ð¥ Hot',warm:'ð¡ï¸ Warm',cool:'âï¸ Cool',looking:'ð Looking'};
+var RATING_LABEL = {hot:'🔥 Hot',warm:'🌡️ Warm',cool:'❄️ Cool',looking:'👀 Looking'};
 var RATING_COLOR = {hot:'#dc2626',warm:'#d97706',cool:'#3b82f6',looking:'#6b7280'};
-var MOTIVATE = ['Every conversation counts. Go get it! ðª','One conversion away from your best month yet.','Stay consistent â leads close when you least expect it.','Your pipeline is your paycheck. Nurture it.','The fortune is in the follow-up. ð'];
+var MOTIVATE = ['Every conversation counts. Go get it! 💪','One conversion away from your best month yet.','Stay consistent — leads close when you least expect it.','Your pipeline is your paycheck. Nurture it.','The fortune is in the follow-up. 📞'];
 
 function pcRender() {
   var clients = pcGet();
@@ -1029,14 +1029,14 @@ function pcRender() {
           '<span style="font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;' + (c.type==='buyer'?'background:#e0e7ff;color:#4338ca':'background:#fff3cd;color:#92400e') + '">' + (c.type==='buyer'?'Buyer':'Seller') + '</span>' +
           '<span style="font-size:11px;font-weight:700;color:' + RATING_COLOR[r] + '">' + RATING_LABEL[r] + '</span>' +
         '</div>' +
-        '<div style="font-size:12px;color:var(--sub);">' + (c.type==='buyer'?'ð ':'ð ') + (c.areas||'â') + (c.timeline?' &nbsp;Â·&nbsp; ð '+c.timeline:'') + '</div>' +
+        '<div style="font-size:12px;color:var(--sub);">' + (c.type==='buyer'?'🔍 ':'📍 ') + (c.areas||'—') + (c.timeline?' &nbsp;·&nbsp; 📅 '+c.timeline:'') + '</div>' +
         (p > 0 ? '<div style="display:flex;gap:16px;margin-top:5px;font-size:12px;">' +
           '<span style="color:var(--sub);">Price: <strong style="color:var(--text);">' + pcFmt(p) + '</strong></span>' +
-          '<span style="color:#0d9488;font-weight:800;">ðµ Est. PAC: ' + pcFmt(comm) + '</span>' +
+          '<span style="color:#0d9488;font-weight:800;">💵 Est. PAC: ' + pcFmt(comm) + '</span>' +
         '</div>' : '<div style="font-size:11px;color:var(--sub);margin-top:4px;font-style:italic;">Add price to see commission estimate</div>') +
       '</div>' +
       '<div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0;">' +
-        '<button onclick="pcEdit(' + i + ')" style="background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;cursor:pointer;color:var(--accent);">âï¸ Edit</button>' +
+        '<button onclick="pcEdit(' + i + ')" style="background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;cursor:pointer;color:var(--accent);">✏️ Edit</button>' +
         '<button onclick="pcRemove(' + i + ')" style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;color:#9ca3af;">Remove</button>' +
       '</div>' +
     '</div>';
