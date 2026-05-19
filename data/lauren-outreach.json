@@ -1,77 +1,71 @@
 {
   "agent": "Lauren Litoborski",
-  "generated": "2026-05-19T17:12:59.428Z",
-  "note": "Leads from full team pool — FUB agent-field assignment sparse for Lauren; strongest unworked signals from active pipeline.",
+  "generated": "2026-05-19",
   "top5": [
     {
       "rank": 1,
-      "fub_id": 72815,
-      "name": "Bethany Rhodes",
-      "stage": "Nurture",
+      "name": "Sammantha Weber",
+      "personId": 73443,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73443",
+      "stage": "Met with customer",
       "score": 17,
-      "score_reasons": [
-        "commitment: seller said 'I'll cancel Harlowe and relist' a month ago — ACTION NEEDED",
-        "fello: viewed $525K listing"
+      "signals": [
+        "Tour booked TODAY (6 min ago) - 304 Cameron Ave",
+        "Confirmed 4 days ago: 'Yes! We are all confirmed 👍'"
       ],
-      "last_activity": "4 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72815",
-      "suggested_action": "Call Bethany — she's ready to relist. Confirm Harlowe status and open house strategy"
+      "why": "Active tour in motion — highest urgency"
     },
     {
       "rank": 2,
-      "fub_id": 73424,
-      "name": "Kari Ternes",
-      "stage": "Lead",
+      "name": "Joanne OReilly",
+      "personId": 73377,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73377",
+      "stage": "Appointment set",
       "score": 17,
-      "score_reasons": [
-        "engagement: replied 'Great!' 7 days ago — no follow-up from team",
-        "fello: viewed $106K listing"
+      "signals": [
+        "Incoming email re 'Multiple Offers' 16 min ago",
+        "Appointment set, active Ylopo buyer"
       ],
-      "last_activity": "4 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73424",
-      "suggested_action": "Reply to Kari's 'Great!' — she's waiting. Ask what areas she's focusing on"
+      "why": "Just reached out about a competing offer — call immediately"
     },
     {
       "rank": 3,
-      "fub_id": 71825,
-      "name": "Michelle Silvia",
-      "stage": "Nurture",
-      "score": 16,
-      "score_reasons": [
-        "commitment: active down payment and earnest money convo 2 days ago",
-        "fello: viewed $370K listing"
+      "name": "Jake Gempel",
+      "personId": 73442,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73442",
+      "stage": "Appointment set",
+      "score": 17,
+      "signals": [
+        "Confirmed appointment 3 days ago: 'Ok great, see you then!'",
+        "Tour agent change notice today"
       ],
-      "last_activity": "12 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71825",
-      "suggested_action": "Follow up on down payment questions — she's actively planning to buy"
+      "why": "Appointment confirmed, active showing pipeline"
     },
     {
       "rank": 4,
-      "fub_id": 72465,
-      "name": "Carol Robb",
+      "name": "Ercan Hocaoglu",
+      "personId": 72991,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/72991",
       "stage": "Spoke with customer",
-      "score": 13,
-      "score_reasons": [
-        "activity: viewed $420K listing, spoke with customer recently",
-        "fello: viewed $420K in Yorktown Dr"
+      "score": 15,
+      "signals": [
+        "Check-in sent 7 days ago unanswered",
+        "Shared property 3hr ago on Ylopo"
       ],
-      "last_activity": "6 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72465",
-      "suggested_action": "Check in — recently active on Fello; find out where she is in the search"
+      "why": "Unanswered outreach + fresh Ylopo activity — follow up now"
     },
     {
       "rank": 5,
-      "fub_id": 69433,
-      "name": "John Nylen",
-      "stage": "Seller",
-      "score": 10,
-      "score_reasons": [
-        "activity: very recent (33 min ago)",
-        "seller lead via Homeowner Pull"
+      "name": "Razan Masri",
+      "personId": 72846,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/72846",
+      "stage": "Nurture",
+      "score": 15,
+      "signals": [
+        "Saved $1M listing 2 hours ago on Ylopo",
+        "Last outgoing 8 months ago unanswered"
       ],
-      "last_activity": "33 minutes ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/69433",
-      "suggested_action": "Fresh seller signal — reach out about a listing appointment or market analysis"
+      "why": "Fresh Ylopo property save signals renewed buying interest"
     }
   ]
 }
