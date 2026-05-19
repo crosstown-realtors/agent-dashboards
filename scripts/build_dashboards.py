@@ -875,6 +875,52 @@ def patch_html(html_path, agent_name, data):
         pipeline_dk_js = json.dumps(pipeline_dk)
         html = re.sub(r'const PIPELINE_DK=\[.*?\];', f'const PIPELINE_DK={pipeline_dk_js};', html, flags=re.DOTALL)
 
+    # ── Remove-button snippet ──────────────────────────────────────────────
+    # Injects a persistent Remove button into every agent dashboard so agents
+    # can dismiss Top 5 leads after contacting them. Resets each calendar day.
+    if 'top5-remove-btn' not in html:
+        _key_map = {
+            'Dan Krembuszewski': 'dan', 'Michelle Madden': 'michelle',
+            'Lauren Litoborski': 'lauren', 'Mollie Kelly': 'mollie',
+            'Mike Kelly': 'mike', 'Angela Palma': 'angela', 'Chris Lira': 'chris'
+        }
+        _ag = _key_map.get(agent_name, agent_name.split()[0].lower())
+        remove_snippet = (
+            '<style>\n'
+            '.top5-card { position: relative !important; }\n'
+            '.top5-remove-btn {\n'
+            '  position: absolute; top: 10px; right: 10px;\n'
+            '  background: rgba(220,38,38,0.08); border: 1px solid rgba(220,38,38,0.28);\n'
+            '  color: #dc2626; border-radius: 5px; padding: 4px 11px;\n'
+            '  cursor: pointer; font-size: 11px; font-weight: 700;\n'
+            '  z-index: 10; line-height: 1.5; font-family: inherit;\n'
+            '  transition: background 0.2s, transform 0.1s;\n'
+            '}\n'
+            '.top5-remove-btn:hover { background: rgba(220,38,38,0.2); transform: scale(1.05); }\n'
+            '</style>\n'
+            '<script>\n'
+            '(function(){\n'
+            f'  var AG=\'{_ag}\';\n'
+            '  function todayKey(){ return \'rm_\'+AG+\'_\'+new Date().toISOString().slice(0,10); }\n'
+            '  function addBtns(wrap){\n'
+            '    wrap.querySelectorAll(\'.top5-card:not([data-rmb])\').forEach(function(card){\n'
+            '      card.setAttribute(\'data-rmb\',\'1\');\n'
+            '      var b=document.createElement(\'button\'); b.className=\'top5-remove-btn\'; b.innerHTML=\'&#10005; Remove\';\n'
+            '      b.onclick=function(e){e.stopPropagation();var n=((card.querySelector(\'.top5-name\')||{}).textContent||\'\').trim();if(n){var k=todayKey();var s=JSON.parse(localStorage.getItem(k)||\'[]\');if(!s.includes(n))s.push(n);localStorage.setItem(k,JSON.stringify(s));}card.style.cssText+=\'transition:opacity .3s,transform .3s;opacity:0;transform:translateX(18px)\';setTimeout(function(){card.remove();renum();},320);};\n'
+            '      card.appendChild(b);\n'
+            '    });\n'
+            '  }\n'
+            '  function renum(){document.querySelectorAll(\'#top5-cards .top5-card\').forEach(function(c,i){var r=c.querySelector(\'.top5-rank\');if(r)r.textContent=\'#\'+(i+1);});}\n'
+            '  var cont=document.getElementById(\'top5-cards\');\n'
+            '  if(cont){var obs=new MutationObserver(function(){addBtns(cont);});obs.observe(cont,{childList:true,subtree:true});}\n'
+            '  var oF=window.fetch;window.fetch=async function(u,o){var r=await oF(u,o);if(typeof u===\'string\'&&u.includes(\'outreach.json\')){try{var d=await r.clone().json();var rm=JSON.parse(localStorage.getItem(todayKey())||\'[]\');if(rm.length&&Array.isArray(d.leads))d.leads=d.leads.filter(function(l){return!rm.includes((l.name||\'\').trim());});return new Response(JSON.stringify(d),{status:200,headers:{\'Content-Type\':\'application/json\'}});}catch(e){}}return r;};\n'
+            '})();\n'
+            '<\/script>'
+        )
+        html = html.replace('</body>', remove_snippet + '\n</body>')
+    # ── End Remove-button snippet ──────────────────────────────────────────
+
+
     with open(html_path, 'w') as f:
         f.write(html)
     print(f"  ✓ Updated {os.path.basename(html_path)}")
