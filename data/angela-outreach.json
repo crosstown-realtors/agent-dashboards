@@ -1,77 +1,73 @@
 {
   "agent": "Angela Palma",
-  "generated": "2026-05-19T17:12:03.332Z",
-  "note": "Leads drawn from full team pool. FUB shows 0 leads agent-assigned to Angela; these are the strongest unworked signals from the active pipeline.",
+  "generated": "2026-05-19",
   "top5": [
     {
       "rank": 1,
-      "fub_id": 72962,
-      "name": "William Hacker",
-      "stage": "Nurture",
-      "score": 15,
-      "score_reasons": [
-        "unanswered: Zillow listing link sent 1 month ago — no reply",
-        "fello: viewed $650K listing in New Lenox"
+      "name": "Krish Sharma",
+      "personId": 73445,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73445",
+      "stage": "Appointment set",
+      "score": 17,
+      "signals": [
+        "LIVE: Angela texting showing rescheduled to 1:30 right now",
+        "Active appointment coordination a few seconds ago"
       ],
-      "last_activity": "2 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72962",
-      "suggested_action": "Send a fresh listing or short check-in — he's a $650K buyer who went quiet"
+      "why": "Appointment in progress this moment — call to confirm logistics"
     },
     {
       "rank": 2,
-      "fub_id": 73438,
-      "name": "Cindy",
-      "stage": "Attempted contact",
-      "score": 15,
-      "score_reasons": [
-        "unanswered: outgoing 'checking in' 5 days ago — no reply",
-        "fello: viewed Vollmer Rd unit 6 days ago"
+      "name": "AbdelFattah AlBustangi",
+      "personId": 73430,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73430",
+      "stage": "Showing homes",
+      "score": 17,
+      "signals": [
+        "Tour booked 15723 Peggy Ln (18 hours ago)",
+        "Shared property today on Ylopo",
+        "Follow-up outgoing 8 days ago"
       ],
-      "last_activity": "13 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73438",
-      "suggested_action": "Try a different channel (call vs text); she's been browsing but not responding"
+      "why": "Tour just booked — reach out to prep and confirm"
     },
     {
       "rank": 3,
-      "fub_id": 72595,
-      "name": "Jonathan Gómez",
-      "stage": "Nurture",
-      "score": 15,
-      "score_reasons": [
-        "unanswered: check-in text sent 4 months ago — no reply",
-        "fello: viewed $299K listing in Bolingbrook"
+      "name": "Adam Abbasi",
+      "personId": 73429,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73429",
+      "stage": "Submitting offers",
+      "score": 17,
+      "signals": [
+        "Letter to Seller submitted 3 days ago",
+        "Waiting on seller response",
+        "Active Ylopo buyer"
       ],
-      "last_activity": "9 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72595",
-      "suggested_action": "New check-in — mention fresh $299K inventory in Bolingbrook area"
+      "why": "Offer submitted — waiting for response, check in on status"
     },
     {
       "rank": 4,
-      "fub_id": 71456,
-      "name": "Donald Urchell",
-      "stage": "Nurture",
+      "name": "Amanda Mast",
+      "personId": 73423,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73423",
+      "stage": "Spoke with customer",
       "score": 15,
-      "score_reasons": [
-        "unanswered: 'Inventory is underwhelming but you never know' outgoing 4 months ago — no reply",
-        "fello: viewed $925K listing (high-end buyer)"
+      "signals": [
+        "Outgoing unanswered 11 days ago (asked about showing time)",
+        "Ylopo activity — viewed $375K property 12 days ago"
       ],
-      "last_activity": "11 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71456",
-      "suggested_action": "High-value buyer ($925K range) — reach out with any new luxury listings in Frankfort area"
+      "why": "Unanswered follow-up on showing availability — circle back"
     },
     {
       "rank": 5,
-      "fub_id": 73112,
-      "name": "Maria Monroy",
-      "stage": "Spoke with customer",
-      "score": 14,
-      "score_reasons": [
-        "unanswered: outgoing 3 months ago about showing fallthrough in Westmont",
-        "fello: viewed $210K listing in Westmont"
+      "name": "Sarah Koch",
+      "personId": 73407,
+      "url": "https://crosstownlincolnway.followupboss.com/2/people/73407",
+      "stage": "Attempted contact",
+      "score": 15,
+      "signals": [
+        "Outgoing unanswered 17–20 days ago",
+        "Viewed $350K property on Ylopo 22 days ago"
       ],
-      "last_activity": "10 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73112",
-      "suggested_action": "Follow up on Westmont search — offer alternative showings now that the previous one fell through"
+      "why": "Multiple unanswered outreach attempts — try a different channel"
     }
   ]
 }
