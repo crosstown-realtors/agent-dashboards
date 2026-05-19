@@ -1,6 +1,75 @@
 {
   "agent": "Mollie Kelly",
-  "generated": "2026-05-19T16:55:44.468Z",
-  "note": "No active leads found in FUB for Mollie Kelly. FUB shows 0 people matching this agent filter (10 results exist in Trash only). No outreach JSON generated — recommend reviewing lead assignment in FUB admin.",
-  "top5": []
+  "generated": "2026-05-19T17:12:59.428Z",
+  "note": "Leads from full team pool. FUB shows 0 active leads agent-assigned to Mollie.",
+  "top5": [
+    {
+      "rank": 1,
+      "fub_id": 71164,
+      "name": "Khrystyna",
+      "stage": "Nurture",
+      "score": 15,
+      "score_reasons": [
+        "unanswered: outgoing 10 months ago about backup offer situation",
+        "fello: viewed listing"
+      ],
+      "last_activity": "13 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71164",
+      "suggested_action": "Re-engage — previous purchase fell through (went backup). Still likely searching. Send fresh inventory"
+    },
+    {
+      "rank": 2,
+      "fub_id": 60797,
+      "name": "Rob Howe",
+      "stage": "Seller",
+      "score": 14,
+      "score_reasons": [
+        "unanswered: 'Market Analysis & Net Sheet Offer' outgoing 3 months ago",
+        "seller lead"
+      ],
+      "last_activity": "12 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/60797",
+      "suggested_action": "Seller who got a market analysis 3 months ago and went quiet — call to check if ready to list"
+    },
+    {
+      "rank": 3,
+      "fub_id": 73410,
+      "name": "Anthony Owens",
+      "stage": "Lead",
+      "score": 7,
+      "score_reasons": [
+        "fello: viewed $659K listing 2 hours ago"
+      ],
+      "last_activity": "2 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73410",
+      "suggested_action": "Fresh Fello view on $659K home — call while listing is top of mind"
+    },
+    {
+      "rank": 4,
+      "fub_id": 71796,
+      "name": "Shahd",
+      "stage": "Nurture",
+      "score": 7,
+      "score_reasons": [
+        "fello: viewed $78K listing 3 hours ago"
+      ],
+      "last_activity": "3 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71796",
+      "suggested_action": "Check in on her search — affordable unit viewer, confirm budget and area"
+    },
+    {
+      "rank": 5,
+      "fub_id": 73048,
+      "name": "Jamal",
+      "stage": "Lead",
+      "score": 7,
+      "score_reasons": [
+        "fello: viewed listing 3 hours ago",
+        "last incoming 'ok let me know' 4 months ago"
+      ],
+      "last_activity": "3 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73048",
+      "suggested_action": "Reply to his 4-month-old 'ok let me know' — send fresh Chicago listings"
+    }
+  ]
 }
