@@ -1,6 +1,62 @@
 {
-  "generated": "1970-01-01T00:00:00-05:00",
+  "generated": "2026-05-19T10:47:00-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
-  "leads": []
+  "leads": [
+    {
+      "rank": 1,
+      "name": "Tiffeny Teml",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Tiffeny texted 8 minutes ago asking to see a home near Minooka/Platteville — she's waiting for a reply right now.",
+      "last_activity": "2h ago",
+      "last_note": "Well we would still like to see the one that was out by Minooka Platteville area",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73446"
+    },
+    {
+      "rank": 2,
+      "name": "Ashley Maciejewski",
+      "signal_type": "unanswered",
+      "signal_label": "No Post-Showing Follow-Up",
+      "reason": "New lead came to a showing 4 days ago with no follow-up from Dan — just viewed a $499K listing an hour ago showing she's still actively searching.",
+      "last_activity": "1h ago",
+      "last_note": "We are on our way should be there by 5:30 gps says",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444"
+    },
+    {
+      "rank": 3,
+      "name": "Peter Mathis",
+      "signal_type": "transaction",
+      "signal_label": "Under Contract — Pending Action",
+      "reason": "Under Contract and asking about wiring instructions and attorney letter confirmation — transaction item needs resolution.",
+      "last_activity": "2h ago",
+      "last_note": "But obviously want it 'official' in an attorney letter",
+      "stage": "Under Contract",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71020"
+    },
+    {
+      "rank": 4,
+      "name": "Kurt Myles",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Question",
+      "reason": "Dan asked Kurt about preferred DuPage County search areas a month ago with no reply — Kurt just viewed a $506K listing showing re-engagement.",
+      "last_activity": "1h ago",
+      "last_note": "are there a handful of your favorite areas I should really stay dialed into?",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73209"
+    },
+    {
+      "rank": 5,
+      "name": "Edwin Tate",
+      "signal_type": "transaction",
+      "signal_label": "Under Contract — Receipt Pending",
+      "reason": "Under Contract and Dan followed up on a missing receipt 18 hours ago — transaction still needs confirmation.",
+      "last_activity": "5h ago",
+      "last_note": "Did we not get a receipt yet?",
+      "stage": "Under Contract",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72664"
+    }
+  ]
 }
