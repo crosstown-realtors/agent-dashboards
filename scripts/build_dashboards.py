@@ -10,7 +10,7 @@ from collections import defaultdict
 
 TRACKER_ID = "1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0"
 TRACKER_URL = f"https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit"
-REPO_DIR = "/tmp/agent-dashboards"
+REPO_DIR = "/sessions/practical-sharp-curie/tmp/agent-dashboards"
 TODAY = date.today().strftime("%Y-%m-%d")
 TODAY_PRETTY = date.today().strftime("%B %-d, %Y")
 
