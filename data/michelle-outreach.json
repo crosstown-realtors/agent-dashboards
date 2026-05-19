@@ -1,62 +1,75 @@
 {
-  "generated": "2026-05-18T07:00:00-05:00",
   "agent": "Michelle Madden",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-05-19T16:52:36.255Z",
+  "note": "Michelle has a small portfolio (8 leads). Most are legacy/dormant. Top 5 shown below prioritizing any with recent engagement.",
+  "top5": [
     {
       "rank": 1,
-      "name": "Jolanta Smolinskas",
-      "signal_type": "commitment",
-      "signal_label": "Unfulfilled Commitment",
-      "reason": "Promised to send a homes list — overdue follow-up",
-      "last_activity": "2d ago",
-      "last_note": "I'll send you a list tomorrow",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+      "fub_id": 4105,
+      "name": "Blair Altenbach",
+      "stage": "SOI/PC",
+      "score": 16,
+      "score_reasons": [
+        "commitment: lead sent incoming msg Feb 15 '26 re EM & Mutual Cancellation – no reply from Michelle",
+        "activity: recent inbound contact"
+      ],
+      "last_activity": "Feb 15th 2026",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/4105",
+      "suggested_action": "Reply to Blair's Feb 15 message about EM & Mutual Cancellation – transaction context, high urgency"
     },
     {
       "rank": 2,
-      "name": "Ricardo Correa",
-      "signal_type": "activity",
-      "signal_label": "Recent Property View",
-      "reason": "Viewed $575K listing 28 min ago — 21 days without contact",
-      "last_activity": "28 min ago",
-      "last_note": "",
-      "stage": "Active Buyer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+      "fub_id": 72790,
+      "name": "Joseph Frechin",
+      "stage": "Closed",
+      "score": 13,
+      "score_reasons": [
+        "fello: viewed $515K listing 13 days ago",
+        "activity: recently active despite closed status – referral potential"
+      ],
+      "last_activity": "13 days ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72790",
+      "suggested_action": "Check in – past client browsing listings again could mean they're ready to move/sell/refer"
     },
     {
       "rank": 3,
-      "name": "Mahmoud Fathi",
-      "signal_type": "activity",
-      "signal_label": "Shared a Listing",
-      "reason": "Shared $370K property an hour ago — strong buying signal",
-      "last_activity": "1h ago",
-      "last_note": "",
-      "stage": "Active Buyer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+      "fub_id": 3226,
+      "name": "Anita Smerz",
+      "stage": "SOI/PC",
+      "score": 8,
+      "score_reasons": [
+        "activity: Michelle sent outreach 6 months ago (Nov '25 pie giveaway)",
+        "SOI relationship established"
+      ],
+      "last_activity": "5 years ago (FUB), outgoing Nov '25",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/3226",
+      "suggested_action": "Warm check-in; reference previous connection and ask if anyone in her network is thinking of buying/selling"
     },
     {
       "rank": 4,
-      "name": "Jamie",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Follow-Up",
-      "reason": "Viewed $430K listing 10h ago — pending Mokena follow-up unanswered",
-      "last_activity": "10h ago",
-      "last_note": "",
-      "stage": "Active Buyer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+      "fub_id": 4048,
+      "name": "Renee Witt",
+      "stage": "Attempted contact",
+      "score": 6,
+      "score_reasons": [
+        "activity: in database, past engagement"
+      ],
+      "last_activity": "6 years ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/4048",
+      "suggested_action": "Brief 'checking in' text – long dormant but worth one more attempt"
     },
     {
       "rank": 5,
-      "name": "Grizz Nava",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Showing Offer",
-      "reason": "Viewed $405K listing 14h ago — showing offer sent but no reply",
-      "last_activity": "14h ago",
-      "last_note": "",
-      "stage": "Active Buyer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people"
+      "fub_id": 3969,
+      "name": "Phyllis Grice",
+      "stage": "Attempted contact",
+      "score": 6,
+      "score_reasons": [
+        "activity: in database, past engagement"
+      ],
+      "last_activity": "6 years ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/3969",
+      "suggested_action": "Brief 'checking in' text – long dormant but worth one more attempt"
     }
   ]
 }
