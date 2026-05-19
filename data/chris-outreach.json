@@ -1,6 +1,77 @@
 {
   "agent": "Chris Lira",
-  "generated": "2026-05-19T16:57:48.578Z",
-  "note": "No active leads found in FUB for Chris Lira. FUB shows 0 people matching this agent filter (1 result in Trash only). No outreach JSON generated — recommend reviewing lead assignment in FUB admin.",
-  "top5": []
+  "generated": "2026-05-19T17:12:59.428Z",
+  "note": "Leads from full team pool. FUB shows 0 active leads agent-assigned to Chris.",
+  "top5": [
+    {
+      "rank": 1,
+      "fub_id": 72273,
+      "name": "Logan Walker",
+      "stage": "Nurture",
+      "score": 15,
+      "score_reasons": [
+        "unanswered: outgoing 4 months ago — no reply",
+        "fello: viewed $449K listing in Tinley Park"
+      ],
+      "last_activity": "13 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72273",
+      "suggested_action": "Owns home at 17335 Oleander, Tinley Park — browsing $449K listings nearby. Possible upgrade buyer"
+    },
+    {
+      "rank": 2,
+      "fub_id": 73426,
+      "name": "Olivia Grunert",
+      "stage": "Lead",
+      "score": 13,
+      "score_reasons": [
+        "activity: Dan messaged 12 min ago re Frankfort/Mokena",
+        "fello: viewed $380K Tinley Park listing 10 days ago"
+      ],
+      "last_activity": "13 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73426",
+      "suggested_action": "New lead in Frankfort/Mokena/Tinley range — follow up if Dan doesn't connect"
+    },
+    {
+      "rank": 3,
+      "fub_id": 72779,
+      "name": "Benny Unknown",
+      "stage": "Spoke with customer",
+      "score": 8,
+      "score_reasons": [
+        "activity: last incoming 9 months ago",
+        "prior conversation established"
+      ],
+      "last_activity": "14 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72779",
+      "suggested_action": "Re-engage with a check-in text"
+    },
+    {
+      "rank": 4,
+      "fub_id": 72664,
+      "name": "Edwin Tate",
+      "stage": "Under Contract",
+      "score": 6,
+      "score_reasons": [
+        "active communication (receipt/EM questions 18-19hr ago)",
+        "Under Contract — closing support"
+      ],
+      "last_activity": "6 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72664",
+      "suggested_action": "Under Contract support — confirm receipt/EM. Good referral source post-close"
+    },
+    {
+      "rank": 5,
+      "fub_id": 71020,
+      "name": "Peter Mathis",
+      "stage": "Under Contract",
+      "score": 6,
+      "score_reasons": [
+        "incoming about wiring/attorney letter 2 days ago",
+        "Under Contract — buyer needs support"
+      ],
+      "last_activity": "1 hour ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71020",
+      "suggested_action": "Follow up on attorney letter and wiring confirmation. Good referral candidate post-close"
+    }
+  ]
 }
