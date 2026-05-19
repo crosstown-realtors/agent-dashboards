@@ -1,21 +1,77 @@
 {
   "agent": "Lauren Litoborski",
-  "generated": "2026-05-19T16:56:27.758Z",
-  "note": "Lauren has only 1 active lead in FUB. Portfolio is very sparse — recommend reviewing lead assignment in FUB admin.",
+  "generated": "2026-05-19T17:12:59.428Z",
+  "note": "Leads from full team pool — FUB agent-field assignment sparse for Lauren; strongest unworked signals from active pipeline.",
   "top5": [
     {
       "rank": 1,
-      "fub_id": 18675,
-      "name": "Jenny Pantoja",
-      "stage": "Bad Phone",
-      "score": 6,
+      "fub_id": 72815,
+      "name": "Bethany Rhodes",
+      "stage": "Nurture",
+      "score": 17,
       "score_reasons": [
-        "activity: only active lead assigned to Lauren",
-        "fello: viewed $258K listing (5 years ago)"
+        "commitment: seller said 'I'll cancel Harlowe and relist' a month ago — ACTION NEEDED",
+        "fello: viewed $525K listing"
       ],
-      "last_activity": "5 years ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/18675",
-      "suggested_action": "Attempt re-contact via alternate channel; update phone or move to Trash if unreachable"
+      "last_activity": "4 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72815",
+      "suggested_action": "Call Bethany — she's ready to relist. Confirm Harlowe status and open house strategy"
+    },
+    {
+      "rank": 2,
+      "fub_id": 73424,
+      "name": "Kari Ternes",
+      "stage": "Lead",
+      "score": 17,
+      "score_reasons": [
+        "engagement: replied 'Great!' 7 days ago — no follow-up from team",
+        "fello: viewed $106K listing"
+      ],
+      "last_activity": "4 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73424",
+      "suggested_action": "Reply to Kari's 'Great!' — she's waiting. Ask what areas she's focusing on"
+    },
+    {
+      "rank": 3,
+      "fub_id": 71825,
+      "name": "Michelle Silvia",
+      "stage": "Nurture",
+      "score": 16,
+      "score_reasons": [
+        "commitment: active down payment and earnest money convo 2 days ago",
+        "fello: viewed $370K listing"
+      ],
+      "last_activity": "12 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71825",
+      "suggested_action": "Follow up on down payment questions — she's actively planning to buy"
+    },
+    {
+      "rank": 4,
+      "fub_id": 72465,
+      "name": "Carol Robb",
+      "stage": "Spoke with customer",
+      "score": 13,
+      "score_reasons": [
+        "activity: viewed $420K listing, spoke with customer recently",
+        "fello: viewed $420K in Yorktown Dr"
+      ],
+      "last_activity": "6 hours ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72465",
+      "suggested_action": "Check in — recently active on Fello; find out where she is in the search"
+    },
+    {
+      "rank": 5,
+      "fub_id": 69433,
+      "name": "John Nylen",
+      "stage": "Seller",
+      "score": 10,
+      "score_reasons": [
+        "activity: very recent (33 min ago)",
+        "seller lead via Homeowner Pull"
+      ],
+      "last_activity": "33 minutes ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/69433",
+      "suggested_action": "Fresh seller signal — reach out about a listing appointment or market analysis"
     }
   ]
 }
