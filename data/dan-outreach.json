@@ -1,6 +1,6 @@
 {
   "agent": "Dan Krembuszewski",
-  "generated": "2026-05-19T16:48:41.123Z",
+  "generated": "2026-05-19T17:11:27.241Z",
   "top5": [
     {
       "rank": 1,
@@ -12,26 +12,40 @@
         "commitment: buyer confirmed wiring/attorney letter",
         "fello: viewed listing"
       ],
-      "last_activity": "1 hour ago",
+      "last_activity": "2 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72800",
       "suggested_action": "Follow up on attorney letter timeline and contract next steps"
     },
     {
       "rank": 2,
+      "fub_id": 73444,
+      "name": "Ashley Maciejewski",
+      "stage": "Met with customer",
+      "score": 17,
+      "score_reasons": [
+        "commitment: just replied with full area wishlist (Westmont, Downers Grove, Lisle, Darien, Woodridge, Lombard, Mokena, New Lenox, Lemont)",
+        "fello: viewed $499K listing"
+      ],
+      "last_activity": "19 minutes ago",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444",
+      "suggested_action": "HOT — reply immediately, set up multi-area listing alerts for her 9 preferred towns"
+    },
+    {
+      "rank": 3,
       "fub_id": 73446,
       "name": "Tiffeny Teml",
       "stage": "Lead",
       "score": 17,
       "score_reasons": [
-        "commitment: replied 'Yes please' 8 min ago",
+        "commitment: replied 'Yes please' 32 min ago",
         "fello: viewed $365K listing"
       ],
       "last_activity": "3 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73446",
-      "suggested_action": "Respond immediately – confirm showing for Grove property"
+      "suggested_action": "Confirm showing for Grove property ASAP"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "fub_id": 73209,
       "name": "Kurt Myles",
       "stage": "Spoke with customer",
@@ -45,7 +59,7 @@
       "suggested_action": "Re-engage with fresh DuPage/Woodridge listings"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "fub_id": 73436,
       "name": "Victoria Zarzycki",
       "stage": "Lead",
@@ -57,20 +71,6 @@
       "last_activity": "3 hours ago",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73436",
       "suggested_action": "Send fresh Aurora listings; acknowledge missed showing"
-    },
-    {
-      "rank": 5,
-      "fub_id": 73444,
-      "name": "Ashley Maciejewski",
-      "stage": "Lead",
-      "score": 13,
-      "score_reasons": [
-        "fello: viewed $499K listing",
-        "activity: Dan just messaged after in-person meeting"
-      ],
-      "last_activity": "2 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444",
-      "suggested_action": "Await reply; prepare area listing alerts"
     }
   ]
 }
