@@ -184,6 +184,59 @@
   .live-dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; animation: livepulse 2s ease-in-out infinite; display: inline-block; }
   @keyframes livepulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.8); } }
 
+
+  /* ── Top 5 Outreach Section ── */
+  .top5-grid { display: flex; flex-direction: column; gap: 10px; }
+  .top5-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: box-shadow .15s;
+  }
+  .top5-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .top5-rank {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7b78ff);
+    color: white; font-size: 12px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .top5-body { flex: 1; min-width: 0; }
+  .top5-name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .top5-reason { font-size: 12px; color: var(--sub); margin-top: 3px; line-height: 1.4; }
+  .top5-meta { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .top5-signal {
+    font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .sig-commitment { background: rgba(239,68,68,.12); color: #dc2626; }
+  .sig-unanswered  { background: rgba(245,158,11,.12); color: #d97706; }
+  .sig-transaction { background: rgba(99,102,241,.12); color: #4f46e5; }
+  .sig-fello       { background: rgba(16,185,129,.12); color: #059669; }
+  .sig-activity    { background: rgba(59,130,246,.12); color: #2563eb; }
+  .top5-stage { font-size: 11px; color: var(--sub); }
+  .top5-activity { font-size: 11px; color: var(--sub); }
+  .top5-note { font-size: 11px; color: var(--sub); font-style: italic; margin-top: 4px; }
+  .top5-link {
+    font-size: 11px; font-weight: 600; color: var(--accent);
+    text-decoration: none; white-space: nowrap; flex-shrink: 0;
+    padding: 6px 10px; border: 1px solid rgba(99,102,241,.3);
+    border-radius: 8px; margin-top: 2px; transition: background .12s;
+  }
+  .top5-link:hover { background: rgba(99,102,241,.08); }
+  .top5-stale {
+    font-size: 11px; color: var(--orange); background: rgba(245,158,11,.08);
+    border: 1px solid rgba(245,158,11,.3); border-radius: 8px;
+    padding: 8px 12px; margin-bottom: 10px;
+  }
+  .top5-empty {
+    color: var(--sub); font-size: 13px; text-align: center; padding: 20px;
+  }
+
 </style>
 </head>
 <body>
@@ -282,6 +335,98 @@
     <a class="ql-btn" href="https://docs.google.com/spreadsheets/d/1i5TOe9iIAkrdMAXV8vAe-YIYxJQ8juKUUjoFcCgySF0/edit" target="_blank"><div class="ql-icon" style="background:#f0f0ff;">📊</div>Transaction Tracker</a>
     <a class="ql-btn" href="https://crosstown-realtors.github.io/agent-dashboards/" target="_blank"><div class="ql-icon" style="background:#eff6ff;">👥</div>Team Dashboards</a>
   </div>
+
+
+  <!-- TOP5-start -->
+  <div class="section" id="top5-section">
+    <div class="section-label">🎯 Today's Top 5 Priority Outreach
+      <span id="top5-ts" style="font-size:10px;font-weight:400;color:var(--sub);margin-left:8px;"></span>
+    </div>
+    <div id="top5-cards">
+      <div class="card top5-empty">Loading outreach priorities…</div>
+    </div>
+  </div>
+  <!-- TOP5-end -->
+
+  <script>
+  (function() {
+    const TOP5_URL = 'https://crosstown-realtors.github.io/agent-dashboards/data/dan-outreach.json';
+    const SIGNAL_CLASS = {
+      commitment:  'sig-commitment',
+      unanswered:  'sig-unanswered',
+      transaction: 'sig-transaction',
+      fello:       'sig-fello',
+      activity:    'sig-activity',
+    };
+
+    function timeAgo(isoStr) {
+      if (!isoStr) return '';
+      const diff = Date.now() - new Date(isoStr).getTime();
+      const h = Math.floor(diff / 3600000);
+      if (h < 1) return 'just now';
+      if (h < 24) return h + 'h ago';
+      return Math.floor(h / 24) + 'd ago';
+    }
+
+    function esc(s) {
+      return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function renderTop5(data) {
+      const container = document.getElementById('top5-cards');
+      const tsEl = document.getElementById('top5-ts');
+      if (!data || !data.leads || !data.leads.length) {
+        container.innerHTML = '<div class="card top5-empty">No outreach data yet — run the Top 5 task to populate.</div>';
+        return;
+      }
+
+      // Stale check: warn if > 18h old
+      const generatedMs = new Date(data.generated).getTime();
+      const ageH = (Date.now() - generatedMs) / 3600000;
+      let staleHtml = '';
+      if (ageH > 18) {
+        const d = new Date(data.generated);
+        staleHtml = `<div class="top5-stale">⚠️ Data from ${d.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})} — next refresh at tomorrow's morning run.</div>`;
+      }
+
+      if (tsEl) {
+        const d = new Date(data.generated);
+        tsEl.textContent = 'Updated ' + d.toLocaleTimeString('en-US', {hour:'numeric',minute:'2-digit'});
+      }
+
+      const cards = data.leads.map(lead => {
+        const sigClass = SIGNAL_CLASS[lead.signal_type] || 'sig-activity';
+        const noteHtml = lead.last_note
+          ? `<div class="top5-note">"${esc(lead.last_note)}"</div>` : '';
+        return `
+        <div class="top5-card">
+          <div class="top5-rank">${lead.rank}</div>
+          <div class="top5-body">
+            <div class="top5-name">${esc(lead.name)}</div>
+            <div class="top5-reason">${esc(lead.reason)}</div>
+            ${noteHtml}
+            <div class="top5-meta">
+              <span class="top5-signal ${sigClass}">${esc(lead.signal_label || lead.signal_type)}</span>
+              <span class="top5-stage">${esc(lead.stage)}</span>
+              <span class="top5-activity">· ${esc(lead.last_activity)}</span>
+            </div>
+          </div>
+          <a class="top5-link" href="${esc(lead.fub_url)}" target="_blank">Open in FUB →</a>
+        </div>`;
+      }).join('\n');
+
+      container.innerHTML = staleHtml + '<div class="top5-grid">' + cards + '</div>';
+    }
+
+    fetch(TOP5_URL + '?_=' + Date.now())
+      .then(r => r.ok ? r.json() : Promise.reject('HTTP ' + r.status))
+      .then(renderTop5)
+      .catch(err => {
+        const container = document.getElementById('top5-cards');
+        container.innerHTML = '<div class="card top5-empty">Outreach data not yet available — will appear after tomorrow morning\'s run.</div>';
+      });
+  })();
+  </script>
 
 <!-- AG:stats-start -->
   <div class="grid-4">
