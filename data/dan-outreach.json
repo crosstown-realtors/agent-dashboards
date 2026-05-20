@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-20T09:00:00-05:00",
+  "generated": "2026-05-20T10:10:44-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,55 +8,55 @@
       "name": "Ashley Maciejewski",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "48m ago",
-      "last_note": "",
+      "reason": "Lead sent a Fello activity alert with no agent reply — active buyer showing recent property interest.",
+      "last_activity": "13 min ago",
+      "last_note": "Ashley Maciejewski may be interested in 16123 S Peerless",
       "stage": "Met with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444"
     },
     {
       "rank": 2,
-      "name": "Nicole",
+      "name": "Victoria Zarzycki",
       "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "4h ago",
+      "signal_label": "Fello Sync Active",
+      "reason": "FelloSync tag with recent update today — actively browsing listings.",
+      "last_activity": "1h ago",
       "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73450"
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73436"
     },
     {
       "rank": 3,
-      "name": "Tiffeny Teml",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "15h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73446"
+      "name": "Cindy",
+      "signal_type": "fello",
+      "signal_label": "Fello Sync Active",
+      "reason": "FelloSync tag updated today with attempted contact logged — worth a fresh outreach.",
+      "last_activity": "5h ago",
+      "last_note": "No response",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73438"
     },
     {
       "rank": 4,
       "name": "Dan Mainczyk",
       "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "4h ago",
-      "last_note": "",
+      "signal_label": "Fello Sync Active",
+      "reason": "FelloSync tag with recent conversation logged and Fello activity continuing today.",
+      "last_activity": "5h ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73437"
     },
     {
       "rank": 5,
-      "name": "Kari Ternes",
+      "name": "Beth Ann",
       "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "20h ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73424"
+      "signal_label": "Fello Sync Active",
+      "reason": "FelloSync tag updated today — lead in database needs consistent follow-up.",
+      "last_activity": "5h ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73441"
     }
   ]
 }
