@@ -1,76 +1,62 @@
 {
+  "generated": "2026-05-20T09:00:00-05:00",
   "agent": "Dan Krembuszewski",
-  "generated": "2026-05-19T17:11:27.241Z",
-  "top5": [
+  "fub_account": "crosstownlincolnway",
+  "leads": [
     {
       "rank": 1,
-      "fub_id": 72800,
-      "name": "Jillian Turner",
+      "name": "Ashley Maciejewski",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "48m ago",
+      "last_note": "",
       "stage": "Met with customer",
-      "score": 17,
-      "score_reasons": [
-        "commitment: buyer confirmed wiring/attorney letter",
-        "fello: viewed listing"
-      ],
-      "last_activity": "2 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72800",
-      "suggested_action": "Follow up on attorney letter timeline and contract next steps"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444"
     },
     {
       "rank": 2,
-      "fub_id": 73444,
-      "name": "Ashley Maciejewski",
-      "stage": "Met with customer",
-      "score": 17,
-      "score_reasons": [
-        "commitment: just replied with full area wishlist (Westmont, Downers Grove, Lisle, Darien, Woodridge, Lombard, Mokena, New Lenox, Lemont)",
-        "fello: viewed $499K listing"
-      ],
-      "last_activity": "19 minutes ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444",
-      "suggested_action": "HOT — reply immediately, set up multi-area listing alerts for her 9 preferred towns"
+      "name": "Nicole",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "4h ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73450"
     },
     {
       "rank": 3,
-      "fub_id": 73446,
       "name": "Tiffeny Teml",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "15h ago",
+      "last_note": "",
       "stage": "Lead",
-      "score": 17,
-      "score_reasons": [
-        "commitment: replied 'Yes please' 32 min ago",
-        "fello: viewed $365K listing"
-      ],
-      "last_activity": "3 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73446",
-      "suggested_action": "Confirm showing for Grove property ASAP"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73446"
     },
     {
       "rank": 4,
-      "fub_id": 73209,
-      "name": "Kurt Myles",
+      "name": "Dan Mainczyk",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "4h ago",
+      "last_note": "",
       "stage": "Spoke with customer",
-      "score": 15,
-      "score_reasons": [
-        "unanswered: Dan msg 1 mo ago – no reply",
-        "fello: viewed $506K listing"
-      ],
-      "last_activity": "2 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73209",
-      "suggested_action": "Re-engage with fresh DuPage/Woodridge listings"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73437"
     },
     {
       "rank": 5,
-      "fub_id": 73436,
-      "name": "Victoria Zarzycki",
-      "stage": "Lead",
-      "score": 15,
-      "score_reasons": [
-        "unanswered: Dan msg 5 days ago – no reply",
-        "fello: viewed $390K listing"
-      ],
-      "last_activity": "3 hours ago",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73436",
-      "suggested_action": "Send fresh Aurora listings; acknowledge missed showing"
+      "name": "Kari Ternes",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "20h ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73424"
     }
   ]
 }
