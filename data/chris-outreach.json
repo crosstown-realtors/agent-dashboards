@@ -1,72 +1,62 @@
 {
+  "generated": "2026-05-20T09:00:00-05:00",
   "agent": "Chris Lira",
-  "generated": "2026-05-19",
-  "top5": [
+  "fub_account": "crosstownlincolnway",
+  "leads": [
     {
       "rank": 1,
-      "name": "Andre Brissett",
-      "personId": 73439,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73439",
-      "stage": "Attempted contact",
-      "score": 15,
-      "signals": [
-        "Outgoing 3 days ago unanswered — asking about proof of funds/lender",
-        "Tour agent change notification today",
-        "Ylopo active 6 days ago ($739K property)"
-      ],
-      "why": "Unanswered lender question 3 days ago — follow up to keep momentum"
+      "name": "Ivan Smilkovic",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal (engagement) detected — high intent indicator.",
+      "last_activity": "12d ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73391"
     },
     {
       "rank": 2,
-      "name": "Camila Johnson",
-      "personId": 73398,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73398",
-      "stage": "Attempted contact",
-      "score": 15,
-      "signals": [
-        "Outgoing 14 days ago unanswered — follow-up on canceled 17654 Driftwood Ln tour",
-        "Ylopo viewed $440K property 25 days ago"
-      ],
-      "why": "Tour canceled, follow-up unanswered — try again with alternative homes"
+      "name": "Maddie Rarick",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal (engagement) detected — high intent indicator.",
+      "last_activity": "70d ago",
+      "last_note": "",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73050"
     },
     {
       "rank": 3,
-      "name": "Maddie Rarick",
-      "personId": 73050,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73050",
-      "stage": "Met with customer",
-      "score": 15,
-      "signals": [
-        "Outgoing 2 months ago unanswered — 'Are you still in the market?'",
-        "Previous tour request Dec '25"
-      ],
-      "why": "Prior meeting, unanswered check-in — worth a fresh touchpoint"
+      "name": "Christian",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal (engagement) detected — high intent indicator.",
+      "last_activity": "33d ago",
+      "last_note": "",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
     },
     {
       "rank": 4,
-      "name": "Christian",
-      "personId": 73023,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73023",
-      "stage": "Showing homes",
-      "score": 15,
-      "signals": [
-        "Outgoing 4 months ago unanswered (Happy New Year check-in)",
-        "Ylopo viewed $310K property Apr 16"
-      ],
-      "why": "Showing homes stage with fresh Ylopo browse — reconnect"
+      "name": "Homayoun",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal (ylopo_info) detected — high intent indicator.",
+      "last_activity": "4h ago",
+      "last_note": "ylopo_info",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73454"
     },
     {
       "rank": 5,
-      "name": "Ivan Smilkovic",
-      "personId": 73391,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73391",
-      "stage": "Spoke with customer",
-      "score": 13,
-      "signals": [
-        "Tour at 1102 Hinswood Dr APT 206 canceled 6 days ago",
-        "Ylopo viewed IN property recently"
-      ],
-      "why": "Tour just canceled — reach out to reschedule or redirect"
+      "name": "Andre Brissett",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal (engagement) detected — high intent indicator.",
+      "last_activity": "2h ago",
+      "last_note": "",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     }
   ]
 }
