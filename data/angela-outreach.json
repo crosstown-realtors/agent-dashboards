@@ -1,73 +1,62 @@
 {
+  "generated": "2026-05-20T09:00:00-05:00",
   "agent": "Angela Palma",
-  "generated": "2026-05-19",
-  "top5": [
+  "fub_account": "crosstownlincolnway",
+  "leads": [
     {
       "rank": 1,
-      "name": "Krish Sharma",
-      "personId": 73445,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73445",
-      "stage": "Appointment set",
-      "score": 17,
-      "signals": [
-        "LIVE: Angela texting showing rescheduled to 1:30 right now",
-        "Active appointment coordination a few seconds ago"
-      ],
-      "why": "Appointment in progress this moment — call to confirm logistics"
+      "name": "Adam Abbasi",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "2d ago",
+      "last_note": "",
+      "stage": "Submitting offers",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73429"
     },
     {
       "rank": 2,
       "name": "AbdelFattah AlBustangi",
-      "personId": 73430,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73430",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "13h ago",
+      "last_note": "",
       "stage": "Showing homes",
-      "score": 17,
-      "signals": [
-        "Tour booked 15723 Peggy Ln (18 hours ago)",
-        "Shared property today on Ylopo",
-        "Follow-up outgoing 8 days ago"
-      ],
-      "why": "Tour just booked — reach out to prep and confirm"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73430"
     },
     {
       "rank": 3,
-      "name": "Adam Abbasi",
-      "personId": 73429,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73429",
-      "stage": "Submitting offers",
-      "score": 17,
-      "signals": [
-        "Letter to Seller submitted 3 days ago",
-        "Waiting on seller response",
-        "Active Ylopo buyer"
-      ],
-      "why": "Offer submitted — waiting for response, check in on status"
+      "name": "Farhin Vhora",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "11m ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73428"
     },
     {
       "rank": 4,
-      "name": "Amanda Mast",
-      "personId": 73423,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73423",
+      "name": "Dan Smieszny",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "2d ago",
+      "last_note": "",
       "stage": "Spoke with customer",
-      "score": 15,
-      "signals": [
-        "Outgoing unanswered 11 days ago (asked about showing time)",
-        "Ylopo activity — viewed $375K property 12 days ago"
-      ],
-      "why": "Unanswered follow-up on showing availability — circle back"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73406"
     },
     {
       "rank": 5,
-      "name": "Sarah Koch",
-      "personId": 73407,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73407",
-      "stage": "Attempted contact",
-      "score": 15,
-      "signals": [
-        "Outgoing unanswered 17–20 days ago",
-        "Viewed $350K property on Ylopo 22 days ago"
-      ],
-      "why": "Multiple unanswered outreach attempts — try a different channel"
+      "name": "Denise Jeffrey",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "4h ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73448"
     }
   ]
 }
