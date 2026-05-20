@@ -1,71 +1,62 @@
 {
+  "generated": "2026-05-20T09:00:00-05:00",
   "agent": "Lauren Litoborski",
-  "generated": "2026-05-19",
-  "top5": [
+  "fub_account": "crosstownlincolnway",
+  "leads": [
     {
       "rank": 1,
-      "name": "Sammantha Weber",
-      "personId": 73443,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73443",
-      "stage": "Met with customer",
-      "score": 17,
-      "signals": [
-        "Tour booked TODAY (6 min ago) - 304 Cameron Ave",
-        "Confirmed 4 days ago: 'Yes! We are all confirmed 👍'"
-      ],
-      "why": "Active tour in motion — highest urgency"
+      "name": "Joanne OReilly",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "32m ago",
+      "last_note": "",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73377"
     },
     {
       "rank": 2,
-      "name": "Joanne OReilly",
-      "personId": 73377,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73377",
-      "stage": "Appointment set",
-      "score": 17,
-      "signals": [
-        "Incoming email re 'Multiple Offers' 16 min ago",
-        "Appointment set, active Ylopo buyer"
-      ],
-      "why": "Just reached out about a competing offer — call immediately"
+      "name": "Maha Alshawwa",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "",
+      "last_activity": "6h ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73357"
     },
     {
       "rank": 3,
-      "name": "Jake Gempel",
-      "personId": 73442,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73442",
-      "stage": "Appointment set",
-      "score": 17,
-      "signals": [
-        "Confirmed appointment 3 days ago: 'Ok great, see you then!'",
-        "Tour agent change notice today"
-      ],
-      "why": "Appointment confirmed, active showing pipeline"
+      "name": "Ella Goelz",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "97d ago",
+      "last_note": "",
+      "stage": "Submitting offers",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73040"
     },
     {
       "rank": 4,
-      "name": "Ercan Hocaoglu",
-      "personId": 72991,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/72991",
-      "stage": "Spoke with customer",
-      "score": 15,
-      "signals": [
-        "Check-in sent 7 days ago unanswered",
-        "Shared property 3hr ago on Ylopo"
-      ],
-      "why": "Unanswered outreach + fresh Ylopo activity — follow up now"
+      "name": "Amalia Burgert",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "2h ago",
+      "last_note": "",
+      "stage": "Submitting offers",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72887"
     },
     {
       "rank": 5,
-      "name": "Razan Masri",
-      "personId": 72846,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/72846",
-      "stage": "Nurture",
-      "score": 15,
-      "signals": [
-        "Saved $1M listing 2 hours ago on Ylopo",
-        "Last outgoing 8 months ago unanswered"
-      ],
-      "why": "Fresh Ylopo property save signals renewed buying interest"
+      "name": "Sabreen Sheikhali",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "",
+      "last_activity": "1d ago",
+      "last_note": "",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73447"
     }
   ]
 }
