@@ -1,72 +1,62 @@
 {
+  "generated": "2026-05-20T09:00:00-05:00",
   "agent": "Mollie Kelly",
-  "generated": "2026-05-19",
-  "top5": [
+  "fub_account": "crosstownlincolnway",
+  "leads": [
     {
       "rank": 1,
-      "name": "Trudy Sturino",
-      "personId": 72797,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/72797",
-      "stage": "Showing homes",
-      "score": 17,
-      "signals": [
-        "Tour CONFIRMED today (14 min ago) — 'Accepted: Confirmed Tour'",
-        "Active Ylopo buyer"
-      ],
-      "why": "Tour just confirmed — reach out to prep for showing"
+      "name": "Angelina Garcia",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message 23h ago that has not received a reply.",
+      "last_activity": "23h ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
     },
     {
       "rank": 2,
-      "name": "Christy Korpal",
-      "personId": 73387,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73387",
+      "name": "Megan Lucchetti",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal detected — high intent indicator.",
+      "last_activity": "4d ago",
+      "last_note": "",
       "stage": "Showing homes",
-      "score": 17,
-      "signals": [
-        "Tour scheduled 6257 157th Pl (2 days ago)",
-        "Viewed $325K property on Ylopo"
-      ],
-      "why": "Active tour pipeline — follow up to confirm and engage"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
     },
     {
       "rank": 3,
-      "name": "Megan Lucchetti",
-      "personId": 73405,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/73405",
-      "stage": "Showing homes",
-      "score": 17,
-      "signals": [
-        "Tour scheduled 916 W Joliet Hwy (3 days ago)",
-        "Viewed $375K property on Ylopo",
-        "Responded 'Thank you!' 23 days ago"
-      ],
-      "why": "Scheduled tour with engaged buyer — touch base before showing"
+      "name": "Brenda Rivas",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal detected — high intent indicator.",
+      "last_activity": "8d ago",
+      "last_note": "",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73389"
     },
     {
       "rank": 4,
-      "name": "Alyssa Buerck",
-      "personId": 72105,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/72105",
-      "stage": "Nurture",
-      "score": 17,
-      "signals": [
-        "Tour at 213 S Anderson Rd scheduled (3 days ago)",
-        "Incoming: lender program interest 3 months ago"
-      ],
-      "why": "Tour scheduled — nurture with lender intro and property prep"
+      "name": "Christy Korpal",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal detected — high intent indicator.",
+      "last_activity": "4h ago",
+      "last_note": "",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73387"
     },
     {
       "rank": 5,
-      "name": "Angelina Garcia",
-      "personId": 72646,
-      "url": "https://crosstownlincolnway.followupboss.com/2/people/72646",
-      "stage": "Spoke with customer",
-      "score": 15,
-      "signals": [
-        "Ylopo activity 3 hours ago (viewed $435K property)",
-        "Outgoing unanswered 8 months ago"
-      ],
-      "why": "Fresh Ylopo browse today after long silence — re-engage now"
+      "name": "Julie Statkus",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Fello activity signal detected — high intent indicator.",
+      "last_activity": "17h ago",
+      "last_note": "",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
     }
   ]
 }
