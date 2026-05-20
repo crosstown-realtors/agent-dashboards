@@ -128,7 +128,7 @@ def parse_tracker(csv_text):
     seen_deals = set()   # for deduplication
     for r in rows:
         def gs(key): return (r.get(key) or '').strip()
-        agent = gs('Agent Name').lstrip('-').strip()   # normalize: strip leading dashes
+        agent = gs('Agent Name') or gs('Column 2').lstrip('-').strip()   # normalize: strip leading dashes
         status = gs('Status')
         if not agent or status not in ('Closed','Under Contract','Busted'):
             continue
