@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-20T09:00:00-05:00",
+  "generated": "2026-05-21T07:25:31.345-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
+      "name": "Adhem Hinnawi",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "22 min ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
+    },
+    {
+      "rank": 2,
+      "name": "Ria DeGradi",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73414"
+    },
+    {
+      "rank": 3,
       "name": "Rachael",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "7h ago",
-      "last_note": "",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
     },
     {
-      "rank": 2,
-      "name": "Yanko",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "2d ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73431"
-    },
-    {
-      "rank": 3,
-      "name": "Tom Murphy",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "5d ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73425"
-    },
-    {
       "rank": 4,
-      "name": "Kelly D",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "12h ago",
-      "last_note": "",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73394"
+      "name": "Rianna Gray",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "11h ago",
+      "last_note": " timeline is 0-3-months.",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73359"
     },
     {
       "rank": 5,
-      "name": "Mace",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "19d ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73392"
+      "name": "Kelly D",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "15h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73394"
     }
   ]
 }
