@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-20T10:10:44-05:00",
+  "generated": "2026-05-21T07:25:22.378-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Ashley Maciejewski",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a Fello activity alert with no agent reply — active buyer showing recent property interest.",
-      "last_activity": "13 min ago",
-      "last_note": "Ashley Maciejewski may be interested in 16123 S Peerless",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73444"
+      "name": "George Atkison",
+      "signal_type": "activity",
+      "signal_label": "Recent Activity",
+      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
+      "last_activity": "10h ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74864"
     },
     {
       "rank": 2,
-      "name": "Victoria Zarzycki",
-      "signal_type": "fello",
-      "signal_label": "Fello Sync Active",
-      "reason": "FelloSync tag with recent update today — actively browsing listings.",
-      "last_activity": "1h ago",
+      "name": "Denise Maniakouras",
+      "signal_type": "activity",
+      "signal_label": "Recent Activity",
+      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
+      "last_activity": "10h ago",
       "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73436"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74863"
     },
     {
       "rank": 3,
-      "name": "Cindy",
-      "signal_type": "fello",
-      "signal_label": "Fello Sync Active",
-      "reason": "FelloSync tag updated today with attempted contact logged — worth a fresh outreach.",
-      "last_activity": "5h ago",
-      "last_note": "No response",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73438"
+      "name": "Ivette Nouti",
+      "signal_type": "activity",
+      "signal_label": "Recent Activity",
+      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
+      "last_activity": "10h ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74862"
     },
     {
       "rank": 4,
-      "name": "Dan Mainczyk",
-      "signal_type": "fello",
-      "signal_label": "Fello Sync Active",
-      "reason": "FelloSync tag with recent conversation logged and Fello activity continuing today.",
-      "last_activity": "5h ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73437"
+      "name": "Griselda Guzman",
+      "signal_type": "activity",
+      "signal_label": "Recent Activity",
+      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
+      "last_activity": "10h ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74861"
     },
     {
       "rank": 5,
-      "name": "Beth Ann",
-      "signal_type": "fello",
-      "signal_label": "Fello Sync Active",
-      "reason": "FelloSync tag updated today — lead in database needs consistent follow-up.",
-      "last_activity": "5h ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made",
+      "name": "Heather Nonte",
+      "signal_type": "activity",
+      "signal_label": "Recent Activity",
+      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
+      "last_activity": "10h ago",
+      "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73441"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74860"
     }
   ]
 }
