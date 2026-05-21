@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-20T09:00:00-05:00",
+  "generated": "2026-05-21T07:25:45.865-05:00",
   "agent": "Angela Palma",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
+      "name": "Krish Sharma",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "5 min ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73445"
+    },
+    {
+      "rank": 2,
+      "name": "Anthony",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "6 min ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74843"
+    },
+    {
+      "rank": 3,
       "name": "Adam Abbasi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "2d ago",
-      "last_note": "",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "2h ago",
+      "last_note": "Adam timeline is 3-6-months.",
       "stage": "Submitting offers",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73429"
     },
     {
-      "rank": 2,
-      "name": "AbdelFattah AlBustangi",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "13h ago",
-      "last_note": "",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73430"
-    },
-    {
-      "rank": 3,
-      "name": "Farhin Vhora",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "11m ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73428"
-    },
-    {
       "rank": 4,
-      "name": "Dan Smieszny",
+      "name": "James And",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "2d ago",
-      "last_note": "",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "10h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73406"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73413"
     },
     {
       "rank": 5,
-      "name": "Denise Jeffrey",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "4h ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73448"
+      "name": "Terry Roberts",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "11h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73400"
     }
   ]
 }
