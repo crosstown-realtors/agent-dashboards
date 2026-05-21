@@ -1,0 +1,62 @@
+{
+  "generated": "2026-05-21T07:25:45.865-05:00",
+  "agent": "Jaclyn Mitchell",
+  "fub_account": "crosstownlincolnway",
+  "leads": [
+    {
+      "rank": 1,
+      "name": "Heather M Lacey",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "12h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72479"
+    },
+    {
+      "rank": 2,
+      "name": "Brian",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "12h ago",
+      "last_note": "Came back through Zillow again as a new lead. Was working with Dan previously. T",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72267"
+    },
+    {
+      "rank": 3,
+      "name": "Alex Martinez",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "12h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72493"
+    },
+    {
+      "rank": 4,
+      "name": "Joey Lahey",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "13h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72094"
+    },
+    {
+      "rank": 5,
+      "name": "Juan Garcia",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "13h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72434"
+    }
+  ]
+}
