@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-20T09:00:00-05:00",
+  "generated": "2026-05-21T07:25:45.865-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Joanne OReilly",
+      "name": "Edward Mehovic",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "32m ago",
-      "last_note": "",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73377"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73386"
     },
     {
       "rank": 2,
-      "name": "Maha Alshawwa",
+      "name": "Sammantha Weber",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "",
-      "last_activity": "6h ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73357"
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
     },
     {
       "rank": 3,
-      "name": "Ella Goelz",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "97d ago",
-      "last_note": "",
-      "stage": "Submitting offers",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73040"
+      "name": "Anthony Salem",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "12h ago",
+      "last_note": "**Anthony Salem** may be interested in 25530 Shinnecock Dr, Monee, IL 60449 ($11",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73279"
     },
     {
       "rank": 4,
-      "name": "Amalia Burgert",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "2h ago",
-      "last_note": "",
-      "stage": "Submitting offers",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72887"
+      "name": "Albana Romacka",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "12h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73364"
     },
     {
       "rank": 5,
-      "name": "Sabreen Sheikhali",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "",
-      "last_activity": "1d ago",
-      "last_note": "",
+      "name": "Veronica Macias",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply.",
+      "last_activity": "13h ago",
+      "last_note": "sent message to schedule a time to gather missing docs/info",
       "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73447"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73245"
     }
   ]
 }
