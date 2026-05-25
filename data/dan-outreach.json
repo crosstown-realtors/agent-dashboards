@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-21T07:25:22.378-05:00",
+  "generated": "2026-05-25T12:22:02.466-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "George Atkison",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
-      "last_activity": "10h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74864"
+      "name": "Carol Robb",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Carol Robb sent an inbound message that has not yet received a reply (Spoke with customer).",
+      "last_activity": "1 hr ago",
+      "last_note": "Inbound message awaiting reply",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72465"
     },
     {
       "rank": 2,
-      "name": "Denise Maniakouras",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
-      "last_activity": "10h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74863"
+      "name": "Larry Garetto",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Larry Garetto sent an inbound message that has not yet received a reply (Spoke with customer).",
+      "last_activity": "2 hr ago",
+      "last_note": "Inbound message awaiting reply",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73395"
     },
     {
       "rank": 3,
-      "name": "Ivette Nouti",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
-      "last_activity": "10h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74862"
+      "name": "Tracy Lasso",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Tracy Lasso sent an inbound message that has not yet received a reply (Spoke with customer).",
+      "last_activity": "3 hr ago",
+      "last_note": "Inbound message awaiting reply",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73193"
     },
     {
       "rank": 4,
-      "name": "Griselda Guzman",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
-      "last_activity": "10h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74861"
+      "name": "Jonathan Gómez",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Jonathan Gómez sent an inbound message that has not yet received a reply (Nurture).",
+      "last_activity": "5 hr ago",
+      "last_note": "Inbound message awaiting reply",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72595"
     },
     {
       "rank": 5,
-      "name": "Heather Nonte",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Lead showed recent activity but has not been contacted by agent in 7+ days.",
-      "last_activity": "10h ago",
+      "name": "Laurie Murphy",
+      "signal_type": "fello",
+      "signal_label": "Fello Activity",
+      "reason": "Laurie Murphy is flagged as a Fello/Ylopo priority lead showing renewed search activity (Spoke with customer).",
+      "last_activity": "2 hr ago",
       "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74860"
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73179"
     }
   ]
 }
