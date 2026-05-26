@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-25T12:22:02.466-05:00",
+  "generated": "2026-05-26T07:23:32-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Carol Robb",
+      "name": "Jennifer",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Carol Robb sent an inbound message that has not yet received a reply (Spoke with customer).",
-      "last_activity": "1 hr ago",
-      "last_note": "Inbound message awaiting reply",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72465"
+      "reason": "Lead sent a message that hasn't been replied to.",
+      "last_activity": "5 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ho",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75066"
     },
     {
       "rank": 2,
-      "name": "Larry Garetto",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Larry Garetto sent an inbound message that has not yet received a reply (Spoke with customer).",
+      "name": "Akash Patel",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Lead has an active Fello/Ylopo engagement signal.",
       "last_activity": "2 hr ago",
-      "last_note": "Inbound message awaiting reply",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73395"
+      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experience starts with a gre",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75064"
     },
     {
       "rank": 3,
-      "name": "Tracy Lasso",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Tracy Lasso sent an inbound message that has not yet received a reply (Spoke with customer).",
-      "last_activity": "3 hr ago",
-      "last_note": "Inbound message awaiting reply",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73193"
+      "name": "Zac Sadek",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Lead has an active Fello/Ylopo engagement signal.",
+      "last_activity": "2 days ago",
+      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experience starts with a gre",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
     },
     {
       "rank": 4,
-      "name": "Jonathan Gómez",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Jonathan Gómez sent an inbound message that has not yet received a reply (Nurture).",
-      "last_activity": "5 hr ago",
-      "last_note": "Inbound message awaiting reply",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72595"
+      "name": "Melissa Welch",
+      "signal_type": "fello",
+      "signal_label": "Fello Signal",
+      "reason": "Lead has an active Fello/Ylopo engagement signal.",
+      "last_activity": "5 days ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75011"
     },
     {
       "rank": 5,
-      "name": "Laurie Murphy",
-      "signal_type": "fello",
-      "signal_label": "Fello Activity",
-      "reason": "Laurie Murphy is flagged as a Fello/Ylopo priority lead showing renewed search activity (Spoke with customer).",
-      "last_activity": "2 hr ago",
+      "name": "Tracy Speed",
+      "signal_type": "activity",
+      "signal_label": "Recent Activity",
+      "reason": "Lead had activity in the past 24 hours.",
+      "last_activity": "5 days ago",
       "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73179"
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75060"
     }
   ]
 }
