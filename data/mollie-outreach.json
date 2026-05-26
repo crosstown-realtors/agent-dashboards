@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-25T12:22:30.160-05:00",
+  "generated": "2026-05-26T07:23:35-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,55 +8,55 @@
       "name": "Megan Lucchetti",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Megan Lucchetti sent an inbound message that has not yet received a reply (Showing homes).",
+      "reason": "Lead sent a message that hasn't been replied to.",
       "last_activity": "2 hr ago",
-      "last_note": "Inbound message awaiting reply",
+      "last_note": "**Megan Lucchetti** is now looking in IL 60451.\n- By Zillow Insights",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
     },
     {
       "rank": 2,
-      "name": "Ragad",
+      "name": "Angelina Garcia",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Ragad sent an inbound message that has not yet received a reply (Nurture).",
-      "last_activity": "4 hr ago",
-      "last_note": "Inbound message awaiting reply",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
+      "reason": "Lead sent a message that hasn't been replied to.",
+      "last_activity": "7 hr ago",
+      "last_note": "Status unchanged as of Sep 06, 2025",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
     },
     {
       "rank": 3,
-      "name": "Stephanie Lauren",
+      "name": "Thomas",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Stephanie Lauren sent an inbound message that has not yet received a reply (Nurture).",
-      "last_activity": "6 hr ago",
-      "last_note": "Inbound message awaiting reply",
+      "reason": "Lead sent a message that hasn't been replied to.",
+      "last_activity": "4 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/57798"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73129"
     },
     {
       "rank": 4,
-      "name": "Mike Hughes",
+      "name": "Julie Statkus",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Mike Hughes sent an inbound message that has not yet received a reply (Nurture).",
-      "last_activity": "13 hr ago",
-      "last_note": "Inbound message awaiting reply",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72030"
+      "reason": "Lead sent a message that hasn't been replied to.",
+      "last_activity": "4 days ago",
+      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
     },
     {
       "rank": 5,
-      "name": "Justin Schiltz",
+      "name": "Ryan Weber",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Justin Schiltz sent an inbound message that has not yet received a reply (Spoke with customer).",
-      "last_activity": "16 hr ago",
-      "last_note": "Inbound message awaiting reply",
+      "reason": "Lead sent a message that hasn't been replied to.",
+      "last_activity": "5 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72504"
     }
   ]
 }
