@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-26T07:23:36-05:00",
+  "generated": "2026-05-28T07:21:38.495-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Travis Mortimer",
+      "name": "Alfredo Ramirez",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "5 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72580"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "11 hrs ago",
+      "last_note": "**\\\"\\\"** may be interested in 230 W Joliet Hwy, New Lenox, IL 60451 ($266K, 2bds, 1.0ba). They have ",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
     },
     {
       "rank": 2,
-      "name": "Janet H",
+      "name": "Praveen Thinakaran",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "6 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73331"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "2 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
     },
     {
       "rank": 3,
       "name": "Maria Cazares",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "6 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "2 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
     },
     {
       "rank": 4,
-      "name": "Cynthia Mazin",
+      "name": "Jason Warren",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "19 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72858"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "7 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
     },
     {
       "rank": 5,
-      "name": "Alfredo Ramirez",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "Lead has an active Fello/Ylopo engagement signal.",
-      "last_activity": "2 days ago",
-      "last_note": "",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
+      "name": "Grant Krusinowski",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "7 days ago",
+      "last_note": "\n<div style=\"font-family:'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;\">\n\n<table cells",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/56293"
     }
   ]
 }
