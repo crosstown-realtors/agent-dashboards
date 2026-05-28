@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-26T07:23:34-05:00",
+  "generated": "2026-05-28T07:20:17.639-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Mary Lou Resh",
+      "name": "Bill Greune",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "6 min ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73180"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "34 min ago",
+      "last_note": "**Bill Greune** may be interested in 1343 W Grand Ave Floor 2, Chicago, IL 60642 ($1.7K, 2bds, 1.0ba",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72930"
     },
     {
       "rank": 2,
       "name": "Maha Alshawwa",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "5 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "4 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73357"
     },
     {
       "rank": 3,
-      "name": "Sammantha Weber",
+      "name": "Joanne OReilly",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "10 hr ago",
-      "last_note": "**Sammantha Weber** may be interested in 330 Harwood St, Joliet, IL 60432 ($220K, 3bds, 1.0ba). They have viewed the pro",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "8 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73377"
     },
     {
       "rank": 4,
-      "name": "Paul",
+      "name": "Joyann Leach",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "11 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Da",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73367"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "9 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72903"
     },
     {
       "rank": 5,
-      "name": "Trevor Gavitt",
+      "name": "Hamza Bouqartacha",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "14 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73202"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "11 hrs ago",
+      "last_note": "**Hamza bouqartacha** is now looking in IL 60453.\n- By Zillow Insights",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73028"
     }
   ]
 }
