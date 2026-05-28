@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-26T07:23:37-05:00",
+  "generated": "2026-05-28T07:21:17.179-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Homayoun",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "Lead has an active Fello/Ylopo engagement signal.",
-      "last_activity": "2 hr ago",
-      "last_note": "",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73454"
+      "name": "Dijana Pejic",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "2 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
     },
     {
       "rank": 2,
-      "name": "Tabitha",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "Lead has an active Fello/Ylopo engagement signal.",
-      "last_activity": "2 hr ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73455"
-    },
-    {
-      "rank": 3,
       "name": "Andre Brissett",
-      "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "Lead has an active Fello/Ylopo engagement signal.",
-      "last_activity": "6 hr ago",
-      "last_note": "",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "11 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     },
     {
+      "rank": 3,
+      "name": "Christian",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "7 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
+    },
+    {
       "rank": 4,
-      "name": "Camila Johnson",
+      "name": "Tessa O’Halloran",
       "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "Lead has an active Fello/Ylopo engagement signal.",
-      "last_activity": "1 days ago",
-      "last_note": "",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73398"
+      "signal_label": "Fello/Ylopo Signal",
+      "reason": "Tagged FelloSync — active buyer signal.",
+      "last_activity": "2 hrs ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75062"
     },
     {
       "rank": 5,
-      "name": "Ivan Smilkovic",
+      "name": "Tabitha",
       "signal_type": "fello",
-      "signal_label": "Fello Signal",
-      "reason": "Lead has an active Fello/Ylopo engagement signal.",
+      "signal_label": "Fello/Ylopo Signal",
+      "reason": "Tagged FelloSync — active buyer signal.",
       "last_activity": "1 days ago",
       "last_note": "",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73391"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73455"
     }
   ]
 }
