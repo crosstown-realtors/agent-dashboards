@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-26T07:23:35-05:00",
+  "generated": "2026-05-28T07:20:37.411-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Megan Lucchetti",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "2 hr ago",
-      "last_note": "**Megan Lucchetti** is now looking in IL 60451.\n- By Zillow Insights",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
-    },
-    {
-      "rank": 2,
       "name": "Angelina Garcia",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "7 hr ago",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "22 hrs ago",
       "last_note": "Status unchanged as of Sep 06, 2025",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
     },
     {
-      "rank": 3,
-      "name": "Thomas",
+      "rank": 2,
+      "name": "Megan Lucchetti",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "4 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73129"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "1 days ago",
+      "last_note": "**Megan Lucchetti** is now looking in IL 60451.\n- By Zillow Insights",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
+    },
+    {
+      "rank": 3,
+      "name": "Justin Schiltz",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "1 days ago",
+      "last_note": "Status unchanged as of Oct 22, 2025",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
     },
     {
       "rank": 4,
-      "name": "Julie Statkus",
+      "name": "Cheryl A Jagielnik",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "4 days ago",
-      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "2 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71475"
     },
     {
       "rank": 5,
-      "name": "Ryan Weber",
+      "name": "Ragad",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't been replied to.",
-      "last_activity": "5 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72504"
+      "reason": "Lead sent a message with no agent reply since.",
+      "last_activity": "3 days ago",
+      "last_note": "**Ragad** may be interested in 11004 Haley Ct, Orland Park, IL 60467 ($659K, 5bds, 5.0ba). They have",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
     }
   ]
 }
