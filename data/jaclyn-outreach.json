@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-28T07:21:38.495-05:00",
+  "generated": "2026-06-01T12:26:11.416-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
+      "name": "Garry Singh",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "11d ago",
+      "last_note": "Ylopo Links &amp; Activity Main City of Interest: Homer Glen, IL 60491 Send push listing: https://stars.ylopo.com/38bmmB",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71460"
+    },
+    {
+      "rank": 2,
+      "name": "Juan Garcia",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "11d ago",
+      "last_note": "Ylopo Links &amp; Activity Send push listing: https://stars.ylopo.com/3nKhio View browsing history: https://stars.ylopo.",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72434"
+    },
+    {
+      "rank": 3,
+      "name": "Randy Starks",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "11d ago",
+      "last_note": "**Randy Starks** may be interested in 10280 SW 228th Ter, Miami, FL 33190 ($725K, 5bds, 3ba). They have viewed the prope",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71581"
+    },
+    {
+      "rank": 4,
       "name": "Alfredo Ramirez",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "11 hrs ago",
-      "last_note": "**\\\"\\\"** may be interested in 230 W Joliet Hwy, New Lenox, IL 60451 ($266K, 2bds, 1.0ba). They have ",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "2h ago",
+      "last_note": "**\\\"\\\"** may be interested in 187 E Francis Rd, New Lenox, IL 60451 ($200K, 4bds, 2.0ba). They have viewed the property ",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
     },
     {
-      "rank": 2,
-      "name": "Praveen Thinakaran",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
-    },
-    {
-      "rank": 3,
-      "name": "Maria Cazares",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
-    },
-    {
-      "rank": 4,
+      "rank": 5,
       "name": "Jason Warren",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "7 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "4h ago",
+      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: Darien, ",
       "stage": "Closed",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
-    },
-    {
-      "rank": 5,
-      "name": "Grant Krusinowski",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "7 days ago",
-      "last_note": "\n<div style=\"font-family:'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;\">\n\n<table cells",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/56293"
     }
   ]
 }
