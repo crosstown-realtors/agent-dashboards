@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T07:19:31.056-05:00",
+  "generated": "2026-06-01T12:26:11.416-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -7,56 +7,56 @@
       "rank": 1,
       "name": "Jennifer",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Signal",
-      "reason": "Tagged FelloSync — active buyer signal from Ylopo/Fello platform.",
-      "last_activity": "22 min ago",
-      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experien",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "2h ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75066"
     },
     {
       "rank": 2,
+      "name": "Jamie Keller",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "2h ago",
+      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experience starts with a gre",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75074"
+    },
+    {
+      "rank": 3,
       "name": "Zac Sadek",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Signal",
-      "reason": "Tagged FelloSync — active buyer signal from Ylopo/Fello platform.",
-      "last_activity": "2 hrs ago",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "11h ago",
       "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Akash Patel",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Signal",
-      "reason": "Tagged FelloSync — active buyer signal from Ylopo/Fello platform.",
-      "last_activity": "2 days ago",
-      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experien",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "2d ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75064"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Melissa Welch",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Signal",
-      "reason": "Tagged Ylopo_Reactivated — active buyer signal from Ylopo/Fello platform.",
-      "last_activity": "7 days ago",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (Ylopo_Reactivated).",
+      "last_activity": "10d ago",
       "last_note": "",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75011"
-    },
-    {
-      "rank": 5,
-      "name": "Tracy Speed",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Last activity 7 days ago — needs follow-up touch.",
-      "last_activity": "7 days ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75060"
     }
   ]
 }
