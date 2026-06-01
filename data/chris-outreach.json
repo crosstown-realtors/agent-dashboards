@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T07:21:17.179-05:00",
+  "generated": "2026-06-01T12:26:11.416-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,55 +8,55 @@
       "name": "Dijana Pejic",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "1d ago",
+      "last_note": "Ylopo Links &amp; Activity Main City of Interest: Woodridge, IL (+1 locations) Send push listing: https://stars.ylopo.co",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
     },
     {
       "rank": 2,
-      "name": "Andre Brissett",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "11 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
-    },
-    {
-      "rank": 3,
       "name": "Christian",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "7 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "2d ago",
+      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: Lockport",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
+    },
+    {
+      "rank": 3,
+      "name": "Ana Mocorro",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "2h ago",
+      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experience starts with a gre",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
     },
     {
       "rank": 4,
       "name": "Tessa O’Halloran",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Signal",
-      "reason": "Tagged FelloSync — active buyer signal.",
-      "last_activity": "2 hrs ago",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "1d ago",
       "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75062"
     },
     {
       "rank": 5,
-      "name": "Tabitha",
+      "name": "Andre Brissett",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Signal",
-      "reason": "Tagged FelloSync — active buyer signal.",
-      "last_activity": "1 days ago",
-      "last_note": "",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73455"
+      "signal_label": "Fello Priority Lead",
+      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
+      "last_activity": "11h ago",
+      "last_note": "Buyer has started searching again for homes after being inactive for at least 14 days. Now is a good time to reach out a",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     }
   ]
 }
