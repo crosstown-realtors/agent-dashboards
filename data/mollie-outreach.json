@@ -1,62 +1,62 @@
 {
-  "generated": "2026-05-28T07:20:37.411-05:00",
+  "generated": "2026-06-01T12:26:11.416-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Angelina Garcia",
+      "name": "Fadi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "22 hrs ago",
-      "last_note": "Status unchanged as of Sep 06, 2025",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "4h ago",
+      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477. - By Zillow Insights",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
     },
     {
       "rank": 2,
       "name": "Megan Lucchetti",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "1 days ago",
-      "last_note": "**Megan Lucchetti** is now looking in IL 60451.\n- By Zillow Insights",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "8h ago",
+      "last_note": "**Megan Lucchetti** may be interested in 19629 S Woodside Dr, New Lenox, IL 60451 ($444K, 4bds, 4.0ba). They have viewed",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
     },
     {
       "rank": 3,
-      "name": "Justin Schiltz",
+      "name": "Angelina Garcia",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "1 days ago",
-      "last_note": "Status unchanged as of Oct 22, 2025",
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "19h ago",
+      "last_note": "Status unchanged as of Sep 06, 2025",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
     },
     {
       "rank": 4,
-      "name": "Cheryl A Jagielnik",
+      "name": "Monalisa Brown",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71475"
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "1d ago",
+      "last_note": "Ylopo Links &amp; Activity Main City of Interest: Frankfort, IL (+1 locations) Send push listing: https://stars.ylopo.co",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75070"
     },
     {
       "rank": 5,
-      "name": "Ragad",
+      "name": "Justin Schiltz",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply since.",
-      "last_activity": "3 days ago",
-      "last_note": "**Ragad** may be interested in 11004 Haley Ct, Orland Park, IL 60467 ($659K, 5bds, 5.0ba). They have",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
+      "reason": "Lead sent a message that has not yet received an agent reply.",
+      "last_activity": "5d ago",
+      "last_note": "Status unchanged as of Oct 22, 2025",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
     }
   ]
 }
