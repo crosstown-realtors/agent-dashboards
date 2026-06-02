@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-01T12:26:11.416-05:00",
+  "generated": "2026-06-02T07:39:40-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Mahmoud Fathi",
+      "name": "Kaycee Bowen",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "2h ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: Orland H",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73348"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75077"
     },
     {
       "rank": 2,
-      "name": "Megan Packwood",
+      "name": "Josh James",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "4h ago",
-      "last_note": "Ylopo Links &amp; Activity Main City of Interest: Frankfort, IL (+1 locations) Send push listing: https://stars.ylopo.co",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75076"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75065"
     },
     {
       "rank": 3,
-      "name": "Cindy Bour",
+      "name": "Rachael Thrush",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "11h ago",
-      "last_note": "**Cindy Bour** may be interested in 4407 Seville Ln, McKinney, TX 75070 ($440K, 4bds, 2.0ba). They have viewed the prope",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73320"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "no contacttext",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
     },
     {
       "rank": 4,
-      "name": "Maria Hernandez Green",
+      "name": "Tom Murphy",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "12h ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: New Leno",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73181"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73425"
     },
     {
       "rank": 5,
-      "name": "Alyssa Jarzynski",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "Lead is tagged as a Fello/Ylopo priority signal (FelloSync).",
-      "last_activity": "9 min ago",
-      "last_note": "Buyer has started searching again for homes after being inactive for at least 14 days. Now is a good time to reach out a",
+      "name": "Grizz Nava",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Grizz Nava** is now looking in IL 60544.\n- By Zillow Insights",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73175"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73420"
     }
   ]
 }
