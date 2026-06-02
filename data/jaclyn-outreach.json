@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-01T12:26:11.416-05:00",
+  "generated": "2026-06-02T07:41:02-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Garry Singh",
+      "name": "Mitchell Van",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "11d ago",
-      "last_note": "Ylopo Links &amp; Activity Main City of Interest: Homer Glen, IL 60491 Send push listing: https://stars.ylopo.com/38bmmB",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71460"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "Did an extensive search on a piece of land for him for about a week. Sent him th",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73341"
     },
     {
       "rank": 2,
-      "name": "Juan Garcia",
+      "name": "Janet H",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "11d ago",
-      "last_note": "Ylopo Links &amp; Activity Send push listing: https://stars.ylopo.com/3nKhio View browsing history: https://stars.ylopo.",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72434"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73331"
     },
     {
       "rank": 3,
-      "name": "Randy Starks",
+      "name": "Maria Cazares",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "11d ago",
-      "last_note": "**Randy Starks** may be interested in 10280 SW 228th Ter, Miami, FL 33190 ($725K, 5bds, 3ba). They have viewed the prope",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71581"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
     },
     {
       "rank": 4,
-      "name": "Alfredo Ramirez",
+      "name": "Cynthia Mazin",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "2h ago",
-      "last_note": "**\\\"\\\"** may be interested in 187 E Francis Rd, New Lenox, IL 60451 ($200K, 4bds, 2.0ba). They have viewed the property ",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72858"
     },
     {
       "rank": 5,
-      "name": "Jason Warren",
+      "name": "Jacie Bowen",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "4h ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: Darien, ",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72500"
     }
   ]
 }
