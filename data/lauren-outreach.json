@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-01T12:26:11.416-05:00",
+  "generated": "2026-06-02T07:40:06-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Pamela Prendergast",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "41 min ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: Oak Fore",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72975"
-    },
-    {
-      "rank": 2,
-      "name": "Joanne OReilly",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "12h ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 0 listings Main City of Interest: Oak Lawn",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73377"
-    },
-    {
-      "rank": 3,
       "name": "Sammantha Weber",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "14h ago",
-      "last_note": "**Sammantha Weber** may be interested in 203 Oneill St, Joliet, IL 60436 ($225K, 2bds, 2.0ba). They have viewed the prop",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Sammantha Weber** may be interested in 203 Oneill St, Joliet, IL 60436 ($225K,",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
     },
     {
-      "rank": 4,
-      "name": "Maha Alshawwa",
+      "rank": 2,
+      "name": "Jake",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "1d ago",
-      "last_note": "**Maha Alshawwa** may be interested in 14792 Montgomery Dr, Orland Park, IL 60462 ($300K, 2bds, 3.0ba). They have viewed",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73357"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Jake** may be interested in 401 Daniels St, Wilmington, IL 60481 ($150K, 3bds,",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73442"
+    },
+    {
+      "rank": 3,
+      "name": "Linda Maro",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73416"
+    },
+    {
+      "rank": 4,
+      "name": "Edward Mehovic",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73386"
     },
     {
       "rank": 5,
-      "name": "Paul",
+      "name": "Joanne OReilly",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "1d ago",
-      "last_note": "Ylopo Links &amp; Activity Main City of Interest: Darien, IL (+1 locations) Send push listing: https://stars.ylopo.com/3",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73367"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73377"
     }
   ]
 }
