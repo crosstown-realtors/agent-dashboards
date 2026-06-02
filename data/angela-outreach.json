@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-01T12:26:11.416-05:00",
+  "generated": "2026-06-02T07:41:25-05:00",
   "agent": "Angela Palma",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Terry Roberts",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "1d ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 1 listings Main City of Interest: Orland P",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73400"
-    },
-    {
-      "rank": 2,
       "name": "Paula Mitchell",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "2h ago",
-      "last_note": "**Paula Mitchell** is now looking in IL 60477. - By Zillow Insights",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Paula Mitchell** is now looking in IL 60477.\n- By Zillow Insights",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75067"
     },
     {
-      "rank": 3,
-      "name": "Farhin Vhora",
+      "rank": 2,
+      "name": "Carole McIntyre",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "5h ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 8 listings Main City of Interest: Oak Fore",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73428"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75063"
+    },
+    {
+      "rank": 3,
+      "name": "Anthony",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74843"
     },
     {
       "rank": 4,
-      "name": "AbdelFattah AlBustangi",
+      "name": "Denise Jeffrey",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "17h ago",
-      "last_note": "**AbdelFattah AlBustangi** may be interested in 14440 Jefferson Ave #2E, Orland Park, IL 60462 ($1.6K, 2bds, 1.0ba). The",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73430"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73448"
     },
     {
       "rank": 5,
-      "name": "James And",
+      "name": "Krish Sharma",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that has not yet received an agent reply.",
-      "last_activity": "1d ago",
-      "last_note": "Ylopo Links &amp; Activity User Action: Lead Returned and searched and viewed 0 listings Main City of Interest: Orland P",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73413"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73445"
     }
   ]
 }
