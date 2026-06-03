@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-02T07:41:02-05:00",
+  "generated": "2026-06-03T07:31:11-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Mitchell Van",
+      "name": "Alfredo Ramirez",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "Did an extensive search on a piece of land for him for about a week. Sent him th",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73341"
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "5 hr ago",
+      "last_note": "**\\\"\\\"** may be interested in 601 Ogden Rd, New Lenox, IL 60451 ($290K, 3bds, 1.",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
     },
     {
       "rank": 2,
-      "name": "Janet H",
+      "name": "Dylan Kulovitz",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "10 hr ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73331"
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/70913"
     },
     {
       "rank": 3,
-      "name": "Maria Cazares",
+      "name": "Praveen Thinakaran",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "1 days ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
     },
     {
       "rank": 4,
-      "name": "Cynthia Mazin",
+      "name": "Stephanie Sanchez",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "1 days ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72858"
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
     },
     {
       "rank": 5,
-      "name": "Jacie Bowen",
+      "name": "Jason Warren",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "2 days ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72500"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
     }
   ]
 }
