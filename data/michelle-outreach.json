@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-02T07:39:40-05:00",
+  "generated": "2026-06-03T07:31:11-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Kaycee Bowen",
+      "name": "Mahmoud Fathi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "2 hr ago",
+      "last_note": "**Mahmoud Fathi** may be interested in 8703 Cashel Ln, Tinley Park, IL 60487 ($3",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75077"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73348"
     },
     {
       "rank": 2,
-      "name": "Josh James",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75065"
-    },
-    {
-      "rank": 3,
       "name": "Rachael Thrush",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "no contacttext",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "2 hr ago",
+      "last_note": "**\\\"\\\"** is now looking in IL 60440.\n- By Zillow Insights",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
     },
     {
-      "rank": 4,
-      "name": "Tom Murphy",
+      "rank": 3,
+      "name": "Adhem Hinnawi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "2 hr ago",
+      "last_note": "**Adhem Hinnawi** may be interested in 8111 Brushwood Ln, Tinley Park, IL 60487 ",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
+    },
+    {
+      "rank": 4,
+      "name": "Lilibeth Edwards",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "4 hr ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73425"
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75079"
     },
     {
       "rank": 5,
-      "name": "Grizz Nava",
+      "name": "Naomi Ch",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "**Grizz Nava** is now looking in IL 60544.\n- By Zillow Insights",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "6 hr ago",
+      "last_note": "**Naomi ch** is now looking in IL 60451.\n- By Zillow Insights",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73420"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73095"
     }
   ]
 }
