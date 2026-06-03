@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-02T07:38:33-05:00",
+  "generated": "2026-06-03T07:31:11-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,55 +8,55 @@
       "name": "Jamie Keller",
       "signal_type": "fello",
       "signal_label": "Fello/Ylopo Priority",
-      "reason": "Tagged as Ylopo/Fello priority — likely actively searching, needs outreach.",
-      "last_activity": "unknown",
-      "last_note": "",
-      "stage": "Lead",
+      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
+      "last_activity": "18 hr ago",
+      "last_note": "Tried contacting several times with no response",
+      "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75074"
     },
     {
       "rank": 2,
-      "name": "Jennifer",
-      "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Tagged as Ylopo/Fello priority — likely actively searching, needs outreach.",
-      "last_activity": "unknown",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75066"
-    },
-    {
-      "rank": 3,
-      "name": "Akash Patel",
-      "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Tagged as Ylopo/Fello priority — likely actively searching, needs outreach.",
-      "last_activity": "unknown",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75064"
-    },
-    {
-      "rank": 4,
       "name": "Zac Sadek",
       "signal_type": "fello",
       "signal_label": "Fello/Ylopo Priority",
-      "reason": "Tagged as Ylopo/Fello priority — likely actively searching, needs outreach.",
-      "last_activity": "unknown",
-      "last_note": "",
+      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
+      "last_activity": "2 days ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teaml",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
     },
     {
-      "rank": 5,
-      "name": "Melissa Welch",
+      "rank": 3,
+      "name": "Frankie Medina",
       "signal_type": "fello",
       "signal_label": "Fello/Ylopo Priority",
-      "reason": "Tagged as Ylopo/Fello priority — likely actively searching, needs outreach.",
-      "last_activity": "unknown",
+      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
+      "last_activity": "13 days ago",
       "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75011"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74174"
+    },
+    {
+      "rank": 4,
+      "name": "Antonio Patino",
+      "signal_type": "fello",
+      "signal_label": "Fello/Ylopo Priority",
+      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
+      "last_activity": "13 days ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74137"
+    },
+    {
+      "rank": 5,
+      "name": "Alexandra Walker'Steele",
+      "signal_type": "fello",
+      "signal_label": "Fello/Ylopo Priority",
+      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
+      "last_activity": "13 days ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74081"
     }
   ]
 }
