@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-02T07:41:48-05:00",
+  "generated": "2026-06-03T07:31:11-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,41 +8,41 @@
       "name": "Abdul Hamideh",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "2 hr ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75078"
     },
     {
       "rank": 2,
-      "name": "Dijana Pejic",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
-    },
-    {
-      "rank": 3,
       "name": "Andre Brissett",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "13 hr ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
+    },
+    {
+      "rank": 3,
+      "name": "Dijana Pejic",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "3 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
     },
     {
       "rank": 4,
       "name": "Christian",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "last_activity": "4 days ago",
       "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
@@ -52,9 +52,9 @@
       "name": "Ana Mocorro",
       "signal_type": "fello",
       "signal_label": "Fello/Ylopo Priority",
-      "reason": "Tagged as Ylopo/Fello priority.",
-      "last_activity": "unknown",
-      "last_note": "",
+      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
+      "last_activity": "14 hr ago",
+      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A gre",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
     }
