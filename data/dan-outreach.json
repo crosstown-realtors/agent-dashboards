@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-03T07:31:11-05:00",
+  "generated": "2026-06-04T12:20:28-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
+      "name": "Jason",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Jason sent a message that hasn't been answered yet.",
+      "last_activity": "2 min ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Elwood, IL (+1 locations)<br />\n",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
+    },
+    {
+      "rank": 2,
       "name": "Jamie Keller",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
-      "last_activity": "18 hr ago",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Active on Fello with tag fellosync — high engagement signal.",
+      "last_activity": "2 hr ago",
       "last_note": "Tried contacting several times with no response",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75074"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Zac Sadek",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
-      "last_activity": "2 days ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teaml",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Active on Fello with tag fellosync — high engagement signal.",
+      "last_activity": "3 days ago",
+      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Frankie Medina",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
-      "last_activity": "13 days ago",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Active on Fello with tag ylopo_reactivated — high engagement signal.",
+      "last_activity": "14 days ago",
       "last_note": "",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74174"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Antonio Patino",
       "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
-      "last_activity": "13 days ago",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Active on Fello with tag ylopo_reactivated — high engagement signal.",
+      "last_activity": "14 days ago",
       "last_note": "",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74137"
-    },
-    {
-      "rank": 5,
-      "name": "Alexandra Walker'Steele",
-      "signal_type": "fello",
-      "signal_label": "Fello/Ylopo Priority",
-      "reason": "Fello/Ylopo sync lead — platform flagged as engaged or priority.",
-      "last_activity": "13 days ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74081"
     }
   ]
 }
