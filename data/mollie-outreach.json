@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-03T07:31:11-05:00",
+  "generated": "2026-06-04T12:20:49-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,55 +8,55 @@
       "name": "Monalisa Brown",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "reason": "Monalisa Brown sent a message that hasn't been answered yet.",
       "last_activity": "2 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Frankfort, IL (+1 locations)<br ",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75070"
     },
     {
       "rank": 2,
-      "name": "Stephanie Lauren",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "5 hr ago",
-      "last_note": "**Stephanie Lauren** is now looking in IL 60423.\n- By Zillow Insights",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/57798"
-    },
-    {
-      "rank": 3,
-      "name": "Fadi",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "7 hr ago",
-      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
-    },
-    {
-      "rank": 4,
       "name": "Ragad",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "reason": "Ragad sent a message that hasn't been answered yet.",
       "last_activity": "9 hr ago",
       "last_note": "**Ragad** is now looking in IL 60467.\n- By Zillow Insights",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
     },
     {
-      "rank": 5,
-      "name": "Julie Statkus",
+      "rank": 3,
+      "name": "Angelina Garcia",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "17 hr ago",
-      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
+      "reason": "Angelina Garcia sent a message that hasn't been answered yet.",
+      "last_activity": "11 hr ago",
+      "last_note": "Status unchanged as of Sep 06, 2025",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
+    },
+    {
+      "rank": 4,
+      "name": "Justin Schiltz",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Justin Schiltz sent a message that hasn't been answered yet.",
+      "last_activity": "12 hr ago",
+      "last_note": "Status unchanged as of Oct 22, 2025",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
+    },
+    {
+      "rank": 5,
+      "name": "Fadi",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Fadi sent a message that hasn't been answered yet.",
+      "last_activity": "15 hr ago",
+      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
     }
   ]
 }
