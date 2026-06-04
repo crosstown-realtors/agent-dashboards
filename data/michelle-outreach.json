@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-03T07:31:11-05:00",
+  "generated": "2026-06-04T12:20:39-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Mahmoud Fathi",
+      "name": "Adhem Hinnawi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "reason": "Adhem Hinnawi sent a message that hasn't been answered yet.",
       "last_activity": "2 hr ago",
-      "last_note": "**Mahmoud Fathi** may be interested in 8703 Cashel Ln, Tinley Park, IL 60487 ($3",
+      "last_note": "**Adhem Hinnawi** may be interested in 8111 Brushwood Ln, Tinley Park, IL 60487 ($350K, 3bds, 3.0ba). They have viewed the property 10 times in 7 days",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73348"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
     },
     {
       "rank": 2,
       "name": "Rachael Thrush",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "2 hr ago",
-      "last_note": "**\\\"\\\"** is now looking in IL 60440.\n- By Zillow Insights",
+      "reason": "Rachael Thrush sent a message that hasn't been answered yet.",
+      "last_activity": "5 hr ago",
+      "last_note": "From ZHL Support specialist: Attempted initial outreach. The borrower didn't pick up. Left voicemail and text to schedule appointment, and sent pre-ap",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
     },
     {
       "rank": 3,
-      "name": "Adhem Hinnawi",
+      "name": "Mahmoud Fathi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "2 hr ago",
-      "last_note": "**Adhem Hinnawi** may be interested in 8111 Brushwood Ln, Tinley Park, IL 60487 ",
+      "reason": "Mahmoud Fathi sent a message that hasn't been answered yet.",
+      "last_activity": "9 hr ago",
+      "last_note": "**Mahmoud Fathi** may be interested in 8703 Cashel Ln, Tinley Park, IL 60487 ($340K, 2bds, 3.0ba). They have viewed the property 10 times in 7 days.\n-",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73348"
     },
     {
       "rank": 4,
-      "name": "Lilibeth Edwards",
+      "name": "Peter Erikson",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "4 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Peter Erikson sent a message that hasn't been answered yet.",
+      "last_activity": "12 hr ago",
+      "last_note": "**Peter Erikson** is now looking in IL 60448.\n- By Zillow Insights",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75079"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73171"
     },
     {
       "rank": 5,
-      "name": "Naomi Ch",
+      "name": "Nicole Czajka",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "6 hr ago",
-      "last_note": "**Naomi ch** is now looking in IL 60451.\n- By Zillow Insights",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73095"
+      "reason": "Nicole Czajka sent a message that hasn't been answered yet.",
+      "last_activity": "14 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 2 li",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73238"
     }
   ]
 }
