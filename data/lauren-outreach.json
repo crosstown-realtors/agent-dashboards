@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-03T07:31:11-05:00",
+  "generated": "2026-06-04T12:20:49-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Jake",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "2 hr ago",
-      "last_note": "**Jake** may be interested in 401 Daniels St, Wilmington, IL 60481 ($150K, 3bds,",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73442"
-    },
-    {
-      "rank": 2,
       "name": "Linda Maro",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "reason": "Linda Maro sent a message that hasn't been answered yet.",
       "last_activity": "2 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> New Lenox, IL (+1 locations)<br ",
       "stage": "Appointment set",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73416"
     },
     {
-      "rank": 3,
-      "name": "Amalia Burgert",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "3 hr ago",
-      "last_note": "**Amalia Burgert** may be interested in 7 Boulder Dr, Carlock, IL 61725 ($408K, ",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72887"
-    },
-    {
-      "rank": 4,
+      "rank": 2,
       "name": "Miroslav",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
+      "reason": "Miroslav sent a message that hasn't been answered yet.",
       "last_activity": "6 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 1 li",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73156"
     },
     {
-      "rank": 5,
-      "name": "Bill Greune",
+      "rank": 3,
+      "name": "Sammantha Weber",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "9 hr ago",
-      "last_note": "**Bill Greune** may be interested in 1343 W Grand Ave Floor 2, Chicago, IL 60642",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72930"
+      "reason": "Sammantha Weber sent a message that hasn't been answered yet.",
+      "last_activity": "8 hr ago",
+      "last_note": "spoke to Samantha to touch base and follow up",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
+    },
+    {
+      "rank": 4,
+      "name": "Pamela Prendergast",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Pamela Prendergast sent a message that hasn't been answered yet.",
+      "last_activity": "10 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 1 li",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72975"
+    },
+    {
+      "rank": 5,
+      "name": "Joyann Leach",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Joyann Leach sent a message that hasn't been answered yet.",
+      "last_activity": "12 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 2 li",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72903"
     }
   ]
 }
