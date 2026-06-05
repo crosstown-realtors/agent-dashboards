@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-04T12:20:59-05:00",
+  "generated": "2026-06-05T07:59:11-05:00",
   "agent": "Angela Palma",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Tareq E",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Tareq E sent a message that hasn't been answered yet.",
-      "last_activity": "4 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Pigeon Forge, TN (+1 locations)<",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75081"
-    },
-    {
-      "rank": 2,
       "name": "Terry Roberts",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Terry Roberts sent a message that hasn't been answered yet.",
-      "last_activity": "9 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 2 li",
+      "reason": "Lead messaged 2026-06-04 no reply since.",
+      "last_activity": "1d ago",
+      "last_note": "2026-06-04 (from lead)",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73400"
     },
     {
-      "rank": 3,
-      "name": "AbdelFattah AlBustangi",
+      "rank": 2,
+      "name": "Dan Smieszny",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "AbdelFattah AlBustangi sent a message that hasn't been answered yet.",
-      "last_activity": "18 hr ago",
-      "last_note": "**AbdelFattah AlBustangi** may be interested in 14440 Jefferson Ave #2E, Orland Park, IL 60462 ($1.6K, 2bds, 1.0ba). They have viewed the property 10 ",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73430"
+      "reason": "Lead messaged 2026-05-06 no reply since.",
+      "last_activity": "30d ago",
+      "last_note": "2026-05-06 (from lead)",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73406"
+    },
+    {
+      "rank": 3,
+      "name": "James And",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead messaged 2026-06-02 no reply since.",
+      "last_activity": "3d ago",
+      "last_note": "2026-06-02 (from lead)",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73413"
     },
     {
       "rank": 4,
-      "name": "Paula Mitchell",
+      "name": "Amanda Mast",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Paula Mitchell sent a message that hasn't been answered yet.",
-      "last_activity": "1 days ago",
-      "last_note": "**Paula Mitchell** is now looking in IL 60477.\n- By Zillow Insights",
+      "reason": "Lead messaged 2026-05-08 no reply since.",
+      "last_activity": "28d ago",
+      "last_note": "2026-05-08 (from lead)",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75067"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73423"
     },
     {
       "rank": 5,
-      "name": "Denise Jeffrey",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Denise Jeffrey sent a message that hasn't been answered yet.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> New Lenox, IL (+1 locations)<br ",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73448"
+      "name": "Sarah Koch",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority — active Ylopo lead.",
+      "last_activity": "33d ago",
+      "last_note": "2026-05-03 (from agent)",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73407"
     }
   ]
 }
