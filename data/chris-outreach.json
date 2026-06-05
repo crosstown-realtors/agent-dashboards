@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-04T12:20:59-05:00",
+  "generated": "2026-06-05T07:59:13-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Abdul Hamideh",
+      "name": "Christian",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Abdul Hamideh sent a message that hasn't been answered yet.",
-      "last_activity": "2 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Orland Park, IL (+1 locations)<b",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75078"
+      "reason": "Lead messaged 2026-05-29 no reply since.",
+      "last_activity": "7d ago",
+      "last_note": "2026-05-29 (from lead)",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
     },
     {
       "rank": 2,
-      "name": "Ana Mocorro",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Ana Mocorro sent a message that hasn't been answered yet.",
-      "last_activity": "16 hr ago",
-      "last_note": "no contact/text",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
-    },
-    {
-      "rank": 3,
       "name": "Andre Brissett",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Andre Brissett sent a message that hasn't been answered yet.",
-      "last_activity": "1 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 1 li",
+      "reason": "Lead messaged 2026-06-01 no reply since.",
+      "last_activity": "4d ago",
+      "last_note": "2026-06-01 (from lead)",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     },
     {
+      "rank": 3,
+      "name": "Maddie Rarick",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority — active Ylopo lead.",
+      "last_activity": "167d ago",
+      "last_note": "2025-12-20 (from agent)",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73050"
+    },
+    {
       "rank": 4,
-      "name": "Dijana Pejic",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Dijana Pejic sent a message that hasn't been answered yet.",
-      "last_activity": "4 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Woodridge, IL (+1 locations)<br ",
+      "name": "Ivan Smilkovic",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority — active Ylopo lead.",
+      "last_activity": "1d ago",
+      "last_note": "2026-06-04 (from agent)",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73391"
     },
     {
       "rank": 5,
-      "name": "Christian",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Christian sent a message that hasn't been answered yet.",
-      "last_activity": "5 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 1 li",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
+      "name": "Camila Johnson",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority — active Ylopo lead.",
+      "last_activity": "30d ago",
+      "last_note": "2026-05-06 (from agent)",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73398"
     }
   ]
 }
