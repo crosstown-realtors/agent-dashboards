@@ -112,10 +112,14 @@ def load_csv(b64_or_path):
         b64 = b64.rstrip('=')[:-1]
     pad = (-len(b64.rstrip('=')) % 4)
     b64_fixed = b64.rstrip('=') + '=' * pad
-    return base64.b64decode(b64_fixed).decode('utf-8', errors='replace')
+    raw_bytes = base64.b64decode(b64_fixed)
+    text = raw_bytes.decode('utf-8', errors='replace')
+    # Normalize line endings: CRLF -> LF, bare CR -> LF, bare LF in unquoted fields -> space
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+    return text
 
 def parse_tracker(csv_text):
-    reader = csv.DictReader(io.StringIO(csv_text))
+    reader = csv.DictReader(io.StringIO(csv_text), dialect='excel')
     rows = list(reader)
     
     agents = defaultdict(lambda: {
