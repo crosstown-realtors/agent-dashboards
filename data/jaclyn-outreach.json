@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-03T07:31:11-05:00",
+  "generated": "2026-06-05T07:59:38-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Alfredo Ramirez",
+      "name": "Nesrin Hasann",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "5 hr ago",
-      "last_note": "**\\\"\\\"** may be interested in 601 Ogden Rd, New Lenox, IL 60451 ($290K, 3bds, 1.",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
+      "reason": "Lead messaged 2022-03-21 — no agent reply.",
+      "last_activity": "1537d ago",
+      "last_note": "2022-03-21 (from lead)",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/54885"
     },
     {
       "rank": 2,
-      "name": "Dylan Kulovitz",
+      "name": "Beth Beaulieu",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "10 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/70913"
+      "reason": "Lead messaged 2023-05-07 — no agent reply.",
+      "last_activity": "1125d ago",
+      "last_note": "2023-05-07 (from lead)",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/55044"
     },
     {
       "rank": 3,
-      "name": "Praveen Thinakaran",
+      "name": "Liz Holicz",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "1 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
+      "reason": "Lead messaged 2021-11-15 — no agent reply.",
+      "last_activity": "1663d ago",
+      "last_note": "2021-11-15 (from lead)",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/55048"
     },
     {
       "rank": 4,
-      "name": "Stephanie Sanchez",
+      "name": "Grant Krusinowski",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "1 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead messaged 2022-03-14 — no agent reply.",
+      "last_activity": "1544d ago",
+      "last_note": "2022-03-14 (from lead)",
       "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/56293"
     },
     {
       "rank": 5,
-      "name": "Jason Warren",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet — needs response today.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
+      "name": "Corinne Romero",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority — active Ylopo lead.",
+      "last_activity": "unknown",
+      "last_note": "",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/55879"
     }
   ]
 }
