@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-04T12:20:49-05:00",
+  "generated": "2026-06-05T07:59:09-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Monalisa Brown",
+      "name": "Gowdhami",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Monalisa Brown sent a message that hasn't been answered yet.",
-      "last_activity": "2 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Frankfort, IL (+1 locations)<br ",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75070"
+      "reason": "Lead messaged 2024-12-05 no reply since.",
+      "last_activity": "547d ago",
+      "last_note": "2024-12-05 (from lead)",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71468"
     },
     {
       "rank": 2,
-      "name": "Ragad",
+      "name": "Cheryl A Jagielnik",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Ragad sent a message that hasn't been answered yet.",
-      "last_activity": "9 hr ago",
-      "last_note": "**Ragad** is now looking in IL 60467.\n- By Zillow Insights",
+      "reason": "Lead messaged 2026-04-27 no reply since.",
+      "last_activity": "39d ago",
+      "last_note": "2026-04-27 (from lead)",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71475"
     },
     {
       "rank": 3,
-      "name": "Angelina Garcia",
+      "name": "Tarsem",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Angelina Garcia sent a message that hasn't been answered yet.",
-      "last_activity": "11 hr ago",
-      "last_note": "Status unchanged as of Sep 06, 2025",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
+      "reason": "Lead messaged 2025-03-01 no reply since.",
+      "last_activity": "461d ago",
+      "last_note": "2025-03-01 (from lead)",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71479"
     },
     {
       "rank": 4,
-      "name": "Justin Schiltz",
+      "name": "Mas Shamsi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Justin Schiltz sent a message that hasn't been answered yet.",
-      "last_activity": "12 hr ago",
-      "last_note": "Status unchanged as of Oct 22, 2025",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
+      "reason": "Lead messaged 2024-10-23 no reply since.",
+      "last_activity": "590d ago",
+      "last_note": "2024-10-23 (from lead)",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71491"
     },
     {
       "rank": 5,
-      "name": "Fadi",
+      "name": "Allie House",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Fadi sent a message that hasn't been answered yet.",
-      "last_activity": "15 hr ago",
-      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
+      "reason": "Lead messaged 2025-06-30 no reply since.",
+      "last_activity": "340d ago",
+      "last_note": "2025-06-30 (from lead)",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71499"
     }
   ]
 }
