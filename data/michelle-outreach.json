@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-04T12:20:39-05:00",
+  "generated": "2026-06-05T07:57:54-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Adhem Hinnawi",
+      "name": "Kelly Gobby",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Adhem Hinnawi sent a message that hasn't been answered yet.",
-      "last_activity": "2 hr ago",
-      "last_note": "**Adhem Hinnawi** may be interested in 8111 Brushwood Ln, Tinley Park, IL 60487 ($350K, 3bds, 3.0ba). They have viewed the property 10 times in 7 days",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
+      "reason": "Lead sent message on 2025-11-21 with no agent reply since.",
+      "last_activity": "196d ago",
+      "last_note": "2025-11-21 (from lead)",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72895"
     },
     {
       "rank": 2,
-      "name": "Rachael Thrush",
+      "name": "Alex Guzman",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Rachael Thrush sent a message that hasn't been answered yet.",
-      "last_activity": "5 hr ago",
-      "last_note": "From ZHL Support specialist: Attempted initial outreach. The borrower didn't pick up. Left voicemail and text to schedule appointment, and sent pre-ap",
+      "reason": "Lead sent message on 2026-03-04 with no agent reply since.",
+      "last_activity": "93d ago",
+      "last_note": "2026-03-04 (from lead)",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72894"
     },
     {
       "rank": 3,
-      "name": "Mahmoud Fathi",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Mahmoud Fathi sent a message that hasn't been answered yet.",
-      "last_activity": "9 hr ago",
-      "last_note": "**Mahmoud Fathi** may be interested in 8703 Cashel Ln, Tinley Park, IL 60487 ($340K, 2bds, 3.0ba). They have viewed the property 10 times in 7 days.\n-",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73348"
+      "name": "Mike Finder",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority tag — active Ylopo lead needs outreach.",
+      "last_activity": "244d ago",
+      "last_note": "2025-10-04 (from agent)",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72909"
     },
     {
       "rank": 4,
-      "name": "Peter Erikson",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Peter Erikson sent a message that hasn't been answered yet.",
-      "last_activity": "12 hr ago",
-      "last_note": "**Peter Erikson** is now looking in IL 60448.\n- By Zillow Insights",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73171"
+      "name": "Dan Hurling",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority tag — active Ylopo lead needs outreach.",
+      "last_activity": "190d ago",
+      "last_note": "2025-11-27 (from agent)",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72906"
     },
     {
       "rank": 5,
-      "name": "Nicole Czajka",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Nicole Czajka sent a message that hasn't been answered yet.",
-      "last_activity": "14 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returned and searched and viewed 2 li",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73238"
+      "name": "Parker Young",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "FelloSync priority tag — active Ylopo lead needs outreach.",
+      "last_activity": "252d ago",
+      "last_note": "2025-09-26 (from agent)",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72892"
     }
   ]
 }
