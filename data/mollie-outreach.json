@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-05T07:59:09-05:00",
+  "generated": "2026-06-08T07:26:52.197-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Gowdhami",
+      "name": "Julie Statkus",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2024-12-05 no reply since.",
-      "last_activity": "547d ago",
-      "last_note": "2024-12-05 (from lead)",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71468"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2h ago",
+      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
     },
     {
       "rank": 2,
-      "name": "Cheryl A Jagielnik",
+      "name": "Stephanie Lauren",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2026-04-27 no reply since.",
-      "last_activity": "39d ago",
-      "last_note": "2026-04-27 (from lead)",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "7h ago",
+      "last_note": "**Stephanie Lauren** is now looking in IL 60487.\n- By Zillow Insights",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71475"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/57798"
     },
     {
       "rank": 3,
-      "name": "Tarsem",
+      "name": "Fadi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2025-03-01 no reply since.",
-      "last_activity": "461d ago",
-      "last_note": "2025-03-01 (from lead)",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71479"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "7h ago",
+      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
     },
     {
       "rank": 4,
-      "name": "Mas Shamsi",
+      "name": "Ragad",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2024-10-23 no reply since.",
-      "last_activity": "590d ago",
-      "last_note": "2024-10-23 (from lead)",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71491"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "8h ago",
+      "last_note": "**Ragad** is now looking in IL 60467.\n- By Zillow Insights",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
     },
     {
       "rank": 5,
-      "name": "Allie House",
+      "name": "Grace Gelfo",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2025-06-30 no reply since.",
-      "last_activity": "340d ago",
-      "last_note": "2025-06-30 (from lead)",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "17h ago",
+      "last_note": "**Grace Gelfo** is now looking in IL 60441.\n- By Zillow Insights",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71499"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72325"
     }
   ]
 }
