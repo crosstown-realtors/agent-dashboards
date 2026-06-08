@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-05T07:59:38-05:00",
+  "generated": "2026-06-08T07:27:38.116-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Nesrin Hasann",
+      "name": "Nick Simich",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2022-03-21 — no agent reply.",
-      "last_activity": "1537d ago",
-      "last_note": "2022-03-21 (from lead)",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/54885"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "4h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\">Ylopo PRIORITY LEAD ALERT: Nick Simich\n\t(708) 428-329",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/59961"
     },
     {
       "rank": 2,
-      "name": "Beth Beaulieu",
+      "name": "Jason Warren",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2023-05-07 — no agent reply.",
-      "last_activity": "1125d ago",
-      "last_note": "2023-05-07 (from lead)",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/55044"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "9h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
     },
     {
       "rank": 3,
-      "name": "Liz Holicz",
+      "name": "Stephanie Sanchez",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2021-11-15 — no agent reply.",
-      "last_activity": "1663d ago",
-      "last_note": "2021-11-15 (from lead)",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "15h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/55048"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
     },
     {
       "rank": 4,
-      "name": "Grant Krusinowski",
+      "name": "Adan Rosales",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2022-03-14 — no agent reply.",
-      "last_activity": "1544d ago",
-      "last_note": "2022-03-14 (from lead)",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "1d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/56293"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/65909"
     },
     {
       "rank": 5,
-      "name": "Corinne Romero",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority — active Ylopo lead.",
-      "last_activity": "unknown",
-      "last_note": "",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/55879"
+      "name": "Praveen Thinakaran",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "1d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
     }
   ]
 }
