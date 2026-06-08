@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-05T07:58:44-05:00",
+  "generated": "2026-06-08T07:26:52.197-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Myron Sharp",
+      "name": "Eduardo Carreno",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent message 2025-08-22 with no agent reply.",
-      "last_activity": "287d ago",
-      "last_note": "2025-08-22 (from lead)",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "1h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72726"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75086"
     },
     {
       "rank": 2,
-      "name": "Dartesha Wright",
+      "name": "Pamela Prendergast",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent message 2026-05-12 with no agent reply.",
-      "last_activity": "24d ago",
-      "last_note": "2026-05-12 (from lead)",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72734"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72975"
     },
     {
       "rank": 3,
-      "name": "Paul Stump",
+      "name": "Sarah Doyle",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent message 2025-08-19 with no agent reply.",
-      "last_activity": "290d ago",
-      "last_note": "2025-08-19 (from lead)",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72754"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75090"
     },
     {
       "rank": 4,
-      "name": "Amr Salah",
+      "name": "Miroslav",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent message 2025-08-20 with no agent reply.",
-      "last_activity": "289d ago",
-      "last_note": "2025-08-20 (from lead)",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72756"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "7h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73156"
     },
     {
       "rank": 5,
-      "name": "H",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority — active Ylopo lead.",
-      "last_activity": "290d ago",
-      "last_note": "2025-08-19 (from agent)",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72755"
+      "name": "Tashawna Shantez Fluker",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "8h ago",
+      "last_note": "**Tashawna Fluker** is now looking in IL 60467.\n- By Zillow Insights",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71097"
     }
   ]
 }
