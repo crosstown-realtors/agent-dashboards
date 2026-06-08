@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-05T07:57:54-05:00",
+  "generated": "2026-06-08T07:26:14.987-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Kelly Gobby",
+      "name": "Miguel",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent message on 2025-11-21 with no agent reply since.",
-      "last_activity": "196d ago",
-      "last_note": "2025-11-21 (from lead)",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72895"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "8 min ago",
+      "last_note": "**Miguel** is now looking in IL 60433.\n- By Zillow Insights",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73332"
     },
     {
       "rank": 2,
-      "name": "Alex Guzman",
+      "name": "Adhem Hinnawi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent message on 2026-03-04 with no agent reply since.",
-      "last_activity": "93d ago",
-      "last_note": "2026-03-04 (from lead)",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72894"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2h ago",
+      "last_note": "**Adhem Hinnawi** may be interested in 8111 Brushwood Ln, Tinley Park, IL 60487 ($350K, 3bds, 3.0ba)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
     },
     {
       "rank": 3,
-      "name": "Mike Finder",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority tag — active Ylopo lead needs outreach.",
-      "last_activity": "244d ago",
-      "last_note": "2025-10-04 (from agent)",
+      "name": "Tom Murphy",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72909"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73425"
     },
     {
       "rank": 4,
-      "name": "Dan Hurling",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority tag — active Ylopo lead needs outreach.",
-      "last_activity": "190d ago",
-      "last_note": "2025-11-27 (from agent)",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72906"
+      "name": "Ria DeGradi",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "4h ago",
+      "last_note": "**Ria DeGradi** is now looking in FL 34293.\n- By Zillow Insights",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73414"
     },
     {
       "rank": 5,
-      "name": "Parker Young",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority tag — active Ylopo lead needs outreach.",
-      "last_activity": "252d ago",
-      "last_note": "2025-09-26 (from agent)",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72892"
+      "name": "Yves Kam",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "5h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75091"
     }
   ]
 }
