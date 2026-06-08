@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-05T07:59:13-05:00",
+  "generated": "2026-06-08T07:27:38.116-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Christian",
+      "name": "Abdul Hamideh",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2026-05-29 no reply since.",
-      "last_activity": "7d ago",
-      "last_note": "2026-05-29 (from lead)",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75078"
     },
     {
       "rank": 2,
+      "name": "Ana Mocorro",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "3h ago",
+      "last_note": "From ZHL Support specialist: Attempted initial outreach. The borrower didn't pick up. Left voicemail",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
+    },
+    {
+      "rank": 3,
       "name": "Andre Brissett",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead messaged 2026-06-01 no reply since.",
-      "last_activity": "4d ago",
-      "last_note": "2026-06-01 (from lead)",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "7h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     },
     {
-      "rank": 3,
-      "name": "Maddie Rarick",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority — active Ylopo lead.",
-      "last_activity": "167d ago",
-      "last_note": "2025-12-20 (from agent)",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73050"
-    },
-    {
       "rank": 4,
-      "name": "Ivan Smilkovic",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority — active Ylopo lead.",
-      "last_activity": "1d ago",
-      "last_note": "2026-06-04 (from agent)",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73391"
+      "name": "Christian",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "2d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
     },
     {
       "rank": 5,
-      "name": "Camila Johnson",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "FelloSync priority — active Ylopo lead.",
-      "last_activity": "30d ago",
-      "last_note": "2026-05-06 (from agent)",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73398"
+      "name": "Dijana Pejic",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "9d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
     }
   ]
 }
