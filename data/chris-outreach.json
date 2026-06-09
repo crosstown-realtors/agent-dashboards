@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-08T07:27:38.116-05:00",
+  "generated": "2026-06-09T07:26:16.036-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Abdul Hamideh",
+      "name": "Ana Mocorro",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "2h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75078"
+      "signal_label": "Unanswered Lender Outreach",
+      "reason": "Lender left voicemail on Jun 6 — FelloSync lead has had no agent follow-up since lender initial attempt.",
+      "last_activity": "1h ago",
+      "last_note": "ZHL lender attempted outreach — voicemail left.",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
     },
     {
       "rank": 2,
-      "name": "Ana Mocorro",
+      "name": "Abdul Hamideh",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "3h ago",
-      "last_note": "From ZHL Support specialist: Attempted initial outreach. The borrower didn't pick up. Left voicemail",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
+      "signal_label": "Unanswered Ylopo Signal",
+      "reason": "Ylopo city-of-interest signal fired — FelloSync tagged lead with no agent reply to latest search activity.",
+      "last_activity": "1 days ago",
+      "last_note": "Ylopo city of interest signal (Jun 2)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75078"
     },
     {
       "rank": 3,
       "name": "Andre Brissett",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "7h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Attempted contact",
+      "signal_label": "Unanswered Ylopo Signal",
+      "reason": "Ylopo shows lead returned after inactivity — FelloSync tagged, no agent response to Jun 1 re-engagement.",
+      "last_activity": "1 days ago",
+      "last_note": "Ylopo lead returned signal (Jun 1)",
+      "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     },
     {
       "rank": 4,
-      "name": "Christian",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "2d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
+      "name": "Homayoun",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead active June 7 — last agent note from May 25, timely follow-up opportunity.",
+      "last_activity": "3 days ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73454"
     },
     {
       "rank": 5,
-      "name": "Dijana Pejic",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "9d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
+      "name": "Camila Johnson",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead active June 6 — last agent note from May 6, over a month without contact.",
+      "last_activity": "3 days ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73398"
     }
   ]
 }
