@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-08T07:25:35.032-05:00",
+  "generated": "2026-06-09T07:19:11.820-05:00",
   "agent": "Dan Krembuszewski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Adan Rodriguez",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "12h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75092"
-    },
-    {
-      "rank": 2,
       "name": "Jamie Keller",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "11h ago",
+      "reason": "Lead messaged that timeline is 0–3 months and has not received an agent reply.",
+      "last_activity": "21h ago",
       "last_note": "Jamie timeline is 0-3-months.",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75074"
     },
     {
-      "rank": 3,
-      "name": "Zac Sadek",
+      "rank": 2,
+      "name": "Adan Rodriguez",
       "signal_type": "fello",
-      "signal_label": "Fello Priority",
-      "reason": "Tagged as Fello/Ylopo priority lead.",
-      "last_activity": "7d ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead with activity in the last 2 hours — active home-search signal today.",
+      "last_activity": "2h ago",
+      "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75092"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "name": "Mohammed Zafarullah",
       "signal_type": "fello",
-      "signal_label": "Fello Priority",
-      "reason": "Tagged as Fello/Ylopo priority lead.",
-      "last_activity": "2h ago",
-      "last_note": "It's been 3 days and only one call or less has been made to this new lead. A great customer experien",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead active yesterday — only 1 call attempt made so far.",
+      "last_activity": "1 days ago",
+      "last_note": "",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75089"
     },
     {
-      "rank": 5,
-      "name": "Jason Brown",
-      "signal_type": "activity",
-      "signal_label": "Recent Activity",
-      "reason": "Last active 19 days ago.",
-      "last_activity": "19d ago",
+      "rank": 4,
+      "name": "Zac Sadek",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync tag with recent portal searches; only 3 calls or fewer in 7 days.",
+      "last_activity": "8 days ago",
       "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74178"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
+    },
+    {
+      "rank": 5,
+      "name": "Frankie Medina",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead with no agent notes recorded — needs first outreach touchpoint.",
+      "last_activity": "20 days ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74174"
     }
   ]
 }
