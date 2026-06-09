@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-08T07:26:52.197-05:00",
+  "generated": "2026-06-09T07:23:00.440-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Julie Statkus",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "2h ago",
-      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
-    },
-    {
-      "rank": 2,
       "name": "Stephanie Lauren",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "7h ago",
-      "last_note": "**Stephanie Lauren** is now looking in IL 60487.\n- By Zillow Insights",
-      "stage": "Nurture",
+      "signal_label": "Unanswered Search Signal",
+      "reason": "Zillow Insights shows lead actively searching IL 60487 (Tinley Park) — FelloSync tagged, no reply since activity.",
+      "last_activity": "5h ago",
+      "last_note": "Now looking in IL 60487 (Zillow Insights)",
+      "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/57798"
     },
     {
-      "rank": 3,
-      "name": "Fadi",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "7h ago",
-      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
-    },
-    {
-      "rank": 4,
+      "rank": 2,
       "name": "Ragad",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "8h ago",
-      "last_note": "**Ragad** is now looking in IL 60467.\n- By Zillow Insights",
-      "stage": "Nurture",
+      "reason": "Lead indicated 6–12 month timeline — FelloSync active lead needs a follow-up to stay top of mind.",
+      "last_activity": "10h ago",
+      "last_note": "Timeline is 6-12 months.",
+      "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
     },
     {
-      "rank": 5,
-      "name": "Grace Gelfo",
+      "rank": 3,
+      "name": "Linda Hastings",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "17h ago",
-      "last_note": "**Grace Gelfo** is now looking in IL 60441.\n- By Zillow Insights",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72325"
+      "signal_label": "Unanswered Ylopo Signal",
+      "reason": "Ylopo shows lead returned and is active — FelloSync tagged, no agent response to latest activity.",
+      "last_activity": "15h ago",
+      "last_note": "Ylopo activity — lead returned signal",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/60207"
+    },
+    {
+      "rank": 4,
+      "name": "Angelina Garcia",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Activity Signal",
+      "reason": "FelloSync lead with recent activity and an unanswered external signal — long-dormant contact worth re-engaging.",
+      "last_activity": "19h ago",
+      "last_note": "Status unchanged (Fello signal)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
+    },
+    {
+      "rank": 5,
+      "name": "Trudy Sturino",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead with activity early this morning — last agent note from March, re-engagement opportunity.",
+      "last_activity": "8h ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72797"
     }
   ]
 }
