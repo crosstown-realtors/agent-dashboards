@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-08T07:26:14.987-05:00",
+  "generated": "2026-06-09T07:20:07.574-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Miguel",
+      "name": "Jason",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "8 min ago",
-      "last_note": "**Miguel** is now looking in IL 60433.\n- By Zillow Insights",
+      "reason": "Lead flagged interest in a Minooka property ($475K) via Fello — no agent reply yet.",
+      "last_activity": "2 min ago",
+      "last_note": "Jason may be interested in 9001 E McEvilly Rd, Minooka, IL 60447 ($475K).",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73332"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
     },
     {
       "rank": 2,
-      "name": "Adhem Hinnawi",
+      "name": "Lilibeth Edwards",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
+      "reason": "Lead showed Fello interest in a Tinley Park property ($290K) this morning — needs a response.",
       "last_activity": "2h ago",
-      "last_note": "**Adhem Hinnawi** may be interested in 8111 Brushwood Ln, Tinley Park, IL 60487 ($350K, 3bds, 3.0ba)",
+      "last_note": "May be interested in 15931 Blackwater Ct, Tinley Park, IL 60477 ($290K).",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73418"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75079"
     },
     {
       "rank": 3,
-      "name": "Tom Murphy",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "2h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73425"
+      "name": "Wendy Marinier",
+      "signal_type": "fello",
+      "signal_label": "Fello Re-Engaged",
+      "reason": "Fello shows buyer restarted home search after 14+ days of inactivity — re-engagement window is now.",
+      "last_activity": "13 min ago",
+      "last_note": "",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71878"
     },
     {
       "rank": 4,
-      "name": "Ria DeGradi",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "4h ago",
-      "last_note": "**Ria DeGradi** is now looking in FL 34293.\n- By Zillow Insights",
+      "name": "Kaycee Bowen",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged new lead with 7-day follow-up alert triggered — limited contact attempts made.",
+      "last_activity": "29 min ago",
+      "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73414"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75077"
     },
     {
       "rank": 5,
-      "name": "Yves Kam",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "5h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "name": "Yanko",
+      "signal_type": "fello",
+      "signal_label": "Fello Active Lead",
+      "reason": "FelloSync-tagged lead active this morning with no recorded agent notes — first outreach needed.",
+      "last_activity": "2h ago",
+      "last_note": "",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75091"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73431"
     }
   ]
 }
