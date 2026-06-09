@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-08T07:26:52.197-05:00",
+  "generated": "2026-06-09T07:21:48.296-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Eduardo Carreno",
+      "name": "Ercan Hocaoglu",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "1h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75086"
+      "signal_label": "Unanswered Search Signal",
+      "reason": "Ylopo shows lead is actively searching in IL 60463 — FelloSync tagged, no agent response since May 24.",
+      "last_activity": "26 min ago",
+      "last_note": "Now looking in IL 60463 (Zillow Insights)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72991"
     },
     {
       "rank": 2,
-      "name": "Pamela Prendergast",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "2h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72975"
-    },
-    {
-      "rank": 3,
-      "name": "Sarah Doyle",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "2h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75090"
-    },
-    {
-      "rank": 4,
       "name": "Miroslav",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "7h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Nurture",
+      "signal_label": "Unanswered Ylopo Signal",
+      "reason": "Ylopo activity signal fired this morning — FelloSync tagged lead with no recent agent contact.",
+      "last_activity": "2h ago",
+      "last_note": "Ylopo Links & Activity signal (Jun 9)",
+      "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73156"
     },
     {
-      "rank": 5,
-      "name": "Tashawna Shantez Fluker",
+      "rank": 3,
+      "name": "Isra Ghazi",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "8h ago",
-      "last_note": "**Tashawna Fluker** is now looking in IL 60467.\n- By Zillow Insights",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71097"
+      "signal_label": "Unanswered Search Signal",
+      "reason": "FelloSync lead browsing in IL 60487 (Tinley Park) — last agent response over 8 days ago.",
+      "last_activity": "2h ago",
+      "last_note": "Now looking in IL 60487 (Zillow Insights)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72245"
+    },
+    {
+      "rank": 4,
+      "name": "Sarah Doyle",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Ylopo Signal",
+      "reason": "Ylopo main city activity signal — new FelloSync lead with no agent notes on file yet.",
+      "last_activity": "2h ago",
+      "last_note": "Ylopo Links & Activity signal (Jun 7)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75090"
+    },
+    {
+      "rank": 5,
+      "name": "Eduardo Carreno",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Search Signal",
+      "reason": "FelloSync lead browsing in IL 60435 (Joliet area) — activity signal from yesterday, no reply.",
+      "last_activity": "4h ago",
+      "last_note": "Now looking in IL 60435 (Zillow Insights)",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75086"
     }
   ]
 }
