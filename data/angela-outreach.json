@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-09T07:25:01.974-05:00",
+  "generated": "2026-06-10T07:41:12-05:00",
   "agent": "Angela Palma",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Debra Farley",
+      "name": "Kevin Flynn",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead stated 3–6 month buying timeline — FelloSync tagged, message awaiting agent response.",
-      "last_activity": "44 min ago",
-      "last_note": "Debra timeline is 3-6 months.",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ti",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75085"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75096"
     },
     {
       "rank": 2,
-      "name": "Farhin Vhora",
+      "name": "Thomas Lithgow",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Ylopo Signal",
-      "reason": "Ylopo shows lead returned and re-engaged this morning — no agent reply to latest activity.",
-      "last_activity": "2h ago",
-      "last_note": "Ylopo lead returned signal (Jun 9)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73428"
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "currently in default on all his credit card debt.  Credit will not qualify",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75094"
     },
     {
       "rank": 3,
-      "name": "AbdelFattah AlBustangi",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged lead active this morning — most recent agent note from Jun 7, quick follow-up warranted.",
-      "last_activity": "2h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73430"
+      "name": "James Ryan",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75088"
     },
     {
       "rank": 4,
-      "name": "Adam Abbasi",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged lead with activity today — last agent contact was May 26, needs a refresh.",
-      "last_activity": "2h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73429"
+      "name": "Amet",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Da",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75087"
     },
     {
       "rank": 5,
-      "name": "Dolly",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged new lead with activity this morning and no agent notes on record — needs first contact.",
-      "last_activity": "2h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75082"
+      "name": "Debra Farley",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "Debra timeline is 3-6-months.",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75085"
     }
   ]
 }
