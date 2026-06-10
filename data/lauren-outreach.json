@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-09T07:21:48.296-05:00",
+  "generated": "2026-06-10T07:40:52-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Ercan Hocaoglu",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Search Signal",
-      "reason": "Ylopo shows lead is actively searching in IL 60463 — FelloSync tagged, no agent response since May 24.",
-      "last_activity": "26 min ago",
-      "last_note": "Now looking in IL 60463 (Zillow Insights)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72991"
-    },
-    {
-      "rank": 2,
-      "name": "Miroslav",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Ylopo Signal",
-      "reason": "Ylopo activity signal fired this morning — FelloSync tagged lead with no recent agent contact.",
-      "last_activity": "2h ago",
-      "last_note": "Ylopo Links & Activity signal (Jun 9)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73156"
-    },
-    {
-      "rank": 3,
-      "name": "Isra Ghazi",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Search Signal",
-      "reason": "FelloSync lead browsing in IL 60487 (Tinley Park) — last agent response over 8 days ago.",
-      "last_activity": "2h ago",
-      "last_note": "Now looking in IL 60487 (Zillow Insights)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72245"
-    },
-    {
-      "rank": 4,
       "name": "Sarah Doyle",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Ylopo Signal",
-      "reason": "Ylopo main city activity signal — new FelloSync lead with no agent notes on file yet.",
-      "last_activity": "2h ago",
-      "last_note": "Ylopo Links & Activity signal (Jun 7)",
-      "stage": "Lead",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Appointment set",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75090"
     },
     {
-      "rank": 5,
+      "rank": 2,
       "name": "Eduardo Carreno",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Search Signal",
-      "reason": "FelloSync lead browsing in IL 60435 (Joliet area) — activity signal from yesterday, no reply.",
-      "last_activity": "4h ago",
-      "last_note": "Now looking in IL 60435 (Zillow Insights)",
-      "stage": "Lead",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**\\\"\\\"** is now looking in IL 60435.\n- By Zillow Insights",
+      "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75086"
+    },
+    {
+      "rank": 3,
+      "name": "Sammantha Weber",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "Sammantha timeline is 0-3-months.",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
+    },
+    {
+      "rank": 4,
+      "name": "Jake",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Jake** may be interested in 401 Daniels St, Wilmington, IL 60481 ($150K, 3bds, 2.0ba). They have viewed the property 1",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73442"
+    },
+    {
+      "rank": 5,
+      "name": "Linda Maro",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73416"
     }
   ]
 }
