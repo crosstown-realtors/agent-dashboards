@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-09T07:23:00.440-05:00",
+  "generated": "2026-06-10T07:41:08-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Stephanie Lauren",
+      "name": "Monalisa Brown",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Search Signal",
-      "reason": "Zillow Insights shows lead actively searching IL 60487 (Tinley Park) — FelloSync tagged, no reply since activity.",
-      "last_activity": "5h ago",
-      "last_note": "Now looking in IL 60487 (Zillow Insights)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/57798"
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Fr",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75070"
     },
     {
       "rank": 2,
-      "name": "Ragad",
+      "name": "Megan Lucchetti",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead indicated 6–12 month timeline — FelloSync active lead needs a follow-up to stay top of mind.",
-      "last_activity": "10h ago",
-      "last_note": "Timeline is 6-12 months.",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Megan Lucchetti** may be interested in 19629 S Woodside Dr, New Lenox, IL 60451 ($444K, 4bds, 4.0ba). They have viewed",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
     },
     {
       "rank": 3,
-      "name": "Linda Hastings",
+      "name": "Julie Statkus",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Ylopo Signal",
-      "reason": "Ylopo shows lead returned and is active — FelloSync tagged, no agent response to latest activity.",
-      "last_activity": "15h ago",
-      "last_note": "Ylopo activity — lead returned signal",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/60207"
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
     },
     {
       "rank": 4,
-      "name": "Angelina Garcia",
+      "name": "Thomas",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Activity Signal",
-      "reason": "FelloSync lead with recent activity and an unanswered external signal — long-dormant contact worth re-engaging.",
-      "last_activity": "19h ago",
-      "last_note": "Status unchanged (Fello signal)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73129"
     },
     {
       "rank": 5,
-      "name": "Trudy Sturino",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged lead with activity early this morning — last agent note from March, re-engagement opportunity.",
-      "last_activity": "8h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72797"
+      "name": "Peter Wojtowicz",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "Status unchanged as of Oct 29, 2025",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72859"
     }
   ]
 }
