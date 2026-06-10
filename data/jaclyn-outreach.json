@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-09T07:24:04.738-05:00",
+  "generated": "2026-06-10T07:41:10-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Alfredo Ramirez",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Fello flagged interest in New Lenox property at $290K — lead message has no agent reply yet.",
-      "last_activity": "8h ago",
-      "last_note": "May be interested in 601 Ogden Rd, New Lenox, IL 60451 ($290K).",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
+      "name": "Cynthia Mazin",
+      "signal_type": "commitment",
+      "signal_label": "Promise to Follow Up",
+      "reason": "Agent made a follow-up promise in last note.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72858"
     },
     {
       "rank": 2,
-      "name": "Stephanie Sanchez",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Ylopo Signal",
-      "reason": "Ylopo shows lead returned and re-engaged — FelloSync tagged, no agent response to June 6 activity.",
-      "last_activity": "11h ago",
-      "last_note": "Ylopo lead returned signal (Jun 6)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
+      "name": "Brian Gorczynski",
+      "signal_type": "commitment",
+      "signal_label": "Promise to Follow Up",
+      "reason": "Agent made a follow-up promise in last note.",
+      "last_activity": "unknown",
+      "last_note": "",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72267"
     },
     {
       "rank": 3,
-      "name": "Nick Simich",
+      "name": "Mitchell Van",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Activity Signal",
-      "reason": "FelloSync lead with recent activity June 8 — last external note unanswered, re-engagement needed.",
-      "last_activity": "1 days ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/59961"
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "Did an extensive search on a piece of land for him for about a week. Sent him the info and talked about building, contra",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73341"
     },
     {
       "rank": 4,
-      "name": "Jason Warren",
+      "name": "Janet H",
       "signal_type": "unanswered",
-      "signal_label": "Unanswered Ylopo Signal",
-      "reason": "Ylopo lead returned signal — FelloSync tagged with no agent response to latest activity.",
-      "last_activity": "1 days ago",
-      "last_note": "Ylopo lead returned signal (Jun 6)",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71872"
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73331"
     },
     {
       "rank": 5,
-      "name": "Sanel Muslimovic",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged lead with activity this morning — last agent note from April, needs a fresh touch.",
-      "last_activity": "7h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73287"
+      "name": "Maria Cazares",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
     }
   ]
 }
