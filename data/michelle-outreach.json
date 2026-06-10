@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-09T07:20:07.574-05:00",
+  "generated": "2026-06-10T07:40:51-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Jason",
+      "name": "Yves Kam",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead flagged interest in a Minooka property ($475K) via Fello — no agent reply yet.",
-      "last_activity": "2 min ago",
-      "last_note": "Jason may be interested in 9001 E McEvilly Rd, Minooka, IL 60447 ($475K).",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Yves kam** may be interested in 14150 S Mallard Dr, Orland Park, IL 60467 ($560K, 5bds, 3.0ba). They have viewed the p",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75091"
     },
     {
       "rank": 2,
+      "name": "Jason",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Jason** may be interested in 9001 E McEvilly Rd, Minooka, IL 60447 ($475K, 3bds, 4.0ba). They have viewed the property",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
+    },
+    {
+      "rank": 3,
       "name": "Lilibeth Edwards",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead showed Fello interest in a Tinley Park property ($290K) this morning — needs a response.",
-      "last_activity": "2h ago",
-      "last_note": "May be interested in 15931 Blackwater Ct, Tinley Park, IL 60477 ($290K).",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": " timeline is 0-3-months.",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75079"
     },
     {
-      "rank": 3,
-      "name": "Wendy Marinier",
-      "signal_type": "fello",
-      "signal_label": "Fello Re-Engaged",
-      "reason": "Fello shows buyer restarted home search after 14+ days of inactivity — re-engagement window is now.",
-      "last_activity": "13 min ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71878"
-    },
-    {
       "rank": 4,
       "name": "Kaycee Bowen",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged new lead with 7-day follow-up alert triggered — limited contact attempts made.",
-      "last_activity": "29 min ago",
-      "last_note": "",
-      "stage": "Lead",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "**Kaycee Bowen** is now looking in IL 60453.\n- By Zillow Insights",
+      "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75077"
     },
     {
       "rank": 5,
-      "name": "Yanko",
-      "signal_type": "fello",
-      "signal_label": "Fello Active Lead",
-      "reason": "FelloSync-tagged lead active this morning with no recorded agent notes — first outreach needed.",
-      "last_activity": "2h ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73431"
+      "name": "Josh James",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply yet.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75065"
     }
   ]
 }
