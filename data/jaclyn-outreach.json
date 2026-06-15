@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-10T07:41:10-05:00",
+  "generated": "2026-06-15T10:56:24.707-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Cynthia Mazin",
-      "signal_type": "commitment",
-      "signal_label": "Promise to Follow Up",
-      "reason": "Agent made a follow-up promise in last note.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72858"
+      "name": "Stephanie Sanchez",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Stephanie Sanchez sent a message 13h ago awaiting agent reply.",
+      "last_activity": "13h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
     },
     {
       "rank": 2,
-      "name": "Brian Gorczynski",
-      "signal_type": "commitment",
-      "signal_label": "Promise to Follow Up",
-      "reason": "Agent made a follow-up promise in last note.",
-      "last_activity": "unknown",
-      "last_note": "",
+      "name": "Nick Simich",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Nick Simich sent a message 19h ago awaiting agent reply.",
+      "last_activity": "19h ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\">Ylopo PRIORITY LEAD ALERT: Nick S",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72267"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/59961"
     },
     {
       "rank": 3,
-      "name": "Mitchell Van",
+      "name": "Praveen Thinakaran",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "Did an extensive search on a piece of land for him for about a week. Sent him the info and talked about building, contra",
+      "reason": "Praveen Thinakaran sent a message 1d ago awaiting agent reply.",
+      "last_activity": "1d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73341"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
     },
     {
       "rank": 4,
-      "name": "Janet H",
+      "name": "Robert Nelson",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73331"
+      "reason": "Robert Nelson sent a message 2d ago awaiting agent reply.",
+      "last_activity": "2d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "SOI/PC",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/65234"
     },
     {
       "rank": 5,
-      "name": "Maria Cazares",
+      "name": "April Host",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
+      "reason": "April Host sent a message 2d ago awaiting agent reply.",
+      "last_activity": "2d ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Closed",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/60416"
     }
   ]
 }
