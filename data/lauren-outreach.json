@@ -1,37 +1,37 @@
 {
-  "generated": "2026-06-10T07:40:52-05:00",
+  "generated": "2026-06-15T10:54:53.994-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Sarah Doyle",
+      "name": "Pamela Prendergast",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75090"
+      "reason": "Pamela Prendergast sent a message 1m ago with no agent reply — priority follow-up needed.",
+      "last_activity": "1m ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72975"
     },
     {
       "rank": 2,
-      "name": "Eduardo Carreno",
+      "name": "Bill Greune",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "**\\\"\\\"** is now looking in IL 60435.\n- By Zillow Insights",
+      "reason": "Bill Greune sent a message 51m ago with no agent reply — priority follow-up needed.",
+      "last_activity": "51m ago",
+      "last_note": "Bill Greune may be interested in 1343 W Grand Ave Floor 2, Chicago, IL 60642",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75086"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72930"
     },
     {
       "rank": 3,
       "name": "Sammantha Weber",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
+      "reason": "Sammantha Weber sent a message 5h ago with no agent reply — priority follow-up needed.",
+      "last_activity": "5h ago",
       "last_note": "Sammantha timeline is 0-3-months.",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
@@ -41,22 +41,22 @@
       "name": "Jake",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "**Jake** may be interested in 401 Daniels St, Wilmington, IL 60481 ($150K, 3bds, 2.0ba). They have viewed the property 1",
+      "reason": "Jake sent a message 5h ago with no agent reply — priority follow-up needed.",
+      "last_activity": "5h ago",
+      "last_note": "Jake may be interested in 401 Daniels St, Wilmington, IL 60481 ($150K, 3bds,",
       "stage": "Met with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73442"
     },
     {
       "rank": 5,
-      "name": "Linda Maro",
+      "name": "Sabreen Sheikhali",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73416"
+      "reason": "Sabreen Sheikhali sent a message 5h ago with no agent reply — priority follow-up needed.",
+      "last_activity": "5h ago",
+      "last_note": " timeline is 0-3-months.",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73447"
     }
   ]
 }
