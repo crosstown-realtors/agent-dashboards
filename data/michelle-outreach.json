@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-10T07:40:51-05:00",
+  "generated": "2026-06-15T10:52:34.871-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Yves Kam",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "**Yves kam** may be interested in 14150 S Mallard Dr, Orland Park, IL 60467 ($560K, 5bds, 3.0ba). They have viewed the p",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75091"
-    },
-    {
-      "rank": 2,
       "name": "Jason",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "**Jason** may be interested in 9001 E McEvilly Rd, Minooka, IL 60447 ($475K, 3bds, 4.0ba). They have viewed the property",
+      "reason": "Jason sent a message 1 hr ago with no agent reply — immediate follow-up needed.",
+      "last_activity": "1 hr ago",
+      "last_note": "Jason is now looking in IL 60404.\n- By Zillow Insights",
       "stage": "Appointment set",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "name": "Lilibeth Edwards",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": " timeline is 0-3-months.",
+      "reason": "Lilibeth Edwards sent a message 1 hr ago with no agent reply — immediate follow-up needed.",
+      "last_activity": "1 hr ago",
+      "last_note": "\\\"\\\" is now looking in IL 60448.\n- By Zillow Insights",
       "stage": "Lead",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75079"
+    },
+    {
+      "rank": 3,
+      "name": "Rachael Thrush",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Rachael Thrush sent a message 3 hr ago with no agent reply — immediate follow-up needed.",
+      "last_activity": "3 hr ago",
+      "last_note": "\\\"\\\" may be interested in 1150 Grandview Ave, Lockport, IL 60441 ($300K, 3bds, 1",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
     },
     {
       "rank": 4,
       "name": "Kaycee Bowen",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "**Kaycee Bowen** is now looking in IL 60453.\n- By Zillow Insights",
+      "reason": "Kaycee Bowen sent a message 5 hr ago with no agent reply — immediate follow-up needed.",
+      "last_activity": "5 hr ago",
+      "last_note": "Kaycee Bowen is now looking in IL 60585.\n- By Zillow Insights",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75077"
     },
     {
       "rank": 5,
-      "name": "Josh James",
+      "name": "Ria DeGradi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply yet.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75065"
+      "reason": "Ria DeGradi sent a message 1 days ago with no agent reply — immediate follow-up needed.",
+      "last_activity": "1 days ago",
+      "last_note": "Ria DeGradi may be interested in 533 Fallbrook Dr, Venice, FL 34292 ($450K, 3bds",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73414"
     }
   ]
 }
