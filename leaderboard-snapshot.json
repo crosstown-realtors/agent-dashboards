@@ -1,36 +1,36 @@
 {
-  "run_date": "2026-06-08",
+  "run_date": "2026-06-15",
   "agents": {
     "Michelle Madden": {
-      "closed_vol": 5909000.0,
+      "closed_vol": 6854000.0,
       "uc_vol": 579900.0
     },
-    "Dan Krembuszewski": {
-      "closed_vol": 4880000.0,
-      "uc_vol": 450000.0
-    },
     "Lauren Litoborski": {
-      "closed_vol": 2608500.0,
-      "uc_vol": 308000.0
-    },
-    "Mike Kelly": {
-      "closed_vol": 2039900.0,
-      "uc_vol": 0.0
+      "closed_vol": 2916500.0,
+      "uc_vol": 0
     },
     "Mollie Kelly": {
       "closed_vol": 1939750.0,
       "uc_vol": 559500.0
     },
+    "Mike Kelly": {
+      "closed_vol": 2369000.0,
+      "uc_vol": 0
+    },
     "Jaclyn Mitchell": {
-      "closed_vol": 829000.0,
-      "uc_vol": 998000.0
+      "closed_vol": 1827000.0,
+      "uc_vol": 0
+    },
+    "Dan Krembuszewski": {
+      "closed_vol": 4320000.0,
+      "uc_vol": 450000.0
     },
     "Chris Lira": {
-      "closed_vol": 645000.0,
-      "uc_vol": 669000.0
+      "closed_vol": 465000.0,
+      "uc_vol": 0
     },
     "Angela Palma": {
-      "closed_vol": 0.0,
+      "closed_vol": 0,
       "uc_vol": 984900.0
     }
   }
