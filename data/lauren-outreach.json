@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-15T10:54:53.994-05:00",
+  "generated": "2026-06-16T07:20:54-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Pamela Prendergast",
+      "name": "Kyle Wagner",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Pamela Prendergast sent a message 1m ago with no agent reply — priority follow-up needed.",
-      "last_activity": "1m ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72975"
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "1 hr ago",
+      "last_note": "**Kyle Wagner** may be interested in 660 Wild Flower St, Merritt Island, FL 32953 ($2.7K, 3bds, 2.0ba). They have viewed",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72416"
     },
     {
       "rank": 2,
-      "name": "Bill Greune",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Bill Greune sent a message 51m ago with no agent reply — priority follow-up needed.",
-      "last_activity": "51m ago",
-      "last_note": "Bill Greune may be interested in 1343 W Grand Ave Floor 2, Chicago, IL 60642",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72930"
-    },
-    {
-      "rank": 3,
-      "name": "Sammantha Weber",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Sammantha Weber sent a message 5h ago with no agent reply — priority follow-up needed.",
-      "last_activity": "5h ago",
-      "last_note": "Sammantha timeline is 0-3-months.",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
-    },
-    {
-      "rank": 4,
-      "name": "Jake",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Jake sent a message 5h ago with no agent reply — priority follow-up needed.",
-      "last_activity": "5h ago",
-      "last_note": "Jake may be interested in 401 Daniels St, Wilmington, IL 60481 ($150K, 3bds,",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73442"
-    },
-    {
-      "rank": 5,
       "name": "Sabreen Sheikhali",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Sabreen Sheikhali sent a message 5h ago with no agent reply — priority follow-up needed.",
-      "last_activity": "5h ago",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 hr ago",
       "last_note": " timeline is 0-3-months.",
       "stage": "Met with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73447"
+    },
+    {
+      "rank": 3,
+      "name": "Miroslav",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 hr ago",
+      "last_note": "**\\\"\\\"** is now looking in IL 60503.\n- By Zillow Insights",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73156"
+    },
+    {
+      "rank": 4,
+      "name": "Isra Ghazi",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "4 hr ago",
+      "last_note": "  and timeline is 0-3-months.",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72245"
+    },
+    {
+      "rank": 5,
+      "name": "Tashawna Shantez Fluker",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "5 hr ago",
+      "last_note": "**Tashawna Fluker** is now looking in IL 60467.\n- By Zillow Insights",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71097"
     }
   ]
 }
