@@ -1,60 +1,60 @@
 {
-  "generated": "2026-06-15T10:55:38.647-05:00",
+  "generated": "2026-06-16T07:21:33-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Ragad",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Ragad sent a message 18h ago with no agent reply — needs follow-up today.",
-      "last_activity": "18h ago",
-      "last_note": "\\\"\\\" is now looking in IL 60462.\n- By Zillow Insights",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
-    },
-    {
-      "rank": 2,
-      "name": "Grace Gelfo",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Grace Gelfo sent a message 23h ago with no agent reply — needs follow-up today.",
-      "last_activity": "23h ago",
-      "last_note": "Grace Gelfo is now looking in IL 60448.\n- By Zillow Insights",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72325"
-    },
-    {
-      "rank": 3,
       "name": "Justin Schiltz",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Justin Schiltz sent a message 1d ago with no agent reply — needs follow-up today.",
-      "last_activity": "1d ago",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "3 hr ago",
       "last_note": "Status unchanged as of Oct 22, 2025",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
     },
     {
-      "rank": 4,
+      "rank": 2,
       "name": "Fadi",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Fadi sent a message 1d ago with no agent reply — needs follow-up today.",
-      "last_activity": "1d ago",
-      "last_note": "Fadi is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "5 hr ago",
+      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
       "stage": "Closed",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
+    },
+    {
+      "rank": 3,
+      "name": "Grace Gelfo",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "12 hr ago",
+      "last_note": "**Grace Gelfo** is now looking in IL 60448.\n- By Zillow Insights",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72325"
+    },
+    {
+      "rank": 4,
+      "name": "Angelina Garcia",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "12 hr ago",
+      "last_note": "Status unchanged as of Sep 06, 2025",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
     },
     {
       "rank": 5,
       "name": "Thomas",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Thomas sent a message 1d ago with no agent reply — needs follow-up today.",
-      "last_activity": "1d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "13 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73129"
     }
