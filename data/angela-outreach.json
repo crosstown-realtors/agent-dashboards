@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-15T10:57:45.457-05:00",
+  "generated": "2026-06-16T07:23:06-05:00",
   "agent": "Angela Palma",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Anthony",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Anthony sent a message 29m ago with no reply yet — follow up now.",
-      "last_activity": "29m ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74843"
-    },
-    {
-      "rank": 2,
-      "name": "Krish Sharma",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Krish Sharma sent a message 5h ago with no reply yet — follow up now.",
-      "last_activity": "5h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73445"
-    },
-    {
-      "rank": 3,
       "name": "Denise Jeffrey",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Denise Jeffrey sent a message 5h ago with no reply yet — follow up now.",
-      "last_activity": "5h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73448"
     },
     {
-      "rank": 4,
-      "name": "Thomas Lithgow",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Thomas Lithgow sent a message 5h ago with no reply yet — follow up now.",
-      "last_activity": "5h ago",
-      "last_note": "\\\"\\\" may be interested in 12821 S Kenneth Ave APT B3, Alsip, IL 60803 ($150K",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75094"
-    },
-    {
-      "rank": 5,
+      "rank": 2,
       "name": "KC Dahlberg",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "KC Dahlberg sent a message 5h ago with no reply yet — follow up now.",
-      "last_activity": "5h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75102"
+    },
+    {
+      "rank": 3,
+      "name": "James Ryan",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "4 hr ago",
+      "last_note": "**Jim Ryan** is now looking in IL 60452.\n- By Zillow Insights",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75088"
+    },
+    {
+      "rank": 4,
+      "name": "Alex Dzimitowicz",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "4 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Pa",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75106"
+    },
+    {
+      "rank": 5,
+      "name": "Kaitlyn Bauman",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "4 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Oa",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75105"
     }
   ]
 }
