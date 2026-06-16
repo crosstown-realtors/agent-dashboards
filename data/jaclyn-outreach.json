@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T10:56:24.707-05:00",
+  "generated": "2026-06-16T07:22:18-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
@@ -8,9 +8,9 @@
       "name": "Stephanie Sanchez",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Stephanie Sanchez sent a message 13h ago awaiting agent reply.",
-      "last_activity": "13h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "15 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "SOI/PC",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
     },
@@ -19,9 +19,9 @@
       "name": "Nick Simich",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Nick Simich sent a message 19h ago awaiting agent reply.",
-      "last_activity": "19h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\">Ylopo PRIORITY LEAD ALERT: Nick S",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "20 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\">Ylopo PRIORITY LEAD ALERT: Nick Simich\n\t(708) 428-3298</p>\n<br />\n<p>\n\t</",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/59961"
     },
@@ -30,9 +30,9 @@
       "name": "Praveen Thinakaran",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Praveen Thinakaran sent a message 1d ago awaiting agent reply.",
-      "last_activity": "1d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
     },
@@ -41,22 +41,22 @@
       "name": "Robert Nelson",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Robert Nelson sent a message 2d ago awaiting agent reply.",
-      "last_activity": "2d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "SOI/PC",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/65234"
     },
     {
       "rank": 5,
-      "name": "April Host",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "April Host sent a message 2d ago awaiting agent reply.",
-      "last_activity": "2d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/60416"
+      "name": "Alfredo Ramirez",
+      "signal_type": "fello",
+      "signal_label": "Fello Priority Lead",
+      "reason": "Flagged as a Fello priority or high-engagement lead.",
+      "last_activity": "2 hr ago",
+      "last_note": "Buyer has started searching again for homes after being inactive for at least 14 days. Now is a good time to reach out a",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
     }
   ]
 }
