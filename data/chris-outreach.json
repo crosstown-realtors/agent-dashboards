@@ -1,38 +1,38 @@
 {
-  "generated": "2026-06-15T10:57:05.275-05:00",
+  "generated": "2026-06-16T07:23:26-05:00",
   "agent": "Chris Lira",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Andre Brissett",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Andre Brissett sent a message 12h ago with no reply yet.",
-      "last_activity": "12h ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
-    },
-    {
-      "rank": 2,
       "name": "Ana Mocorro",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Ana Mocorro sent a message 14h ago with no reply yet.",
-      "last_activity": "14h ago",
-      "last_note": "From ZHL Support specialist: Attempted initial outreach. The borrower didn't pic",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "2 hr ago",
+      "last_note": "From ZHL Support specialist: Attempted initial outreach. The borrower didn't pick up. Left voicemail and text to schedul",
       "stage": "Attempted contact",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
+    },
+    {
+      "rank": 2,
+      "name": "Andre Brissett",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "13 hr ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
     },
     {
       "rank": 3,
       "name": "Dijana Pejic",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Dijana Pejic sent a message 5d ago with no reply yet.",
-      "last_activity": "5d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "5 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Wo",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
     },
@@ -41,9 +41,9 @@
       "name": "Abdul Hamideh",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Abdul Hamideh sent a message 7d ago with no reply yet.",
-      "last_activity": "7d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "8 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Or",
       "stage": "Spoke with customer",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75078"
     },
@@ -52,9 +52,9 @@
       "name": "Christian",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Christian sent a message 9d ago with no reply yet.",
-      "last_activity": "9d ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b>",
+      "reason": "Lead sent a message and has not received a reply from agent.",
+      "last_activity": "9 days ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "Showing homes",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
     }
