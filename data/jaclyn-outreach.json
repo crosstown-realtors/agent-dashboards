@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-16T07:22:18-05:00",
+  "generated": "2026-06-17T07:25:28-05:00",
   "agent": "Jaclyn Mitchell",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Stephanie Sanchez",
+      "name": "Mitchell Van",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "15 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "Did an extensive search on a piece of land for him for about a week. Sent him the info and talked ab",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73341"
     },
     {
       "rank": 2,
-      "name": "Nick Simich",
+      "name": "Janet H",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "20 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\">Ylopo PRIORITY LEAD ALERT: Nick Simich\n\t(708) 428-3298</p>\n<br />\n<p>\n\t</",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/59961"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73331"
     },
     {
       "rank": 3,
-      "name": "Praveen Thinakaran",
+      "name": "Maria Cazares",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73316"
     },
     {
       "rank": 4,
-      "name": "Robert Nelson",
+      "name": "John McGuire",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/65234"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73183"
     },
     {
       "rank": 5,
-      "name": "Alfredo Ramirez",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "Flagged as a Fello priority or high-engagement lead.",
-      "last_activity": "2 hr ago",
-      "last_note": "Buyer has started searching again for homes after being inactive for at least 14 days. Now is a good time to reach out a",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
+      "name": "Cynthia Mazin",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72858"
     }
   ]
 }
