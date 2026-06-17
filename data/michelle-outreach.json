@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-16T07:20:08-05:00",
+  "generated": "2026-06-17T07:23:54-05:00",
   "agent": "Michelle Madden",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Jolanta Smolinskas",
+      "name": "Veronica B.",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "20 min ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/65961"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
+      "stage": "Lead",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75109"
     },
     {
       "rank": 2,
-      "name": "Lilibeth Edwards",
+      "name": "Kylie Burke",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "1 hr ago",
-      "last_note": "**\\\"\\\"** is now looking in IL 60448.\n- By Zillow Insights",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75079"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75108"
     },
     {
       "rank": 3,
-      "name": "Ria DeGradi",
+      "name": "Taylor Braun",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "1 hr ago",
-      "last_note": "**Ria DeGradi** may be interested in 533 Fallbrook Dr, Venice, FL 34292 ($450K, 3bds, 3.0ba). They have viewed the prope",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73414"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "**Taylor Braun** may be interested in 13064 S 71st Ave, Palos Heights, IL 60463 ($355K, 3bds, 2.0ba)",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75095"
     },
     {
       "rank": 4,
-      "name": "Rianna Gray",
+      "name": "Yves Kam",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "2 hr ago",
-      "last_note": "**\\\"\\\"** may be interested in 301 59th St, Downers Grove, IL 60516 ($455K, 3bds, 2.0ba). They have viewed the property 1",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73359"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75091"
     },
     {
       "rank": 5,
-      "name": "Ricardo Correa",
+      "name": "Jason",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "2 hr ago",
-      "last_note": "**Ricardo Correa** may be interested in 2822 Joela Dr, New Lenox, IL 60451 ($375K, 3bds, 2.0ba). They have viewed the pr",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73409"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "**Jason** is now looking in IL 60416.\n- By Zillow Insights",
+      "stage": "Appointment set",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
     }
   ]
 }
