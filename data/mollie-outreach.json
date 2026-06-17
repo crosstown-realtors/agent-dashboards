@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-16T07:21:33-05:00",
+  "generated": "2026-06-17T07:25:12-05:00",
   "agent": "Mollie Kelly",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Justin Schiltz",
+      "name": "Monalisa Brown",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "3 hr ago",
-      "last_note": "Status unchanged as of Oct 22, 2025",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71533"
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75070"
     },
     {
       "rank": 2,
-      "name": "Fadi",
+      "name": "Megan Lucchetti",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "5 hr ago",
-      "last_note": "**Fadi** is now looking in Tinley Park, IL 60477.\n- By Zillow Insights",
-      "stage": "Closed",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/71771"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "**Megan Lucchetti** may be interested in 19629 S Woodside Dr, New Lenox, IL 60451 ($444K, 4bds, 4.0b",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73405"
     },
     {
       "rank": 3,
-      "name": "Grace Gelfo",
+      "name": "Julie Statkus",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "12 hr ago",
-      "last_note": "**Grace Gelfo** is now looking in IL 60448.\n- By Zillow Insights",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72325"
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "**Julie Statkus** is now looking in IL 60451.\n- By Zillow Insights",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73169"
     },
     {
       "rank": 4,
-      "name": "Angelina Garcia",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "12 hr ago",
-      "last_note": "Status unchanged as of Sep 06, 2025",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72646"
-    },
-    {
-      "rank": 5,
       "name": "Thomas",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message and has not received a reply from agent.",
-      "last_activity": "13 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
       "stage": "Nurture",
       "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73129"
+    },
+    {
+      "rank": 5,
+      "name": "Peter Wojtowicz",
+      "signal_type": "unanswered",
+      "signal_label": "Unanswered Message",
+      "reason": "Lead sent a message with no agent reply.",
+      "last_activity": "unknown",
+      "last_note": "Status unchanged as of Oct 29, 2025",
+      "stage": "Attempted contact",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72859"
     }
   ]
 }
