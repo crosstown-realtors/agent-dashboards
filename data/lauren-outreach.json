@@ -1,62 +1,62 @@
 {
-  "generated": "2026-06-17T07:24:40-05:00",
+  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Lauren Litoborski",
   "fub_account": "crosstownlincolnway",
   "leads": [
     {
       "rank": 1,
-      "name": "Amy Bauer",
+      "name": "Kyle Wagner",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75107"
+      "reason": "Lead sent a message that hasn't received an agent reply.",
+      "last_activity": "Less than 1 hr ago",
+      "last_note": "**Kyle Wagner** may be interested in 660 Wild Flower St, Merritt Island, FL 32953 ($2.7K, 3bds, 2.0ba). They have viewed",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72416"
     },
     {
       "rank": 2,
-      "name": "Sarah Doyle",
+      "name": "Bill Greune",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply.",
-      "last_activity": "unknown",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Acti",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75090"
+      "reason": "Lead sent a message that hasn't received an agent reply.",
+      "last_activity": "Less than 1 hr ago",
+      "last_note": "**Bill Greune** may be interested in 1343 W Grand Ave Floor 2, Chicago, IL 60642 ($1.7K, 2bds, 1.0ba). They have viewed ",
+      "stage": "Spoke with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72930"
     },
     {
       "rank": 3,
-      "name": "Eduardo Carreno",
+      "name": "Issac Plamoottil",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply.",
-      "last_activity": "unknown",
-      "last_note": "**\\\"\\\"** may be interested in 26164 W Tallgrass Trl, Channahon, IL 60410 ($296K, 3bds, 3.0ba). They ",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75086"
+      "reason": "Lead sent a message that hasn't received an agent reply.",
+      "last_activity": "2 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Nurture",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/63752"
     },
     {
       "rank": 4,
-      "name": "Sabreen Sheikhali",
+      "name": "Dartesha Wright",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply.",
-      "last_activity": "unknown",
-      "last_note": " timeline is 0-3-months.",
-      "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73447"
+      "reason": "Lead sent a message that hasn't received an agent reply.",
+      "last_activity": "2 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "stage": "Showing homes",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72734"
     },
     {
       "rank": 5,
-      "name": "Sammantha Weber",
+      "name": "Amy Bauer",
       "signal_type": "unanswered",
       "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message with no agent reply.",
-      "last_activity": "unknown",
-      "last_note": "no contact check in",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73443"
+      "reason": "Lead sent a message that hasn't received an agent reply.",
+      "last_activity": "2 hrs ago",
+      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ho",
+      "stage": "Met with customer",
+      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75107"
     }
   ]
 }
