@@ -1,62 +1,71 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Michelle Madden",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:39.001Z",
+  "top5": [
     {
-      "rank": 1,
-      "name": "Jason",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "**Jason** is now looking in IL 60560.\n- By Zillow Insights",
-      "stage": "Appointment set",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75080"
-    },
-    {
-      "rank": 2,
+      "id": 73453,
       "name": "Rachael Thrush",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "**\\\"\\\"** may be interested in 1150 Grandview Ave, Lockport, IL 60441 ($300K, 3bds, 1.0ba). They have viewed the property",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73453"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T12:31:17Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 3,
-      "name": "Konrad P",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "3 hrs ago",
-      "last_note": "**\\\"\\\"** may be interested in 12309 Partridge Ln, Orland Park, IL 60467 ($508K, 5bds, 3.0ba). They have viewed the prope",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73203"
+      "id": 75080,
+      "name": "Jason",
+      "stage": "Appointment set",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:15:26Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 4,
-      "name": "Taylor Braun",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "8 hrs ago",
-      "last_note": "**Taylor Braun** may be interested in 13064 S 71st Ave, Palos Heights, IL 60463 ($355K, 3bds, 2.0ba). They have viewed t",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75095"
-    },
-    {
-      "rank": 5,
-      "name": "Naomi Ch",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "10 hrs ago",
-      "last_note": "**Naomi ch** may be interested in 144 1st Ave, New Lenox, IL 60451 ($325K, 3bds, 2.0ba). They have viewed the property 1",
+      "id": 73205,
+      "name": "Meaghan Gritzenbach",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73095"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:15:26Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 73175,
+      "name": "Alyssa Jarzynski",
+      "stage": "Lead",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:15:26Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 73075,
+      "name": "Jeanne Schultz",
+      "stage": "Spoke with customer",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:15:26Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     }
   ]
 }
