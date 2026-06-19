@@ -1,62 +1,64 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Jaclyn Mitchell",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:39.776Z",
+  "top5": [
     {
-      "rank": 1,
-      "name": "Brian Gorczynski",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "1 hr ago",
-      "last_note": "**Brian** may be interested in 7455 W Benton Dr, Frankfort, IL 60423 ($345K, 3bds, 1.0ba). They have viewed the property",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72267"
+      "id": 73183,
+      "name": "John McGuire",
+      "stage": "Spoke with customer",
+      "source": "Referral",
+      "lastActivity": "2026-06-18T23:41:15Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": []
     },
     {
-      "rank": 2,
-      "name": "Alfredo Ramirez",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "1 day ago",
-      "last_note": "**\\\"\\\"** is now looking in IL 60441.\n- By Zillow Insights",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72033"
+      "id": 56781,
+      "name": "Deborah Eck",
+      "stage": "Seller",
+      "source": "StreetText",
+      "lastActivity": "2026-06-12T15:45:42Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "Fello Home Value Lead",
+        "Fello Lead Update",
+        "Fello Cash Offer Lead",
+        "PresentinFelloandFUB"
+      ]
     },
     {
-      "rank": 3,
-      "name": "Stephanie Sanchez",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "1 day ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "id": 72836,
+      "name": "Kyle Anderson",
+      "stage": "Active listing",
+      "source": "Referral from Past Client",
+      "lastActivity": "2026-06-12T14:08:14Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": []
+    },
+    {
+      "id": 72500,
+      "name": "Jacie Bowen",
+      "stage": "Closed",
+      "source": "Ylopo",
+      "lastActivity": "2026-06-12T13:40:14Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync"
+      ]
+    },
+    {
+      "id": 72493,
+      "name": "Alex Martinez",
       "stage": "SOI/PC",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/66801"
-    },
-    {
-      "rank": 4,
-      "name": "Nick Simich",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\">Ylopo PRIORITY LEAD ALERT: Nick Simich\n\t(708) 428-3298</p>\n<br />\n<p>\n\t</",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/59961"
-    },
-    {
-      "rank": 5,
-      "name": "Praveen Thinakaran",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "4 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72089"
+      "source": "Referral",
+      "lastActivity": "2026-06-12T13:39:37Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": []
     }
   ]
 }
