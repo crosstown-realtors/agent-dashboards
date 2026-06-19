@@ -1,62 +1,72 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Dan Krembuszewski",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:38.750Z",
+  "top5": [
     {
-      "rank": 1,
-      "name": "Jamie Keller",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 days ago",
-      "last_note": "Jamie timeline is 0-3-months.",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75074"
-    },
-    {
-      "rank": 2,
-      "name": "Mohammed Zafarullah",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "Tagged as a Fello priority lead — active on the platform.",
-      "last_activity": "2 hrs ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75089"
-    },
-    {
-      "rank": 3,
+      "id": 75061,
       "name": "Zac Sadek",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "Tagged as a Fello priority lead — active on the platform.",
-      "last_activity": "9 hrs ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75061"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:09:25Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead_Day30Audit",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 4,
+      "id": 75114,
+      "name": "Jeff Cizek",
+      "stage": "Lead",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T08:17:54Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 75113,
+      "name": "No name",
+      "stage": "Spoke with customer",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T00:31:21Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 75089,
+      "name": "Mohammed Zafarullah",
+      "stage": "Lead",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-18T10:09:29Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 75092,
       "name": "Adan Rodriguez",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "Tagged as a Fello priority lead — active on the platform.",
-      "last_activity": "1 day ago",
-      "last_note": "It's been 7 days and only 3 calls or less have been made to this contact. @Teamleader",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75092"
-    },
-    {
-      "rank": 5,
-      "name": "Hdhehdhd",
-      "signal_type": "fello",
-      "signal_label": "Fello Priority Lead",
-      "reason": "Tagged as a Fello priority lead — active on the platform.",
-      "last_activity": "5 days ago",
-      "last_note": "",
-      "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74182"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-16T13:35:12Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     }
   ]
 }
