@@ -1,62 +1,72 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Chris Lira",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:39.922Z",
+  "top5": [
     {
-      "rank": 1,
-      "name": "Andre Brissett",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "14 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73439"
-    },
-    {
-      "rank": 2,
-      "name": "Jeffrey Starzynski",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "14 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ho",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75110"
-    },
-    {
-      "rank": 3,
+      "id": 73023,
       "name": "Christian",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "17 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
       "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73023"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T11:47:48Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 4,
-      "name": "Ana Mocorro",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "1 day ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "id": 73454,
+      "name": "Homayoun",
       "stage": "Attempted contact",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75075"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:12:25Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 5,
+      "id": 74865,
       "name": "Dijana Pejic",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "7 days ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Wo",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74865"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:09:24Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead_Day30Audit",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 75100,
+      "name": "Lauren Longoria",
+      "stage": "Lead",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:08:27Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 73398,
+      "name": "Camila Johnson",
+      "stage": "Attempted contact",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-15T03:18:02Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     }
   ]
 }
