@@ -1,62 +1,69 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Mollie Kelly",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:39.492Z",
+  "top5": [
     {
-      "rank": 1,
-      "name": "Grace Gelfo",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "4 hrs ago",
-      "last_note": "**Grace Gelfo** is now looking in IL 60448.\n- By Zillow Insights",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72325"
+      "id": 73327,
+      "name": "Alexandra DelSasso",
+      "stage": "Lead",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:13:26Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 2,
-      "name": "Jon Granberry",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "5 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/61226"
+      "id": 73405,
+      "name": "Megan Lucchetti",
+      "stage": "Showing homes",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-13T10:13:21Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 3,
-      "name": "Ragad",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "10 hrs ago",
-      "last_note": "**\\\"\\\"** may be interested in 7830 Sioux Rd, Orland Park, IL 60462 ($629K, 4bds, 3.0ba). They have viewed the property 1",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72053"
+      "id": 72050,
+      "name": "Kirsten Chapman",
+      "stage": "Attempted contact",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-12T19:27:14Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync"
+      ]
     },
     {
-      "rank": 4,
-      "name": "Michael Alfrejd",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "14 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/67014"
+      "id": 71829,
+      "name": "Jasmine Mason",
+      "stage": "Attempted contact",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-12T19:22:41Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync"
+      ]
     },
     {
-      "rank": 5,
-      "name": "Linda Hastings",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "18 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/60207"
+      "id": 73387,
+      "name": "Christy Korpal",
+      "stage": "Showing homes",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-12T19:20:39Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     }
   ]
 }
