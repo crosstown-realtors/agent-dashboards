@@ -1,62 +1,72 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Angela Palma",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:40.086Z",
+  "top5": [
     {
-      "rank": 1,
+      "id": 75085,
+      "name": "Debra Farley",
+      "stage": "Appointment set",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:54:08Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 75102,
       "name": "KC Dahlberg",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "Less than 1 hr ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75102"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:07:25Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead_Day7Audit",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 2,
-      "name": "Anthony",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ne",
+      "id": 73428,
+      "name": "Farhin Vhora",
+      "stage": "Spoke with customer",
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T06:47:04Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 75071,
+      "name": "Paddy",
       "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/74843"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T05:23:59Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 3,
-      "name": "Alex Dzimitowicz",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Pa",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75106"
-    },
-    {
-      "rank": 4,
-      "name": "Karolina Swanson",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Wo",
-      "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75104"
-    },
-    {
-      "rank": 5,
-      "name": "Terry Roberts",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "12 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "id": 75105,
+      "name": "Kaitlyn Bauman",
       "stage": "Lead",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/73400"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-18T10:06:24Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     }
   ]
 }
