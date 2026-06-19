@@ -1,62 +1,67 @@
 {
-  "generated": "2026-06-18T07:26:39-05:00",
   "agent": "Lauren Litoborski",
-  "fub_account": "crosstownlincolnway",
-  "leads": [
+  "generated": "2026-06-19T12:40:39.237Z",
+  "top5": [
     {
-      "rank": 1,
-      "name": "Kyle Wagner",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "Less than 1 hr ago",
-      "last_note": "**Kyle Wagner** may be interested in 660 Wild Flower St, Merritt Island, FL 32953 ($2.7K, 3bds, 2.0ba). They have viewed",
-      "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72416"
-    },
-    {
-      "rank": 2,
-      "name": "Bill Greune",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "Less than 1 hr ago",
-      "last_note": "**Bill Greune** may be interested in 1343 W Grand Ave Floor 2, Chicago, IL 60642 ($1.7K, 2bds, 1.0ba). They have viewed ",
+      "id": 73357,
+      "name": "Maha Alshawwa",
       "stage": "Spoke with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72930"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-19T10:07:59Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 3,
-      "name": "Issac Plamoottil",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
-      "stage": "Nurture",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/63752"
-    },
-    {
-      "rank": 4,
-      "name": "Dartesha Wright",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>User Action:</b> Lead Returne",
+      "id": 73443,
+      "name": "Sammantha Weber",
       "stage": "Showing homes",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/72734"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-16T18:50:36Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
     },
     {
-      "rank": 5,
-      "name": "Amy Bauer",
-      "signal_type": "unanswered",
-      "signal_label": "Unanswered Message",
-      "reason": "Lead sent a message that hasn't received an agent reply.",
-      "last_activity": "2 hrs ago",
-      "last_note": "<p style=\"font-size:1.2em;margin-bottom:10px;\"><b>Ylopo Links &amp; Activity</b></p><p>\n<b>Main City of Interest:</b> Ho",
+      "id": 75103,
+      "name": "No name",
+      "stage": "Lead",
+      "source": "Zillow",
+      "lastActivity": "2026-06-15T04:32:17Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync"
+      ]
+    },
+    {
+      "id": 72951,
+      "name": "James Ashack",
       "stage": "Met with customer",
-      "fub_url": "https://crosstownlincolnway.followupboss.com/2/people/view/75107"
+      "source": "Zillow Preferred",
+      "lastActivity": "2026-06-13T15:04:51Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": [
+        "FelloSync",
+        "#New_Lead"
+      ]
+    },
+    {
+      "id": 73415,
+      "name": "Amie Ernst",
+      "stage": "Closed",
+      "source": "SOI",
+      "lastActivity": "2026-06-12T20:20:03Z",
+      "score": 8,
+      "contacted": 0,
+      "tags": []
     }
   ]
 }
